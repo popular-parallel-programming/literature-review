@@ -797,6 +797,7 @@
  address = {New York, NY, USA},
  keywords = {multicore, parallelization, reactive systems},
   abstract = 	 {Synchronous data-flow programming appeared in the 80s, with Lustre and Signal, applied to the design, modeling, and programming of safety-critical embedded systems. Its scientific and industrial success derives from the ability to master the high levels of concurrency in reactive systems, while pre-serving a functionally deterministic semantics, with liveness, bounded memory, and bounded execution time guarantees. Recent work on Lucid Synchrone and Scade version 6 led to important progress in expressiveness, from automatic type inference to the modular construction of complex systems combining state machines and data-flow equations. Powerful compilation techniques have also been designed that are capable of generating sequential code competitive with low-level C programming. As multicore embedded processors and MPSoC become unavoidable, even in safety-critical environments, and as control applications become increasingly computational, new challenges emerge in the parallelization and optimization of synchronous programs. In this talk, we will survey recent and ongoing work on generating parallel code and highly efficient nested loops with in-place, array-based computations from data-flow synchronous programs. This survey will take us through programming language design, data structure and stream abstraction, compilation algorithms, and runtime systems, with a focus on real-time embedded systems.},
+  review = 	 {fbie: rejected <2016-01-12 16:03:06>},
 }
 
 @inproceedings{Cave:2011:HNA:2093157.2093165,
@@ -815,6 +816,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {data-race detection, language, parallel programming},
+  abstract = 	 {In this paper, we present the Habanero-Java (HJ) language developed at Rice University as an extension to the original Java-based definition of the X10 language. HJ includes a powerful set of task-parallel programming constructs that can be added as simple extensions to standard Java programs to take advantage of today's multi-core and heterogeneous architectures. The language puts a particular emphasis on the usability and safety of parallel constructs. For example, no HJ program using async, finish, isolated, and phaser constructs can create a logical deadlock cycle. In addition, the future and data-driven task variants of the async construct facilitate a functional approach to parallel programming. Finally, any HJ program written with async, finish, and phaser constructs that is data-race free is guaranteed to also be deterministic. HJ also features two key enhancements that address well known limitations in the use of Java in scientific computing --- the inclusion of complex numbers as a primitive data type, and the inclusion of array-views that support multidimensional views of one-dimensional arrays. The HJ compiler generates standard Java class-files that can run on any JVM for Java 5 or higher. The HJ runtime is responsible for orchestrating the creation, execution, and termination of HJ tasks, and features both work-sharing and work-stealing schedulers. HJ is used at Rice University as an introductory parallel programming language for second-year undergraduate students. A wide variety of benchmarks have been ported to HJ, including a full application that was originally written in Fortran 90. HJ has a rich development and runtime environment that includes integration with DrJava, the addition of a data race detection tool, and service as a target platform for the Intel Concurrent Collections coordination language},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2093165&ftid=1078704&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Cav{\'e}_2011_Habanero.pdf},
+  review = 	 {fbie: rejected <2016-01-12 16:05:36>},
 }
 
 @inproceedings{Li:2014:EEP:2627373.2627385,
@@ -833,6 +838,9 @@
  acmid = {2627385},
  publisher = {ACM},
  address = {New York, NY, USA},
+  abstract = 	 {In this paper, we explore the newly introduced array notion syntax extension in recent release of Intel Compiler with a few representative quantitative finance workloads. We will explore the array syntax both as an abstraction tool to allow the user to succinctly express the intended operations and as a performance tool that facilitates the most efficient implementation which can take advantage of the parallel hardware resource such as vector processing units and ever increasing number of processor cores. We specifically look at how these new array style programming capability can help the financial modeler and software developers to extract the parallelism from the numerical algorithm and extend it from multicore host processor to a hybrid of multicore many-core accelerated computing environment. We start with a functional introduction to the C++ array notation syntax that will be used in the subsequent examples. We, then, present background information on a few derivative pricing algorithms in quantitative finance. For each algorithm, we present a scalar program first and take a performance measurement as baseline. As we choose to use the array programming mechanism, we will look at the programming language related issues and postulate what syntax motivate the developer to use then what the alternative syntax are and why some might be more popular than others. Then we look at the performance related issues and look at the code generation on Intel Architecture based multicore and many-core platforms, and investigate mechanism for performance optimization. We conclude the paper by creating a hybrid program that runs both on multicore and many-core environment, concurrently.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2627385&ftid=1503136&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:08:02>},
 }
 
 @inproceedings{Chatterjee:1993:AAA:158511.158517,
@@ -850,6 +858,10 @@
  acmid = {158517},
  publisher = {ACM},
  address = {New York, NY, USA},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=158517&ftid=33072&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Chatterjee_1993_Automatic.pdf},
+  notes = 	 {Very unsure about this one.},
 }
 
 @article{Raman:2012:PSF:2345156.2254082,
@@ -870,6 +882,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {adaptivity, automatic parallelization, code generation, compiler, flexible, multicore, parallel, performance portability, run-time, tuning},
+  abstract = 	 {Workload, platform, and available resources constitute a parallel program's execution environment. Most parallelization efforts statically target an anticipated range of environments, but performance generally degrades outside that range. Existing approaches address this problem with dynamic tuning but do not optimize a multiprogrammed system holistically. Further, they either require manual programming effort or are limited to array-based data-parallel programs. This paper presents Parcae, a generally applicable automatic system for platform-wide dynamic tuning. Parcae includes (i) the Nona compiler, which creates flexible parallel programs whose tasks can be efficiently reconfigured during execution; (ii) the Decima monitor, which measures resource availability and system performance to detect change in the environment; and (iii) the Morta executor, which cuts short the life of executing tasks, replacing them with other functionally equivalent tasks better suited to the current environment. Parallel programs made flexible by Parcae outperform original parallel implementations in many interesting scenarios.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2254082&ftid=1235822&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Raman_2012_Parcae.pdf},
+  review = 	 {fbie: rejected <2016-01-12 16:15:58>},
 }
 
 @inproceedings{Raman:2012:PSF:2254064.2254082,
@@ -888,6 +904,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {adaptivity, automatic parallelization, code generation, compiler, flexible, multicore, parallel, performance portability, run-time, tuning},
+  abstract = 	 {Workload, platform, and available resources constitute a parallel program's execution environment. Most parallelization efforts statically target an anticipated range of environments, but performance generally degrades outside that range. Existing approaches address this problem with dynamic tuning but do not optimize a multiprogrammed system holistically. Further, they either require manual programming effort or are limited to array-based data-parallel programs. This paper presents Parcae, a generally applicable automatic system for platform-wide dynamic tuning. Parcae includes (i) the Nona compiler, which creates flexible parallel programs whose tasks can be efficiently reconfigured during execution; (ii) the Decima monitor, which measures resource availability and system performance to detect change in the environment; and (iii) the Morta executor, which cuts short the life of executing tasks, replacing them with other functionally equivalent tasks better suited to the current environment. Parallel programs made flexible by Parcae outperform original parallel implementations in many interesting scenarios.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2254082&ftid=1235822&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:16:06>},
 }
 
 @inproceedings{O'Donnell:2013:ESF:2505879.2505891,
@@ -906,6 +925,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {circuit parallelism, extensible array, functional array, functional programming, sparse array},
+  abstract = 	 {A longstanding open question in algorithms and data structures is the time and space complexity of pure functional arrays. Imperative arrays provide update and lookup operations that require constant time in the RAM theoretical model, but it is conjectured that there does not exist a RAM algorithm that achieves the same complexity for functional arrays, unless restrictions are placed on the operations. The main result of this paper is an algorithm that does achieve optimal unit time and space complexity for update and lookup on functional arrays. This algorithm does not run on a RAM, but instead it exploits the massive parallelism inherent in digital circuits. The algorithm also provides unit time operations that support storage management, as well as sparse and extensible arrays. The main idea behind the algorithm is to replace a RAM memory by a tree circuit that is more powerful than the RAM yet has the same asymptotic complexity in time (gate delays) and size (number of components). The algorithm uses an array representation that allows elements to be shared between many arrays with only a small constant factor penalty in space and time. This system exemplifies circuit parallelism, which exploits very large numbers of transistors per chip in order to speed up key algorithms. Extensible Sparse Functional Arrays (ESFA) can be used with both functional and imperative programming languages. The system comprises a set of algorithms and a circuit specification, and it has been implemented on a GPGPU with good performance.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2505891&ftid=1397415&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:17:18>},
 }
 
 @article{Willhoft:1995:DDP:216800.216803,
@@ -925,6 +947,8 @@
  acmid = {216803},
  publisher = {ACM},
  address = {New York, NY, USA},
+  abstract = 	 {},
+  review = 	 {fbie: rejected <2016-01-12 16:18:22>},
 }
 
 @article{Blelloch:2010:FPA:1932681.1863579,
@@ -945,6 +969,8 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {functional programming, parallel algorithms},
+  abstract = 	 {Functional programming presents several important advantages in the design, analysis and implementation of parallel algorithms: It discourages iteration and encourages decomposition. It supports persistence and hence easy speculation. It encourages higher-order aggregate operations. It is well suited for defining cost models tied to the programming language rather than the machine. Implementations can avoid false sharing. Implementations can use cheaper weak consistency models. And most importantly, it supports safe deterministic parallelism. In fact functional programming supports a level of abstraction in which parallel algorithms are often as easy to design and analyze as sequential algorithms. The recent widespread advent of parallel machines therefore presents a great opportunity for functional programming languages. However, any changes will require significant education at all levels and involvement of the functional programming community. In this talk I will discuss an approach to designing and analyzing parallel algorithms in a strict functional and fully deterministic setting. Key ideas include a cost model defined in term of analyzing work and span, the use of divide-and-conquer and contraction, the need for arrays (immutable) to achieve asymptotic efficiency, and the power of (deterministic) randomized algorithms. These are all ideas I believe can be taught at any level.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863579&ftid=978044&dwn=1&CFID=574773947&CFTOKEN=83431304},
 }
 
 @inproceedings{Blelloch:2010:FPA:1863543.1863579,
@@ -963,6 +989,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {functional programming, parallel algorithms},
+  abstract = 	 {Functional programming presents several important advantages in the design, analysis and implementation of parallel algorithms: It discourages iteration and encourages decomposition. It supports persistence and hence easy speculation. It encourages higher-order aggregate operations. It is well suited for defining cost models tied to the programming language rather than the machine. Implementations can avoid false sharing. Implementations can use cheaper weak consistency models. And most importantly, it supports safe deterministic parallelism. In fact functional programming supports a level of abstraction in which parallel algorithms are often as easy to design and analyze as sequential algorithms. The recent widespread advent of parallel machines therefore presents a great opportunity for functional programming languages. However, any changes will require significant education at all levels and involvement of the functional programming community. In this talk I will discuss an approach to designing and analyzing parallel algorithms in a strict functional and fully deterministic setting. Key ideas include a cost model defined in term of analyzing work and span, the use of divide-and-conquer and contraction, the need for arrays (immutable) to achieve asymptotic efficiency, and the power of (deterministic) randomized algorithms. These are all ideas I believe can be taught at any level.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863579&ftid=978044&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  notes = 	 {This is a talk, but it's highly relevant. Don't know how to handle it right now.},
 }
 
 @article{Deitz:2003:DIP:966049.781526,
@@ -1001,6 +1030,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {ZPL, array languages, gather, parallel programming, scatter},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=781526&ftid=156280&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Deitz_2003_The.pdf},
+  review = 	 {fbie: accepted <2016-01-12 16:24:42>},
 }
 
 @inproceedings{Nieplocha:2005:EPG:1062261.1062305,
@@ -1019,6 +1052,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {extreme scalability, global arrays, multi-level parallelism, processor groups},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1062305&ftid=315458&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Nieplocha_2005_Exploiting.pdf},
+  review = 	 {fbie: rejected <2016-01-12 16:26:21>},
 }
 
 @article{Fluet:2008:SFG:1411203.1411239,
@@ -1039,6 +1076,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {compilers, heterogeneous parallel languages, run-time systems, scheduling},
+  abstract = 	 {The trend in microprocessor design toward multicore and manycore processors means that future performance gains in software will largely come from harnessing parallelism. To realize such gains, we need languages and implementations that can enable parallelism at many different levels. For example, an application might use both explicit threads to implement course-grain parallelism for independent tasks and implicit threads for fine-grain data-parallel computation over a large array. An important aspect of this requirement is supporting a wide range of different scheduling mechanisms for parallel computation. In this paper, we describe the scheduling framework that we have designed and implemented for Manticore, a strict parallel functional language. We take a micro-kernel approach in our design: the compiler and runtime support a small collection of scheduling primitives upon which complex scheduling policies can be implemented. This framework is extremely flexible and can support a wide range of different scheduling policies. It also supports the nesting of schedulers, which is key to both supporting multiple scheduling policies in the same application and to hierarchies of speculative parallel computations. In addition to describing our framework, we also illustrate its expressiveness with several popular scheduling techniques. We present a (mostly) modular approach to extending our schedulers to support cancellation. This mechanism is essential for implementing eager and speculative parallelism. We finally evaluate our framework with a series of benchmarks and an analysis.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1411239&ftid=551291&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:32:59>},
 }
 
 @inproceedings{Fluet:2008:SFG:1411204.1411239,
@@ -1057,6 +1097,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {compilers, heterogeneous parallel languages, run-time systems, scheduling},
+  abstract = 	 {The trend in microprocessor design toward multicore and manycore processors means that future performance gains in software will largely come from harnessing parallelism. To realize such gains, we need languages and implementations that can enable parallelism at many different levels. For example, an application might use both explicit threads to implement course-grain parallelism for independent tasks and implicit threads for fine-grain data-parallel computation over a large array. An important aspect of this requirement is supporting a wide range of different scheduling mechanisms for parallel computation. In this paper, we describe the scheduling framework that we have designed and implemented for Manticore, a strict parallel functional language. We take a micro-kernel approach in our design: the compiler and runtime support a small collection of scheduling primitives upon which complex scheduling policies can be implemented. This framework is extremely flexible and can support a wide range of different scheduling policies. It also supports the nesting of schedulers, which is key to both supporting multiple scheduling policies in the same application and to hierarchies of speculative parallel computations. In addition to describing our framework, we also illustrate its expressiveness with several popular scheduling techniques. We present a (mostly) modular approach to extending our schedulers to support cancellation. This mechanism is essential for implementing eager and speculative parallelism. We finally evaluate our framework with a series of benchmarks and an analysis.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1411239&ftid=551291&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:33:06>},
 }
 
 @book{Szymanski:1991:PFL:107214,
@@ -1086,6 +1129,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Array programming, GPGPU, Patterns},
+  abstract = 	 {Heterogeneous computing has now become mainstream with virtually every desktop machines featuring accelerators such as Graphics Processing Units (GPUs). While heterogeneity offers the promise of high-performance and high-efficiency, it comes at the cost of huge programming difficulties. Languages and interfaces for programming such system tend to be low-level and require expert knowledge of the hardware in order to achieve its potential. A promising approach for programming such heterogeneous systems is the use of array programming. This style of programming relies on well known parallel patterns that can be easily translated into GPU or other accelerator code. However, only little work has been done on integrating such concepts in mainstream languages such as Java. In this work, we propose a new Array Function interface implemented with the new features from Java 8. While similar in spirit to the new Stream API of Java, our API follows a different design based on reusability and composability. We demonstrate that this API can be used to generate OpenCL code for a simple application. We present encouraging preliminary performance results showing the potential of our approach.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2627381&ftid=1503132&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:34:03>},
 }
 
 @inproceedings{Fraguela:2004:HTA:1066650.1066657,
@@ -1103,6 +1149,11 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {parallel languages},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1066657&ftid=316641&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Fraguela_2004_The.pdf},
+  notes = 	 {Distributed memory, and master-slave architecture, not quite relevant.},
+  review = 	 {fbie: rejected <2016-01-12 16:36:18>},
 }
 
 @article{Corbett:1996:VPF:233557.233558,
@@ -1123,6 +1174,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {data partitioning, parallel computing, parallel file system},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=233558&ftid=27217&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:36:33>},
 }
 
 @inproceedings{Bernecky:2015:AEP:2774959.2774962,
@@ -1141,6 +1195,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {APL, HPC, SAC, algorithms, expressiveness, functional array languages, parallelism, readability},
+  abstract = 	 { Programming with abstract, mathematical expressions offers benefits including terser programs, easier communication of algorithms, ability to prove theorems about algorithms, increased parallelism, and improved programming productivity. Common belief is that higher levels of abstraction imply a larger semantic gap between the user and computer and, therefore, typically slower execution, whether sequential or parallel. In recent years, domain-specific languages have been shown to close this gap through sophisticated optimizations benefitting from domain-specific knowledge. In this paper, we demonstrate that the semantic gap can also be closed for non-domain-specific functional array languages, without requiring embedding of language-specific semantic knowledge into the compiler tool chain. We present a simple example of APL-style programs, compiled into C-code that outperform equivalent C programs in both sequential and parallel (OpenMP) environments. We offer insights into abstract expressionist programming, by comparing the characteristics and performance of a numerical relaxation benchmark written in C99, C99 with OpenMP directives, scheduling code, and pragmas, and in , a functional array language. We compare three algorithmic styles: if/then/else, hand-optimized loop splitting, and an abstract, functional style whose roots lie in APL. We show that the algorithms match or outperform serial C, and that the hand-optimized and abstract styles generate identical code, and so have identical performance. Furthermore, parallel variants also outperform the best OpenMP C variant by up to a third, with no source code modifications. Preserving an algorithm&#039;s abstract expression during optimization opens the door to generation of radically different code for different architectures. [The author list is wrong, but I see no way to correct, despite the fact that EasyChair has the correct author list.] },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2774962&ftid=1589049&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:38:31>},
 }
 
 @article{Holk:2014:RMM:2714064.2660244,
@@ -1161,6 +1218,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {algebraic data types, compilers, first class procedures, gpu, harlan, implementation, opencl, optimization, parallel programming, performance, recursion},
+  abstract = 	 {Graphics processing units (GPUs) can effectively accelerate many applications, but their applicability has been largely limited to problems whose solutions can be expressed neatly in terms of linear algebra. Indeed, most GPU programming languages limit the user to simple data structures - typically only multidimensional rectangular arrays of scalar values. Many algorithms are more naturally expressed using higher level language features, such as algebraic data types (ADTs) and first class procedures, yet building these structures in a manner suitable for a GPU remains a challenge. We present a region-based memory management approach that enables rich data structures in Harlan, a language for data parallel computing. Regions enable rich data structures by providing a uniform representation for pointers on both the CPU and GPU and by providing a means of transferring entire data structures between CPU and GPU memory. We demonstrate Harlan's increased expressiveness on several example programs and show that Harlan performs well on more traditional data-parallel problems.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2660244&ftid=1506842&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:38:39>},
 }
 
 @inproceedings{Holk:2014:RMM:2660193.2660244,
@@ -1179,6 +1239,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {algebraic data types, compilers, first class procedures, gpu, harlan, implementation, opencl, optimization, parallel programming, performance, recursion},
+  abstract = 	 {Graphics processing units (GPUs) can effectively accelerate many applications, but their applicability has been largely limited to problems whose solutions can be expressed neatly in terms of linear algebra. Indeed, most GPU programming languages limit the user to simple data structures - typically only multidimensional rectangular arrays of scalar values. Many algorithms are more naturally expressed using higher level language features, such as algebraic data types (ADTs) and first class procedures, yet building these structures in a manner suitable for a GPU remains a challenge. We present a region-based memory management approach that enables rich data structures in Harlan, a language for data parallel computing. Regions enable rich data structures by providing a uniform representation for pointers on both the CPU and GPU and by providing a means of transferring entire data structures between CPU and GPU memory. We demonstrate Harlan's increased expressiveness on several example programs and show that Harlan performs well on more traditional data-parallel problems.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2660244&ftid=1506842&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:38:45>},
 }
 
 @inproceedings{Walinsky:1990:FPL:91556.91610,
@@ -1196,6 +1259,11 @@
  acmid = {91610},
  publisher = {ACM},
  address = {New York, NY, USA},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=91610&ftid=34538&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Walinsky_1990_A.pdf},
+  notes = 	 {High-level parallelism in the FP language.},
+  review = 	 {fbie: accepted <2016-01-12 16:41:13>},
 }
 
 @inproceedings{Ross:2015:PPM:2768177.2768183,
@@ -1214,6 +1282,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {2D RISC Array, Adapteva Epiphany, Energy Efficiency, MPI, Many-core, NoC, Parallella},
+  abstract = 	 {The Adapteva Epiphany many-core architecture comprises a 2D tiled mesh Network-on-Chip (NoC) of low-power RISC cores with minimal uncore functionality. It offers high computational energy efficiency for both integer and floating point calculations as well as parallel scalability. Yet despite the interesting architectural features, a compelling programming model has not been presented to date. This paper demonstrates an efficient parallel programming model for the Epiphany architecture based on the Message Passing Interface (MPI) standard. Using MPI exploits the similarities between the Epiphany architecture and a conventional parallel distributed cluster of serial cores. Our approach enables MPI codes to execute on the RISC array processor with little modification and achieve high performance. We report benchmark results for the threaded MPI implementation of four algorithms (dense matrix-matrix multiplication, N-body particle interaction, a five-point 2D stencil update, and 2D FFT) and highlight the importance of fast inter-core communication for the architecture.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2768183&ftid=1601844&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:41:32>},
 }
 
 @inproceedings{Henriksen:2014:BCI:2627373.2627388,
@@ -1233,6 +1304,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {autoparallelization, functional language, subscripts bounds checking},
+  abstract = 	 {This paper presents an analysis for bounds checking of array subscripts that lifts checking assertions to program level under the form of an arbitrarily-complex predicate (inspector), whose runtime evaluation guards the execution of the code of interest. Separating the predicate from the computation makes it more amenable to optimization, and allows it to be split into a cascade of sufficient conditions of increasing complexity that optimizes the common-inspection path. While synthesizing the bounds checking invariant resembles type checking techniques, we rely on compiler simplification and runtime evaluation rather than employing complex inference and annotation systems that might discourage the non-specialist user. We integrate the analysis in the compiler's repertoire of Futhark: a purely-functional core language supporting map-reduce nested parallelism on regular arrays, and show how the high-level language invariants enable a relatively straightforward analysis. Finally, we report a qualitative evaluation of our technique on three real-world applications from the financial domain that indicates that the runtime overhead of predicates is negligible.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2627388&ftid=1503139&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:42:34>},
 }
 
 @inproceedings{Rodrigues:2014:TPS:2555243.2555268,
@@ -1251,6 +1325,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {algorithmic skeletons, loop fusion, parallel programming},
+  abstract = 	 {Functional algorithmic skeletons promise a high-level programming interface for distributed-memory clusters that free developers from concerns of task decomposition, scheduling, and communication. Unfortunately, prior distributed functional skeleton frameworks do not deliver performance comparable to that achievable in a low-level distributed programming model such as C with MPI and OpenMP, even when used in concert with high-performance array libraries. There are several causes: they do not take advantage of shared memory on each cluster node; they impose a fixed partitioning strategy on input data; and they have limited ability to fuse loops involving skeletons that produce a variable number of outputs per input. We address these shortcomings in the Triolet programming language through a modular library design that separates concerns of parallelism, loop nesting, and data partitioning. We show how Triolet substantially improves the parallel performance of algorithms involving array traversals and nested, variable-size loops over what is achievable in Eden, a distributed variant of Haskell. We further demonstrate how Triolet can substantially simplify parallel programming relative to C with MPI and OpenMP while achieving 23--100% of its performance on a 128-core cluster.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2555268&ftid=1429535&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:43:51>},
 }
 
 @article{Rodrigues:2014:TPS:2692916.2555268,
@@ -1271,6 +1348,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {algorithmic skeletons, loop fusion, parallel programming},
+  abstract = 	 {Functional algorithmic skeletons promise a high-level programming interface for distributed-memory clusters that free developers from concerns of task decomposition, scheduling, and communication. Unfortunately, prior distributed functional skeleton frameworks do not deliver performance comparable to that achievable in a low-level distributed programming model such as C with MPI and OpenMP, even when used in concert with high-performance array libraries. There are several causes: they do not take advantage of shared memory on each cluster node; they impose a fixed partitioning strategy on input data; and they have limited ability to fuse loops involving skeletons that produce a variable number of outputs per input. We address these shortcomings in the Triolet programming language through a modular library design that separates concerns of parallelism, loop nesting, and data partitioning. We show how Triolet substantially improves the parallel performance of algorithms involving array traversals and nested, variable-size loops over what is achievable in Eden, a distributed variant of Haskell. We further demonstrate how Triolet can substantially simplify parallel programming relative to C with MPI and OpenMP while achieving 23--100% of its performance on a 128-core cluster.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2555268&ftid=1429535&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:43:55>},
 }
 
 @inproceedings{Jones:2005:FVP:1046192.1046207,
@@ -1289,6 +1369,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {NIOS, VLIW, compiler, kernels, parallelism, synthesis},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1046207&ftid=303790&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:44:07>},
 }
 
 @inproceedings{Haveraaen:2013:HDP:2532352.2532358,
@@ -1307,6 +1390,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Fortran, co-arrays, compute globally -- return locally, coordinate-free programming, high performance computing, scientific computing},
+  abstract = 	 {High-performance software, as all software, continuously evolves. Besides the normal changes in user requirements, e.g., the wish to solve a variation of a scientific problem, such software is also challenged by a flood of new technologies that promise higher performance and better energy utilization. Continuously adapting HPC codes for multicore processors and many-core accelerators while also adapting to new user requirements, however, drains human resources and prevents utilization of more cost-effective hardware. Here we present some ideas for dealing with software variability in the PDE domain, namely the use of coordinate-free numerics for achieving flexibility. We also show how Fortran, over the last few decades, has changed to become a language well suited for state-of-the-art software development. Fortran's new coarray distributed data structure, the language's class mechanism and side-effect-free, pure function capability provide the scaffolding on which we implement high performance software. These features empower compilers to organize parallel computations with efficient communication. We present some programming patterns that support asynchronous evaluation of expressions comprised of parallel operations on distributed data.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2532358&ftid=1411584&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:45:22>},
 }
 
 @inproceedings{Wallace:1988:DMA:55364.55405,
@@ -1324,6 +1410,8 @@
  acmid = {55405},
  publisher = {ACM},
  address = {New York, NY, USA},
+  abstract = 	 {},
+  review = 	 {fbie: rejected <2016-01-12 16:45:35>},
 }
 
 @inproceedings{Aguston:2014:PHV:2555243.2555275,
@@ -1342,6 +1430,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {parallelization, skeletonization, vectorization},
+  abstract = 	 {Tools that provide optimization hints for program developers are facing severe obstacles and often unable to provide meaningful guidance on how to parallelize real--life applications. The main reason is due to the high code complexity and its large size when considering commercially valuable code. Such code is often rich with pointers, heavily nested conditional statements, nested while--based loops, function calls, etc. These constructs prevent existing compiler analysis from extracting the full parallelization potential. We propose a new paradigm to overcome this issue by automatically transforming the code into a much simpler skeleton-like form that is more conductive for auto-parallelization. We then apply existing tools of source--level automatic parallelization on the skeletonized code in order to expose possible parallelization patterns. The skeleton code, along with the parallelized version, are then provided to the programmer in the form of an IDE (Integrated Development Environment) recommendation. The proposed skeletonization algorithm replaces pointers by integer indexes and C-struct references by references to multi-dimensional arrays. This is because automatic parallelizers cannot handle pointer expressions. For example, while(p != NULL){ p-&#62;val++; p=p-&#62;next; } will be skeletonized to the parallelizable for(Ip=0;Ip<N;Ip++){ Aval[Ip]++; } where Aval[] holds the embedding of the original list. It follows that the main goal of the skeletonization process is to embed pointer-based data structures into arrays. Though the skeletonized code is not semantically equivalent to the original code, it points out a possible parallelization pattern for this code segment and can be used as an effective parallelization hint to the programmer. We applied the method on several representative benchmarks from SPEC CPU 2000 and reached up to 80% performance gain after several sequential code segments had been manually parallelized based on the parallelization patterns of the generated skeletons. In a different set of experiments we tried to estimate the potential of skeletonization for a larger set of programs in SPEC 2000 and obtained an estimation of 27% additional loops that can be parallelized/vectorized due to skeletonization.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2555275&ftid=1429547&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:46:55>},
 }
 
 @article{Aguston:2014:PHV:2692916.2555275,
@@ -1362,6 +1453,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {parallelization, skeletonization, vectorization},
+  abstract = 	 {Tools that provide optimization hints for program developers are facing severe obstacles and often unable to provide meaningful guidance on how to parallelize real--life applications. The main reason is due to the high code complexity and its large size when considering commercially valuable code. Such code is often rich with pointers, heavily nested conditional statements, nested while--based loops, function calls, etc. These constructs prevent existing compiler analysis from extracting the full parallelization potential. We propose a new paradigm to overcome this issue by automatically transforming the code into a much simpler skeleton-like form that is more conductive for auto-parallelization. We then apply existing tools of source--level automatic parallelization on the skeletonized code in order to expose possible parallelization patterns. The skeleton code, along with the parallelized version, are then provided to the programmer in the form of an IDE (Integrated Development Environment) recommendation. The proposed skeletonization algorithm replaces pointers by integer indexes and C-struct references by references to multi-dimensional arrays. This is because automatic parallelizers cannot handle pointer expressions. For example, while(p != NULL){ p-&#62;val++; p=p-&#62;next; } will be skeletonized to the parallelizable for(Ip=0;Ip<N;Ip++){ Aval[Ip]++; } where Aval[] holds the embedding of the original list. It follows that the main goal of the skeletonization process is to embed pointer-based data structures into arrays. Though the skeletonized code is not semantically equivalent to the original code, it points out a possible parallelization pattern for this code segment and can be used as an effective parallelization hint to the programmer. We applied the method on several representative benchmarks from SPEC CPU 2000 and reached up to 80% performance gain after several sequential code segments had been manually parallelized based on the parallelization patterns of the generated skeletons. In a different set of experiments we tried to estimate the potential of skeletonization for a larger set of programs in SPEC 2000 and obtained an estimation of 27% additional loops that can be parallelized/vectorized due to skeletonization.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2555275&ftid=1429547&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:46:59>},
 }
 
 @inproceedings{Oancea:2012:FSG:2364474.2364484,
@@ -1380,6 +1474,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {autoparallelization, functional language, memory coalescing, strength reduction, tiling},
+  abstract = 	 {This paper presents a real-world pricing kernel for financial derivatives and evaluates the language and compiler tool chain that would allow expressive, hardware-neutral algorithm implementation and efficient execution on graphics-processing units (GPU). The language issues refer to preserving algorithmic invariants, e.g., inherent parallelism made explicit by map-reduce-scan functional combinators. Efficient execution is achieved by manually; applying a series of generally-applicable compiler transformations that allows the generated-OpenCL code to yield speedups as high as 70x and 540x on a commodity mobile and desktop GPU, respectively. Apart from the concrete speed-ups attained, our contributions are twofold: First, from a language perspective;, we illustrate that even state-of-the-art auto-parallelization techniques are incapable of discovering all the requisite data parallelism when rendering the functional code in Fortran-style imperative array processing form. Second, from a performance perspective;, we study which compiler transformations are necessary to map the high-level functional code to hand-optimized OpenCL code for GPU execution. We discover a rich optimization space with nontrivial trade-offs and cost models. Memory reuse in map-reduce patterns, strength reduction, branch divergence optimization, and memory access coalescing, exhibit significant impact individually. When combined, they enable essentially full utilization of all GPU cores. Functional programming has played a crucial double role in our case study: Capturing the naturally data-parallel structure of the pricing algorithm in a transparent, reusable and entirely hardware-independent fashion; and supporting the correctness of the subsequent compiler transformations to a hardware-oriented target language by a rich class of universally valid equational properties. Given the observed difficulty of automatically parallelizing imperative sequential code and the inherent labor of porting hardware-oriented and -optimized programs, our case study suggests that functional programming technology can facilitate high-level; expression of leading-edge performant portable; high-performance systems for massively parallel hardware architectures.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364484&ftid=1282821&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:48:35>},
 }
 
 @inproceedings{Geuns:2014:TAM:2609248.2609252,
@@ -1398,6 +1495,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {automatic parallelization, dataflow, real-time},
+  abstract = 	 {Modern real-time stream processing applications, such as Software Defined Radio (SDR) applications, typically have multiple modes and multi-rate behavior. Modes are often described using while-loops whereas multi-rate behavior is frequently described using arrays with pseudo-random indexing patterns. The temporal properties of these applications have to be analyzed in order to determine whether optimizations improve throughput. However, no method exists in which a temporal analysis model is derived from these applications that is suitable for temporal analysis and optimization. In this paper an approach is presented in which a concurrency model for the temporal analysis and optimization of stream processing applications is automatically extracted from a parallelized sequential application. With this model it can be determined whether a program transformation improves the worst-case temporal behavior. The key feature of the presented approach is that arrays with arbitrary indexing patterns can be described, allowing the description of multi-rate behavior, while still supporting the description of modes using while-loops. In the model, an over-approximation of the synchronization dependencies is used in case of arrays with pseudo-random indexing patterns. Despite the use of this approximation, we show that deadlock is only concluded from the model if there is also deadlock in the parallelized application. The relevance and applicability of the presented approach are demonstrated using an Orthogonal Frequency-Division Multiplexing (OFDM) transmitter application.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2609252&ftid=1469668&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:49:46>},
 }
 
 @inproceedings{Pham:2015:GDI:2791347.2791363,
@@ -1417,6 +1517,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {HPC systems, data organization, data-intensive computing, database systems, parallel programs, scientific data management},
+  abstract = 	 {In this paper, we present GEN an interface generator that takes user-supplied C declarations and provides the necessary interface needed to load and access data from common scientific array databases such as SciDB and Rasdaman. GEN can be used for storing the output of parallel computations directly into the database and automates the previously used inefficient ingestion process which requires development of special database schemas for each computation. Further, GEN requires no modifications to existing C code and can build a working interface in minutes. We show how GEN can be used for Cosmology analysis programs to output data sets in real-time to a database and use for subsequent analysis. We show that GEN introduces modest overhead in program execution but is more efficient than writing to files and then loading. More significantly, it significantly reduces the programmatic overhead of learning new database languages.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2791363&ftid=1601941&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 16:50:21>},
 }
 
 @article{Hwang:1995:AOS:209937.209949,
@@ -1436,6 +1539,11 @@
  acmid = {209949},
  publisher = {ACM},
  address = {New York, NY, USA},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=209949&ftid=47044&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Hwang_1995_An.pdf},
+  notes = 	 {Optimizing array accesses in Fortran.},
+  review = 	 {fbie: accepted <2016-01-12 16:52:18>},
 }
 
 @inproceedings{Hwang:1995:AOS:209936.209949,
@@ -1453,6 +1561,9 @@
  acmid = {209949},
  publisher = {ACM},
  address = {New York, NY, USA},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=209949&ftid=47044&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:52:24>},
 }
 
 @article{Stucki:2015:RVP:2858949.2784739,
@@ -1473,6 +1584,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Arrays, Data Structures, Immutable, Radix-Balanced, Relaxed-Radix-Balanced, Sequences, Trees, Vectors},
+  abstract = 	 { State-of-the-art immutable collections have wildly differing performance characteristics across their operations, often forcing programmers to choose different collection implementations for each task. Thus, changes to the program can invalidate the choice of collections, making code evolution costly. It would be desirable to have a collection that performs well for a broad range of operations. To this end, we present the RRB-Vector, an immutable sequence collection that offers good performance across a large number of sequential and parallel operations. The underlying innovations are: (1) the Relaxed-Radix-Balanced (RRB) tree structure, which allows efficient structural reorganization, and (2) an optimization that exploits spatio-temporal locality on the RRB data structure in order to offset the cost of traversing the tree. In our benchmarks, the RRB-Vector speedup for parallel operations is lower bounded by 7x when executing on 4 CPUs of 8 cores each. The performance for discrete operations, such as appending on either end, or updating and removing elements, is consistently good and compares favorably to the most important immutable sequence collections in the literature and in use today. The memory footprint of RRB-Vector is on par with arrays and an order of magnitude less than competing collections. },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2784739&ftid=1616034&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:53:40>},
 }
 
 @inproceedings{Stucki:2015:RVP:2784731.2784739,
@@ -1491,6 +1605,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Arrays, Data Structures, Immutable, Radix-Balanced, Relaxed-Radix-Balanced, Sequences, Trees, Vectors},
+  abstract = 	 { State-of-the-art immutable collections have wildly differing performance characteristics across their operations, often forcing programmers to choose different collection implementations for each task. Thus, changes to the program can invalidate the choice of collections, making code evolution costly. It would be desirable to have a collection that performs well for a broad range of operations. To this end, we present the RRB-Vector, an immutable sequence collection that offers good performance across a large number of sequential and parallel operations. The underlying innovations are: (1) the Relaxed-Radix-Balanced (RRB) tree structure, which allows efficient structural reorganization, and (2) an optimization that exploits spatio-temporal locality on the RRB data structure in order to offset the cost of traversing the tree. In our benchmarks, the RRB-Vector speedup for parallel operations is lower bounded by 7x when executing on 4 CPUs of 8 cores each. The performance for discrete operations, such as appending on either end, or updating and removing elements, is consistently good and compares favorably to the most important immutable sequence collections in the literature and in use today. The memory footprint of RRB-Vector is on par with arrays and an order of magnitude less than competing collections. },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2784739&ftid=1616034&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:53:43>},
 }
 
 @inproceedings{Hannig:2002:EEN:564870.564895,
@@ -1509,6 +1626,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {hardware mapping, low power, processor arrays},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=564895&ftid=86359&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Hannig_2002_Energy.pdf},
+  review = 	 {fbie: rejected <2016-01-12 16:54:41>},
 }
 
 @inproceedings{Henriksen:2013:TGA:2502323.2502328,
@@ -1527,6 +1648,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {autoparallelization, functional language, fusion},
+  abstract = 	 {Fusion is one of the most important code transformations as it has the potential to substantially optimize both the memory hierarchy time overhead and, sometimes asymptotically, the space requirement. In functional languages, fusion is naturally and relatively easily derived as a producer-consumer relation between program constructs that expose a richer, higher-order algebra of program invariants, such as the map-reduce list homomorphisms. In imperative languages, fusing producer-consumer loops requires dependency analysis on arrays applied at loop-nest level. Such analysis, however, has often been labeled as "heroic effort" and, if at all, is supported only in its simplest and most conservative form in industrial compilers. Related implementations in the functional context typically apply fusion only when the to-be-fused producer is used exactly once, i.e., in the consumer. This guarantees that the transformation is conservative: the resulting program does not duplicate computation. We show that the above restriction is more conservative than needed, and present a structural-analysis technique, inspired from the T1--T2 transformation for reducible data flow, that enables fusion even in some cases when the producer is used in different consumers and without duplicating computation. We report an implementation of the fusion algorithm for a functional-core language, named L0, which is intended to support nested parallelism across regular multi-dimensional arrays. We succinctly describe L0's semantics and the compiler infrastructure on which the fusion transformation relies, and present compiler-generated statistics related to fusion on a set of six benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2502328&ftid=1397476&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:55:42>},
 }
 
 @inproceedings{Reddi:1978:MCP:800127.804072,
@@ -1545,6 +1669,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Modular computers, Parallel computer architecture, Petri nets, Reconfigurable computers},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=804072&ftid=59880&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Reddi_1978_A.pdf},
+  review = 	 {fbie: rejected <2016-01-12 16:56:32>},
 }
 
 @inproceedings{Baskaran:2008:ADM:1345206.1345210,
@@ -1563,6 +1691,8 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {data movement, graphics processor unit, multi-level tiling, scratchpad memory},
+  abstract = 	 {Several parallel architectures such as GPUs and the Cell processor have fast explicitly managed on-chip memories, in addition to slow off-chip memory. They also have very high computational power with multiple levels of parallelism. A significant challenge in programming these architectures is to effectively exploit the parallelism available in the architecture and manage the fast memories to maximize performance. In this paper we develop an approach to effective automatic data management for on-chip memories, including creation of buffers in on-chip (local) memories for holding portions of data accessed in a computational block, automatic determination of array access functions of local buffer references, and generation of code that moves data between slow off-chip memory and fast local memories. We also address the problem of mapping computation in regular programs to multi-level parallel architectures using a multi-level tiling approach, and study the impact of on-chip memory availability on the selection of tile sizes at various levels. Experimental results on a GPU demonstrate the effectiveness of the proposed approach.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1345210&ftid=506004&dwn=1&CFID=574773947&CFTOKEN=83431304},
 }
 
 @article{Pugh:1998:CAD:291889.291900,
