@@ -17,6 +17,7 @@
  keywords = {Array-oriented programming, CUDA, Code generation, Compilation, Functional programming, Multi-core CPU},
   abstract = 	 {Functional languages provide a solid foundation on which complex optimization passes can be designed to exploit parallelism available in the underlying system. Their mathematical foundations enable high-level optimizations that would be impossible in traditional imperative languages. This makes them uniquely suited for generation of efficient target code for parallel systems, such as multiple Central Processing Units (CPUs) or highly data-parallel Graphics Processing Units (GPUs). Such systems are becoming the mainstream for scientific and commodity desktop computing. Writing performance portable code for such systems using low-level languages requires significant effort from a human expert. This paper presents NOVA, a functional language and compiler for multi-core CPUs and GPUs. The NOVA language is a polymorphic, statically-typed functional language with a suite of higher-order functions which are used to express parallelism. These include map, reduce and scan. The NOVA compiler is a light-weight, yet powerful, optimizing compiler. It generates code for a variety of target platforms that achieve performance comparable to competing languages and tools, including hand-optimized code. The NOVA compiler is stand-alone and can be easily used as a target for higher-level or domain specific languages or embedded in other applications. We evaluate NOVA against two competing approaches: the Thrust library and hand-written CUDA C. NOVA achieves comparable performance to these approaches across a range of benchmarks. NOVA-generated code also scales linearly with the number of processor cores across all compute-bound benchmarks.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2627375&ftid=1503126&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  review = 	 {fbie: accepted <2016-01-12 15:08:12>},
 }
 
 @article{Keller:2010:RSP:1932681.1863582,
@@ -39,6 +40,7 @@
  keywords = {arrays, data parallelism, haskell},
   abstract = 	 {We present a novel approach to regular, multi-dimensional arrays in Haskell. The main highlights of our approach are that it (1) is purely functional, (2) supports reuse through shape polymorphism, (3) avoids unnecessary intermediate structures rather than relying on subsequent loop fusion, and (4) supports transparent parallelisation. We show how to embed two forms of shape polymorphism into Haskell's type system using type classes and type families. In particular, we discuss the generalisation of regular array transformations to arrays of higher rank, and introduce a type-safe specification of array slices. We discuss the runtime performance of our approach for three standard array algorithms. We achieve absolute performance comparable to handwritten C code. At the same time, our implementation scales well up to 8 processor cores.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863582&ftid=845214&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  review = 	 {fbie: accepted <2016-01-12 15:08:58>},
 }
 
 @inproceedings{Keller:2010:RSP:1863543.1863582,
@@ -59,6 +61,7 @@
  keywords = {arrays, data parallelism, haskell},
   abstract = 	 {We present a novel approach to regular, multi-dimensional arrays in Haskell. The main highlights of our approach are that it (1) is purely functional, (2) supports reuse through shape polymorphism, (3) avoids unnecessary intermediate structures rather than relying on subsequent loop fusion, and (4) supports transparent parallelisation. We show how to embed two forms of shape polymorphism into Haskell's type system using type classes and type families. In particular, we discuss the generalisation of regular array transformations to arrays of higher rank, and introduce a type-safe specification of array slices. We discuss the runtime performance of our approach for three standard array algorithms. We achieve absolute performance comparable to handwritten C code. At the same time, our implementation scales well up to 8 processor cores.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863582&ftid=845214&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  review = 	 {fbie: accepted <2016-01-12 15:09:02>},
 }
 
 @article{McKenney:1992:GPC:130616.130622,
@@ -101,6 +104,7 @@
  keywords = {arrays, data parallelism, haskell},
   abstract = 	 {Existing approaches to higher-order vectorisation, also known as flattening nested data parallelism, do not preserve the asymptotic work complexity of the source program. Straightforward examples, such as sparse matrix-vector multiplication, can suffer a severe blow-up in both time and space, which limits the practicality of this method. We discuss why this problem arises, identify the mis-handling of index space transforms as the root cause, and present a solution using a refined representation of nested arrays. We have implemented this solution in Data Parallel Haskell (DPH) and present benchmarks showing that realistic programs, which used to suffer the blow-up, now have the correct asymptotic work complexity. In some cases, the asymptotic complexity of the vectorised program is even better than the original.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364564&ftid=1282930&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  review = 	 {fbie: accepted <2016-01-12 15:09:45>},
 }
 
 @article{Lippmeier:2012:WEH:2398856.2364564,
@@ -121,6 +125,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {arrays, data parallelism, haskell},
+  abstract = 	 {Existing approaches to higher-order vectorisation, also known as flattening nested data parallelism, do not preserve the asymptotic work complexity of the source program. Straightforward examples, such as sparse matrix-vector multiplication, can suffer a severe blow-up in both time and space, which limits the practicality of this method. We discuss why this problem arises, identify the mis-handling of index space transforms as the root cause, and present a solution using a refined representation of nested arrays. We have implemented this solution in Data Parallel Haskell (DPH) and present benchmarks showing that realistic programs, which used to suffer the blow-up, now have the correct asymptotic work complexity. In some cases, the asymptotic complexity of the vectorised program is even better than the original.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364564&ftid=1282930&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:09:53>},
 }
 
 @inproceedings{Chakravarty:2013:DPH:2502323.2508151,
@@ -139,6 +146,11 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {array programming, code optimisation, data parallelism, haskell},
+  abstract = 	 {The implicit data parallelism in collective operations on aggregate data structures constitutes an attractive parallel programming model for functional languages. Beginning with our work on integrating nested data parallelism into Haskell, we explored a variety of different approaches to array-centric data parallel programming in Haskell, experimented with a range of code generation and optimisation strategies, and targeted both multicore CPUs and GPUs. In addition to practical tools for parallel programming, the outcomes of this research programme include more widely applicable concepts, such as Haskell's type families and stream fusion. In this talk, I will contrast the different approaches to data parallel programming that we explored. I will discuss their strengths and weaknesses and review what we have learnt in the course of exploring the various options. This includes our experience of implementing these approaches in the Glasgow Haskell Compiler as well the experimental results that we have gathered so far. Finally, I will outline the remaining open challenges and our plans for the future. This talk is based on joint work with Gabriele Keller, Sean Lee, Roman Leshchinskiy, Ben Lippmeier, Trevor L. McDonell, and Simon Peyton Jones.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2508151&ftid=1397480&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  fullTextFile = {.slirm_cache/Chakravarty_2013_Data.pdf},
+  notes = 	 {This is a talk, the paper consists only of the abstract.},
+  review = 	 {fbie: accepted <2016-01-12 15:12:05>},
 }
 
 @inproceedings{Chakravarty:2011:AHA:1926354.1926358,
@@ -157,6 +169,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {arrays, data parallelism, dynamic compilation, gpgpu, haskell, skeletons},
+  abstract = 	 {Current GPUs are massively parallel multicore processors optimised for workloads with a large degree of SIMD parallelism. Good performance requires highly idiomatic programs, whose development is work intensive and requires expert knowledge. To raise the level of abstraction, we propose a domain-specific high-level language of array computations that captures appropriate idioms in the form of collective array operations. We embed this purely functional array language in Haskell with an online code generator for NVIDIA's CUDA GPGPU programming environment. We regard the embedded language's collective array operations as algorithmic skeletons; our code generator instantiates CUDA implementations of those skeletons to execute embedded array programs. This paper outlines our embedding in Haskell, details the design and implementation of the dynamic code generator, and reports on initial benchmark results. These results suggest that we can compete with moderately optimised native CUDA code, while enabling much simpler source programs.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1926358&ftid=907606&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:13:14>},
 }
 
 @article{Lippmeier:2012:GPA:2430532.2364511,
@@ -177,6 +192,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {arrays, data parallelism, haskell},
+  abstract = 	 {We present a refined approach to parallel array fusion that uses indexed types to specify the internal representation of each array. Our approach aids the client programmer in reasoning about the performance of their program in terms of the source code. It also makes the intermediate code easier to transform at compile-time, resulting in faster compilation and more reliable runtimes. We demonstrate how our new approach improves both the clarity and performance of several end-user written programs, including a fluid flow solver and an interpolator for volumetric data.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364511&ftid=1282872&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  notes = 	 {Not quite sure, will accept it tentatively.},
+  review = 	 {fbie: accepted <2016-01-12 15:14:07>},
 }
 
 @inproceedings{Lippmeier:2012:GPA:2364506.2364511,
@@ -195,6 +214,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {arrays, data parallelism, haskell},
+  abstract = 	 {We present a refined approach to parallel array fusion that uses indexed types to specify the internal representation of each array. Our approach aids the client programmer in reasoning about the performance of their program in terms of the source code. It also makes the intermediate code easier to transform at compile-time, resulting in faster compilation and more reliable runtimes. We demonstrate how our new approach improves both the clarity and performance of several end-user written programs, including a fluid flow solver and an interpolator for volumetric data.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364511&ftid=1282872&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:14:17>},
 }
 
 @article{Lippmeier:2011:EPS:2096148.2034684,
@@ -215,6 +237,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {arrays, data parallelism, haskell},
+  abstract = 	 {Stencil convolution is a fundamental building block of many scientific and image processing algorithms. We present a declarative approach to writing such convolutions in Haskell that is both efficient at runtime and implicitly parallel. To achieve this we extend our prior work on the Repa array library with two new features: partitioned and cursored arrays. Combined with careful management of the interaction between GHC and its back-end code generator LLVM, we achieve performance comparable to the standard OpenCV library.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2034684&ftid=1035453&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:15:13>},
 }
 
 @inproceedings{Lippmeier:2011:EPS:2034675.2034684,
@@ -233,6 +258,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {arrays, data parallelism, haskell},
+  abstract = 	 {Stencil convolution is a fundamental building block of many scientific and image processing algorithms. We present a declarative approach to writing such convolutions in Haskell that is both efficient at runtime and implicitly parallel. To achieve this we extend our prior work on the Repa array library with two new features: partitioned and cursored arrays. Combined with careful management of the interaction between GHC and its back-end code generator LLVM, we achieve performance comparable to the standard OpenCV library.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2034684&ftid=1035453&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:15:20>},
 }
 
 @inproceedings{Herhut:2009:CCS:1481839.1481847,
@@ -251,6 +279,8 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {concurrent side-effects, functional programming languages, non-determinism},
+  abstract = 	 {With the rising variety of hardware designs for multi-core systems, the effectiveness in exploiting implicit concurrency of programs plays a more vital role for programming such systems than ever before. We believe that a combination of a data-parallel approach with a declarative programming-style is up to that task: Data-parallel approaches are known to enable compilers to make efficient use of multi-processors without requiring low-level program annotations. Combining the data-parallel approach with a declarative programming-style guarantees semantic equivalence between sequential and concurrent executions of data parallel operations. Furthermore, the side-effect free setting and explicit model of dependencies enables compilers to maximise the size of the data-parallel program sections. However, the strength of the rigidity of the declarative approach also constitutes its weakness: Being bound to observe all data dependencies categorically rules out the use of side-effecting operations within data-parallel sections. Not only does this limit the size of these regions in certain situations, but it may also hamper an effective workload distribution. Considering side effects such as plotting individual pixels of an image or output for debugging purposes, there are situations where a non-deterministic order of side-effects would not be considered harmful at all. We propose a mechanism for enabling such non-determinism on the execution of side-effecting operations within data-parallel sections without sacrificing the side-effect free setting in general. Outside of the data-parallel sections we ensure single-threading of side-effecting operations using uniqueness typing. Within data-parallel operations however we allow the side-effecting operations of different threads to occur in any order, as long as effects of different threads are not interleaved. Furthermore, we still model the dependencies arising from the manipulated states within the data parallel sections. This measure preserves the explicitness of all data dependencies and therefore it preserves the transformational potential of any restructuring compiler.},
+  review = 	 {fbie: rejected <2016-01-12 15:16:34>},
 }
 
 @inproceedings{Grelck:2007:SOS:1248648.1248654,
@@ -269,6 +299,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {S<sc>a</sc>C, Single assignment C, automatic parallelisation, data parallel programming, generic array programming, multicore programming},
+  abstract = 	 {The advent of multicore processors has raised new demand for harnessing concurrency in the software mass market. We summarise our previous work on the data parallel, functional array processing language SaC. Its compiler technology is geared towards highly runtime-efficient support for shared memory multiprocessors and, thus, is readily applicable to today's off-the-shelf multicore systems.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1248654&ftid=415640&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:17:02>},
 }
 
 @inproceedings{Svensson:2015:CDT:2808091.2808093,
@@ -287,6 +320,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Data-parallelism, GPU, Haskell, Multi-device, Scheduling},
+  abstract = 	 { High-level domain-specific languages for array processing on the GPU are increasingly common, but they typically only run on a single GPU. As computational power is distributed across more devices, languages must target multiple devices simultaneously. To this end, we present a compositional translation that fissions data-parallel programs in the Accelerate language, allowing subsequent compiler and runtime stages to map computations onto multiple devices for improved performance---even programs that begin as a single data-parallel kernel. },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2808093&ftid=1614992&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  notes = 	 {GPUs are not a relevant topic.},
+  review = 	 {fbie: rejected <2016-01-12 15:17:40>},
 }
 
 @inproceedings{Svensson:2012:PPH:2364474.2364477,
@@ -305,6 +342,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {array programming, data parallelism, dynamic compilation, embedded language},
+  abstract = 	 {Nowadays, performance in processors is increased by adding more cores or wider vector units, or by combining accelerators like GPUs and traditional cores on a chip. Programming for these diverse architectures is a challenge. We would like to exploit all the resources at hand without putting too much burden on the programmer. Ideally, the programmer should be presented with a machine model abstracted from the specific number of cores, SIMD width or the existence of a GPU or not. Intel's Array Building Blocks (ArBB) is a system that takes on these challenges. ArBB is a language for data parallel and nested data parallel programming, embedded in C++. By offering a retargetable dynamic compilation framework, it provides vectorisation and threading to programmers without the need to write highly architecture specific code. We aim to bring the same benefits to the Haskell programmer by implementing a Haskell frontend (embedding) of the ArBB system. We call this embedding EmbArBB. We use standard Haskell embedded language procedures to provide an interface to the ArBB functionality in Haskell. EmbArBB is work in progress and does not currently support all of the ArBB functionality. Some small programming examples illustrate how the Haskell embedding is used to write programs. ArBB code is short and to the point in both C++ and Haskell. Matrix multiplication has been benchmarked in sequential C++, ArBB in C++, EmbArBB and the Repa library. The C++ and the Haskell embeddings have almost identical performance, showing that the Haskell embedding does not impose any large extra overheads. Two image processing algorithms have also been benchmarked against Repa. In these benchmarks at least, EmbArBB performance is much better than that of the Repa library, indicating that building on ArBB may be a cheap and easy approach to exploiting data parallelism in Haskell.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364477&ftid=1282816&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:18:35>},
 }
 
 @inproceedings{Singh:2010:DDP:1708046.1708048,
@@ -323,6 +363,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {data-parallelsim},
+  abstract = 	 {The Accelerator project at Microsoft Research is developing a data-parallel library which provides a high level and accessible mechanism for producing code that executes on GPUs (via DirectX) and X64 multi-cores using SIMD instructions. An experimental target can also produced VHDL netlists which can be implemented on FPGA circuits. Although the library is developed in a mainstream imperative language the user programs in what is essentially a functional embedded domain specific language. The library provides data-parallel arrays and data-parallel operations e.g. element-wise operations, reductions, and matrix transformations. It is also possible to layer higher level domain specific data-parallel languages on top of Accelerator e.g. parallel bitonic sorters and mergers (e.g. Batcher's) have been expressed in a combinator based library in F# which has appealing properties for composing computations through the use of higher order functions. A key distinction between the Accelerator approach for generating GPU code and the CUDA path supported by NVidia is that Accelerator works on-line by jit-ing rather than off-line by generating programs that need to be further compiled and executed. This greatly simplifies to usage model for the programmer. The circuit generator target for Accelerator cannot work by ji-ting so it works in off-line mode. The ability to target three quite different architectures (GPUs, multi-core SIMD instructions and FPGAs) is possible due to the careful design of the Accelerator library by picking just the right level of abstraction for the data and its associated data-parallel operations. A series of examples have been developed including applications for image processing and motion estimation.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1708048&ftid=743279&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:20:55>},
 }
 
 @inproceedings{Claessen:2012:EAC:2103736.2103740,
@@ -341,6 +384,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {arrays, data parallelism, embedded domain specific language, general purpose gpu programming, haskell},
+  abstract = 	 {Graphics Processing Units (GPUs) are powerful computing devices that with the advent of CUDA/OpenCL are becomming useful for general purpose computations. Obsidian is an embedded domain specific language that generates CUDA kernels from functional descriptions. A symbolic array construction allows us to guarantee that intermediate arrays are fused away. However, the current array construction has some drawbacks; in particular, arrays cannot be combined efficiently. We add a new type of push arrays to the existing Obsidian system in order to solve this problem. The two array types complement each other, and enable the definition of combinators that both take apart and combine arrays, and that result in efficient generated code. This extension to Obsidian is demonstrated on a sequence of sorting kernels, with good results. The case study also illustrates the use of combinators for expressing the structure of parallel algorithms. The work presented is preliminary, and the combinators presented must be generalised. However, the raw speed of the generated kernels bodes well.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2103740&ftid=1093833&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:23:49>},
 }
 
 @inproceedings{Madsen:2015:FAS:2808091.2808094,
@@ -359,6 +405,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Arrays, Data parallelism, Embedded language, GPGPU, Haskell, Streams},
+  abstract = 	 { Regular array languages for high performance computing based on aggregate operations provide a convenient parallel programming model, which enables the generation of efficient code for SIMD architectures, such as GPUs. However, the data sets that can be processed with current implementations are severely constrained by the limited amount of main memory available in these architectures. In this paper, we propose an extension of the embedded array language Accelerate with a notion of sequences, resulting in a two level hierarchy which allows the programmer to specify a partitioning strategy which facilitates automatic resource allocation. Depending on the available memory, the runtime system processes the overall data set in streams of chunks appropriate to the hardware parameters. In this paper, we present the language design for the sequence operations, as well as the compilation and runtime support, and demonstrate with a set of benchmarks the feasibility of this approach. },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2808094&ftid=1614993&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:24:23>},
 }
 
 @inproceedings{Wernsing:2012:RHA:2380403.2380423,
@@ -377,6 +426,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {elastic computing, execution time, fpga, gpu, heterogeneous, optimization, performance prediction, racecar},
+  abstract = 	 {Embedded systems increasingly combine multi-core processors and heterogeneous resources such as graphics-processing units and field-programmable gate arrays. However, significant application design complexity for such systems caused by parallel programming and device-specific challenges has often led to untapped performance potential. Application developers targeting such systems currently must determine how to parallelize computation, create different device-specialized implementations for each heterogeneous resource, and then determine how to apportion work to each resource. In this paper, we present the RACECAR heuristic to automate the optimization of applications for multi-core heterogeneous systems by automatically exploring implementation alternatives that include different algorithms, parallelization strategies, and work distributions. Experimental results show RACECAR-specialized implementations can effectively incorporate provided implementations and parallelize computation across multiple cores, graphics-processing units, and field-programmable gate arrays, improving performance by an average of 47x compared to a CPU, while the fastest provided implementations are only able to average 33x.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2380423&ftid=1294482&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:25:29>},
 }
 
 @article{Keller:2012:VA:2430532.2364512,
@@ -397,6 +449,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {haskell, nested data parallelism, program transformation},
+  abstract = 	 {Flattening nested parallelism is a vectorising code transform that converts irregular nested parallelism into flat data parallelism. Although the result has good asymptotic performance, flattening thoroughly restructures the code. Many intermediate data structures and traversals are introduced, which may or may not be eliminated by subsequent optimisation. We present a novel program analysis to identify parts of the program where flattening would only introduce overhead, without appropriate gain. We present empirical evidence that avoiding vectorisation in these cases leads to more efficient programs than if we had applied vectorisation and then relied on array fusion to eliminate intermediates from the resulting code.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364512&ftid=1282873&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:26:38>},
 }
 
 @inproceedings{Keller:2012:VA:2364506.2364512,
@@ -415,6 +470,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {haskell, nested data parallelism, program transformation},
+  abstract = 	 {Flattening nested parallelism is a vectorising code transform that converts irregular nested parallelism into flat data parallelism. Although the result has good asymptotic performance, flattening thoroughly restructures the code. Many intermediate data structures and traversals are introduced, which may or may not be eliminated by subsequent optimisation. We present a novel program analysis to identify parts of the program where flattening would only introduce overhead, without appropriate gain. We present empirical evidence that avoiding vectorisation in these cases leads to more efficient programs than if we had applied vectorisation and then relied on array fusion to eliminate intermediates from the resulting code.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364512&ftid=1282873&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:26:42>},
 }
 
 @inproceedings{Shafarenko:2002:CHT:571157.571160,
@@ -433,6 +491,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {array processing, data-parallel programming, overloading, subtyping, type inference},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=571160&ftid=78557&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  fullTextFile = {.slirm_cache/Shafarenko_2002_Coercion.pdf},
+  review = 	 {fbie: rejected <2016-01-12 15:29:59>},
 }
 
 @inproceedings{McDonell:2015:TRC:2804302.2804313,
@@ -451,6 +513,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Arrays, Code Generation, Data Parallelism, Dynamic Compilation, Embedded Language, GPGPU, Haskell, LLVM},
+  abstract = 	 { Embedded languages are often compiled at application runtime; thus, embedded compile-time errors become application runtime errors. We argue that advanced type system features, such as GADTs and type families, play a crucial role in minimising such runtime errors. Specifically, a rigorous type discipline reduces runtime errors due to bugs in both embedded language applications and the implementation of the embedded language compiler itself. In this paper, we focus on the safety guarantees achieved by type preserving compilation. We discuss the compilation pipeline of Accelerate, a high-performance array language targeting both multicore CPUs and GPUs, where we are able to preserve types from the source language down to a low-level register language in SSA form. Specifically, we demonstrate the practicability of our approach by creating a new type-safe interface to the industrial-strength LLVM compiler infrastructure, which we used to build two new Accelerate backends that show competitive runtimes on a set of benchmarks across both CPUs and GPUs. },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2804313&ftid=1614990&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:30:36>},
 }
 
 @inproceedings{Larsen:2011:SOA:1926354.1926360,
@@ -469,6 +534,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {array programming, cuda, gpgpu},
+  abstract = 	 {Graphics processors (GPUs) are highly parallel devices that promise high performance, and they are now flexible enough to be used for general-purpose computing. A programming language based on implicitly data-parallel collective array operations can permit high-level, effective programming of GPUs. I describe three optimizations for such a language: automatic use of GPU shared memory cache, array fusion, and hoisting of nested parallel constructs. These optimizations are simple to implement because of the design of the language to which they are applied but can result in large run-time speedups.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1926360&ftid=907608&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:31:20>},
 }
 
 @article{Wernsing:2012:RHA:2370036.2145875,
@@ -489,6 +557,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {elastic computing, heterogeneous, optimization, racecar, speedup},
+  abstract = 	 {High-performance computing systems increasingly combine multi-core processors and heterogeneous resources such as graphics-processing units and field-programmable gate arrays. However, significant application design complexity for such systems has often led to untapped performance potential. Application designers targeting such systems currently must determine how to parallelize computation, create device-specialized implementations for each heterogeneous resource, and determine how to partition work for each resource. In this paper, we present the RACECAR heuristic to automate the optimization of applications for multi-core heterogeneous systems by automatically exploring implementation alternatives that include different algorithms, parallelization strategies, and work distributions. Experimental results show RACECAR-specialized implementations achieve speedups up to 117x and average 11x compared to a single CPU thread when parallelizing computation across multiple cores, graphics-processing units, and field-programmable gate arrays.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2145875&ftid=1145220&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:31:37>},
 }
 
 @inproceedings{Wernsing:2012:RHA:2145816.2145875,
@@ -507,6 +578,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {elastic computing, heterogeneous, optimization, racecar, speedup},
+  abstract = 	 {High-performance computing systems increasingly combine multi-core processors and heterogeneous resources such as graphics-processing units and field-programmable gate arrays. However, significant application design complexity for such systems has often led to untapped performance potential. Application designers targeting such systems currently must determine how to parallelize computation, create device-specialized implementations for each heterogeneous resource, and determine how to partition work for each resource. In this paper, we present the RACECAR heuristic to automate the optimization of applications for multi-core heterogeneous systems by automatically exploring implementation alternatives that include different algorithms, parallelization strategies, and work distributions. Experimental results show RACECAR-specialized implementations achieve speedups up to 117x and average 11x compared to a single CPU thread when parallelizing computation across multiple cores, graphics-processing units, and field-programmable gate arrays.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2145875&ftid=1145220&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:31:40>},
 }
 
 @article{McDonell:2013:OPF:2544174.2500595,
@@ -527,6 +601,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {array fusion, arrays, data parallelism, dynamic compilation, embedded language, gpgpu, haskell, sharing recovery},
+  abstract = 	 {Purely functional, embedded array programs are a good match for SIMD hardware, such as GPUs. However, the naive compilation of such programs quickly leads to both code explosion and an excessive use of intermediate data structures. The resulting slow-down is not acceptable on target hardware that is usually chosen to achieve high performance. In this paper, we discuss two optimisation techniques, sharing recovery and array fusion, that tackle code explosion and eliminate superfluous intermediate structures. Both techniques are well known from other contexts, but they present unique challenges for an embedded language compiled for execution on a GPU. We present novel methods for implementing sharing recovery and array fusion, and demonstrate their effectiveness on a set of benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2500595&ftid=1397521&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:32:22>},
 }
 
 @inproceedings{McDonell:2013:OPF:2500365.2500595,
@@ -545,6 +622,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {array fusion, arrays, data parallelism, dynamic compilation, embedded language, gpgpu, haskell, sharing recovery},
+  abstract = 	 {Purely functional, embedded array programs are a good match for SIMD hardware, such as GPUs. However, the naive compilation of such programs quickly leads to both code explosion and an excessive use of intermediate data structures. The resulting slow-down is not acceptable on target hardware that is usually chosen to achieve high performance. In this paper, we discuss two optimisation techniques, sharing recovery and array fusion, that tackle code explosion and eliminate superfluous intermediate structures. Both techniques are well known from other contexts, but they present unique challenges for an embedded language compiled for execution on a GPU. We present novel methods for implementing sharing recovery and array fusion, and demonstrate their effectiveness on a set of benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2500595&ftid=1397521&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:32:27>},
 }
 
 @article{Bergstrom:2010:LTS:1932681.1863558,
@@ -565,6 +645,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {compilers, nested-data-parallel languages, run-time systems, scheduling},
+  abstract = 	 {Nested data-parallelism (NDP) is a declarative style for programming irregular parallel applications. NDP languages provide language features favoring the NDP style, efficient compilation of NDP programs, and various common NDP operations like parallel maps, filters, and sum-like reductions. In this paper, we describe the implementation of NDP in Parallel ML (PML), part of the Manticore project. Managing the parallel decomposition of work is one of the main challenges of implementing NDP. If the decomposition creates too many small chunks of work, performance will be eroded by too much parallel overhead. If, on the other hand, there are too few large chunks of work, there will be too much sequential processing and processors will sit idle. Recently the technique of Lazy Binary Splitting was proposed for dynamic parallel decomposition of work on flat arrays, with promising results. We adapt Lazy Binary Splitting to parallel processing of binary trees, which we use to represent parallel arrays in PML. We call our technique Lazy Tree Splitting (LTS). One of its main advantages is its performance robustness: per-program tuning is not required to achieve good performance across varying platforms. We describe LTS-based implementations of standard NDP operations, and we present experimental data demonstrating the scalability of LTS across a range of benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863558&ftid=843647&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:33:59>},
 }
 
 @inproceedings{Bergstrom:2010:LTS:1863543.1863558,
@@ -583,6 +666,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {compilers, nested-data-parallel languages, run-time systems, scheduling},
+  abstract = 	 {Nested data-parallelism (NDP) is a declarative style for programming irregular parallel applications. NDP languages provide language features favoring the NDP style, efficient compilation of NDP programs, and various common NDP operations like parallel maps, filters, and sum-like reductions. In this paper, we describe the implementation of NDP in Parallel ML (PML), part of the Manticore project. Managing the parallel decomposition of work is one of the main challenges of implementing NDP. If the decomposition creates too many small chunks of work, performance will be eroded by too much parallel overhead. If, on the other hand, there are too few large chunks of work, there will be too much sequential processing and processors will sit idle. Recently the technique of Lazy Binary Splitting was proposed for dynamic parallel decomposition of work on flat arrays, with promising results. We adapt Lazy Binary Splitting to parallel processing of binary trees, which we use to represent parallel arrays in PML. We call our technique Lazy Tree Splitting (LTS). One of its main advantages is its performance robustness: per-program tuning is not required to achieve good performance across varying platforms. We describe LTS-based implementations of standard NDP operations, and we present experimental data demonstrating the scalability of LTS across a range of benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863558&ftid=843647&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:34:05>},
 }
 
 @article{Quillere:2000:OMU:365151.365152,
@@ -603,6 +689,10 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {affine recurrence equations, applicative (functional) languages, automatic parallelization, data-parallel languages, dataflow analysis, dependence analysis, lifetime analysis, memory management, parallel code generation, polyhedral model, scheduling},
+  abstract = 	 {},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=365152&ftid=47708&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  fullTextFile = {.slirm_cache/Quiller{\'e}_2000_Optimizing.pdf},
+  review = 	 {fbie: accepted <2016-01-12 15:35:20>},
 }
 
 @inproceedings{Sarkar:2008:COP:1356058.1356087,
@@ -621,6 +711,8 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {code optimization, multicore processors, parallel programs},
+  abstract = 	 {Code optimization has a rich history that dates back over half a century. Over the years, it has contributed deep innovations to address challenges posed by new computer system and programming language features. Examples of the former include optimizations for improved register utilization, instruction-level parallelism, vector parallelism, multiprocessor parallelism and memory hierarchy utilization. Examples of the latter include optimizations for procedural, object-oriented, functional and domain-specific languages as well as dynamic optimization for managed runtimes. These optimizations have contributed significantly to programmer productivity by reducing the effort that programmers need to spend on hand-implementing code optimizations and by enabling code to be more portable, especially as programming models and computer architectures change. While compiler frameworks are often able to incorporate new code optimizations in an evolutionary manner, there have been notable periods in the history of compilers when more revolutionary changes were necessary. Examples of such paradigm shifts in the history of compilers include interprocedural whole program analysis, coloring-based register allocation, static single assignment form, array dependence analysis, pointer alias analysis, loop transformations, adaptive profile-directed optimizations, and dynamic compilation. The revolutionary nature of these shifts is evidenced by the fact that production-strength optimization frameworks (especially those in industry) had to be rewritten from scratch or significantly modified to support the new capabilities. In this talk, we claim that the current multicore trend in the computer industry is forcing a new paradigm shift in compilers to address the challenge of code optimization of parallel programs, regardless of whether the parallelism is implicit or explicit in the programming model. All computers --- embedded, mainstream, and high-end --- are now being built from multicore processors with little or no increase in clock speed per core. This trend poses multiple challenges for compilers for future systems as the number of cores per socket continues to grow, and the cores become more heterogeneous. In addition, compilers have to keep pace with emerging parallel programming models embodied in a proliferation of new libraries and new languages. To substantiate our claim, we examine the historical foundations of code optimization including intermediate representations (IR's), abstract execution models, legality and cost analyses of IR transformations and show that they are all deeply entrenched in the von Neumann model of sequential computing. We discuss ongoing evolutionary efforts to support optimization of parallel programs in the context of existing compiler frameworks, and their inherent limitations for the long term. We then outline what a revolutionary approach will entail, and identify where its underlying paradigm shifts are likely to lie. We provide examples of past research that are likely to influence future directions in code optimization of parallel programs such as program dependence graphs, partitioning and scheduling of lightweight parallelism, synchronization optimizations, communication optimizations, transactional memory optimizations, code generation for heterogeneous accelerators, impact of memory models on code optimization, and general forms of data and computation alignment. Finally, we briefly describe the approach to code optimization of parallel programs being taken in the Habanero Multicore Software Research project at Rice University.},
+  review = 	 {fbie: rejected <2016-01-12 15:38:07>},
 }
 
 @inproceedings{Grelck:2013:NGA:2620678.2620690,
@@ -640,6 +732,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Array processing, Single Assignment C, dynamic compilation, rank and shape specialization, runtime optimization},
+  abstract = 	 {Data-parallel processing of multi-dimensional functional/immutable arrays is characterized by a fundamental trade-off between software engineering principles on the one hand and runtime performance concerns on the other hand. Whereas the former demand code to be written in a generic style abstracting from structural properties of arrays as much as possible, the latter require an optimizing compiler to have as much information on the very same structural properties available at compile time. Asynchronous adaptive specialization of generic code to specific data to be processed at application runtime has proven to be an effective way to reconcile these contrarian demands. In this paper we revisit asynchronous adaptive specialization in the context of the functional data-parallel array language SaC. We provide a comprehensive analysis of its strengths and weaknesses and propose improvements for its design and implementation. These improvements are primarily concerned with making specializations available to running applications as quickly as possible. We propose four complementary measures to this effect. Bulk adaptive specialization speculatively waits for future specialization requests to materialize instead of addressing each request individually. Prioritized adaptive specialization aims at selecting the most profitable specializations first. Parallel adaptive specialization reserves multiple cores for specialization and, thus, computes multiple specializations simultaneously. Last but not least, persistent adaptive specialization preserves specializations across independent program runs and even across unrelated applications.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2620690&ftid=1509730&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: rejected <2016-01-12 15:40:22>},
 }
 
 @inproceedings{Spliet:2014:KDM:2588768.2576781,
@@ -659,6 +754,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {Dynamic memory allocation, Massive parallelism, Multi-/many-cores, OpenCL kernels},
+  abstract = 	 {OpenCL is becoming a popular choice for the parallel programming of both multi-core CPUs and GPGPUs. One of the features missing in OpenCL, yet commonly required in irregular parallel applications, is dynamic memory allocation. In this paper, we propose KMA, a first dynamic memory allocator for OpenCL. KMA's design is based on a thorough analysis of a set of 11 algorithms, which shows that dynamic memory allocation is a necessary commodity, typically used for implementing complex data structures (arrays, lists, trees) that need constant restructuring at runtime. Taking into account both the survey findings and the status-quo of OpenCL, we design KMA as a two-layer memory manager that makes smart use of the patterns we identified in our application analysis: its basic functionality provides generic malloc() and free() APIs, while the higher layer provides support for building and efficiently managing dynamic data structures. Our experiments measure the performance and usability of KMA, using both microbenchmarks and a real-life case-study. Results show that when dynamic allocation is mandatory, KMA is a competitive allocator. We conclude that embedding dynamic memory allocation in OpenCL is feasible, but it is a complex, delicate task due to the massive parallelism of the platform and the portability issues between different OpenCL implementations.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2576781&ftid=1434818&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: rejected <2016-01-12 15:40:32>},
 }
 
 @inproceedings{Murthy:2008:PCX:1370082.1370086,
@@ -677,6 +775,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {X10, atomic blocks, clocks, data distribution, java, multi-threading, non-uniform cluster computing(NUCC), partitioned global address space (PGAS), places, scalability},
+  abstract = 	 {Many problems require parallel solutions and implementations and how to extract and specify parallelism has been the focus of Research during the last few decades. While there has been a significant progress in terms of (a)automatically deriving implicit parallelism from functional and logic programs, (b) using parallelizing compilers to extract parallelism from serial programs written in Fortran or C mainly by parallelizing loop constructs and (c) evolution of standards such as Message Passing Interface (MPI) to allow a Fortran or C programmer to decompose a problem into a parallel solution, the parallel computing problem is still not solved completely. With the emergence of parallel computing architectures based on multi-core chips, there is a need to rewrite existing software and also develop future software so that parallelism available at the hardware level is fully exploited. Executing concurrent or distributed programs using modern object-oriented programming languages such as Java and C# is possible on two platforms: 1. a uniprocessor or shared memory multiprocessor system on which one or more threads execute against a single shared heap in a single virtual machine and 2. a loosely coupled distributed computing system in which each node has its own virtual machine and communicates with other nodes using protocols such as RMI. Computer systems are already consisting of and will have multicore SMP nodes with non-uniform memory hierarchies interconnected in horizontally scalable cluster configurations. Since the current High Performance Computing programming models do not support the notions of a non-uniform data access or of tight coupling of distributed nodes, the models are ineffective in addressing the needs of such a system. As a consequence, X10 is proposed [1, 2]. The target machine for the execution of an X10 program may range from a uniprocessor machine to a large cluster of parallel processors supporting millions of concurrent operations. The design goals of X10 are to achieve a balance among Safety, Analyzability, Scalability and Flexibility. The X10 programming model uses the serial subset of Java and introduces new features to ensure that a suitable expression of parallelism is the basis for exploiting the modern computer architectures. X10 introduces a Partitioned Global Address Space (PGAS) that materializes as locality in the form of places. To provide a foundation for concurrency constructs in the language, dynamic and asynchronous activities are introduced in X10. To support dense and sparse distributed multi-dimensional arrays, X10 introduces a rich array sub-language. The Java programming model uses the notion of a single uniform heap and this is a limitation in using the language on non-uniform cluster computing systems. Scalability problems are reported in trying to automatically map a uniform heap onto a non-uniform cluster. Places in X10 attempt to address the scalability issue by letting an X10 programmer decide which objects and activities are co-located. To be able to create light-weight threads locally or remotely, X10 introduces the notion of asynchronous activities. The corresponding mechanisms in Java are heavy weight. The language constructs async, future, foreach, ateach, finish, clocks and atomic blocks are designed to co-ordinate asynchronous activities in an X10 program. The elements of an array are distributed across multiple places in the partitioned global address space based on the array's distribution specification. Throughout the program's execution, the distribution remains unchanged. The issues of locality and distribution cannot be hidden from a programmer of high-performance code and X10 reflects this in its design choices. To illustrate X10's features to implement concurrent and distributed computations, sample programs are discussed.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1370086&ftid=515419&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 15:44:49>},
 }
 
 @inproceedings{Cohen:2013:POC:2443608.2443609,
@@ -695,6 +796,7 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {multicore, parallelization, reactive systems},
+  abstract = 	 {Synchronous data-flow programming appeared in the 80s, with Lustre and Signal, applied to the design, modeling, and programming of safety-critical embedded systems. Its scientific and industrial success derives from the ability to master the high levels of concurrency in reactive systems, while pre-serving a functionally deterministic semantics, with liveness, bounded memory, and bounded execution time guarantees. Recent work on Lucid Synchrone and Scade version 6 led to important progress in expressiveness, from automatic type inference to the modular construction of complex systems combining state machines and data-flow equations. Powerful compilation techniques have also been designed that are capable of generating sequential code competitive with low-level C programming. As multicore embedded processors and MPSoC become unavoidable, even in safety-critical environments, and as control applications become increasingly computational, new challenges emerge in the parallelization and optimization of synchronous programs. In this talk, we will survey recent and ongoing work on generating parallel code and highly efficient nested loops with in-place, array-based computations from data-flow synchronous programs. This survey will take us through programming language design, data structure and stream abstraction, compilation algorithms, and runtime systems, with a focus on real-time embedded systems.},
 }
 
 @inproceedings{Cave:2011:HNA:2093157.2093165,
