@@ -165,6 +165,9 @@
   keywords =	 {data parallelism},
   fullTextUrl =
                   {http://dl.acm.org/ft_gateway.cfm?id=130622&ftid=32971&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  abstract = 	 {
+
+             Massively parallel SIMD machines rely on data parallelism usually achieved by a careful hand coding to support program efficiency. This paper describes parallelization of code generated for SIMD machines by the compiler for the Equational Programming Language, EPL. The language supports architecture-independent scientific programming by recurrent equations. The EPL compiler serves as a programming aid for users of parallel machines by automating data partitioning and computation parallelization based on inherent data dependencies. In support of a Connection Machine architecture, the EPL compiler performs horizontal partitioning of the program, a process that selects a dimension of each data structure to be projected along the processor array. Each processor then holds a single instance of that structure and operations along the projected dimension are done in parallel. The paper describes horizontal partitioning, code generation in MPL and efficiency of programs generated for Maspar SIMD machine. },
 
 }
 
@@ -1910,6 +1913,10 @@
                   {http://dl.acm.org/ft_gateway.cfm?id=158517&ftid=33072&dwn=1&CFID=574773947&CFTOKEN=83431304},
   fullTextFile = {.slirm_cache/Chatterjee_1993_Automatic.pdf},
   notes =	 {Very unsure about this one.},
+  abstract = 	 {
+
+             Data-parallel languages like Fortran 90 express parallelism in the form of operations on data aggregates such as arrays. Misalignment of the operands of an array operation can reduce program performance on a distributed-memory parallel machine by requiring nonlocal data accesses. Determining array alignments that reduce communication is therefore a key issue in compiling such languages.
+We present a framework for the automatic determination of array alignments in data-parallel languages such as Fortran 90. Our language model handles array sectioning, reductions, spreads, transpositions, and masked operations. We decompose alignment functions into three constituents: axis, stride, and offset. For each of these subproblems, we show how to solve the alignment problem for a   basic block of code, possibly containing common subexpressions. Alignments are generated for all array objects in the code, both named program variables and intermediate results. The alignments obtained by our algorithms are more general than those provided by the &ldquo;owner-computes&rdquo; rule. Finally, we present some ideas for dealing with control flow, replication, and dynamic alignments that depend on loop induction variables. },
 
 }
 
@@ -2139,6 +2146,7 @@
   fullTextUrl =
                   {http://dl.acm.org/ft_gateway.cfm?id=1863579&ftid=978044&dwn=1&CFID=574773947&CFTOKEN=83431304},
   notes = 	 {This is a talk, keep it?},
+  review = 	 {fbie: rejected <2016-01-13 16:25:50>},
 }
 
 @inproceedings{Blelloch:2010:FPA:1863543.1863579,
@@ -2192,6 +2200,7 @@
                   {http://dl.acm.org/ft_gateway.cfm?id=1863579&ftid=978044&dwn=1&CFID=574773947&CFTOKEN=83431304},
   notes =	 {This is a talk, but it's highly relevant. Don't know
                   how to handle it right now.},
+  review = 	 {fbie: rejected <2016-01-13 16:25:51>},
 }
 
 @article{Deitz:2003:DIP:966049.781526,
@@ -2217,6 +2226,9 @@
                   scatter},
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=781526&ftid=156280&dwn=1&CFID=574965416&CFTOKEN=24274792},
+  abstract = 	 {
+
+             Gather and scatter are data redistribution functions of long-standing importance to high performance computing. In this paper, we present a highly-general array operator with powerful gather and scatter capabilities unmatched by other array languages. We discuss an efficient parallel implementation, introducing three new optimizations---schedule compression, dead array reuse, and direct communication---that reduce the costs associated with the operator's wide applicability. In our implementation of this operator in ZPL, we demonstrate performance comparable to the hand-coded Fortran + MPI versions of the NAS FT and CG benchmarks. },
 }
 
 @inproceedings{Deitz:2003:DIP:781498.781526,
@@ -5624,6 +5636,7 @@
   fullTextFile = {.slirm_cache/Hall_1993_Experiences-Using.pdf},
   notes = 	 {More of an IDE.},
   review = 	 {fbie: rejected <2016-01-13 14:09:09>},
+  abstract = 	 {The ParaScope Editor is an interactive parallel programming tool that assists knowledgeable users in developing scientific Fortran programs. It displays the results of sophisticated program analyses, provides a set of powerful interactive transformations, and supports program editing. This paper summarizes experiences of scientific programmers and tool designers using the ParaScope Editor. We evaluate existing features and describe enhancements in three key areas: user interface, analysis, and transformation. many existing features prove crucial to successful program parallelization. They include interprocedural array side-effect analysis and program and dependence view filtering. Desirable functionality includes improved program navigation based on performance estimation, incorporating user assertions in analysis and more guidance in selecting transformations. These results offer insights for the authors of a variety of programming tools and parallelizing compilers.},
 }
 
 @inproceedings{Hall:1993:EUP:155332.155336,
@@ -5649,6 +5662,7 @@
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=155336&ftid=28671&dwn=1&CFID=744742186&CFTOKEN=77967707},
   review = 	 {fbie: rejected <2016-01-13 14:09:16>},
+  abstract = 	 {The ParaScope Editor is an interactive parallel programming tool that assists knowledgeable users in developing scientific Fortran programs. It displays the results of sophisticated program analyses, provides a set of powerful interactive transformations, and supports program editing. This paper summarizes experiences of scientific programmers and tool designers using the ParaScope Editor. We evaluate existing features and describe enhancements in three key areas: user interface, analysis, and transformation. many existing features prove crucial to successful program parallelization. They include interprocedural array side-effect analysis and program and dependence view filtering. Desirable functionality includes improved program navigation based on performance estimation, incorporating user assertions in analysis and more guidance in selecting transformations. These results offer insights for the authors of a variety of programming tools and parallelizing compilers.},
 }
 
 @inproceedings{Henriksen:2014:SSH:2636228.2636238,
@@ -5672,6 +5686,7 @@
   keywords =	 {dependent types, functional language, size analysis},
   review = 	 {fbie: rejected <2016-01-13 14:09:29>},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2636238&ftid=1498027&dwn=1&CFID=744754184&CFTOKEN=77672816},
+  abstract = 	 {We present a shape inference analysis for a purely-functional language, named Futhark, that supports nested parallelism via array combinators such as map, reduce, filter}, and scan}. Our approach is to infer code for computing precise shape information at run-time, which in the most common cases can be effectively optimized by standard compiler optimizations. Instead of restricting the language or sacrificing ease of use, the language allows the occasional shape-dynamic, and even shape-misbehaving, constructs. Inherently shape-dynamic code is treated with a fall-back technique that preserves, asymptotically, the number of operations of the program and that computes and returns the array's shape alongside with its value. This approach leads to a shape-dependent system with existentially-quantified types, where static shape inference corresponds to eliminating existential quantifications from the types of program expressions. We optimize the common case to negligible overhead via size slicing: a technique that separates the computation of the array's shape from its values. This allows the shape to be calculated in advance and to be used to instantiate the previously existentially-quantified shapes of the value slice. We report negligible overhead, on several mini-benchmarks and three real-world applications.},
 }
 
 @inproceedings{Yamaguchi:2011:CFG:1950413.1950476,
@@ -5719,6 +5734,7 @@
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=232650&ftid=38674&dwn=1&CFID=744742186&CFTOKEN=77967707},
   review = 	 {fbie: accepted <2016-01-13 14:09:45>},
+  abstract = 	 {In this paper we prove time and space bounds for the implementation of the programming language NESL on various parallel machine models. NESL is a sugared typed &amp;lambda;-calculus with a set of array primitives and an explicit parallel map over arrays. Our results extend previous work on provable implementation bounds for functional languages by considering space and by including arrays. For modeling the cost of NESL we augment a standard call-by-value operational semantics to return two cost measures: a DAG representing the sequential dependence in the computation, and a measure of the space taken by a sequential implementation. We show that a NESL program with w work (nodes in the DAG), d depth (levels in the DAG), and s sequential space can be implemented on a p processor butterfly network, hypercube, or CRCW PRAM using O(w/p + d log p) time and O(s + dp log p) reachable space.1 For programs with sufficient parallelism these bounds are optimal in that they give linear speedup and use space within a constant factor of the sequential space.},
 }
 
 @inproceedings{Blelloch:1996:PTS:232627.232650,
@@ -5741,6 +5757,7 @@
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=232650&ftid=38674&dwn=1&CFID=744742186&CFTOKEN=77967707},
   review = 	 {fbie: accepted <2016-01-13 14:09:49>},
+  abstract = 	 {In this paper we prove time and space bounds for the implementation of the programming language NESL on various parallel machine models. NESL is a sugared typed &amp;lambda;-calculus with a set of array primitives and an explicit parallel map over arrays. Our results extend previous work on provable implementation bounds for functional languages by considering space and by including arrays. For modeling the cost of NESL we augment a standard call-by-value operational semantics to return two cost measures: a DAG representing the sequential dependence in the computation, and a measure of the space taken by a sequential implementation. We show that a NESL program with w work (nodes in the DAG), d depth (levels in the DAG), and s sequential space can be implemented on a p processor butterfly network, hypercube, or CRCW PRAM using O(w/p + d log p) time and O(s + dp log p) reachable space.1 For programs with sufficient parallelism these bounds are optimal in that they give linear speedup and use space within a constant factor of the sequential space.},
 }
 
 @inproceedings{Wise:2001:LSM:379539.379559,
@@ -5765,6 +5782,7 @@
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=379559&ftid=65671&dwn=1&CFID=744742186&CFTOKEN=77967707},
   fullTextFile = {.slirm_cache/Wise_2001_Language-Support.pdf},
   review = 	 {fbie: rejected <2016-01-13 14:11:15>},
+  abstract = 	 {The uniform representation of 2-dimensional arrays serially in Morton order (or {\eee} order) supports both their iterative scan with cartesian indices and their divide-and-conquer manipulation as quaternary trees. This data structure is important because it relaxes serious problems of locality and latency, and the tree helps to schedule multi-processing. Results here show how it facilitates algorithms that avoid cache misses and page faults at all levels in hierarchical memory, independently of a specific runtime environment.We have built a rudimentary C-to-C translator that implements matrices in Morton-order from source that presumes a row-major implementation. Early performance from LAPACK's reference implementation of \texttt{dgesv} (linear solver), and all its supporting routines (including \texttt{dgemm} matrix-multiplication) form a successful research demonstration. Its performance predicts improvements from new algebra in back-end optimizers.We also present results from a more stylish \texttt{dgemm} algorithm that takes better advantage of this representation.  With only routine back-end optimizations inserted by hand (unfolding the base case and passing arguments in registers), we achieve machine performance exceeding that of the manufacturer-crafted {\tt dgemm} running at 67% of peak flops. And the same code performs similarly on several machines.Together, these results show how existing codes and future block-recursive algorithms can work well together on this matrix representation. Locality is key to future performance, and the new representation has a remarkable impact.},
 }
 
 @article{Wise:2001:LSM:568014.379559,
@@ -5789,6 +5807,7 @@
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=379559&ftid=65671&dwn=1&CFID=744742186&CFTOKEN=77967707},
   review = 	 {fbie: rejected <2016-01-13 14:11:18>},
+  abstract = 	 {The uniform representation of 2-dimensional arrays serially in Morton order (or {\eee} order) supports both their iterative scan with cartesian indices and their divide-and-conquer manipulation as quaternary trees. This data structure is important because it relaxes serious problems of locality and latency, and the tree helps to schedule multi-processing. Results here show how it facilitates algorithms that avoid cache misses and page faults at all levels in hierarchical memory, independently of a specific runtime environment.We have built a rudimentary C-to-C translator that implements matrices in Morton-order from source that presumes a row-major implementation. Early performance from LAPACK's reference implementation of \texttt{dgesv} (linear solver), and all its supporting routines (including \texttt{dgemm} matrix-multiplication) form a successful research demonstration. Its performance predicts improvements from new algebra in back-end optimizers.We also present results from a more stylish \texttt{dgemm} algorithm that takes better advantage of this representation.  With only routine back-end optimizations inserted by hand (unfolding the base case and passing arguments in registers), we achieve machine performance exceeding that of the manufacturer-crafted {\tt dgemm} running at 67% of peak flops. And the same code performs similarly on several machines.Together, these results show how existing codes and future block-recursive algorithms can work well together on this matrix representation. Locality is key to future performance, and the new representation has a remarkable impact.},
 }
 
 @inproceedings{Hiraki:1988:EVP:62972.63020,
@@ -5849,6 +5868,11 @@
   acmid =	 144142,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {
+
+             A functional style application of APL notation succinctly describes the architecture and principles of operation of one kind of connection-based computer. In the future it is expected that these machines will have thousands of processors and large arrays of dynamic connections. APL programs running on von Neumann computers now provide precise descriptions of connection-based machines which are convenient for exploring the potential of connection-based computation. Experience with radically new structures and different principles of operation for neural network problem solving can be obtained using virtual machines provided by software. Virtual machines are described by functions programmed on conventional computers.
+Two adaptive variants of the sparse distributed memory or SDM (Kanerva [1991]) show improved efficiency. The demonstrated superiority of Kanerva's new pattern weighting idea can be obtained by improved coding of the input patterns. This coding is done by generally defined preprocessing of features of representative binary input patterns. Transformed input patterns select addresses which pack distributed memories more efficiently.
+Coding is done by first computing customized weight vectors for each input pattern vector. Individual weighting of each pattern leads to more uniform utilization of the addresses and their corresponding memory connection weights. The derived pattern weights improve discrimination between pairs of similar inputs with few significant differences. This paper is to provide the APL community access to a concise symbolic description of Kanerva's weighted SDM machine. APL's rich set of computer modeling and exposition tools have the potential of markedly accelerating software and hardware development for array-base connectionist computing. },
 }
 
 @article{Fordyce:1991:UBI:114055.114074,
@@ -5871,6 +5895,7 @@
   address =	 {New York, NY, USA},
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=114074&ftid=28883&dwn=1&CFID=744754184&CFTOKEN=77672816},
+  abstract = 	 {A critical computational requirement for many of the decision technologies in the fields of operations research (PERT/CPM, Markov chains, decision trees, Bayesian analysis, MRP, simulation, &amp;hellip;), artificial intelligence (evidential reasoning, truth maintenance systems, propositional logic, rule based inference, frames and semantic nets, &amp;hellip;), and decision support systems (worksheet or financial planning models, data / entity models, &amp;hellip;) is the development and manipulation of a function network or directed graph describing the relationship between "variables", "objects", or "actors" involved in the application of the decision technology to a specific problem. The manipulation of such networks or graphs using Boolean matrices and vector of integer vectors is well known in portions of the APL community (see bibliography), but intertwined with specific applications and spread out across a variety sources (some of which are difficult to obtain). This paper succinctly and simply describes the basics of manipulating a function network with Boolean matrices and integer vectors including focusing networks, finding circular conditions (A depends on B, B depends on C, C depends on A, therefore A depends on A, &amp;hellip;), and grouping functions based on relative independence to identify parallel computational opportunities and substantially reduces the non-procedural aspect of the problem.},
 }
 
 @inproceedings{Fordyce:1991:UBI:114054.114074,
@@ -5892,6 +5917,9 @@
   address =	 {New York, NY, USA},
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=114074&ftid=28883&dwn=1&CFID=744754184&CFTOKEN=77672816},
+  abstract = 	 {
+
+             A critical computational requirement for many of the decision technologies in the fields of operations research (PERT/CPM, Markov chains, decision trees, Bayesian analysis, MRP, simulation, &amp;hellip;), artificial intelligence (evidential reasoning, truth maintenance systems, propositional logic, rule based inference, frames and semantic nets, &amp;hellip;), and decision support systems (worksheet or financial planning models, data / entity models, &amp;hellip;) is the development and manipulation of a function network or directed graph describing the relationship between "variables", "objects", or "actors" involved in the application of the decision technology to a specific problem. The manipulation of such networks or graphs using Boolean matrices and vector of integer vectors is well known in portions of the APL community (see bibliography), but intertwined with specific applications and spread out across a variety sources (some of which are difficult to obtain). This paper succinctly and simply describes the basics of manipulating a function network with Boolean matrices and integer vectors including focusing networks, finding circular conditions (A depends on B, B depends on C, C depends on A, therefore A depends on A, &amp;hellip;), and grouping functions based on relative independence to identify parallel computational opportunities and substantially reduces the non-procedural aspect of the problem. },
 }
 
 @inproceedings{Chadha:2014:EOI:2628071.2628103,
@@ -5916,6 +5944,9 @@
                   prefetching, javascript},
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2628103&ftid=1494239&dwn=1&CFID=744754184&CFTOKEN=77672816},
+  abstract = 	 {
+
+             Web 2.0 applications written in JavaScript are increasingly popular as they are easy to use, easy to update and maintain, and portable across a wide variety of computing platforms. Web applications receive frequent input from a rich array of sensors, network, and user input modalities. To handle the resulting asynchrony due to these inputs, web applications are developed using an event-driven programming model. These event-driven web applications have dramatically different characteristics, which provides an opportunity to create a customized processor core to improve the responsiveness of web applications. In this paper, we take one step towards creating a core customized to event-driven applications. We observe that instruction cache misses of web applications are substantially higher than conventional server and desktop workloads due to large working sets caused by distant re-use. To mitigate this bottleneck, we propose an instruction prefetcher (EFetch) that is tuned to exploit the characteristics of web applications. We find that an event signature, which captures the current event and function calling context, is a good predictor of the control flow inside a function of an event-driven program. It allows us to accurately predict a function's callees and their function bodies and prefetch them in a timely manner. For a set of real-world web applications, we show that the proposed prefetcher outperforms commonly implemented next-2-line prefetcher by 17%. Also, it consumes 5.2 times less area than a recently proposed prefetcher, while outperforming it. },
 }
 
 @inproceedings{Baxter:1989:RPS:72935.72967,
