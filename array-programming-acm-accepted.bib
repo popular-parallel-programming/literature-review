@@ -1,0 +1,1764 @@
+@inproceedings{Venkat:2014:NEP:2581122.2544141,
+  author = 	 {Venkat, Anand and Shantharam, Manu and Hall, Mary
+                  and Strout, Michelle Mills},
+  title = 	 {Non-affine Extensions to Polyhedral Code Generation},
+  booktitle = 	 {Proceedings of Annual IEEE/ACM International
+                  Symposium on Code Generation and Optimization},
+  series = 	 {CGO '14},
+  year = 	 {2014},
+  isbn = 	 {978-1-4503-2670-4},
+  location = 	 {Orlando, FL, USA},
+  pages = 	 {185:185--185:194},
+  articleno = 	 {185},
+  numpages = 	 {10},
+  url = 	 {http://doi.acm.org/10.1145/2544137.2544141},
+  doi = 	 {10.1145/2544137.2544141},
+  acmid = 	 {2544141},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {code generation, inspector/executor, loop
+                  coalescing, non-affine, polyhedral model},
+  abstract = 	 {This paper describes a loop transformation framework that extends a polyhedral representation of loop nests to represent and transform computations with non-affine index arrays in loop bounds and subscripts via a new interface between compile-time and run-time abstractions. Polyhedra scanning code generation, which historically applies an affine mapping to the subscript expressions of the statements in a loop nest, is modified to apply non-affine mappings involving index arrays that are represented at compile time by uninterpreted functions; non-affine loop bounds involving index arrays are also represented. When appropriate, an inspector is utilized to capture the non-affine subscript mappings, and a generalized loop coalescing transformation is introduced as a non-affine transformation to support non-affine loop bounds. With this support, complex sequences of new and existing transformations can then be composed. We demonstrate the effectiveness of this framework by optimizing sparse matrix vector multiplication operations targeting GPUs for different matrix structures and parallelization strategies. This approach achieves performance that is comparable to or greater than the hand-tuned CUSP library; for two of the implementations it achieves an average 1.14× improvement over CUSP across a collection of sparse matrices, while the third performs on average within \% of CUSP.},
+  notes = 	 {Targets GPUs but seems a general technique.},
+  review = 	 {fbie: accepted <2016-01-14 11:59:00>},
+}
+@inproceedings{Ureche:2012:SCS:2103746.2103762,
+  author = 	 {Ureche, Vlad and Rompf, Tiark and Sujeeth, Arvind
+                  and Chafi, Hassan and Odersky, Martin},
+  title = 	 {StagedSAC: A Case Study in Performance-oriented DSL
+                  Development},
+  booktitle = 	 {Proceedings of the ACM SIGPLAN 2012 Workshop on
+                  Partial Evaluation and Program Manipulation},
+  series = 	 {PEPM '12},
+  year = 	 {2012},
+  isbn = 	 {978-1-4503-1118-2},
+  location = 	 {Philadelphia, Pennsylvania, USA},
+  pages = 	 {73--82},
+  numpages = 	 {10},
+  url = 	 {http://doi.acm.org/10.1145/2103746.2103762},
+  doi = 	 {10.1145/2103746.2103762},
+  acmid = 	 {2103762},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {DSL, SAC, domain specific languages, optimization,
+                  single assignment c, staging},
+  abstract = 	 {Domain-specific languages (DSLs) can bridge the gap between high-level programming and efficient execution. However, implementing compiler tool-chains for performance oriented DSLs requires significant effort. Recent research has produced methodologies and frameworks that promise to reduce this development effort by enabling quick transition from library-only, purely embedded DSLs to optimizing compilation. In this case study we report on our experience implementing a compiler for StagedSAC. StagedSAC is a DSL for arithmetic processing with multidimensional arrays modeled after the stand-alone language SAC (Single Assignment C). The main language feature of both SAC and StagedSAC is a loop construction that enables high-level and concise implementations of array algorithms. At the same time, the functional semantics of the two languages allow for advanced compiler optimizations and parallel code generation. We describe how we were able to quickly evolve from a pure library DSL to a performance-oriented compiler with a good speedup and only minor syntax changes using the technique of Lightweight Modular Staging. We also describe the optimizations we perform to obtain fast code and how we plan to generate parallel code with minimal effort using the Delite framework.},
+  notes = 	 {Last sentence of abstract seems interesting.},
+  review = 	 {fbie: accepted <2016-01-14 11:48:40>},
+}
+@inproceedings{Tang:1990:CTD:77726.255155,
+  author = 	 {Tang, Peiyi and Yew, Pen-Chung and Zhu, Chuan-Qi},
+  title = 	 {Compiler Techniques for Data Synchronization in
+                  Nested Parallel Loops},
+  booktitle = 	 {Proceedings of the 4th International Conference on
+                  Supercomputing},
+  series = 	 {ICS '90},
+  year = 	 {1990},
+  isbn = 	 {0-89791-369-8},
+  location = 	 {Amsterdam, The Netherlands},
+  pages = 	 {177--186},
+  numpages = 	 {10},
+  url = 	 {http://doi.acm.org/10.1145/77726.255155},
+  doi = 	 {10.1145/77726.255155},
+  acmid = 	 {255155},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  abstract = 	 {The major source of parallelism in ordinary programs is do loops. When loop iterations of parallelized loops are executed on multiprocessors, the cross-iteration data dependencies need to be enforced by synchronization between processors. Existing data synchronization schemes are either too simple to handle general nested loop structures with non-trivia array subscript functions or inefficient due to the large run-time overhead.
+In this paper, we propose a new synchronization scheme based on two data-oriented synchronization instructions: synch_read(x,s) and synch_write(x,s). We present the algorithm to compute the ordering number, s, for each data access. Using our scheme, a parallelizing compiler can parallelize a general nested loop structure with complicated cross-iteration data dependencies. If the computations of ordering numbers cannot be done at compile time, the run-time overhead is smaller than the other existing run-time schemes.},
+  review = 	 {fbie: accepted <2016-01-14 10:32:58>},
+}
+@article{Tang:1990:CTD:255129.255155,
+  author = 	 {Tang, Peiyi and Yew, Pen-Chung and Zhu, Chuan-Qi},
+  title = 	 {Compiler Techniques for Data Synchronization in
+                  Nested Parallel Loops},
+  journal = 	 {SIGARCH Comput. Archit. News},
+  issue_date = 	 {Sept. 1990},
+  volume = 	 {18},
+  number = 	 {3b},
+  month = 	 {jun},
+  year = 	 {1990},
+  issn = 	 {0163-5964},
+  pages = 	 {177--186},
+  numpages = 	 {10},
+  url = 	 {http://doi.acm.org/10.1145/255129.255155},
+  doi = 	 {10.1145/255129.255155},
+  acmid = 	 {255155},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  abstract = 	 {
+
+             The major source of parallelism in ordinary programs is do loops. When loop iterations of parallelized loops are executed on multiprocessors, the cross-iteration data dependencies need to be enforced by synchronization between processors. Existing data synchronization schemes are either too simple to handle general nested loop structures with non-trivia array subscript functions or inefficient due to the large run-time overhead.
+In this paper, we propose a new synchronization scheme based on two data-oriented synchronization instructions: synch_read(x,s) and synch_write(x,s). We present the algorithm to compute the ordering number, s, for each data access. Using our scheme, a parallelizing compiler can parallelize a general nested loop structure with complicated cross-iteration data dependencies. If the computations of ordering numbers cannot be done at compile time, the run-time overhead is smaller than the other existing run-time schemes.
+ },
+  review = 	 {fbie: accepted <2016-01-14 10:31:31>},
+}
+@inproceedings{Blelloch:1996:PTS:232627.232650,
+  author = 	 {Blelloch, Guy E. and Greiner, John},
+  title = 	 {A Provable Time and Space Efficient Implementation
+                  of NESL},
+  booktitle = 	 {Proceedings of the First ACM SIGPLAN International
+                  Conference on Functional Programming},
+  series = 	 {ICFP '96},
+  year = 	 {1996},
+  isbn = 	 {0-89791-770-7},
+  location = 	 {Philadelphia, Pennsylvania, USA},
+  pages = 	 {213--225},
+  numpages = 	 {13},
+  url = 	 {http://doi.acm.org/10.1145/232627.232650},
+  doi = 	 {10.1145/232627.232650},
+  acmid = 	 {232650},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=232650&ftid=38674&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  review = 	 {fbie: accepted <2016-01-13 14:09:49>},
+  abstract = 	 {In this paper we prove time and space bounds for the implementation of the programming language NESL on various parallel machine models. NESL is a sugared typed &amp;lambda;-calculus with a set of array primitives and an explicit parallel map over arrays. Our results extend previous work on provable implementation bounds for functional languages by considering space and by including arrays. For modeling the cost of NESL we augment a standard call-by-value operational semantics to return two cost measures: a DAG representing the sequential dependence in the computation, and a measure of the space taken by a sequential implementation. We show that a NESL program with w work (nodes in the DAG), d depth (levels in the DAG), and s sequential space can be implemented on a p processor butterfly network, hypercube, or CRCW PRAM using O(w/p + d log p) time and O(s + dp log p) reachable space.1 For programs with sufficient parallelism these bounds are optimal in that they give linear speedup and use space within a constant factor of the sequential space.},
+}
+@article{Blelloch:1996:PTS:232629.232650,
+  author = 	 {Blelloch, Guy E. and Greiner, John},
+  title = 	 {A Provable Time and Space Efficient Implementation
+                  of NESL},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {June 15, 1996},
+  volume = 	 {31},
+  number = 	 {6},
+  month = 	 {jun},
+  year = 	 {1996},
+  issn = 	 {0362-1340},
+  pages = 	 {213--225},
+  numpages = 	 {13},
+  url = 	 {http://doi.acm.org/10.1145/232629.232650},
+  doi = 	 {10.1145/232629.232650},
+  acmid = 	 {232650},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=232650&ftid=38674&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  review = 	 {fbie: accepted <2016-01-13 14:09:45>},
+  abstract = 	 {In this paper we prove time and space bounds for the implementation of the programming language NESL on various parallel machine models. NESL is a sugared typed &amp;lambda;-calculus with a set of array primitives and an explicit parallel map over arrays. Our results extend previous work on provable implementation bounds for functional languages by considering space and by including arrays. For modeling the cost of NESL we augment a standard call-by-value operational semantics to return two cost measures: a DAG representing the sequential dependence in the computation, and a measure of the space taken by a sequential implementation. We show that a NESL program with w work (nodes in the DAG), d depth (levels in the DAG), and s sequential space can be implemented on a p processor butterfly network, hypercube, or CRCW PRAM using O(w/p + d log p) time and O(s + dp log p) reachable space.1 For programs with sufficient parallelism these bounds are optimal in that they give linear speedup and use space within a constant factor of the sequential space.},
+}
+@inproceedings{Anderson:1990:CHA:93542.93561,
+  author = 	 {Anderson, Steven and Hudak, Paul},
+  title = 	 {Compilation of Haskell Array Comprehensions for
+                  Scientific Computing},
+  booktitle = 	 {Proceedings of the ACM SIGPLAN 1990 Conference on
+                  Programming Language Design and Implementation},
+  series = 	 {PLDI '90},
+  year = 	 {1990},
+  isbn = 	 {0-89791-364-7},
+  location = 	 {White Plains, New York, USA},
+  pages = 	 {137--149},
+  numpages = 	 {13},
+  url = 	 {http://doi.acm.org/10.1145/93542.93561},
+  doi = 	 {10.1145/93542.93561},
+  acmid = 	 {93561},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=93561&ftid=14811&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  review = 	 {fbie: accepted <2016-01-13 13:50:11>},
+}
+@article{Anderson:1990:CHA:93548.93561,
+  author = 	 {Anderson, Steven and Hudak, Paul},
+  title = 	 {Compilation of Haskell Array Comprehensions for
+                  Scientific Computing},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {Jun. 1990},
+  volume = 	 {25},
+  number = 	 {6},
+  month = 	 {jun},
+  year = 	 {1990},
+  issn = 	 {0362-1340},
+  pages = 	 {137--149},
+  numpages = 	 {13},
+  url = 	 {http://doi.acm.org/10.1145/93548.93561},
+  doi = 	 {10.1145/93548.93561},
+  acmid = 	 {93561},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=93561&ftid=14811&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  fullTextFile = {.slirm_cache/Anderson_1990_Compilation-of.pdf},
+  notes = 	 {Analysis of inter-data dependencies in array comprehensions.},
+  review = 	 {fbie: accepted <2016-01-13 13:50:06>},
+}
+@inproceedings{Hall:1994:UHT:182409.156781,
+  author = 	 {Hall, Cordelia V.},
+  title = 	 {Using Hindley-Milner Type Inference to Optimise List
+                  Representation},
+  booktitle = 	 {Proceedings of the 1994 ACM Conference on LISP and
+                  Functional Programming},
+  series = 	 {LFP '94},
+  year = 	 {1994},
+  isbn = 	 {0-89791-643-3},
+  location = 	 {Orlando, Florida, USA},
+  pages = 	 {162--172},
+  numpages = 	 {11},
+  url = 	 {http://doi.acm.org/10.1145/182409.156781},
+  doi = 	 {10.1145/182409.156781},
+  acmid = 	 {156781},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=156781&ftid=25751&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  review = 	 {fbie: accepted <2016-01-13 13:45:12>},
+}
+@article{Hall:1994:UHT:182590.156781,
+  author = 	 {Hall, Cordelia V.},
+  title = 	 {Using Hindley-Milner Type Inference to Optimise List
+                  Representation},
+  journal = 	 {SIGPLAN Lisp Pointers},
+  issue_date = 	 {July-Sept. 1994},
+  volume = 	 {VII},
+  number = 	 {3},
+  month = 	 {jul},
+  year = 	 {1994},
+  issn = 	 {1045-3563},
+  pages = 	 {162--172},
+  numpages = 	 {11},
+  url = 	 {http://doi.acm.org/10.1145/182590.156781},
+  doi = 	 {10.1145/182590.156781},
+  acmid = 	 {156781},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=156781&ftid=25751&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  fullTextFile = {.slirm_cache/Hall_1994_Using-Hindley.pdf},
+  review = 	 {fbie: accepted <2016-01-13 13:45:08>},
+}
+@inproceedings{Lowney:1981:CAI:567532.567533,
+  author = 	 {Lowney, P. Geoffrey},
+  title = 	 {Carrier Arrays: An Idiom-preserving Extension to
+                  APL},
+  booktitle = 	 {Proceedings of the 8th ACM SIGPLAN-SIGACT Symposium
+                  on Principles of Programming Languages},
+  series = 	 {POPL '81},
+  year = 	 {1981},
+  isbn = 	 {0-89791-029-X},
+  location = 	 {Williamsburg, Virginia},
+  pages = 	 {1--13},
+  numpages = 	 {13},
+  url = 	 {http://doi.acm.org/10.1145/567532.567533},
+  doi = 	 {10.1145/567532.567533},
+  acmid = 	 {567533},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=567533&ftid=84193&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  fullTextFile = {.slirm_cache/Lowney_1981_Carrier-Arrays.pdf},
+  notes = 	 {"A carrier array is a ragged array with an associated partition which allows functions to be applied to subarrays in parallel."},
+  review = 	 {fbie: accepted <2016-01-13 13:41:28>},
+}
+@article{Perrott:1979:LAV:357073.357075,
+  author = 	 {Perrott, R. H.},
+  title = 	 {A Language for Array and Vector Processors},
+  journal = 	 {ACM Trans. Program. Lang. Syst.},
+  issue_date = 	 {Oct. 1979},
+  volume = 	 {1},
+  number = 	 {2},
+  month = 	 {oct},
+  year = 	 {1979},
+  issn = 	 {0164-0925},
+  pages = 	 {177--195},
+  numpages = 	 {19},
+  url = 	 {http://doi.acm.org/10.1145/357073.357075},
+  doi = 	 {10.1145/357073.357075},
+  acmid = 	 {357075},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=357075&ftid=51974&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  fullTextFile = {.slirm_cache/Perrott_1979_A-Language.pdf},
+  notes = 	 {High-level languages for parallel programming.},
+  review = 	 {fbie: accepted <2016-01-13 13:37:16>},
+}
+@inproceedings{Kadayif:2002:ILP:513918.514096,
+  author = 	 {Kadayif, I. and Kandemir, M. and Sezer, U.},
+  title = 	 {An Integer Linear Programming Based Approach for
+                  Parallelizing Applications in On-chip
+                  Multiprocessors},
+  booktitle = 	 {Proceedings of the 39th Annual Design Automation
+                  Conference},
+  series = 	 {DAC '02},
+  year = 	 {2002},
+  isbn = 	 {1-58113-461-4},
+  location = 	 {New Orleans, Louisiana, USA},
+  pages = 	 {703--706},
+  numpages = 	 {4},
+  url = 	 {http://doi.acm.org/10.1145/513918.514096},
+  doi = 	 {10.1145/513918.514096},
+  acmid = 	 {514096},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {constraint-based compilation, embedded systems,
+                  loop-Level parallelism},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=514096&ftid=72110&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  fullTextFile = {.slirm_cache/Kadayif_2002_An-Integer.pdf},
+  notes = 	 {Automatic parallelization of array-intensive languages with multiple constraints (here performance and energy consumption).},
+  review = 	 {fbie: accepted <2016-01-13 13:22:47>},
+}
+@inproceedings{Sastry:1994:PDU:182409.182486,
+  author = 	 {Sastry, A. V. S. and Clinger, William},
+  title = 	 {Parallel Destructive Updating in Strict Functional
+                  Languages},
+  booktitle = 	 {Proceedings of the 1994 ACM Conference on LISP and
+                  Functional Programming},
+  series = 	 {LFP '94},
+  year = 	 {1994},
+  isbn = 	 {0-89791-643-3},
+  location = 	 {Orlando, Florida, USA},
+  pages = 	 {263--272},
+  numpages = 	 {10},
+  url = 	 {http://doi.acm.org/10.1145/182409.182486},
+  doi = 	 {10.1145/182409.182486},
+  acmid = 	 {182486},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=182486&ftid=27882&dwn=1&CFID=744742186&CFTOKEN=77967707},
+  review = 	 {fbie: accepted <2016-01-13 13:17:29>},
+}
+@article{Sastry:1994:PDU:182590.182486,
+  author = 	 {Sastry, A. V. S. and Clinger, William},
+  title = 	 {Parallel Destructive Updating in Strict Functional
+                  Languages},
+  journal = 	 {SIGPLAN Lisp Pointers},
+  issue_date = 	 {July-Sept. 1994},
+  volume = 	 {VII},
+  number = 	 {3},
+  month = 	 {jul},
+  year = 	 {1994},
+  issn = 	 {1045-3563},
+  pages = 	 {263--272},
+  numpages = 	 {10},
+  url = 	 {http://doi.acm.org/10.1145/182590.182486},
+  doi = 	 {10.1145/182590.182486},
+  acmid = 	 {182486},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=182486&ftid=27882&dwn=1&CFID=574981389&CFTOKEN=13307282},
+  fullTextFile = {.slirm_cache/Sastry_1994_Parallel-Destructive.pdf},
+  notes = 	 {Concerns array updates in functional languages. Author acknowledges that there has not been much research in this area and mentions amongst others SISAL as an exception.},
+  review = 	 {fbie: accepted <2016-01-13 13:17:24>},
+}
+@inproceedings{Sinkarovs:2013:SDL:2502323.2502332,
+  author = 	 {Sinkarovs, Artjoms and Scholz, Sven-Bodo},
+  title = 	 {Semantics-preserving Data Layout Transformations for
+                  Improved Vectorisation},
+  booktitle = 	 {Proceedings of the 2Nd ACM SIGPLAN Workshop on
+                  Functional High-performance Computing},
+  series = 	 {FHPC '13},
+  year = 	 {2013},
+  isbn = 	 {978-1-4503-2381-9},
+  location = 	 {Boston, Massachusetts, USA},
+  pages = 	 {59--70},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/2502323.2502332},
+  doi = 	 {10.1145/2502323.2502332},
+  acmid = 	 {2502332},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {correctness, program transformation, type systems,
+                  vectorisation},
+  abstract = 	 {Data-Layouts that are favourable from an algorithmic perspective often are less suitable for vectorisation, i.e., for an effective use of modern processor's vector instructions. This paper presents work on a compiler driven approach towards automatically transforming data layouts into a form that is suitable for vectorisation. In particular, we present a program transformation for a first-order functional array programming language that systematically modifies they layouts of all data structures. At the same time, the transformation also adjusts the code that operates on these structures so that the overall computation remains unchanged. We define a correctness criterion for layout modifying program transformations and we show that our transformation abides to this criterion.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2502332&ftid=1397477&dwn=1&CFID=574981389&CFTOKEN=13307282},
+  review = 	 {fbie: accepted <2016-01-13 13:09:45>},
+}
+@inproceedings{Knobe:1998:ASF:268946.268956,
+  author = 	 {Knobe, Kathleen and Sarkar, Vivek},
+  title = 	 {Array SSA Form and Its Use in Parallelization},
+  booktitle = 	 {Proceedings of the 25th ACM SIGPLAN-SIGACT Symposium
+                  on Principles of Programming Languages},
+  series = 	 {POPL '98},
+  year = 	 {1998},
+  isbn = 	 {0-89791-979-3},
+  location = 	 {San Diego, California, USA},
+  pages = 	 {107--120},
+  numpages = 	 {14},
+  url = 	 {http://doi.acm.org/10.1145/268946.268956},
+  doi = 	 {10.1145/268946.268956},
+  acmid = 	 {268956},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=268956&ftid=33536&dwn=1&CFID=574981389&CFTOKEN=13307282},
+  fullTextFile = {.slirm_cache/Knobe_1998_Array-SSA.pdf},
+  notes = 	 {SSA stands for "single static assignment".},
+  review = 	 {fbie: accepted <2016-01-13 13:04:58>},
+}
+@article{Arvind:1989:IDS:69558.69562,
+  author = 	 {Arvind and Nikhil, Rishiyur S. and Pingali, Keshav
+                  K.},
+  title = 	 {I-structures: Data Structures for Parallel
+                  Computing},
+  journal = 	 {ACM Trans. Program. Lang. Syst.},
+  issue_date = 	 {Oct. 1989},
+  volume = 	 {11},
+  number = 	 {4},
+  month = 	 {oct},
+  year = 	 {1989},
+  issn = 	 {0164-0925},
+  pages = 	 {598--632},
+  numpages = 	 {35},
+  url = 	 {http://doi.acm.org/10.1145/69558.69562},
+  doi = 	 {10.1145/69558.69562},
+  acmid = 	 {69562},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=69562&ftid=19522&dwn=1&CFID=574981389&CFTOKEN=13307282},
+  fullTextFile = {.slirm_cache/Arvind and Nikhil_1989_I-structures.pdf},
+  notes = 	 {I am not quite sure about this one, but it seems an interesting paper.},
+  review = 	 {fbie: accepted <2016-01-13 13:02:55>},
+}
+@article{Ching:1990:APA:97811.97826,
+  author = 	 {Ching, Wai-Mee},
+  title = 	 {Automatic Parallelization of APL-style Programs},
+  journal = 	 {SIGAPL APL Quote Quad},
+  issue_date = 	 {July 1990},
+  volume = 	 {20},
+  number = 	 {4},
+  month = 	 {may},
+  year = 	 {1990},
+  issn = 	 {0163-6006},
+  pages = 	 {76--80},
+  numpages = 	 {5},
+  url = 	 {http://doi.acm.org/10.1145/97811.97826},
+  doi = 	 {10.1145/97811.97826},
+  acmid = 	 {97826},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=97826&ftid=14719&dwn=1&CFID=574974113&CFTOKEN=15072837},
+  review = 	 {fbie: accepted <2016-01-13 11:30:39>},
+}
+@inproceedings{Ching:1990:APA:97808.97826,
+  author = 	 {Ching, Wai-Mee},
+  title = 	 {Automatic Parallelization of APL-style Programs},
+  booktitle = 	 {Conference Proceedings on APL 90: For the Future},
+  series = 	 {APL '90},
+  year = 	 {1990},
+  isbn = 	 {0-89791-371-X},
+  location = 	 {Copenhagen, Denmark},
+  pages = 	 {76--80},
+  numpages = 	 {5},
+  url = 	 {http://doi.acm.org/10.1145/97808.97826},
+  doi = 	 {10.1145/97808.97826},
+  acmid = 	 {97826},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=97826&ftid=14719&dwn=1&CFID=574974113&CFTOKEN=15072837},
+  fullTextFile = {.slirm_cache/Ching_1990_Automatic.pdf},
+  review = 	 {fbie: accepted <2016-01-13 11:30:32>},
+}
+@inproceedings{Maydan:1993:AFA:158511.158515,
+  author = 	 {Maydan, Dror E. and Amarasinghe, Saman P. and Lam,
+                  Monica S.},
+  title = 	 {Array-data Flow Analysis and Its Use in Array
+                  Privatization},
+  booktitle = 	 {Proceedings of the 20th ACM SIGPLAN-SIGACT Symposium
+                  on Principles of Programming Languages},
+  series = 	 {POPL '93},
+  year = 	 {1993},
+  isbn = 	 {0-89791-560-7},
+  location = 	 {Charleston, South Carolina, USA},
+  pages = 	 {2--15},
+  numpages = 	 {14},
+  url = 	 {http://doi.acm.org/10.1145/158511.158515},
+  doi = 	 {10.1145/158511.158515},
+  acmid = 	 {158515},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=158515&ftid=33071&dwn=1&CFID=574974113&CFTOKEN=15072837},
+  fullTextFile = {.slirm_cache/Maydan_1993_Array.pdf},
+  notes = 	 {A efficient algorithm for analyzing array accesses in nested loops via data-flow techniques.},
+  review = 	 {fbie: accepted <2016-01-13 11:28:39>},
+}
+@article{Chakravarty:2001:FAF:507669.507661,
+  author = 	 {Chakravarty, Manuel M. T. and Keller, Gabriele},
+  title = 	 {Functional Array Fusion},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {October 2001},
+  volume = 	 {36},
+  number = 	 {10},
+  month = 	 {oct},
+  year = 	 {2001},
+  issn = 	 {0362-1340},
+  pages = 	 {205--216},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/507546.507661},
+  doi = 	 {10.1145/507546.507661},
+  acmid = 	 {507661},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=507661&ftid=69665&dwn=1&CFID=574974113&CFTOKEN=15072837},
+  fullTextFile = {.slirm_cache/Chakravarty_2001_Functional.pdf},
+  review = 	 {fbie: accepted <2016-01-13 11:25:44>},
+}
+@inproceedings{Chakravarty:2001:FAF:507635.507661,
+  author = 	 {Chakravarty, Manuel M. T. and Keller, Gabriele},
+  title = 	 {Functional Array Fusion},
+  booktitle = 	 {Proceedings of the Sixth ACM SIGPLAN International
+                  Conference on Functional Programming},
+  series = 	 {ICFP '01},
+  year = 	 {2001},
+  isbn = 	 {1-58113-415-0},
+  location = 	 {Florence, Italy},
+  pages = 	 {205--216},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/507635.507661},
+  doi = 	 {10.1145/507635.507661},
+  acmid = 	 {507661},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=507661&ftid=69665&dwn=1&CFID=574965416&CFTOKEN=24274792},
+  fullTextFile = {.slirm_cache/Chakravarty_2001_Functional.pdf},
+  notes = 	 {Describes loop fusion in the Haskell compiler, the abstract claims that it is geared towards parallelism.},
+  review = 	 {fbie: accepted <2016-01-13 11:25:25>},
+}
+@article{Pugh:1998:CAD:291889.291900,
+  author = 	 {Pugh, William and Wonnacott, David},
+  title = 	 {Constraint-based Array Dependence Analysis},
+  journal = 	 {ACM Trans. Program. Lang. Syst.},
+  issue_date = 	 {May 1998},
+  volume = 	 {20},
+  number = 	 {3},
+  month = 	 {may},
+  year = 	 {1998},
+  issn = 	 {0164-0925},
+  pages = 	 {635--678},
+  numpages = 	 {44},
+  url = 	 {http://doi.acm.org/10.1145/291889.291900},
+  doi = 	 {10.1145/291889.291900},
+  acmid = 	 {291900},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {Presburger Arithmetic, array dataflow analysis,
+                  dependence abstraction, dependence analysis,
+                  parallelization, static analysis},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=291900&ftid=32245&dwn=1&CFID=574965416&CFTOKEN=24274792},
+  fullTextFile = {.slirm_cache/Pugh_1998_Constraint.pdf},
+  notes = 	 {},
+  review = 	 {fbie: accepted <2016-01-13 11:08:21>},
+  abstract = 	 {Traditional array dependence analysis, which detects potential memory  aliasing of array references is a key analysis technique for automatic parallelization. Recent studies of benchmark codes indicate that limitations of analysis cause many compilers to overlook large amounts of potential parallelism, and that exploiting this parallelism requires algorithms to answer new question about array references, not just get better answers to the old questions of aliasing. We need to ask about the flow of values in arrays, to check the legality of array privatization, and about the conditions under which a dependence exists, to obtain information about conditional parallelism. In some cases, we must answer these questions about code containing nonlinear terms in loop bounds or subscripts.  This article describes techniques for phrasing these questions in terms of systems of contstraints. Conditional dependence analysis can be performed with a constraint operation we call the "gist" operation. When subscripts and loop bounds are affine, questions about the flow of values in array variables can be phrased in terms of Presburger Arithmetic.  When the constraints describing a dependence are not affine, we introduce uninterpreted function symbols to represent the nonaffine terms. Our constraint language also provides a rich language for communication with the dependence analyzer, by either the programmer or other phases of the compiler. This article also documents our investigations of the praticality of our approach. The worst-case complexity of Presburger Arithmetic  indicates that it might be unsuitable for any practical application. However, we have found that analysis of benchmark programs does not cause the exponential growth in the number of constraints that could occur in the worst case.  We have studied the constraints produced during our aanalysis, and identified characteristics that keep our algorithms free of exponential behavior in practice.},
+}
+@inproceedings{Henriksen:2013:TGA:2502323.2502328,
+  author = 	 {Henriksen, Troels and Oancea, Cosmin Eugen},
+  title = 	 {A T2 Graph-reduction Approach to Fusion},
+  booktitle = 	 {Proceedings of the 2Nd ACM SIGPLAN Workshop on
+                  Functional High-performance Computing},
+  series = 	 {FHPC '13},
+  year = 	 {2013},
+  isbn = 	 {978-1-4503-2381-9},
+  location = 	 {Boston, Massachusetts, USA},
+  pages = 	 {47--58},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/2502323.2502328},
+  doi = 	 {10.1145/2502323.2502328},
+  acmid = 	 {2502328},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {autoparallelization, functional language, fusion},
+  abstract = 	 {Fusion is one of the most important code
+                  transformations as it has the potential to
+                  substantially optimize both the memory hierarchy
+                  time overhead and, sometimes asymptotically, the
+                  space requirement. In functional languages, fusion
+                  is naturally and relatively easily derived as a
+                  producer-consumer relation between program
+                  constructs that expose a richer, higher-order
+                  algebra of program invariants, such as the
+                  map-reduce list homomorphisms. In imperative
+                  languages, fusing producer-consumer loops requires
+                  dependency analysis on arrays applied at loop-nest
+                  level. Such analysis, however, has often been
+                  labeled as "heroic effort" and, if at all, is
+                  supported only in its simplest and most conservative
+                  form in industrial compilers. Related
+                  implementations in the functional context typically
+                  apply fusion only when the to-be-fused producer is
+                  used exactly once, i.e., in the consumer. This
+                  guarantees that the transformation is conservative:
+                  the resulting program does not duplicate
+                  computation. We show that the above restriction is
+                  more conservative than needed, and present a
+                  structural-analysis technique, inspired from the
+                  T1--T2 transformation for reducible data flow, that
+                  enables fusion even in some cases when the producer
+                  is used in different consumers and without
+                  duplicating computation. We report an implementation
+                  of the fusion algorithm for a functional-core
+                  language, named L0, which is intended to support
+                  nested parallelism across regular multi-dimensional
+                  arrays. We succinctly describe L0's semantics and
+                  the compiler infrastructure on which the fusion
+                  transformation relies, and present
+                  compiler-generated statistics related to fusion on a
+                  set of six benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2502328&ftid=1397476&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:55:42>},
+}
+@inproceedings{Stucki:2015:RVP:2784731.2784739,
+  author = 	 {Stucki, Nicolas and Rompf, Tiark and Ureche, Vlad
+                  and Bagwell, Phil},
+  title = 	 {RRB Vector: A Practical General Purpose Immutable
+                  Sequence},
+  booktitle = 	 {Proceedings of the 20th ACM SIGPLAN International
+                  Conference on Functional Programming},
+  series = 	 {ICFP 2015},
+  year = 	 {2015},
+  isbn = 	 {978-1-4503-3669-7},
+  location = 	 {Vancouver, BC, Canada},
+  pages = 	 {342--354},
+  numpages = 	 {13},
+  url = 	 {http://doi.acm.org/10.1145/2784731.2784739},
+  doi = 	 {10.1145/2784731.2784739},
+  acmid = 	 {2784739},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {Arrays, Data Structures, Immutable, Radix-Balanced,
+                  Relaxed-Radix-Balanced, Sequences, Trees, Vectors},
+  abstract = 	 { State-of-the-art immutable collections have wildly
+                  differing performance characteristics across their
+                  operations, often forcing programmers to choose
+                  different collection implementations for each
+                  task. Thus, changes to the program can invalidate
+                  the choice of collections, making code evolution
+                  costly. It would be desirable to have a collection
+                  that performs well for a broad range of
+                  operations. To this end, we present the RRB-Vector,
+                  an immutable sequence collection that offers good
+                  performance across a large number of sequential and
+                  parallel operations. The underlying innovations are:
+                  (1) the Relaxed-Radix-Balanced (RRB) tree structure,
+                  which allows efficient structural reorganization,
+                  and (2) an optimization that exploits
+                  spatio-temporal locality on the RRB data structure
+                  in order to offset the cost of traversing the
+                  tree. In our benchmarks, the RRB-Vector speedup for
+                  parallel operations is lower bounded by 7x when
+                  executing on 4 CPUs of 8 cores each. The performance
+                  for discrete operations, such as appending on either
+                  end, or updating and removing elements, is
+                  consistently good and compares favorably to the most
+                  important immutable sequence collections in the
+                  literature and in use today. The memory footprint of
+                  RRB-Vector is on par with arrays and an order of
+                  magnitude less than competing collections. },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2784739&ftid=1616034&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:53:43>},
+}
+@article{Stucki:2015:RVP:2858949.2784739,
+  author = 	 {Stucki, Nicolas and Rompf, Tiark and Ureche, Vlad
+                  and Bagwell, Phil},
+  title = 	 {RRB Vector: A Practical General Purpose Immutable
+                  Sequence},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {September 2015},
+  volume = 	 {50},
+  number = 	 {9},
+  month = 	 {aug},
+  year = 	 {2015},
+  issn = 	 {0362-1340},
+  pages = 	 {342--354},
+  numpages = 	 {13},
+  url = 	 {http://doi.acm.org/10.1145/2858949.2784739},
+  doi = 	 {10.1145/2858949.2784739},
+  acmid = 	 {2784739},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {Arrays, Data Structures, Immutable, Radix-Balanced,
+                  Relaxed-Radix-Balanced, Sequences, Trees, Vectors},
+  abstract = 	 { State-of-the-art immutable collections have wildly
+                  differing performance characteristics across their
+                  operations, often forcing programmers to choose
+                  different collection implementations for each
+                  task. Thus, changes to the program can invalidate
+                  the choice of collections, making code evolution
+                  costly. It would be desirable to have a collection
+                  that performs well for a broad range of
+                  operations. To this end, we present the RRB-Vector,
+                  an immutable sequence collection that offers good
+                  performance across a large number of sequential and
+                  parallel operations. The underlying innovations are:
+                  (1) the Relaxed-Radix-Balanced (RRB) tree structure,
+                  which allows efficient structural reorganization,
+                  and (2) an optimization that exploits
+                  spatio-temporal locality on the RRB data structure
+                  in order to offset the cost of traversing the
+                  tree. In our benchmarks, the RRB-Vector speedup for
+                  parallel operations is lower bounded by 7x when
+                  executing on 4 CPUs of 8 cores each. The performance
+                  for discrete operations, such as appending on either
+                  end, or updating and removing elements, is
+                  consistently good and compares favorably to the most
+                  important immutable sequence collections in the
+                  literature and in use today. The memory footprint of
+                  RRB-Vector is on par with arrays and an order of
+                  magnitude less than competing collections. },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2784739&ftid=1616034&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:53:40>},
+}
+@inproceedings{Hwang:1995:AOS:209936.209949,
+  author = 	 {Hwang, Gwan-Hwan and Lee, Jenq Kuen and Ju,
+                  Dz-Ching},
+  title = 	 {An Array Operation Synthesis Scheme to Optimize
+                  Fortran 90 Programs},
+  booktitle = 	 {Proceedings of the Fifth ACM SIGPLAN Symposium on
+                  Principles and Practice of Parallel Programming},
+  series = 	 {PPOPP '95},
+  year = 	 {1995},
+  isbn = 	 {0-89791-700-6},
+  location = 	 {Santa Barbara, California, USA},
+  pages = 	 {112--122},
+  numpages = 	 {11},
+  url = 	 {http://doi.acm.org/10.1145/209936.209949},
+  doi = 	 {10.1145/209936.209949},
+  acmid = 	 {209949},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=209949&ftid=47044&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:52:24>},
+  abstract = 	 {An increasing number of programming languages, such as Fortran 90 and APL, are providing a rich set of intrinsic array functions and array expressions. These constructs which constitute an important part of data parallel languages provide excellent opportunities for compiler optimizations. In this paper, we present a new approach to combine consecutive data access patterns of array constructs into a composite access function to the source arrays. Our scheme is based on the composition of access functions, which is similar to a composition of mathematic functions. Our new scheme can handle not only data movements of arrays of different numbers of dimensions and segmented array operations but also masked array expressions and multiple sources array operations. As a result, our proposed scheme is the first synthesis scheme which can synthesize Fortran 90 RESHAPE, EOSHIFT, MERGE, and WHERE constructs together. Experimental results show speedups from 1.21 to 2.95 for code fragments from real applications on a Sequent multiprocessor machine by incorporating the proposed optimizations.},
+}
+@article{Hwang:1995:AOS:209937.209949,
+  author = 	 {Hwang, Gwan-Hwan and Lee, Jenq Kuen and Ju,
+                  Dz-Ching},
+  title = 	 {An Array Operation Synthesis Scheme to Optimize
+                  Fortran 90 Programs},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {Aug. 1995},
+  volume = 	 {30},
+  number = 	 {8},
+  month = 	 {aug},
+  year = 	 {1995},
+  issn = 	 {0362-1340},
+  pages = 	 {112--122},
+  numpages = 	 {11},
+  url = 	 {http://doi.acm.org/10.1145/209937.209949},
+  doi = 	 {10.1145/209937.209949},
+  acmid = 	 {209949},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=209949&ftid=47044&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Hwang_1995_An.pdf},
+  notes = 	 {Optimizing array accesses in Fortran.},
+  review = 	 {fbie: accepted <2016-01-12 16:52:18>},
+  abstract = 	 {An increasing number of programming languages, such as Fortran 90 and APL, are providing a rich set of intrinsic array functions and array expressions. These constructs which constitute an important part of data parallel languages provide excellent opportunities for compiler optimizations. In this paper, we present a new approach to combine consecutive data access patterns of array constructs into a composite access function to the source arrays. Our scheme is based on the composition of access functions, which is similar to a composition of mathematic functions. Our new scheme can handle not only data movements of arrays of different numbers of dimensions and segmented array operations but also masked array expressions and multiple sources array operations. As a result, our proposed scheme is the first synthesis scheme which can synthesize Fortran 90 RESHAPE, EOSHIFT, MERGE, and WHERE constructs together. Experimental results show speedups from 1.21 to 2.95 for code fragments from real applications on a Sequent multiprocessor machine by incorporating the proposed optimizations.},
+}
+@inproceedings{Henriksen:2014:BCI:2627373.2627388,
+  author = 	 {Henriksen, Troels and Oancea, Cosmin E.},
+  title = 	 {Bounds Checking: An Instance of Hybrid Analysis},
+  booktitle = 	 {Proceedings of ACM SIGPLAN International Workshop on
+                  Libraries, Languages, and Compilers for Array
+                  Programming},
+  series = 	 {ARRAY'14},
+  year = 	 {2014},
+  isbn = 	 {978-1-4503-2937-8},
+  location = 	 {Edinburgh, United Kingdom},
+  pages = 	 {88:88--88:94},
+  articleno = 	 {88},
+  numpages = 	 {7},
+  url = 	 {http://doi.acm.org/10.1145/2627373.2627388},
+  doi = 	 {10.1145/2627373.2627388},
+  acmid = 	 {2627388},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {autoparallelization, functional language, subscripts
+                  bounds checking},
+  abstract = 	 {This paper presents an analysis for bounds checking
+                  of array subscripts that lifts checking assertions
+                  to program level under the form of an
+                  arbitrarily-complex predicate (inspector), whose
+                  runtime evaluation guards the execution of the code
+                  of interest. Separating the predicate from the
+                  computation makes it more amenable to optimization,
+                  and allows it to be split into a cascade of
+                  sufficient conditions of increasing complexity that
+                  optimizes the common-inspection path. While
+                  synthesizing the bounds checking invariant resembles
+                  type checking techniques, we rely on compiler
+                  simplification and runtime evaluation rather than
+                  employing complex inference and annotation systems
+                  that might discourage the non-specialist user. We
+                  integrate the analysis in the compiler's repertoire
+                  of Futhark: a purely-functional core language
+                  supporting map-reduce nested parallelism on regular
+                  arrays, and show how the high-level language
+                  invariants enable a relatively straightforward
+                  analysis. Finally, we report a qualitative
+                  evaluation of our technique on three real-world
+                  applications from the financial domain that
+                  indicates that the runtime overhead of predicates is
+                  negligible.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2627388&ftid=1503139&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:42:34>},
+}
+@inproceedings{Walinsky:1990:FPL:91556.91610,
+  author = 	 {Walinsky, Clifford and Banerjee, Deb},
+  title = 	 {A Functional Programming Language Compiler for
+                  Massively Parallel Computers},
+  booktitle = 	 {Proceedings of the 1990 ACM Conference on LISP and
+                  Functional Programming},
+  series = 	 {LFP '90},
+  year = 	 {1990},
+  isbn = 	 {0-89791-368-X},
+  location = 	 {Nice, France},
+  pages = 	 {131--138},
+  numpages = 	 {8},
+  url = 	 {http://doi.acm.org/10.1145/91556.91610},
+  doi = 	 {10.1145/91556.91610},
+  acmid = 	 {91610},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=91610&ftid=34538&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Walinsky_1990_A.pdf},
+  notes = 	 {High-level parallelism in the FP language.},
+  review = 	 {fbie: accepted <2016-01-12 16:41:13>},
+  abstract = 	 {Functional programming languages remove programmers from low-level machine details, an important achievement when programming massively parallel systems. We present an overview of an FP compiler that generates programs capable of exploiting data-parallelism, a view of parallelism where distinct data elements reside on distinct processors and all processors execute a single instruction stream. To achieve this form of parallelism, FP's sequences are represented as arrays. This representation makes possible optimization techniques developed for APL compilers that compose routing functions at compile-time. These techniques are described succinctly by a set of axioms and inference rules. We demonstrate the optimizations by compiling several FP functions, obtaining optimal performance.},
+}
+@inproceedings{Bernecky:2015:AEP:2774959.2774962,
+  author = 	 {Bernecky, Robert and Scholz, Sven-Bodo},
+  title = 	 {Abstract Expressionism for Parallel Performance},
+  booktitle = 	 {Proceedings of the 2Nd ACM SIGPLAN International
+                  Workshop on Libraries, Languages, and Compilers for
+                  Array Programming},
+  series = 	 {ARRAY 2015},
+  year = 	 {2015},
+  isbn = 	 {978-1-4503-3584-3},
+  location = 	 {Portland, OR, USA},
+  pages = 	 {54--59},
+  numpages = 	 {6},
+  url = 	 {http://doi.acm.org/10.1145/2774959.2774962},
+  doi = 	 {10.1145/2774959.2774962},
+  acmid = 	 {2774962},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {APL, HPC, SAC, algorithms, expressiveness,
+                  functional array languages, parallelism,
+                  readability},
+  abstract = 	 { Programming with abstract, mathematical expressions
+                  offers benefits including terser programs, easier
+                  communication of algorithms, ability to prove
+                  theorems about algorithms, increased parallelism,
+                  and improved programming productivity. Common belief
+                  is that higher levels of abstraction imply a larger
+                  semantic gap between the user and computer and,
+                  therefore, typically slower execution, whether
+                  sequential or parallel. In recent years,
+                  domain-specific languages have been shown to close
+                  this gap through sophisticated optimizations
+                  benefitting from domain-specific knowledge. In this
+                  paper, we demonstrate that the semantic gap can also
+                  be closed for non-domain-specific functional array
+                  languages, without requiring embedding of
+                  language-specific semantic knowledge into the
+                  compiler tool chain. We present a simple example of
+                  APL-style programs, compiled into C-code that
+                  outperform equivalent C programs in both sequential
+                  and parallel (OpenMP) environments. We offer
+                  insights into abstract expressionist programming, by
+                  comparing the characteristics and performance of a
+                  numerical relaxation benchmark written in C99, C99
+                  with OpenMP directives, scheduling code, and
+                  pragmas, and in , a functional array language. We
+                  compare three algorithmic styles: if/then/else,
+                  hand-optimized loop splitting, and an abstract,
+                  functional style whose roots lie in APL. We show
+                  that the algorithms match or outperform serial C,
+                  and that the hand-optimized and abstract styles
+                  generate identical code, and so have identical
+                  performance. Furthermore, parallel variants also
+                  outperform the best OpenMP C variant by up to a
+                  third, with no source code modifications. Preserving
+                  an algorithm&#039;s abstract expression during
+                  optimization opens the door to generation of
+                  radically different code for different
+                  architectures. [The author list is wrong, but I see
+                  no way to correct, despite the fact that EasyChair
+                  has the correct author list.] },
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2774962&ftid=1589049&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:38:31>},
+}
+@inproceedings{Fumero:2014:CAF:2627373.2627381,
+  author = 	 {Fumero, Juan Jos{\'e} and Steuwer, Michel and
+                  Dubach, Christophe},
+  title = 	 {A Composable Array Function Interface for
+                  Heterogeneous Computing in Java},
+  booktitle = 	 {Proceedings of ACM SIGPLAN International Workshop on
+                  Libraries, Languages, and Compilers for Array
+                  Programming},
+  series = 	 {ARRAY'14},
+  year = 	 {2014},
+  isbn = 	 {978-1-4503-2937-8},
+  location = 	 {Edinburgh, United Kingdom},
+  pages = 	 {44:44--44:49},
+  articleno = 	 {44},
+  numpages = 	 {6},
+  url = 	 {http://doi.acm.org/10.1145/2627373.2627381},
+  doi = 	 {10.1145/2627373.2627381},
+  acmid = 	 {2627381},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {Array programming, GPGPU, Patterns},
+  abstract = 	 {Heterogeneous computing has now become mainstream
+                  with virtually every desktop machines featuring
+                  accelerators such as Graphics Processing Units
+                  (GPUs). While heterogeneity offers the promise of
+                  high-performance and high-efficiency, it comes at
+                  the cost of huge programming difficulties. Languages
+                  and interfaces for programming such system tend to
+                  be low-level and require expert knowledge of the
+                  hardware in order to achieve its potential. A
+                  promising approach for programming such
+                  heterogeneous systems is the use of array
+                  programming. This style of programming relies on
+                  well known parallel patterns that can be easily
+                  translated into GPU or other accelerator
+                  code. However, only little work has been done on
+                  integrating such concepts in mainstream languages
+                  such as Java. In this work, we propose a new Array
+                  Function interface implemented with the new features
+                  from Java 8. While similar in spirit to the new
+                  Stream API of Java, our API follows a different
+                  design based on reusability and composability. We
+                  demonstrate that this API can be used to generate
+                  OpenCL code for a simple application. We present
+                  encouraging preliminary performance results showing
+                  the potential of our approach.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2627381&ftid=1503132&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:34:03>},
+}
+@inproceedings{Fluet:2008:SFG:1411204.1411239,
+  author = 	 {Fluet, Matthew and Rainey, Mike and Reppy, John},
+  title = 	 {A Scheduling Framework for General-purpose Parallel
+                  Languages},
+  booktitle = 	 {Proceedings of the 13th ACM SIGPLAN International
+                  Conference on Functional Programming},
+  series = 	 {ICFP '08},
+  year = 	 {2008},
+  isbn = 	 {978-1-59593-919-7},
+  location = 	 {Victoria, BC, Canada},
+  pages = 	 {241--252},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/1411204.1411239},
+  doi = 	 {10.1145/1411204.1411239},
+  acmid = 	 {1411239},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {compilers, heterogeneous parallel languages,
+                  run-time systems, scheduling},
+  abstract = 	 {The trend in microprocessor design toward multicore
+                  and manycore processors means that future
+                  performance gains in software will largely come from
+                  harnessing parallelism. To realize such gains, we
+                  need languages and implementations that can enable
+                  parallelism at many different levels. For example,
+                  an application might use both explicit threads to
+                  implement course-grain parallelism for independent
+                  tasks and implicit threads for fine-grain
+                  data-parallel computation over a large array. An
+                  important aspect of this requirement is supporting a
+                  wide range of different scheduling mechanisms for
+                  parallel computation. In this paper, we describe the
+                  scheduling framework that we have designed and
+                  implemented for Manticore, a strict parallel
+                  functional language. We take a micro-kernel approach
+                  in our design: the compiler and runtime support a
+                  small collection of scheduling primitives upon which
+                  complex scheduling policies can be implemented. This
+                  framework is extremely flexible and can support a
+                  wide range of different scheduling policies. It also
+                  supports the nesting of schedulers, which is key to
+                  both supporting multiple scheduling policies in the
+                  same application and to hierarchies of speculative
+                  parallel computations. In addition to describing our
+                  framework, we also illustrate its expressiveness
+                  with several popular scheduling techniques. We
+                  present a (mostly) modular approach to extending our
+                  schedulers to support cancellation. This mechanism
+                  is essential for implementing eager and speculative
+                  parallelism. We finally evaluate our framework with
+                  a series of benchmarks and an analysis.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1411239&ftid=551291&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:33:06>},
+}
+@article{Fluet:2008:SFG:1411203.1411239,
+  author = 	 {Fluet, Matthew and Rainey, Mike and Reppy, John},
+  title = 	 {A Scheduling Framework for General-purpose Parallel
+                  Languages},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {September 2008},
+  volume = 	 {43},
+  number = 	 {9},
+  month = 	 {sep},
+  year = 	 {2008},
+  issn = 	 {0362-1340},
+  pages = 	 {241--252},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/1411203.1411239},
+  doi = 	 {10.1145/1411203.1411239},
+  acmid = 	 {1411239},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {compilers, heterogeneous parallel languages,
+                  run-time systems, scheduling},
+  abstract = 	 {The trend in microprocessor design toward multicore
+                  and manycore processors means that future
+                  performance gains in software will largely come from
+                  harnessing parallelism. To realize such gains, we
+                  need languages and implementations that can enable
+                  parallelism at many different levels. For example,
+                  an application might use both explicit threads to
+                  implement course-grain parallelism for independent
+                  tasks and implicit threads for fine-grain
+                  data-parallel computation over a large array. An
+                  important aspect of this requirement is supporting a
+                  wide range of different scheduling mechanisms for
+                  parallel computation. In this paper, we describe the
+                  scheduling framework that we have designed and
+                  implemented for Manticore, a strict parallel
+                  functional language. We take a micro-kernel approach
+                  in our design: the compiler and runtime support a
+                  small collection of scheduling primitives upon which
+                  complex scheduling policies can be implemented. This
+                  framework is extremely flexible and can support a
+                  wide range of different scheduling policies. It also
+                  supports the nesting of schedulers, which is key to
+                  both supporting multiple scheduling policies in the
+                  same application and to hierarchies of speculative
+                  parallel computations. In addition to describing our
+                  framework, we also illustrate its expressiveness
+                  with several popular scheduling techniques. We
+                  present a (mostly) modular approach to extending our
+                  schedulers to support cancellation. This mechanism
+                  is essential for implementing eager and speculative
+                  parallelism. We finally evaluate our framework with
+                  a series of benchmarks and an analysis.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1411239&ftid=551291&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 16:32:59>},
+}
+@inproceedings{Deitz:2003:DIP:781498.781526,
+  author = 	 {Deitz, Steven J. and Chamberlain, Bradford L. and
+                  Choi, Sung-Eun and Snyder, Lawrence},
+  title = 	 {The Design and Implementation of a Parallel Array
+                  Operator for the Arbitrary Remapping of Data},
+  booktitle = 	 {Proceedings of the Ninth ACM SIGPLAN Symposium on
+                  Principles and Practice of Parallel Programming},
+  series = 	 {PPoPP '03},
+  year = 	 {2003},
+  isbn = 	 {1-58113-588-2},
+  location = 	 {San Diego, California, USA},
+  pages = 	 {155--166},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/781498.781526},
+  doi = 	 {10.1145/781498.781526},
+  acmid = 	 {781526},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {ZPL, array languages, gather, parallel programming,
+                  scatter},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=781526&ftid=156280&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  fullTextFile = {.slirm_cache/Deitz_2003_The.pdf},
+  review = 	 {fbie: accepted <2016-01-12 16:24:42>},
+  abstract = 	 {
+
+             Gather and scatter are data redistribution functions of long-standing importance to high performance computing. In this paper, we present a highly-general array operator with powerful gather and scatter capabilities unmatched by other array languages. We discuss an efficient parallel implementation, introducing three new optimizations---schedule compression, dead array reuse, and direct communication---that reduce the costs associated with the operator's wide applicability. In our implementation of this operator in ZPL, we demonstrate performance comparable to the hand-coded Fortran + MPI versions of the NAS FT and CG benchmarks. },
+}
+@inproceedings{Murthy:2008:PCX:1370082.1370086,
+  author = 	 {Murthy, PVR},
+  title = 	 {Parallel Computing with x10},
+  booktitle = 	 {Proceedings of the 1st International Workshop on
+                  Multicore Software Engineering},
+  series = 	 {IWMSE '08},
+  year = 	 {2008},
+  isbn = 	 {978-1-60558-031-9},
+  location = 	 {Leipzig, Germany},
+  pages = 	 {5--6},
+  numpages = 	 {2},
+  url = 	 {http://doi.acm.org/10.1145/1370082.1370086},
+  doi = 	 {10.1145/1370082.1370086},
+  acmid = 	 {1370086},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {X10, atomic blocks, clocks, data distribution, java,
+                  multi-threading, non-uniform cluster
+                  computing(NUCC), partitioned global address space
+                  (PGAS), places, scalability},
+  abstract = 	 {Many problems require parallel solutions and
+                  implementations and how to extract and specify
+                  parallelism has been the focus of Research during
+                  the last few decades. While there has been a
+                  significant progress in terms of (a)automatically
+                  deriving implicit parallelism from functional and
+                  logic programs, (b) using parallelizing compilers to
+                  extract parallelism from serial programs written in
+                  Fortran or C mainly by parallelizing loop constructs
+                  and (c) evolution of standards such as Message
+                  Passing Interface (MPI) to allow a Fortran or C
+                  programmer to decompose a problem into a parallel
+                  solution, the parallel computing problem is still
+                  not solved completely. With the emergence of
+                  parallel computing architectures based on multi-core
+                  chips, there is a need to rewrite existing software
+                  and also develop future software so that parallelism
+                  available at the hardware level is fully
+                  exploited. Executing concurrent or distributed
+                  programs using modern object-oriented programming
+                  languages such as Java and C# is possible on two
+                  platforms: 1. a uniprocessor or shared memory
+                  multiprocessor system on which one or more threads
+                  execute against a single shared heap in a single
+                  virtual machine and 2. a loosely coupled distributed
+                  computing system in which each node has its own
+                  virtual machine and communicates with other nodes
+                  using protocols such as RMI. Computer systems are
+                  already consisting of and will have multicore SMP
+                  nodes with non-uniform memory hierarchies
+                  interconnected in horizontally scalable cluster
+                  configurations. Since the current High Performance
+                  Computing programming models do not support the
+                  notions of a non-uniform data access or of tight
+                  coupling of distributed nodes, the models are
+                  ineffective in addressing the needs of such a
+                  system. As a consequence, X10 is proposed [1,
+                  2]. The target machine for the execution of an X10
+                  program may range from a uniprocessor machine to a
+                  large cluster of parallel processors supporting
+                  millions of concurrent operations. The design goals
+                  of X10 are to achieve a balance among Safety,
+                  Analyzability, Scalability and Flexibility. The X10
+                  programming model uses the serial subset of Java and
+                  introduces new features to ensure that a suitable
+                  expression of parallelism is the basis for
+                  exploiting the modern computer architectures. X10
+                  introduces a Partitioned Global Address Space (PGAS)
+                  that materializes as locality in the form of
+                  places. To provide a foundation for concurrency
+                  constructs in the language, dynamic and asynchronous
+                  activities are introduced in X10. To support dense
+                  and sparse distributed multi-dimensional arrays, X10
+                  introduces a rich array sub-language. The Java
+                  programming model uses the notion of a single
+                  uniform heap and this is a limitation in using the
+                  language on non-uniform cluster computing
+                  systems. Scalability problems are reported in trying
+                  to automatically map a uniform heap onto a
+                  non-uniform cluster. Places in X10 attempt to
+                  address the scalability issue by letting an X10
+                  programmer decide which objects and activities are
+                  co-located. To be able to create light-weight
+                  threads locally or remotely, X10 introduces the
+                  notion of asynchronous activities. The corresponding
+                  mechanisms in Java are heavy weight. The language
+                  constructs async, future, foreach, ateach, finish,
+                  clocks and atomic blocks are designed to co-ordinate
+                  asynchronous activities in an X10 program. The
+                  elements of an array are distributed across multiple
+                  places in the partitioned global address space based
+                  on the array's distribution
+                  specification. Throughout the program's execution,
+                  the distribution remains unchanged. The issues of
+                  locality and distribution cannot be hidden from a
+                  programmer of high-performance code and X10 reflects
+                  this in its design choices. To illustrate X10's
+                  features to implement concurrent and distributed
+                  computations, sample programs are discussed.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1370086&ftid=515419&dwn=1&CFID=574773947&CFTOKEN=83431304},
+  review = 	 {fbie: accepted <2016-01-12 15:44:49>},
+}
+@article{Quillere:2000:OMU:365151.365152,
+  author = 	 {Quiller{\'e}, Fabien and Rajopadhye, Sanjay},
+  title = 	 {Optimizing Memory Usage in the Polyhedral Model},
+  journal = 	 {ACM Trans. Program. Lang. Syst.},
+  issue_date = 	 {Sept. 2000},
+  volume = 	 {22},
+  number = 	 {5},
+  month = 	 {sep},
+  year = 	 {2000},
+  issn = 	 {0164-0925},
+  pages = 	 {773--815},
+  numpages = 	 {43},
+  url = 	 {http://doi.acm.org/10.1145/365151.365152},
+  doi = 	 {10.1145/365151.365152},
+  acmid = 	 {365152},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {affine recurrence equations, applicative
+                  (functional) languages, automatic parallelization,
+                  data-parallel languages, dataflow analysis,
+                  dependence analysis, lifetime analysis, memory
+                  management, parallel code generation, polyhedral
+                  model, scheduling},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=365152&ftid=47708&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  fullTextFile = {.slirm_cache/Quiller{\'e}_2000_Optimizing.pdf},
+  review = 	 {fbie: accepted <2016-01-12 15:35:20>},
+  abstract = 	 {The polyhedral model provides a single unified foundation for systolic array synthesis and automatic parallelization of loop programs. We investigate the problem of memory reuse when compiling Alpha (a functional language based on this model). Direct compilation would require unacceptably large memory (for example O(n3) for matrix multiplication). Researchers have previously addressed the problem of memory reuse, and the analysis that this entails for projective memory allocations. This paper addresses, for a given schedule, the choice of the projections so as to minimize the volume of the residual memory. We prove tight bounds on the number of linearly independent projection vectors. Our method is constructive, yielding an optimal memory  allocation. We extend the method to modular functions, and deal with the subsequent problems of code generation. Our ideas are illustrated on a number of examples generated by the current version of the Alpha compiler.},
+}
+@inproceedings{Bergstrom:2010:LTS:1863543.1863558,
+  author = 	 {Bergstrom, Lars and Rainey, Mike and Reppy, John and
+                  Shaw, Adam and Fluet, Matthew},
+  title = 	 {Lazy Tree Splitting},
+  booktitle = 	 {Proceedings of the 15th ACM SIGPLAN International
+                  Conference on Functional Programming},
+  series = 	 {ICFP '10},
+  year = 	 {2010},
+  isbn = 	 {978-1-60558-794-3},
+  location = 	 {Baltimore, Maryland, USA},
+  pages = 	 {93--104},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/1863543.1863558},
+  doi = 	 {10.1145/1863543.1863558},
+  acmid = 	 {1863558},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {compilers, nested-data-parallel languages, run-time
+                  systems, scheduling},
+  abstract = 	 {Nested data-parallelism (NDP) is a declarative style
+                  for programming irregular parallel applications. NDP
+                  languages provide language features favoring the NDP
+                  style, efficient compilation of NDP programs, and
+                  various common NDP operations like parallel maps,
+                  filters, and sum-like reductions. In this paper, we
+                  describe the implementation of NDP in Parallel ML
+                  (PML), part of the Manticore project. Managing the
+                  parallel decomposition of work is one of the main
+                  challenges of implementing NDP. If the decomposition
+                  creates too many small chunks of work, performance
+                  will be eroded by too much parallel overhead. If, on
+                  the other hand, there are too few large chunks of
+                  work, there will be too much sequential processing
+                  and processors will sit idle. Recently the technique
+                  of Lazy Binary Splitting was proposed for dynamic
+                  parallel decomposition of work on flat arrays, with
+                  promising results. We adapt Lazy Binary Splitting to
+                  parallel processing of binary trees, which we use to
+                  represent parallel arrays in PML. We call our
+                  technique Lazy Tree Splitting (LTS). One of its main
+                  advantages is its performance robustness:
+                  per-program tuning is not required to achieve good
+                  performance across varying platforms. We describe
+                  LTS-based implementations of standard NDP
+                  operations, and we present experimental data
+                  demonstrating the scalability of LTS across a range
+                  of benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863558&ftid=843647&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:34:05>},
+}
+@article{Bergstrom:2010:LTS:1932681.1863558,
+  author = 	 {Bergstrom, Lars and Rainey, Mike and Reppy, John and
+                  Shaw, Adam and Fluet, Matthew},
+  title = 	 {Lazy Tree Splitting},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {September 2010},
+  volume = 	 {45},
+  number = 	 {9},
+  month = 	 {sep},
+  year = 	 {2010},
+  issn = 	 {0362-1340},
+  pages = 	 {93--104},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/1932681.1863558},
+  doi = 	 {10.1145/1932681.1863558},
+  acmid = 	 {1863558},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {compilers, nested-data-parallel languages, run-time
+                  systems, scheduling},
+  abstract = 	 {Nested data-parallelism (NDP) is a declarative style
+                  for programming irregular parallel applications. NDP
+                  languages provide language features favoring the NDP
+                  style, efficient compilation of NDP programs, and
+                  various common NDP operations like parallel maps,
+                  filters, and sum-like reductions. In this paper, we
+                  describe the implementation of NDP in Parallel ML
+                  (PML), part of the Manticore project. Managing the
+                  parallel decomposition of work is one of the main
+                  challenges of implementing NDP. If the decomposition
+                  creates too many small chunks of work, performance
+                  will be eroded by too much parallel overhead. If, on
+                  the other hand, there are too few large chunks of
+                  work, there will be too much sequential processing
+                  and processors will sit idle. Recently the technique
+                  of Lazy Binary Splitting was proposed for dynamic
+                  parallel decomposition of work on flat arrays, with
+                  promising results. We adapt Lazy Binary Splitting to
+                  parallel processing of binary trees, which we use to
+                  represent parallel arrays in PML. We call our
+                  technique Lazy Tree Splitting (LTS). One of its main
+                  advantages is its performance robustness:
+                  per-program tuning is not required to achieve good
+                  performance across varying platforms. We describe
+                  LTS-based implementations of standard NDP
+                  operations, and we present experimental data
+                  demonstrating the scalability of LTS across a range
+                  of benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863558&ftid=843647&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:33:59>},
+}
+@inproceedings{Larsen:2011:SOA:1926354.1926360,
+  author = 	 {Larsen, Bradford},
+  title = 	 {Simple Optimizations for an Applicative Array
+                  Language for Graphics Processors},
+  booktitle = 	 {Proceedings of the Sixth Workshop on Declarative
+                  Aspects of Multicore Programming},
+  series = 	 {DAMP '11},
+  year = 	 {2011},
+  isbn = 	 {978-1-4503-0486-3},
+  location = 	 {Austin, Texas, USA},
+  pages = 	 {25--34},
+  numpages = 	 {10},
+  url = 	 {http://doi.acm.org/10.1145/1926354.1926360},
+  doi = 	 {10.1145/1926354.1926360},
+  acmid = 	 {1926360},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {array programming, cuda, gpgpu},
+  abstract = 	 {Graphics processors (GPUs) are highly parallel
+                  devices that promise high performance, and they are
+                  now flexible enough to be used for general-purpose
+                  computing. A programming language based on
+                  implicitly data-parallel collective array operations
+                  can permit high-level, effective programming of
+                  GPUs. I describe three optimizations for such a
+                  language: automatic use of GPU shared memory cache,
+                  array fusion, and hoisting of nested parallel
+                  constructs. These optimizations are simple to
+                  implement because of the design of the language to
+                  which they are applied but can result in large
+                  run-time speedups.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1926360&ftid=907608&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:31:20>},
+}
+@inproceedings{Keller:2012:VA:2364506.2364512,
+  author = 	 {Keller, Gabriele and Chakravarty, Manuel M.T. and
+                  Leshchinskiy, Roman and Lippmeier, Ben and Peyton
+                  Jones, Simon},
+  title = 	 {Vectorisation Avoidance},
+  booktitle = 	 {Proceedings of the 2012 Haskell Symposium},
+  series = 	 {Haskell '12},
+  year = 	 {2012},
+  isbn = 	 {978-1-4503-1574-6},
+  location = 	 {Copenhagen, Denmark},
+  pages = 	 {37--48},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/2364506.2364512},
+  doi = 	 {10.1145/2364506.2364512},
+  acmid = 	 {2364512},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {haskell, nested data parallelism, program
+                  transformation},
+  abstract = 	 {Flattening nested parallelism is a vectorising code
+                  transform that converts irregular nested parallelism
+                  into flat data parallelism. Although the result has
+                  good asymptotic performance, flattening thoroughly
+                  restructures the code. Many intermediate data
+                  structures and traversals are introduced, which may
+                  or may not be eliminated by subsequent
+                  optimisation. We present a novel program analysis to
+                  identify parts of the program where flattening would
+                  only introduce overhead, without appropriate
+                  gain. We present empirical evidence that avoiding
+                  vectorisation in these cases leads to more efficient
+                  programs than if we had applied vectorisation and
+                  then relied on array fusion to eliminate
+                  intermediates from the resulting code.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364512&ftid=1282873&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:26:42>},
+}
+@article{Keller:2012:VA:2430532.2364512,
+  author = 	 {Keller, Gabriele and Chakravarty, Manuel M.T. and
+                  Leshchinskiy, Roman and Lippmeier, Ben and Peyton
+                  Jones, Simon},
+  title = 	 {Vectorisation Avoidance},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {December 2012},
+  volume = 	 {47},
+  number = 	 {12},
+  month = 	 {sep},
+  year = 	 {2012},
+  issn = 	 {0362-1340},
+  pages = 	 {37--48},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/2430532.2364512},
+  doi = 	 {10.1145/2430532.2364512},
+  acmid = 	 {2364512},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {haskell, nested data parallelism, program
+                  transformation},
+  abstract = 	 {Flattening nested parallelism is a vectorising code
+                  transform that converts irregular nested parallelism
+                  into flat data parallelism. Although the result has
+                  good asymptotic performance, flattening thoroughly
+                  restructures the code. Many intermediate data
+                  structures and traversals are introduced, which may
+                  or may not be eliminated by subsequent
+                  optimisation. We present a novel program analysis to
+                  identify parts of the program where flattening would
+                  only introduce overhead, without appropriate
+                  gain. We present empirical evidence that avoiding
+                  vectorisation in these cases leads to more efficient
+                  programs than if we had applied vectorisation and
+                  then relied on array fusion to eliminate
+                  intermediates from the resulting code.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364512&ftid=1282873&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:26:38>},
+}
+@inproceedings{Grelck:2007:SOS:1248648.1248654,
+  author = 	 {Grelck, Clemens and Scholz, Sven-Bodo},
+  title = 	 {SAC: Off-the-shelf Support for Data-parallelism on
+                  Multicores},
+  booktitle = 	 {Proceedings of the 2007 Workshop on Declarative
+                  Aspects of Multicore Programming},
+  series = 	 {DAMP '07},
+  year = 	 {2007},
+  isbn = 	 {978-1-59593-690-5},
+  location = 	 {Nice, France},
+  pages = 	 {25--33},
+  numpages = 	 {9},
+  url = 	 {http://doi.acm.org/10.1145/1248648.1248654},
+  doi = 	 {10.1145/1248648.1248654},
+  acmid = 	 {1248654},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {S<sc>a</sc>C, Single assignment C, automatic
+                  parallelisation, data parallel programming, generic
+                  array programming, multicore programming},
+  abstract = 	 {The advent of multicore processors has raised new
+                  demand for harnessing concurrency in the software
+                  mass market. We summarise our previous work on the
+                  data parallel, functional array processing language
+                  SaC. Its compiler technology is geared towards
+                  highly runtime-efficient support for shared memory
+                  multiprocessors and, thus, is readily applicable to
+                  today's off-the-shelf multicore systems.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1248654&ftid=415640&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:17:02>},
+}
+@inproceedings{Lippmeier:2012:GPA:2364506.2364511,
+  author = 	 {Lippmeier, Ben and Chakravarty, Manuel and Keller,
+                  Gabriele and Peyton Jones, Simon},
+  title = 	 {Guiding Parallel Array Fusion with Indexed Types},
+  booktitle = 	 {Proceedings of the 2012 Haskell Symposium},
+  series = 	 {Haskell '12},
+  year = 	 {2012},
+  isbn = 	 {978-1-4503-1574-6},
+  location = 	 {Copenhagen, Denmark},
+  pages = 	 {25--36},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/2364506.2364511},
+  doi = 	 {10.1145/2364506.2364511},
+  acmid = 	 {2364511},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {arrays, data parallelism, haskell},
+  abstract = 	 {We present a refined approach to parallel array
+                  fusion that uses indexed types to specify the
+                  internal representation of each array. Our approach
+                  aids the client programmer in reasoning about the
+                  performance of their program in terms of the source
+                  code. It also makes the intermediate code easier to
+                  transform at compile-time, resulting in faster
+                  compilation and more reliable runtimes. We
+                  demonstrate how our new approach improves both the
+                  clarity and performance of several end-user written
+                  programs, including a fluid flow solver and an
+                  interpolator for volumetric data.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364511&ftid=1282872&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:14:17>},
+}
+@article{Lippmeier:2012:GPA:2430532.2364511,
+  author = 	 {Lippmeier, Ben and Chakravarty, Manuel and Keller,
+                  Gabriele and Peyton Jones, Simon},
+  title = 	 {Guiding Parallel Array Fusion with Indexed Types},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {December 2012},
+  volume = 	 {47},
+  number = 	 {12},
+  month = 	 {sep},
+  year = 	 {2012},
+  issn = 	 {0362-1340},
+  pages = 	 {25--36},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/2430532.2364511},
+  doi = 	 {10.1145/2430532.2364511},
+  acmid = 	 {2364511},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {arrays, data parallelism, haskell},
+  abstract = 	 {We present a refined approach to parallel array
+                  fusion that uses indexed types to specify the
+                  internal representation of each array. Our approach
+                  aids the client programmer in reasoning about the
+                  performance of their program in terms of the source
+                  code. It also makes the intermediate code easier to
+                  transform at compile-time, resulting in faster
+                  compilation and more reliable runtimes. We
+                  demonstrate how our new approach improves both the
+                  clarity and performance of several end-user written
+                  programs, including a fluid flow solver and an
+                  interpolator for volumetric data.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364511&ftid=1282872&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  notes = 	 {Not quite sure, will accept it tentatively.},
+  review = 	 {fbie: accepted <2016-01-12 15:14:07>},
+}
+@inproceedings{Chakravarty:2013:DPH:2502323.2508151,
+  author = 	 {Chakravarty, Manuel M.T.},
+  title = 	 {Data Parallelism in Haskell},
+  booktitle = 	 {Proceedings of the 2Nd ACM SIGPLAN Workshop on
+                  Functional High-performance Computing},
+  series = 	 {FHPC '13},
+  year = 	 {2013},
+  isbn = 	 {978-1-4503-2381-9},
+  location = 	 {Boston, Massachusetts, USA},
+  pages = 	 {97--98},
+  numpages = 	 {2},
+  url = 	 {http://doi.acm.org/10.1145/2502323.2508151},
+  doi = 	 {10.1145/2502323.2508151},
+  acmid = 	 {2508151},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {array programming, code optimisation, data
+                  parallelism, haskell},
+  abstract = 	 {The implicit data parallelism in collective
+                  operations on aggregate data structures constitutes
+                  an attractive parallel programming model for
+                  functional languages. Beginning with our work on
+                  integrating nested data parallelism into Haskell, we
+                  explored a variety of different approaches to
+                  array-centric data parallel programming in Haskell,
+                  experimented with a range of code generation and
+                  optimisation strategies, and targeted both multicore
+                  CPUs and GPUs. In addition to practical tools for
+                  parallel programming, the outcomes of this research
+                  programme include more widely applicable concepts,
+                  such as Haskell's type families and stream
+                  fusion. In this talk, I will contrast the different
+                  approaches to data parallel programming that we
+                  explored. I will discuss their strengths and
+                  weaknesses and review what we have learnt in the
+                  course of exploring the various options. This
+                  includes our experience of implementing these
+                  approaches in the Glasgow Haskell Compiler as well
+                  the experimental results that we have gathered so
+                  far. Finally, I will outline the remaining open
+                  challenges and our plans for the future. This talk
+                  is based on joint work with Gabriele Keller, Sean
+                  Lee, Roman Leshchinskiy, Ben Lippmeier, Trevor
+                  L. McDonell, and Simon Peyton Jones.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2508151&ftid=1397480&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  fullTextFile = {.slirm_cache/Chakravarty_2013_Data.pdf},
+  notes = 	 {This is a talk, the paper consists only of the
+                  abstract.},
+  review = 	 {fbie: accepted <2016-01-12 15:12:05>},
+}
+@article{Lippmeier:2012:WEH:2398856.2364564,
+  author = 	 {Lippmeier, Ben and Chakravarty, Manuel M.T. and
+                  Keller, Gabriele and Leshchinskiy, Roman and Peyton
+                  Jones, Simon},
+  title = 	 {Work Efficient Higher-order Vectorisation},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {September 2012},
+  volume = 	 {47},
+  number = 	 {9},
+  month = 	 {sep},
+  year = 	 {2012},
+  issn = 	 {0362-1340},
+  pages = 	 {259--270},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/2398856.2364564},
+  doi = 	 {10.1145/2398856.2364564},
+  acmid = 	 {2364564},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {arrays, data parallelism, haskell},
+  abstract = 	 {Existing approaches to higher-order vectorisation,
+                  also known as flattening nested data parallelism, do
+                  not preserve the asymptotic work complexity of the
+                  source program. Straightforward examples, such as
+                  sparse matrix-vector multiplication, can suffer a
+                  severe blow-up in both time and space, which limits
+                  the practicality of this method. We discuss why this
+                  problem arises, identify the mis-handling of index
+                  space transforms as the root cause, and present a
+                  solution using a refined representation of nested
+                  arrays. We have implemented this solution in Data
+                  Parallel Haskell (DPH) and present benchmarks
+                  showing that realistic programs, which used to
+                  suffer the blow-up, now have the correct asymptotic
+                  work complexity. In some cases, the asymptotic
+                  complexity of the vectorised program is even better
+                  than the original.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364564&ftid=1282930&dwn=1&CFID=574762219&CFTOKEN=10899110},
+  review = 	 {fbie: accepted <2016-01-12 15:09:53>},
+}
+@inproceedings{Lippmeier:2012:WEH:2364527.2364564,
+  author = 	 {Lippmeier, Ben and Chakravarty, Manuel M.T. and
+                  Keller, Gabriele and Leshchinskiy, Roman and Peyton
+                  Jones, Simon},
+  title = 	 {Work Efficient Higher-order Vectorisation},
+  booktitle = 	 {Proceedings of the 17th ACM SIGPLAN International
+                  Conference on Functional Programming},
+  series = 	 {ICFP '12},
+  year = 	 {2012},
+  isbn = 	 {978-1-4503-1054-3},
+  location = 	 {Copenhagen, Denmark},
+  pages = 	 {259--270},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/2364527.2364564},
+  doi = 	 {10.1145/2364527.2364564},
+  acmid = 	 {2364564},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {arrays, data parallelism, haskell},
+  abstract = 	 {Existing approaches to higher-order vectorisation,
+                  also known as flattening nested data parallelism, do
+                  not preserve the asymptotic work complexity of the
+                  source program. Straightforward examples, such as
+                  sparse matrix-vector multiplication, can suffer a
+                  severe blow-up in both time and space, which limits
+                  the practicality of this method. We discuss why this
+                  problem arises, identify the mis-handling of index
+                  space transforms as the root cause, and present a
+                  solution using a refined representation of nested
+                  arrays. We have implemented this solution in Data
+                  Parallel Haskell (DPH) and present benchmarks
+                  showing that realistic programs, which used to
+                  suffer the blow-up, now have the correct asymptotic
+                  work complexity. In some cases, the asymptotic
+                  complexity of the vectorised program is even better
+                  than the original.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2364564&ftid=1282930&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  review = 	 {fbie: accepted <2016-01-12 15:09:45>},
+}
+@inproceedings{Keller:2010:RSP:1863543.1863582,
+  author = 	 {Keller, Gabriele and Chakravarty, Manuel M.T. and
+                  Leshchinskiy, Roman and Peyton Jones, Simon and
+                  Lippmeier, Ben},
+  title = 	 {Regular, Shape-polymorphic, Parallel Arrays in
+                  Haskell},
+  booktitle = 	 {Proceedings of the 15th ACM SIGPLAN International
+                  Conference on Functional Programming},
+  series = 	 {ICFP '10},
+  year = 	 {2010},
+  isbn = 	 {978-1-60558-794-3},
+  location = 	 {Baltimore, Maryland, USA},
+  pages = 	 {261--272},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/1863543.1863582},
+  doi = 	 {10.1145/1863543.1863582},
+  acmid = 	 {1863582},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {arrays, data parallelism, haskell},
+  abstract = 	 {We present a novel approach to regular,
+                  multi-dimensional arrays in Haskell. The main
+                  highlights of our approach are that it (1) is purely
+                  functional, (2) supports reuse through shape
+                  polymorphism, (3) avoids unnecessary intermediate
+                  structures rather than relying on subsequent loop
+                  fusion, and (4) supports transparent
+                  parallelisation. We show how to embed two forms of
+                  shape polymorphism into Haskell's type system using
+                  type classes and type families. In particular, we
+                  discuss the generalisation of regular array
+                  transformations to arrays of higher rank, and
+                  introduce a type-safe specification of array
+                  slices. We discuss the runtime performance of our
+                  approach for three standard array algorithms. We
+                  achieve absolute performance comparable to
+                  handwritten C code. At the same time, our
+                  implementation scales well up to 8 processor cores.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863582&ftid=845214&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  review = 	 {fbie: accepted <2016-01-12 15:09:02>},
+}
+@article{Keller:2010:RSP:1932681.1863582,
+  author = 	 {Keller, Gabriele and Chakravarty, Manuel M.T. and
+                  Leshchinskiy, Roman and Peyton Jones, Simon and
+                  Lippmeier, Ben},
+  title = 	 {Regular, Shape-polymorphic, Parallel Arrays in
+                  Haskell},
+  journal = 	 {SIGPLAN Not.},
+  issue_date = 	 {September 2010},
+  volume = 	 {45},
+  number = 	 {9},
+  month = 	 {sep},
+  year = 	 {2010},
+  issn = 	 {0362-1340},
+  pages = 	 {261--272},
+  numpages = 	 {12},
+  url = 	 {http://doi.acm.org/10.1145/1932681.1863582},
+  doi = 	 {10.1145/1932681.1863582},
+  acmid = 	 {1863582},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {arrays, data parallelism, haskell},
+  abstract = 	 {We present a novel approach to regular,
+                  multi-dimensional arrays in Haskell. The main
+                  highlights of our approach are that it (1) is purely
+                  functional, (2) supports reuse through shape
+                  polymorphism, (3) avoids unnecessary intermediate
+                  structures rather than relying on subsequent loop
+                  fusion, and (4) supports transparent
+                  parallelisation. We show how to embed two forms of
+                  shape polymorphism into Haskell's type system using
+                  type classes and type families. In particular, we
+                  discuss the generalisation of regular array
+                  transformations to arrays of higher rank, and
+                  introduce a type-safe specification of array
+                  slices. We discuss the runtime performance of our
+                  approach for three standard array algorithms. We
+                  achieve absolute performance comparable to
+                  handwritten C code. At the same time, our
+                  implementation scales well up to 8 processor cores.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1863582&ftid=845214&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  review = 	 {fbie: accepted <2016-01-12 15:08:58>},
+}
+@inproceedings{Collins:2014:NFL:2627373.2627375,
+  author = 	 {Collins, Alexander and Grewe, Dominik and Grover,
+                  Vinod and Lee, Sean and Susnea, Adriana},
+  title = 	 {NOVA: A Functional Language for Data Parallelism},
+  booktitle = 	 {Proceedings of ACM SIGPLAN International Workshop on
+                  Libraries, Languages, and Compilers for Array
+                  Programming},
+  series = 	 {ARRAY'14},
+  year = 	 {2014},
+  isbn = 	 {978-1-4503-2937-8},
+  location = 	 {Edinburgh, United Kingdom},
+  pages = 	 {8:8--8:13},
+  articleno = 	 {8},
+  numpages = 	 {6},
+  url = 	 {http://doi.acm.org/10.1145/2627373.2627375},
+  doi = 	 {10.1145/2627373.2627375},
+  acmid = 	 {2627375},
+  publisher = 	 {ACM},
+  address = 	 {New York, NY, USA},
+  keywords = 	 {Array-oriented programming, CUDA, Code generation,
+                  Compilation, Functional programming, Multi-core CPU},
+  abstract = 	 {Functional languages provide a solid foundation on
+                  which complex optimization passes can be designed to
+                  exploit parallelism available in the underlying
+                  system. Their mathematical foundations enable
+                  high-level optimizations that would be impossible in
+                  traditional imperative languages. This makes them
+                  uniquely suited for generation of efficient target
+                  code for parallel systems, such as multiple Central
+                  Processing Units (CPUs) or highly data-parallel
+                  Graphics Processing Units (GPUs). Such systems are
+                  becoming the mainstream for scientific and commodity
+                  desktop computing. Writing performance portable code
+                  for such systems using low-level languages requires
+                  significant effort from a human expert. This paper
+                  presents NOVA, a functional language and compiler
+                  for multi-core CPUs and GPUs. The NOVA language is a
+                  polymorphic, statically-typed functional language
+                  with a suite of higher-order functions which are
+                  used to express parallelism. These include map,
+                  reduce and scan. The NOVA compiler is a
+                  light-weight, yet powerful, optimizing compiler. It
+                  generates code for a variety of target platforms
+                  that achieve performance comparable to competing
+                  languages and tools, including hand-optimized
+                  code. The NOVA compiler is stand-alone and can be
+                  easily used as a target for higher-level or domain
+                  specific languages or embedded in other
+                  applications. We evaluate NOVA against two competing
+                  approaches: the Thrust library and hand-written CUDA
+                  C. NOVA achieves comparable performance to these
+                  approaches across a range of
+                  benchmarks. NOVA-generated code also scales linearly
+                  with the number of processor cores across all
+                  compute-bound benchmarks.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2627375&ftid=1503126&dwn=1&CFID=574747772&CFTOKEN=80047865},
+  review = 	 {fbie: accepted <2016-01-12 15:08:12>},
+}
