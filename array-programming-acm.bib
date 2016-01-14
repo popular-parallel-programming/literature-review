@@ -2255,6 +2255,9 @@ We present a framework for the automatic determination of array alignments in da
                   {http://dl.acm.org/ft_gateway.cfm?id=781526&ftid=156280&dwn=1&CFID=574773947&CFTOKEN=83431304},
   fullTextFile = {.slirm_cache/Deitz_2003_The.pdf},
   review =	 {fbie: accepted <2016-01-12 16:24:42>},
+  abstract = 	 {
+
+             Gather and scatter are data redistribution functions of long-standing importance to high performance computing. In this paper, we present a highly-general array operator with powerful gather and scatter capabilities unmatched by other array languages. We discuss an efficient parallel implementation, introducing three new optimizations---schedule compression, dead array reuse, and direct communication---that reduce the costs associated with the operator's wide applicability. In our implementation of this operator in ZPL, we demonstrate performance comparable to the hand-coded Fortran + MPI versions of the NAS FT and CG benchmarks. },
 }
 
 @inproceedings{Nieplocha:2005:EPG:1062261.1062305,
@@ -2281,6 +2284,9 @@ We present a framework for the automatic determination of array alignments in da
                   {http://dl.acm.org/ft_gateway.cfm?id=1062305&ftid=315458&dwn=1&CFID=574773947&CFTOKEN=83431304},
   fullTextFile = {.slirm_cache/Nieplocha_2005_Exploiting.pdf},
   review =	 {fbie: rejected <2016-01-12 16:26:21>},
+  abstract = 	 {
+
+             Exploiting processor groups is becoming increasingly important for programming next-generation high-end systems composed of tens or hundreds of thousands of processors. This paper discusses the requirements, functionality and development of multilevel-parallelism based on processor groups in the context of the Global Array (GA) shared memory programming model. The main effort involves management of shared data, rather than interprocessor communication. Experimental results for the NAS NPB Conjugate Gradient benchmark and a molecular dynamics (MD) application are presented for a Linux cluster with Myrinet and illustrate the value of the proposed approach for improving scalability. While the original GA version of the CG benchmark lagged MPI, the processor-group version outperforms MPI in all cases, except for a few points on the smallest problem size. Similarly, processor groups were very effective in improving scalability of a Molecular Dynamics application },
 }
 
 @article{Fluet:2008:SFG:1411203.1411239,
@@ -5847,6 +5853,12 @@ We present a framework for the automatic determination of array alignments in da
   acmid =	 144142,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {
+
+             A functional style application of APL notation succinctly describes the architecture and principles of operation of one kind of connection-based computer. In the future it is expected that these machines will have thousands of processors and large arrays of dynamic connections. APL programs running on von Neumann computers now provide precise descriptions of connection-based machines which are convenient for exploring the potential of connection-based computation. Experience with radically new structures and different principles of operation for neural network problem solving can be obtained using virtual machines provided by software. Virtual machines are described by functions programmed on conventional computers.
+Two adaptive variants of the sparse distributed memory or SDM (Kanerva [1991]) show improved efficiency. The demonstrated superiority of Kanerva's new pattern weighting idea can be obtained by improved coding of the input patterns. This coding is done by generally defined preprocessing of features of representative binary input patterns. Transformed input patterns select addresses which pack distributed memories more efficiently.
+Coding is done by first computing customized weight vectors for each input pattern vector. Individual weighting of each pattern leads to more uniform utilization of the addresses and their corresponding memory connection weights. The derived pattern weights improve discrimination between pairs of similar inputs with few significant differences. This paper is to provide the APL community access to a concise symbolic description of Kanerva's weighted SDM machine. APL's rich set of computer modeling and exposition tools have the potential of markedly accelerating software and hardware development for array-base connectionist computing. },
+  review = 	 {fbie: rejected <2016-01-14 09:55:15>},
 
 }
 
@@ -5873,6 +5885,7 @@ We present a framework for the automatic determination of array alignments in da
              A functional style application of APL notation succinctly describes the architecture and principles of operation of one kind of connection-based computer. In the future it is expected that these machines will have thousands of processors and large arrays of dynamic connections. APL programs running on von Neumann computers now provide precise descriptions of connection-based machines which are convenient for exploring the potential of connection-based computation. Experience with radically new structures and different principles of operation for neural network problem solving can be obtained using virtual machines provided by software. Virtual machines are described by functions programmed on conventional computers.
 Two adaptive variants of the sparse distributed memory or SDM (Kanerva [1991]) show improved efficiency. The demonstrated superiority of Kanerva's new pattern weighting idea can be obtained by improved coding of the input patterns. This coding is done by generally defined preprocessing of features of representative binary input patterns. Transformed input patterns select addresses which pack distributed memories more efficiently.
 Coding is done by first computing customized weight vectors for each input pattern vector. Individual weighting of each pattern leads to more uniform utilization of the addresses and their corresponding memory connection weights. The derived pattern weights improve discrimination between pairs of similar inputs with few significant differences. This paper is to provide the APL community access to a concise symbolic description of Kanerva's weighted SDM machine. APL's rich set of computer modeling and exposition tools have the potential of markedly accelerating software and hardware development for array-base connectionist computing. },
+  review = 	 {fbie: rejected <2016-01-14 09:55:19>},
 }
 
 @article{Fordyce:1991:UBI:114055.114074,
@@ -5896,6 +5909,7 @@ Coding is done by first computing customized weight vectors for each input patte
 
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=114074&ftid=28883&dwn=1&CFID=744754184&CFTOKEN=77672816},
   abstract = 	 {A critical computational requirement for many of the decision technologies in the fields of operations research (PERT/CPM, Markov chains, decision trees, Bayesian analysis, MRP, simulation, &amp;hellip;), artificial intelligence (evidential reasoning, truth maintenance systems, propositional logic, rule based inference, frames and semantic nets, &amp;hellip;), and decision support systems (worksheet or financial planning models, data / entity models, &amp;hellip;) is the development and manipulation of a function network or directed graph describing the relationship between "variables", "objects", or "actors" involved in the application of the decision technology to a specific problem. The manipulation of such networks or graphs using Boolean matrices and vector of integer vectors is well known in portions of the APL community (see bibliography), but intertwined with specific applications and spread out across a variety sources (some of which are difficult to obtain). This paper succinctly and simply describes the basics of manipulating a function network with Boolean matrices and integer vectors including focusing networks, finding circular conditions (A depends on B, B depends on C, C depends on A, therefore A depends on A, &amp;hellip;), and grouping functions based on relative independence to identify parallel computational opportunities and substantially reduces the non-procedural aspect of the problem.},
+  review = 	 {fbie: rejected <2016-01-14 09:57:19>},
 }
 
 @inproceedings{Fordyce:1991:UBI:114054.114074,
@@ -5920,6 +5934,7 @@ Coding is done by first computing customized weight vectors for each input patte
   abstract = 	 {
 
              A critical computational requirement for many of the decision technologies in the fields of operations research (PERT/CPM, Markov chains, decision trees, Bayesian analysis, MRP, simulation, &amp;hellip;), artificial intelligence (evidential reasoning, truth maintenance systems, propositional logic, rule based inference, frames and semantic nets, &amp;hellip;), and decision support systems (worksheet or financial planning models, data / entity models, &amp;hellip;) is the development and manipulation of a function network or directed graph describing the relationship between "variables", "objects", or "actors" involved in the application of the decision technology to a specific problem. The manipulation of such networks or graphs using Boolean matrices and vector of integer vectors is well known in portions of the APL community (see bibliography), but intertwined with specific applications and spread out across a variety sources (some of which are difficult to obtain). This paper succinctly and simply describes the basics of manipulating a function network with Boolean matrices and integer vectors including focusing networks, finding circular conditions (A depends on B, B depends on C, C depends on A, therefore A depends on A, &amp;hellip;), and grouping functions based on relative independence to identify parallel computational opportunities and substantially reduces the non-procedural aspect of the problem. },
+  review = 	 {fbie: rejected <2016-01-14 09:57:22>},
 }
 
 @inproceedings{Chadha:2014:EOI:2628071.2628103,
@@ -5947,6 +5962,7 @@ Coding is done by first computing customized weight vectors for each input patte
   abstract = 	 {
 
              Web 2.0 applications written in JavaScript are increasingly popular as they are easy to use, easy to update and maintain, and portable across a wide variety of computing platforms. Web applications receive frequent input from a rich array of sensors, network, and user input modalities. To handle the resulting asynchrony due to these inputs, web applications are developed using an event-driven programming model. These event-driven web applications have dramatically different characteristics, which provides an opportunity to create a customized processor core to improve the responsiveness of web applications. In this paper, we take one step towards creating a core customized to event-driven applications. We observe that instruction cache misses of web applications are substantially higher than conventional server and desktop workloads due to large working sets caused by distant re-use. To mitigate this bottleneck, we propose an instruction prefetcher (EFetch) that is tuned to exploit the characteristics of web applications. We find that an event signature, which captures the current event and function calling context, is a good predictor of the control flow inside a function of an event-driven program. It allows us to accurately predict a function's callees and their function bodies and prefetch them in a timely manner. For a set of real-world web applications, we show that the proposed prefetcher outperforms commonly implemented next-2-line prefetcher by 17%. Also, it consumes 5.2 times less area than a recently proposed prefetcher, while outperforming it. },
+  review = 	 {fbie: rejected <2016-01-14 09:57:42>},
 }
 
 @inproceedings{Baxter:1989:RPS:72935.72967,
@@ -5965,6 +5981,15 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 72967,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {
+
+                  An abstract is not available.
+
+
+
+
+            },
+  notes = 	 {The paper seems incomplete at a first glance, at least one table is missing. I am undecided.},
 }
 
 @inproceedings{Moreira:2001:CTA:376656.376831,
@@ -5986,6 +6011,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 376831,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  review = 	 {fbie: rejected <2016-01-14 10:10:46>},
+  abstract = 	 {The lack of direct support for multidimensional arrays in Java™ has been recognized as a major deficiency in the language's applicability to numerical computing. The typical approach to adding multidimensional arrays to Java has been through class libraries that implement these structures. It has been shown that the class library approach can achieve very high-performance for numerical computing, through the use of compiler techniques and efficient implementations of aggregate array operations. Because of the inconvenience of accessing array elements through method invocations, it is advocated by many that class libraries for multidimensional arrays should be combined with new language syntax to facilitate manipulation of those multidimensional arrays. Another approach that has been discussed in the literature is that of relying exclusively on the JVM to recognize those arrays of arrays that are being used to stimulate multidimensional arrays. This approach can also deliver good performance, but it does not improve the existing interfaces for numerical computing. There is yet a third approach: extending the Java language with new syntactic constructs for multidimensional arrays and directly compiling those constructs to bytecode. The new constructs provide a more convenient interface for numerical computing, without requiring a matching class library. This paper is a comparative discussion or the three approaches to adding multidimensional arrays to Java mentioned above. We present a description of the three approaches, listing the pros and cons of each. We give a more detailed description of the third approach — language constructs translated to bytecode — as it is a new contribution. We compare each of the approaches with regards to functionality, impact on the language and virtual machine specification, implementation efforts, and typical achievable performance. We show that the best choice depends on the relative importance attached to the above metrics.},
 }
 
 @article{Tang:1990:CTD:255129.255155,
@@ -6006,6 +6033,12 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 255155,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {
+
+             The major source of parallelism in ordinary programs is do loops. When loop iterations of parallelized loops are executed on multiprocessors, the cross-iteration data dependencies need to be enforced by synchronization between processors. Existing data synchronization schemes are either too simple to handle general nested loop structures with non-trivia array subscript functions or inefficient due to the large run-time overhead.
+In this paper, we propose a new synchronization scheme based on two data-oriented synchronization instructions: synch_read(x,s) and synch_write(x,s). We present the algorithm to compute the ordering number, s, for each data access. Using our scheme, a parallelizing compiler can parallelize a general nested loop structure with complicated cross-iteration data dependencies. If the computations of ordering numbers cannot be done at compile time, the run-time overhead is smaller than the other existing run-time schemes.
+ },
+  review = 	 {fbie: accepted <2016-01-14 10:31:31>},
 }
 
 @inproceedings{Tang:1990:CTD:77726.255155,
@@ -6025,6 +6058,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 255155,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {The major source of parallelism in ordinary programs is do loops. When loop iterations of parallelized loops are executed on multiprocessors, the cross-iteration data dependencies need to be enforced by synchronization between processors. Existing data synchronization schemes are either too simple to handle general nested loop structures with non-trivia array subscript functions or inefficient due to the large run-time overhead.
+In this paper, we propose a new synchronization scheme based on two data-oriented synchronization instructions: synch_read(x,s) and synch_write(x,s). We present the algorithm to compute the ordering number, s, for each data access. Using our scheme, a parallelizing compiler can parallelize a general nested loop structure with complicated cross-iteration data dependencies. If the computations of ordering numbers cannot be done at compile time, the run-time overhead is smaller than the other existing run-time schemes.},
+  review = 	 {fbie: accepted <2016-01-14 10:32:58>},
 }
 
 @inproceedings{Ajima:2015:ADG:2832241.2832242,
@@ -6047,6 +6083,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {PGAS, communication library, data structure, global
                   memory allocator},
+  abstract = 	 {HPC systems comprise an increasing number of processor cores towards the exascale computing era. As the number of parallel processes on a system increases, the number of point-to-point connections for each process increases and the memory usage of connections becomes an issue. A new communication library called Advanced Communication Primitives (ACP) is being developed to address the issue by providing communication functions with the Partitioned Global Address Space (PGAS) model that is potentially connection-less. The ACP library is designed to underlie domain-specific languages or parallel language runtimes. The ACP basic layer (ACPbl) comprises a minimum set of functions to abstract interconnect devices and to provide an address translation mechanism. As far as using ACPbl, global address can be granted only to local memory. In this paper, a new set of functions called the ACP data library (ACPdl) including global memory allocator and data-structure library is introduced to improve the productivity of the ACP library. The global memory allocator allocates a memory region of a remote process and assigns global address to it without involving the remote process. The data-structure library uses the global memory allocator internally and provides functions to create, read, update and delete distributed data-structures. Evaluation results of global memory allocator and associative-array data-structure functions show that overhead between the main and communication threads may become a bottleneck when an implementation of ACPbl uses a low latency HPC-dedicated interconnect device.},
+  review = 	 {fbie: rejected <2016-01-14 10:42:55>},
 }
 
 @article{Surkan:1989:ADF:75145.75191,
@@ -6067,6 +6105,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 75191,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {APL functions provide concise, array-oriented expressions for describing connection-based computing. These give insights into a variety of neural network-like computer models. Functional decomposition into inherently parallel operation of collective or memory-based computing is effected with the identification of several command-like APL simulation functions.These functions serve to: (a) generate and configure initial values and structures for network layers, connection weights and thresholds, (b) strategically sample training sets to provide acyclic sequences of patterns, (c) update weights for memorizing or learning from the training set, (d) locate units effective for storing and retrieving memories, and (e) use a cue or noise-corrupted pattern for recalling or reconstructing memory associations established during training. Also, APL functions are used to accomodate for data values missing from the training patterns. Other simply described functions generate random fixed reference addresses and initialize modifiable weight values. Test patterns with specified levels of noise contamination are generated by simple APL expressions.},
+  review = 	 {fbie: rejected <2016-01-14 10:43:22>},
 }
 
 @inproceedings{Surkan:1989:ADF:75144.75191,
@@ -6085,6 +6125,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 75191,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {APL functions provide concise, array-oriented expressions for describing connection-based computing. These give insights into a variety of neural network-like computer models. Functional decomposition into inherently parallel operation of collective or memory-based computing is effected with the identification of several command-like APL simulation functions.These functions serve to: (a) generate and configure initial values and structures for network layers, connection weights and thresholds, (b) strategically sample training sets to provide acyclic sequences of patterns, (c) update weights for memorizing or learning from the training set, (d) locate units effective for storing and retrieving memories, and (e) use a cue or noise-corrupted pattern for recalling or reconstructing memory associations established during training. Also, APL functions are used to accomodate for data values missing from the training patterns. Other simply described functions generate random fixed reference addresses and initialize modifiable weight values. Test patterns with specified levels of noise contamination are generated by simple APL expressions.},
+  review = 	 {fbie: rejected <2016-01-14 10:43:52>},
 }
 
 @article{Rogers:1995:SDD:201059.201065,
@@ -6107,6 +6149,8 @@ Coding is done by first computing customized weight vectors for each input patte
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
   keywords =	 {dynamic data structures},
+  abstract = 	 {Compiling for distributed-memory machines has been a very active research area in recent years. Much of this work has concentrated on programs that use arrays as their primary data structures. To date, little work has been done to address the problem of supporting programs that use pointer-based dynamic data structures. The techniques developed for supporting SPMD execution of array-based programs rely on the fact that arrays are statically defined and directly addressable. Recursive data structures do not have these properties, so new techniques must be developed. In this article, we describe an execution model for supporting programs that use pointer-based dynamic data structures. This model uses a simple mechanism for migrating a thread of control based on the layout of heap-allocated data and introduces parallelism using a technique based on futures and lazy task creation. We intend to exploit this execution model using compiler analyses and automatic parallelization techniques. We have implemented a prototype system, which we call Olden, that runs on the Intel iPSC/860 and the Thinking Machines CM-5. We discuss our implementation and report on experiments with five benchmarks.},
+  review = 	 {fbie: rejected <2016-01-14 10:44:03>},
 }
 
 @inproceedings{Pinto:1988:DSP:322609.323146,
@@ -6125,6 +6169,14 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 323146,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {In the inevitable search for the “perfect” structure, the beginning programmer is faced with a multitude of possibilities. Stacks, arrays, queues, linked lists, trees, and, on a higher level, the decision whether the “best” choice would involve a physical implementation of arrays or pointers. The choice, particularly for the novice, is not easy. The purpose of the abstract is to facilitate that choice.
+Having perused a dozen textbooks dealing with introduction to data structures (the greater majority of which employ Pascal) one finds the “expected” comparative analysis between dynamic and static variables. The prevalent tendency indicates that the utilization of pointer (dynamic) variables more effectively controls memory allocation with the result being a generally more effective, possibly more expedient execution.
+The strange occurrence that I could not help the questioning was involved with the reasons why most treatments of data structures devote more time to the static approach as opposed to the dynamic one. And, on a different note, why so few textbooks actually compared the two parallel approaches for the same problem.
+To alleviate this, I considered solving a simple problem both ways. We wish to create a binary search tree from a list of up to 50000 numbers and, in addition, remove any duplicates from the list. A reasonable approach to this would be to statically declare an array of 50000 nodes, using subroutines to “getnode” (using an available pool of nodes created within the program), create a tree (i.e., the root), setleft and setright (to properly place an item in the tree). Such a program involves 5 modules, about 80 lines of code, a run time of under 2 seconds, 1089 page faults, and a peak page file (indicating the use of memory) of 3253.
+On the other hand, if one writes the program using pointer variables, the “getnode” procedure mentioned above can be replaced by a simple “new” function (for obtaining a new node), no storage for the numbers is required within the program and we see the following results: 72 lines of code, 4 modules, a run time of under 2 seconds, 861 page faults, and a peak page file of 924.
+An interesting observation is that the only “significant” difference in the “statistics” of the two versions is in the peak page file. There was emphatically no difference in run time.
+It would seem useful, therefore, to allow the novice programmer the option of attempting both approaches, while encouraging such comparisons as the one noted above. The “best” approach may not be an acceptable one for a particular user who feels burdened by a concept not fully understood. Thus, the when, where, and why can only be asked and answered by the programmer who truly experiences the greatest magnitude.},
+  review = 	 {fbie: rejected <2016-01-14 10:44:59>},
 }
 
 @article{Koster:1985:CAP:255315.255327,
@@ -6145,6 +6197,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 255327,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {This paper investigates the features of an APL compiler designed for a cellular computer (the FFP machine). This machine directly executes Formal Functional Programming (FFP) code. The APL compiler generates parallel FFP code. Techniques for parallel implementation of many APL array processing operators and functions are described. The implicit parallelism between different operations in a given APL program is also exploited. The FFP machine can accommodate the almost unbounded parallelism of FFP programs. Execution time analysis shows potential for highly efficient execution of APL programs on this machine.},
+  review = 	 {fbie: rejected <2016-01-14 10:46:27>},
 }
 
 @inproceedings{Koster:1985:CAP:17701.255327,
@@ -6164,6 +6218,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 255327,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {This paper investigates the features of an APL compiler designed for a cellular computer (the FFP machine). This machine directly executes Formal Functional Programming (FFP) code. The APL compiler generates parallel FFP code. Techniques for parallel implementation of many APL array processing operators and functions are described. The implicit parallelism between different operations in a given APL program is also exploited. The FFP machine can accommodate the almost unbounded parallelism of FFP programs. Execution time analysis shows potential for highly efficient execution of APL programs on this machine.},
+  review = 	 {fbie: rejected <2016-01-14 10:46:42>},
 }
 
 @inproceedings{El-Ghazawi:2005:RCE:1046192.1046263,
@@ -6186,6 +6242,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 1046263,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Reconfigurable Computers are parallel systems that are designed around multiple general-purpose processors and multiple field programmable gate array (FPGA) chips. These systems can leverage the synergism between conventional processors and FPGAs to provide low-level hardware functionality at the same level of programmability as general-purpose computers. In this work we conduct an experimental study using one of the state-of-the-art reconfigurable computers and a representative set of applications to assess the field, uncover the challenges, propose solutions, and conceive a realistic evolution path. We consider issues of concern including performance/cost. We also consider productivity in the sense of development, compiling, running, and system reliability. It will be shown that for some applications, the performance/cost can be orders of magnitude better than conventional computers. It will be also shown that programming such machines may still require some hardware knowledge, similar to hardware knowledge computer programmers must acquire to write scalable programs.},
+  review = 	 {fbie: rejected <2016-01-14 10:46:50>},
 }
 
 @inproceedings{Saha:2015:IHS:2701126.2701213,
@@ -6209,6 +6267,8 @@ Coding is done by first computing customized weight vectors for each input patte
   keywords =	 {binary coded decimal (BCD), circular convolution,
                   high speed, linear convolution, multiplier and
                   accumulate (MAC), systolic array},
+  abstract = 	 {In this paper, we report on transistor level (ASIC) implementation of high speed processor for the first time, for computing convolution sum (linear and circular) of two sequences. The convolution sum was calculated through the orientation of the sequences into array formation for parallel processing, owing towards high speed architecture design. The architectures were implemented and functionality was verified through spice simulator. The mathematical transformation along with binary coded decimal(BCD) arithmetic have been incorporated for the practical implementation of convolution sum, ensure substantial reduction of propagation delay in comparison with earlier reported architectures. The performance parameters such as propagation delay, dynamic switching power consumption were calculated through spice using 90nm CMOS technology. The propagation delay of the resulting 4-point linear convolution was only ~12.79ns and consumes ~27.56mW power with a layout area of ~9.06mm2. Moreover, performance parameters of 4-point circular convolution were ~14.8ns propagation delay with ~37.8mW switching power consumption.},
+  review = 	 {fbie: rejected <2016-01-14 10:47:04>},
 }
 
 @inproceedings{Tsuda:1989:AVC:76263.76283,
@@ -6228,6 +6288,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 76283,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {In our paper of Supercomputing '88, an overview of V-Pascal, an automatic vectorizing compiler for Pascal, was presented with focus on its Version 1. In that paper, as one of those higher functions to be added to Version 2 V-Pascal, vector-mode execution of nonnummeric operations such as relational database operations and nonnumeric data manipulations was considered. This paper describes the actual results we have obtained. These results are important in that a new vista has been opened up for vector supercomputers which are originally designed solely for high-speed manipulations of scientific numerical data.
+More concretely, the compiler V-Pascal has acquired the ability to automatically vectorize Pascal programs that compare/assign massive data of character strings and those programs which prescribe time-consuming relational operations such as 'join' and others for relational database manipulation. Timing results demonstrate that these nonnumeric operations are performed in the regime of vector performance.},
+  review = 	 {fbie: rejected <2016-01-14 10:49:40>},
 }
 
 @article{Thomasian:2014:AFR:2658850.2628913,
@@ -6258,6 +6321,8 @@ Coding is done by first computing customized weight vectors for each input patte
                   split-merge queueing system, stream processing, task
                   systems, team service model, vacationing server
                   model},
+  abstract = 	 {Fork/join (F/J) requests arise in contexts such as parallel computing, query processing in parallel databases, and parallel disk access in RAID. F/J requests spawn K tasks that are sent to K parallel servers, and the completion of all K tasks marks the completion of an F/J request. The exact formula for the mean response time of K = 2-way F/J requests derived under Markovian assumptions (RF/J2) served as the starting point for an approximate expression for RF/JK for 2 < K ≤ 32. When servers process independent requests in addition to F/J requests, the mean response time of F/J requests is better approximated by RmaxK, which is the maximum of the response times of tasks constituting F/J requests. RmaxK is easier to compute and serves as an upper bound to RF/JK. We discuss techniques to compute RmaxK and generally the maximum of K random variables denoting the processing times of the tasks of a parallel computation &Xmacr;maxK. Graph models of computations such as Petri nets—a more general form of parallelism than F/J requests—are also discussed in this work. Jobs with precedence constraints may require multiple resources, which are represented by a queueing network model. We also discuss various queueing systems related to F/J queueing systems and outline their analysis.},
+  review = 	 {fbie: rejected <2016-01-14 10:54:53>},
 }
 
 @article{Shterenlikht:2015:FC:2754942.2754944,
@@ -6278,6 +6343,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 2754944,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Coarrays are a Fortran 2008 standard feature intended for SIMD type parallel programming. The runtime environment starts a number of identical executable images of the coarray program, on multiple processors, which could be actual physical processors or threads. Each image has a unique number and its private address space. Ordinary variables are private to an image. Coarray variables are available for read/write access from any other image. Coarray communications are of "single sided" type, i.e. a remote call from imageA to image B does not need to be accompanied by a corresponding call in image B. This feature makes coarray programming a lot simpler than MPI. The standard provides synchronisation intrinsics to help avoid race conditions or deadlocks. Any ordinary variable can be made into a coarray - scalars, arrays, intrinsic or derived data types, pointers, allocatables are all allowed. Coarrays can be declared in, and passed to, procedures. Coarrays are thus very flexible and can be used for a number of purposes. For example a collection of coarrays from all or some images can be thought of as a large single array. This is precisely the inverse of the model partitioning logic, typical in MPI programs. A coarray program can exploit functional parallelism too, by delegating dis- tinct tasks to separate images or teams of images. Coarray collectives are expected to become a part of the next version of the Fortran standard. A major unresolved problem of coarray programming is the lack of standard parallel I/O facility in Fortran. In this paper several simple complete coarray programs are shown and compared to alternative parallel technologies - OpenMP, MPI and Fortran 2008 intrinsic "do concurrent". Inter image communication patterns and data transfer are illustrated. An example of a materials microstructure simulation coarray program scaled up to 32k cores is shown. Problems with coarray I/O at this scale are highlighted and addressed with the use of MPI-I/O. A hybrid MPI/coarray programming is discussed and illustrated with a finite element/cellular automata (CAFÃ) multi-scale model. The paper completes with a description of the new coarray language features, expected in the 2015 Fortran standard, and with a brief list of coarray resources},
+  review = 	 {fbie: rejected <2016-01-14 10:57:16>},
 }
 
 @inproceedings{Chakrabarti:2001:GOT:377792.377827,
@@ -6297,6 +6364,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 377827,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {This paper presents a novel technique to perform global optimization of communication and preprocessing calls in the presence of array accesses with arbitrary subscripts. Our scheme is presented in the context of automatic parallelization of sequential programs to produce message passing programs for execution on distributed machines. We use the static single assignment (SSA) form for message passing programs as the intermediate representation and then present techniques to perform global optimizations even in the presence of array accesses with arbitrary subscripts. The focus of this paper is in showing that, using a uniform compilation method both at compile-time and at run-time, our framework is able to determine the earliest and the latest legal communication point for a certain distributed array reference even in the presence of arbitrary array addressing functions. Our scheme then heuristically determines the final communication point after considering the interaction between the relevant communication schedules. Owing to combined static and dynamic analysis, a quasi-dynamic method of code generation is implemented. We describe the need for proper interaction between the compiler and the run-time routines for efficient implementation of optimizations as well as for compatible code generation. All of the analyses is initiated at compile-time, static analyses of the program is done as much as possible, and then the run-time routines take over the analyses while building on the data structures initiated at compile time. This scheme has been incorporated in our compiler framework which can use uniform methods to compile, parallelize, and optimize a sequential program irrespective of the subscripts used in array addressing functions. Experimental results for a number of benchmarks on an IBM SP-2 show up to around 10-25% reduction in total run-times in our globally-optimized schemes compared to other state-of-the-art schemes on 16 processors.},
+  review = 	 {fbie: rejected <2016-01-14 10:58:40>},
 }
 
 @inproceedings{Chin:2003:EST:777388.777397,
@@ -6318,6 +6387,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {collection analysis, fix-point, mixed constraints,
                   polymorphism, sized type},
+  abstract = 	 {Many program optimizations and analyses, such as array-bounds checking, termination analysis, depend on knowing the size of a function's input and output. However, size information can be difficult to compute. Firstly, accurate size computation requires detecting a size relation between different inputs of a function. Secondly, size information may also be contained inside a collection (data structure with multiple elements). In this paper, we introduce some techniques to derive universal and existential size properties over collections of elements of recursive data structures. We shall show how a mixed constraint system could support the enhanced size type, and highlight examples where collection analysis are useful.},
+  review = 	 {fbie: rejected <2016-01-14 10:59:30>},
 }
 
 @article{Chin:2003:EST:966049.777397,
@@ -6339,6 +6410,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {collection analysis, fix-point, mixed constraints,
                   polymorphism, sized type},
+  abstract = 	 {Many program optimizations and analyses, such as array-bounds checking, termination analysis, depend on knowing the size of a function's input and output. However, size information can be difficult to compute. Firstly, accurate size computation requires detecting a size relation between different inputs of a function. Secondly, size information may also be contained inside a collection (data structure with multiple elements). In this paper, we introduce some techniques to derive universal and existential size properties over collections of elements of recursive data structures. We shall show how a mixed constraint system could support the enhanced size type, and highlight examples where collection analysis are useful.},
+  review = 	 {fbie: rejected <2016-01-14 10:59:36>},
 }
 
 @inproceedings{Oliver:2005:HCP:1046192.1046222,
@@ -6361,6 +6434,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {FPGA, Smith-Waterman, bio-informatics, dynamic
                   re-configuration},
+  abstract = 	 {Protein sequences with unknown functionality are often compared to a set of known sequences to detect functional similarities. Efficient dynamic-programming algorithms exist for solving this problem, however current solutions still require significant scan times. These scan time requirements are likely to become even more severe due to exponential database growth. In this paper we present a new approach to bio-sequence database scanning using re-configurable FPGA-based hardware platforms to gain high performance at low cost. Efficient mappings of the Smith-Waterman algorithm using fine-grained parallel processing elements (PEs) that are tailored towards the parameters of a query have been designed. We use customization opportunities available at run-time to dynamically hyper customize the systolic array to make better use of available resource. Our FPGA implementation achieves a speedup of approximately 170 for linear gap penalties and 125 for affine gap penalties as compared to a standard desktop computing platform. We show how hyper-customization at run-time can be used to further improve the performance.},
+  review = 	 {fbie: rejected <2016-01-14 10:59:49>},
 }
 
 @inproceedings{Sanchez:1997:SLA:522659.825636,
@@ -6378,6 +6453,8 @@ Coding is done by first computing customized weight vectors for each input patte
   publisher =	 {IEEE Computer Society},
   address =	 {Washington, DC, USA},
   keywords =	 {Locality analysis, Selective Cache, Dual Data Cache},
+  abstract = 	 {Most memory references in numerical codes correspond to array references whose indices are affine functions of surrounding loop indices. These array references follow a regular predictable memory pattern that can be analyzed at compile time. This analysis can provide valuable information like the locality exhibited by the program, which can be used to implement a more intelligent caching strategy. In this paper we propose a static locality analysis oriented to the management of data caches. We show that previous proposals on locality analysis are not appropriate when the programs have a high conflict miss ratio. This paper extends those proposals by introducing a compile time interference analysis that significantly improve the performance of them. We first show how this analysis can be used to characterize the dynamic locality properties of numerical codes. This evaluation show for instance that a large percentage of references exhibit only temporal locality and another significant percentage does not exhibit any type of locality. This motivates the use of a dual data cache, which has a module specialized to exploit temporal locality, and a selective cache respectively. Then, the performance provided by these two cache organizations is evaluated. In both organizations, the static locality analysis is responsible for tagging each memory instruction accordingly to the particular type(s) of locality that it exhibits.},
+  notes = 	 {The paper seems not to be available from ACM.},
 }
 
 @inproceedings{Krothapalli:1990:EPT:100348.100461,
@@ -6396,6 +6473,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 100461,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Several vendors such as Cray, Fujitsu, NEC supply vector processors that use pipelined functional units. A pipelined functional unit can extract parallelism by operating on a stream of operands simultaneously, with each stage in the pipeline working on a different set of operands. Users of these machines typically program in FORTRAN, and rely on an optimizing compiler (vectorizer) to extract parallelism. These compilers analyze loops in a program and generate a vector instruction for each type of operation that can be performed simultaneously on different elements of an array. When the independence of operations on different elements of an array is not compile-time determinable, as for example is the case with unstructured sparse matrix computations, these compilers generate scalar code.
+In this paper we propose a scheme based on run-time dependence analysis to vectorize loops with dependencies unknown at compile-time. Our approach analyses a loop at run-time by executing a skeleton of the loop and assigns a level to each operation. Operations that are independent of any other operations in the loop are given a level of one. Other operations are given a level one greater than the maximum of levels of all dependent operations. A vector instruction, using indirect operand access, is generated for all the operations of a given type at each level. The approach was evaluated by implementing a sparse triangular solver on one processor of a Cray X-MP. A number of sparse matrices derived from the application domain of circuit simulation were used. An improvement in performance ranging between 100-500.},
+  review = 	 {fbie: rejected <2016-01-14 11:04:08>},
 }
 
 @inproceedings{Olmstead:1987:CPA:322917.323085,
@@ -6414,6 +6494,12 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 323085,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {The parallel optimizing compiler is offered as the only viable means of fully exploiting the power of parallel architectures and applying it to mainstream computing problems. In this context, “mainstream” includes -but should not be limited to- scientific computing, which generally implies the solving of partial differential equations, fast Fourier transforms, matrix manipulations, etc. Basically our motivation is to provide the fast execution of a broad class of programs.
+The requirements of general parallel computing are examined from an engineering perspective and architectures are evaluated in the context of accepted standards, These standards include cost, reliability/fault tolerance, and performance. To simplify the evaluation process, the standards are applied to classes rather than individual architectures. Two classes of architectures exist: algorithmically and computationally specialized architectures (e.g., systolic arrays, SIMD machines, associative processors) and computationally generalized architectures (e.g., MIMD homogeneous multiprocessors with shared central memory). As each standard is applied, generalized architectures invariably prove superior. Although some algorithmically specialized computers, (e.g., systolic arrays) are admittedly less expensive than their more generalized counterparts (though this is not the case with most SIMD machines), total system cost rapidly becomes prohibitive when one considers the vast number of possible algorithms encountered in solving mainstream computing problems. Reliability also favors the generalized machine. Clearly, a machine rich in data paths and redundancy offers superior fault tolerance. Concerning performance, while it is true that algorithmically specialized architectures can occasionally provide nearly optimal solutions to certain specific problems, generalized architectures can produce both high-throughput and rapid turnaround. Indeed, a generalized machine might make use of one or more algorithmically specialized architectures, much like a standard system maintains a library of specialized software routines. In sum, specialized architectural approaches are fundamentally flawed and not sufficient to solve mainstream computing problems.
+Having opted for generalized parallel architectures, two approaches for their exploitation are evaluated: parallel languages and parallel optimizing compilers. Languages include both those that were designed for parallel programming, like Occam, as well as those sequential languages with added parallel constructs. Standards, similar to those employed above but modified for application to software, are used to evaluate each approach. These standards also include cost and performance, but in the place of reliability, maintainability, and portability are substituted. When examined in light of these standards, the parallel language approach is shown to be inferior in nearly every case. First, software science has shown, empirically, that increasing the quantity of instructions required to perform a given task has a direct, and negative, effect on both programmer productivity and software quality. Thus, the use of additional constructs required to express an algorithm using a parallel language has an adverse effect on the overall cost of the program; and although hand coded programs often more efficient than their compiled counterparts, industry studies have shown that the gain in performance attributable to hand coding is less than twenty percent. Programs coded in a parallel language are also more difficult to maintain. For example, a program might be modified in such a way that the original process-partitioning is no longer optimal; still worse, it may no longer function at all. This problem is not encountered when utilizing sequential programming languages. Concerning portability, if the source program written in a parallel language is moved to a machine with a different architecture (i.e., one having dissimilar process creation, synchronization, and communication costs), it will be less efficient and, more likely, incorrect. It becomes obvious that the criticisms leveled against parallel languages are similar to those favoring the use of high order, rather than assembly languages. This issue points to an underlying philosophical tenet: that is, humans should be freed, whenever possible, from concern over details that can best be left to the automation. Finally, and most importantly, recent research in psycho-linguistics has demonstrated that the structure of natural language is fundamentally sequential. The human brain is inherently designed to map even parallel ideas onto a sequential medium. Thus, the parallel language approach is inimical to human cognitive processes and its application for widespread use in parallel computing is extremely limited.
+It is clear then, that our goal should be the development of powerful, generalized parallel architectures and the design of compilers capable of extracting the maximum amount of parallelism inherent in a program.},
+  notes = 	 {This is a really interesting abstract, supporting many of our claims. However, it seems irrelevant for the literature review at hand, as it also does not produce any new insights.},
+  review = 	 {fbie: rejected <2016-01-14 11:09:53>},
 }
 
 @inproceedings{Vulov:2011:BFS:2431518.2431870,
@@ -6432,6 +6518,8 @@ Coding is done by first computing customized weight vectors for each input patte
   url =		 {http://dl.acm.org/citation.cfm?id=2431518.2431870},
   acmid =	 2431870,
   publisher =	 {Winter Simulation Conference},
+  abstract = 	 {We introduce Backstroke, a new open source framework for the automatic generation of reverse code for functions written in C++. Backstroke enables reverse computation for optimistic parallel discrete event simulations. It is built using the ROSE open-source compiler infrastructure, and handles complex C++ features including pointers and pointer types, arrays, function and method calls, class types, inheritance, polymorphism, virtual functions, abstract classes, templated classes and containers. Backstroke also introduces new program inversion techniques based on advanced compiler analysis tools built into ROSE. We explore and illustrate some of the complex language and semantic issues that arise in generating correct reverse code for C++ functions.},
+  review = 	 {fbie: rejected <2016-01-14 11:11:07>},
 }
 
 @inproceedings{Duro:2010:OVF:1866210.1866217,
@@ -6456,6 +6544,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {applications, configuration, deployment,
                   infrastructures, management, virtualization},
+  abstract = 	 {The recent developments in virtualization change completely the panorama of the Hardware/OS deployment. New bottlenecks arise in the deployment of application stacks, where IT industry will spend most of the time to assure automation. VIRTU tool aims at managing, configuring and testing distributed ground applications of space systems on a virtualized environment, based on open tools and cross virtualization support. This tool is a spin-off of previous activities performed by the European Space Operations Center (ESOC) and thus it covers the original needs from the ground data systems infrastructure division of the European Space Agency. VIRTU is a testing oriented solution. Its ability to group several virtual machines in an assembly provides the means to easily deploy a full testing infrastructure, including the client/server relationships. The possibility of making on-demand request of the testing infrastructure will provide some infrastructure optimizations, specially having in mind that ESA maintains Ground Control software of various missions, and each mission cam potentially have a different set of System baselines and last up to 15 years. The matrix array of supported system combinations is therefore enormous and any improvement on the process provides substantial benefits to ESA, by reducing the effort and schedule of each maintenance activity. The ESOC's case study focuses on the development and validation activities of infrastructure or mission Ground Systems solutions. The Ground Systems solutions are typically composed of distributed systems that could take advantage of virtualized environments for testing purposes. Virtualization is used as way to optimize maintenance for tasks such as testing new releases and patches, test different system's configurations and replicate tests. The main benefits identified are related to deployment test environment and the possibility to have on-demand infrastructure.},
+  review = 	 {fbie: rejected <2016-01-14 11:11:55>},
 }
 
 @article{Bernecky:1993:RAJ:166198.166201,
@@ -6476,6 +6566,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 166201,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Although multicomputers are becoming feasible for solving large problems, they are difficult to program: Extraction of parallelism from scalar languages is possible, but limited. Parallelism in algorithm design is difficult for those who think in von Neumann terms. Portability of programs and programming skills can only be achieved by hiding the underlying machine architecture from the user, yet this may impact performance on a specific host.APL, J, and other applicative array languages with adequately rich semantics can do much to solve these problems. The paper discusses the value of abstraction and semantic richness, performance issues, portability, potential degree of parallelism, data distribution, process creation, communication and synchronization, frequency of program faults, and clarity of expression. The BLAS are used as a basis for comparison with traditional supercomputing languages.},
+  notes = 	 {Review paper, interesting for motivation, but less interesting for the review.},
+  review = 	 {fbie: rejected <2016-01-14 11:16:58>},
 }
 
 @inproceedings{Bernecky:1993:RAJ:166197.166201,
@@ -6494,6 +6587,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 166201,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Although multicomputers are becoming feasible for solving large problems, they are difficult to program: Extraction of parallelism from scalar languages is possible, but limited. Parallelism in algorithm design is difficult for those who think in von Neumann terms. Portability of programs and programming skills can only be achieved by hiding the underlying machine architecture from the user, yet this may impact performance on a specific host.APL, J, and other applicative array languages with adequately rich semantics can do much to solve these problems. The paper discusses the value of abstraction and semantic richness, performance issues, portability, potential degree of parallelism, data distribution, process creation, communication and synchronization, frequency of program faults, and clarity of expression. The BLAS are used as a basis for comparison with traditional supercomputing languages.},
+  review = 	 {fbie: rejected <2016-01-14 11:17:23>},
 }
 
 @article{Lei:2008:VCI:2509420.2512430,
@@ -6518,6 +6613,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {QP_VELP, Quadruple precision floating-point,
                   elementary function, very long instruction word},
+  abstract = 	 {In this article, a unified VLIW coprocessor, based on a common group of atomic operation units, for Quad arithmetic and elementary functions (QP_VELP) is presented. The explicitly parallel scheme of VLIW instruction and Estrin's evaluation scheme for polynomials are used to improve the performance. A two-level VLIW instruction RAM scheme is introduced to achieve high scalability and customizability, even for more complex key program kernels. Finally, the Quad arithmetic accelerator (QAA) with the QP_VELP array is implemented on ASIC. Compared with hyper-thread software implementation on an Intel Xeon E5620, QAA with 8 QP_VELP units achieves improvement by a factor of 18X.},
+  review = 	 {fbie: rejected <2016-01-14 11:17:35>},
 }
 
 @inproceedings{Sabety:1984:SGP:800033.800835,
@@ -6537,6 +6634,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 800835,
   publisher =	 {IEEE Press},
   address =	 {Piscataway, NJ, USA},
+  abstract = 	 {This paper describes a recently implemented program that very rapidly generates control paths for different variants of the constituent processing elements of a particular massively parallel machine; the NON-VON Supercomputer. The program, called PLATO, accepts as input a set of instruction opcodes, together with associated control information, and produces as output a functionally correct, highly area-efficient set of PLA's for the processing elements. One novel aspect of the program is its use of a channel routing algorithm to generate a Weinberger Array layout for the OR-plane of the PLA. By supporting extremely rapid generation of processing elements with different instruction sets, PLATO facilitates “rapid turnaround” architectural experimentation of a sort that would otherwise be impractical. Use of the program has already yielded major area and performance improvements in the NON-VON processing element. Many of the techniques employed in the PLATO system should prove applicable to the semi-automatic layout of processing elements for other multiprocessor machines.},
+  review = 	 {fbie: rejected <2016-01-14 11:17:57>},
 }
 
 @article{Brown:2001:CIP:377769.377774,
@@ -6559,6 +6658,8 @@ Coding is done by first computing customized weight vectors for each input patte
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
   keywords =	 {compiler optimization, prefetching, virtual memory},
+  abstract = 	 {Current operating systems offer poor performance when a numeric application's working set does not fit in main memory. As a result, programmers who wish to solve “out-of-core” problems efficiently are typically faced with the onerous task of rewriting an application to use explicit I/O operations (e.g., read/write). In this paper, we propose and evaluate a fully automatic technique which liberates the programmer from this task, provides high performance, and requires only minimal changes to current operating systems. In our scheme the compiler provides the crucial information on future access patterns without burdening the programmer; the operating system supports nonbinding prefetch and release hints for managing I/O; and the operating  systems cooperates with a run-time layer to accelerate performance by adapting to dynamic behavior and minimizing prefetch overhead. This approach maintains the abstraction of unlimited virtual memory for the programmer, gives the compiler the flexibility to aggressively insert prefetches ahead of references, and gives the operating system the flexibility to arbitrate between the competing resource demands of multiple applications. We implemented our compiler analysis within the SUIF compiler, and used it to target implementations of our run-time and OS support on both research and commercial systems (Hurricane and IRIX 6.5, respectively). Our experimental results show large performance gains for out-of-core scientific applications on both systems: more than 50% of the I/O stall time has  been eliminated in most cases, thus translating into overall speedups of roughly twofold in many cases.},
+  review = 	 {fbie: rejected <2016-01-14 11:18:33>},
 }
 
 @article{Eusebi:1986:AAS:22008.22051,
@@ -6578,6 +6679,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 22051,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {The APL2 language and its environment offers a number of features which make it an effective vehicle for AI research and for the development of knowledge-based systems. In the language, general arrays can easily model various knowledge representations; it is easy to model parallel behavior; there are various ways to implement deductive reasoning: and there are some interesting features that support a functional style of programming. In the environment, editors, interactive graphics, and debugging tools provide excellent human interfaces; Fortran, REXX, and Assembler routines may transparently replace APL2 functions; relational tables which are subsets of APL2 arrays may be retrieved dynamically; and user-to-user shared variable processing can be used to model parallel behavior.
+In this paper, we will demonstrate the usage of APL2 for AI problems by presenting concise functional programs for searching a database of rules and facts. Various simple enhancements are shown which extend the scope of the programs to and/or, heuristic, bi-directional, and parallel search.},
+  review = 	 {fbie: rejected <2016-01-14 11:18:45>},
 }
 
 @inproceedings{Eusebi:1986:AAS:22415.22051,
@@ -6595,6 +6699,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 22051,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {The APL2 language and its environment offers a number of features which make it an effective vehicle for AI research and for the development of knowledge-based systems. In the language, general arrays can easily model various knowledge representations; it is easy to model parallel behavior; there are various ways to implement deductive reasoning: and there are some interesting features that support a functional style of programming. In the environment, editors, interactive graphics, and debugging tools provide excellent human interfaces; Fortran, REXX, and Assembler routines may transparently replace APL2 functions; relational tables which are subsets of APL2 arrays may be retrieved dynamically; and user-to-user shared variable processing can be used to model parallel behavior.
+In this paper, we will demonstrate the usage of APL2 for AI problems by presenting concise functional programs for searching a database of rules and facts. Various simple enhancements are shown which extend the scope of the programs to and/or, heuristic, bi-directional, and parallel search.},
+  review = 	 {fbie: rejected <2016-01-14 11:18:48>},
 }
 
 @inproceedings{Kim:1997:VAM:522659.825642,
@@ -6612,6 +6719,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 825642,
   publisher =	 {IEEE Computer Society},
   address =	 {Washington, DC, USA},
+  abstract = 	 {Advances in IC technology increase the integration density for higher clock rates and provide more opportunities for microprocessor design. In this paper, we propose a new paradigm to exploit instruction-level parallelism (ILP) across multiple superscalar processors on a single chip by taking advantages of both VLIW-style static scheduling techniques and dynamic scheduling of superscalar architecture. In the proposed paradigm, ILP is exploited by a compiler from a sequential program and this VLIW-like-parallelized code is further parallelized by 2-way superscalar engines at run-time. Superscalar processors are connected by an aggregate function network, which can enforce the necessary static timing constraints and provide appropriate inter-processor data communication mechanisms that are needed for ILP. The aggregate function operations are statically scheduled and implement not only fine-grain communication and control, but also simple global computations resembling systolic array operations within the network.},
+  review = 	 {fbie: rejected <2016-01-14 11:19:18>},
 }
 
 @inproceedings{Corbal:2002:TMV:774861.774878,
@@ -6630,6 +6739,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 774878,
   publisher =	 {IEEE Computer Society Press},
   address =	 {Los Alamitos, CA, USA},
+  abstract = 	 {Vector processors have good performance, cost and adaptability when targeting multimedia applications. However, for a significant number of media programs, conventional memory configurations fail to deliver enough memory references per cycle to feed the SIMD functional units. This paper addresses the problem of the memory bandwidth.We propose a novel mechanism suitable for 2-dimensional vector architectures and targeted at providing high effective bandwidth for SIMD memory instructions. The basis of this mechanism is the extension of the scope of vectorization at the memory level, so that 3-dimensional memory patterns can be fetched into a second-level register file.By fetching long blocks of data and by reusing 2-dimensional memory streams at this second-level register file, we obtain a significant increase in the effective memory bandwidth. As side benefits, the new 3-dimensional load instructions provide a high robustness to memory latency and a significant reduction of the cache activity, thus reducing power and energy requirements. At the investment of a 50% more area than a regular SIMD register file, we have measured and average speed-up of 13% and the potential for power savings in the L2 cache of a 30%.},
+  review = 	 {fbie: rejected <2016-01-14 11:19:55>},
 }
 
 @inproceedings{Heule:2015:MCM:2786805.2786875,
@@ -6651,6 +6762,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {JavaScript, MCMC, Opaque code, model generation,
                   program synthesis},
+  abstract = 	 {Opaque code, which is executable but whose source is unavailable or hard to process, can be problematic in a number of scenarios, such as program analysis. Manual construction of models is often used to handle opaque code, but this process is tedious and error-prone. (In this paper, we use model to mean a representation of a piece of code suitable for program analysis.) We present a novel technique for automatic generation of models for opaque code, based on program synthesis. The technique intercepts memory accesses from the opaque code to client objects, and uses this information to construct partial execution traces. Then, it performs a heuristic search inspired by Markov Chain Monte Carlo techniques to discover an executable code model whose behavior matches the opaque code. Native execution, parallelization, and a carefully-designed fitness function are leveraged to increase the effectiveness of the search. We have implemented our technique in a tool Mimic for discovering models of opaque JavaScript functions, and used Mimic to synthesize correct models for a variety of array-manipulating routines.},
+  review = 	 {fbie: rejected <2016-01-14 11:20:22>},
 }
 
 @article{Baker:1990:EIB:121989.121991,
@@ -6671,6 +6784,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 121991,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {In this paper we show various techniques for the efficient implementation of the various functions of Common Lisp involving bit-vectors and bit-arrays. Bit-vectors are extremely useful for computing everything from the Sieve of Eratosthenes for finding prime numbers, to the representation of sets and relations, to the implementation of natural language parsers, to the performance of flow analysis in an optimizing compiler, to the manipulation of complex communication codes like those used in facsimile machines. However, the efficient manipulation of bit-vectors on modern computers represents a curious point on the spectrum of data processing tasks. On the one hand, the possibility of packing many bits within a single computer word and operating on all of them in parallel offers a potential for speedup not usually available for other types of tasks. On the other hand, the lack of the ability to efficiently manipulate single bits because of addressing schemes tuned for larger objects can actually reduce the speed of operating on bits. As a result of these observations, it should be obvious that no simple, automatic techniques such as "in-lining" (procedure integration) or "loop unrolling" of the obvious serial algorithms will produce the kinds of efficiency we are seeking. For these reasons, the efficient implementation of bit-vector operations requires special-case code, and is an interesting challenge in ingenuity and engineering.},
+  review = 	 {fbie: rejected <2016-01-14 11:44:23>},
 }
 
 @article{Asthana:1994:EAM:190787.190796,
@@ -6691,6 +6806,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 190796,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {We describe an I/O subsystem based on an active memory called SWIM, designed for efficient storage and manipulation of data structures. The key architectural idea in SWIM is to put some processing logic inside each memory chip that allows it to perform data manipulation operations locally and to communicate with a disk or a communication line through a backend port. The processing logic is specially designed to perform operations such as pointer dereferencing, memory indirection, searching and bounds checking efficiently. The I/O subsystem is built using an interconnected ensemble of such memory logic pairs. This allows a complex I/O task to be distributed between a large number of small memory processors each doing a sub-task, while still retaining a common locus of control for higher level functions. This enables more powerful, scalable and robust designs for storage and communications subsystems that can support emerging network services, multimedia workstations and wireless PCS systems. A complete parallel hardware and software system constructed using an array of SWIM elements has been operational for over a year. We present the application of SWIM to three network functions that we have currently implemented: a national phone database server, a high performance IP router, and a call screening agent.},
+  review = 	 {fbie: rejected <2016-01-14 11:44:31>},
 }
 
 @article{Fordyce:1990:FCR:122382.122383,
@@ -6711,6 +6828,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 122383,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {A critical computational requirement for many of the decision technologies in the fields of MS/OR, AI/KBS, and DSS is the development and manipulation of a network describing the relationship between "actors" involved in the application of the decision technology to a specific problem. The manipulation of such networks using Boolean arrays and functions is well known in the APL community (see bibliography). Often in such networks it is important to identify circular conditions as a preprocessing step, but the techniques to accomplish often yield incomplete information. This paper describes a simple and efficient method to find all circular conditions as a preprocessing step.This paper is a subset of a longer paper (Fordyce, Jantzen, and Sullivan, 1990) which describes how we can fully build and manipulate a function network with Boolean arrays including focusing networks, finding circular conditions, and grouping functions based on relative independence to identify parallel computational opportunities and substantially reduces the non-procedural aspect of the problem.},
+  review = 	 {fbie: rejected <2016-01-14 11:44:50>},
 }
 
 @inproceedings{Dong:2010:XM:2020373.2020382,
@@ -6731,6 +6850,8 @@ Coding is done by first computing customized weight vectors for each input patte
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
   keywords =	 {MapReduce, PGAS, across-node-communication},
+  abstract = 	 {The MapReduce framework has become a popular and powerful tool to process large datasets in parallel over a cluster of computing nodes [1]. Currently, there are many flavors of implementations of MapReduce, among which the most popular is the Hadoop implementation in Java [5]. However, these implementations either rely on third-party file systems for across-computer-node communication or are difficult to implement with socket programming or communication libraries such as MPI. To address these challenges, we investigated utilizing the X10 language to implement MapReduce and tested it with the word-count use case. The key performance factor in implementing MapReduce is data moving across different computer nodes. Since X10 has built-in functions for across-node communication such as distributed arrays [2], a major challenge with MapReduce implementations is easily solved. We tested two main implementations: the first utilizes the HashMap data structure and the second a Rail with elements consisting of a string and integer pair. The performance of these two implementations are analyzed and discussed.},
+  review = 	 {fbie: rejected <2016-01-14 11:45:37>},
 }
 
 @inproceedings{Garcia:1996:DDD:369028.369048,
@@ -6750,6 +6871,7 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 369048,
   publisher =	 {IEEE Computer Society},
   address =	 {Washington, DC, USA},
+  review = 	 {fbie: rejected <2016-01-14 11:45:42>},
 }
 
 @inproceedings{Li:1997:EHC:509593.509610,
@@ -6770,6 +6892,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 509610,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {In this work, we evaluated the capabilities and performances of two commercially available HPF compilers, xlhpf[1] from IBM and pghpf[2] from the Portland Group. In particular, we examined the suitability of the two compilers for the development of a reservoir simulator. Because of the nature of reservoir simulation, multiple data distributions and data transfer between arrays of different data layouts are of great importance. An HPF compiler that does not provide these capabilities is unsuitable for the development of a parallel reservoir simulator. A detailed comparison of the functionalities of the two compilers and their suitabilities for reservoir simulator development are presented.To test the performance of the compilers, we used a parallel linear equation solver[3,4] that was developed to run on the CM5 and the Cray YMP. This solver is an important computational kernel in an in-house MPP reservoir simulator that is written in CM Fortran. Because the solver consumes about 90% of the CPU time in a typical reservoir simulation run with more than a million grid blocks, it can be used as an indicator of the performance of the simulator without having to convert it in its entirety. The solver was based on preconditioned Orthomin[5,6] and a truncated Neumann series preconditioner. Unlike solvers that are based on domain decomposition[7,8], the convergence behavior of this solver does not depend on the number of processors and therefore can scale better than domain decomposition based methods when the number of processors increases. This linear equation solver was found to be robust and efficient for the simulation of the giant oil reservoirs in Saudi Arabia and has been used in several field scale simulation studies with good success[4].The parallel solver was first implemented in HPF[9] and later in MPI[10] using hpf_local to improve the performance. Communication patterns of the solver include nearest neighbor communication, reduction function and general gather/scatter for handling the implicit bottom-hole pressure term. The solver has most of the features of a reservoir simulator to test the inter-processor communication bandwidth and floating point performance of the target machines. Its performance was compared for several MPP machines: CM5, IBM SP2, Cray T-3E and Cray Origin. The advantages and disadvantages of HPF and MPI are discussed from a programming as well as performance point of view.},
+  review = 	 {fbie: rejected <2016-01-14 11:46:13>},
 }
 
 @article{Davis:2005:CPS:1105734.1105740,
@@ -6791,6 +6915,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 1105740,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {We describe a hybrid hardware emulation environment: the Flexible Architecture for Simulation and Testing (FAST). FAST integrates field-programmable gate arrays (FPGAs), microprocessors, and memory to enable rapid prototyping of chip multiprocessors, multithreaded architectures, or other novel computer architectures and chip-level memory systems. FAST combines configurable and fixed-function hardware and software to facilitate rapid prototyping by utilizing components optimized for their particular tasks: FPGAs for interconnect and glue logic; processors for rapid program execution; and SRAMs for fast memory. Unlike software simulators, FAST can simulate complex designs at multi-megahertz speeds regardless of the simulation detail. We illustrate FAST's utility by describing mappings of both a small-scale CMP with speculation support and a large-scale CMP connected using a network. We then show performance results from a very simple, decoupled 4-way CMP executing small test programs.},
+  review = 	 {fbie: rejected <2016-01-14 11:46:22>},
 }
 
 @article{Sullivan:1985:AID:255315.255347,
@@ -6810,6 +6936,15 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 255347,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {AIDA is a suite of APL based functions, and an approach, to assist in the development of modules to perform artificial intelligence (AI) tasks within a computer based information system (CBIS) or decision support system (DSS). The AIDA functions provide four basic capabilities:
+
+string processing or character manipulation
+Boolean knowledge representation
+predicate logic like knowledge representation
+a Boolean array based inference mechanism which helps identify parallel computation paths, has reversibility, and appears to improve performance by reducing rule visits
+
+This paper will describe some of the functions in AIDA, and briefly describe some of the systems developed with the help of AIDA. This should help demonstrate that APL is an excellent language for development of expert systems.},
+  review = 	 {fbie: rejected <2016-01-14 11:46:30>},
 }
 
 @inproceedings{Sullivan:1985:AID:17701.255347,
@@ -6828,6 +6963,15 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 255347,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {AIDA is a suite of APL based functions, and an approach, to assist in the development of modules to perform artificial intelligence (AI) tasks within a computer based information system (CBIS) or decision support system (DSS). The AIDA functions provide four basic capabilities:
+
+string processing or character manipulation
+Boolean knowledge representation
+predicate logic like knowledge representation
+a Boolean array based inference mechanism which helps identify parallel computation paths, has reversibility, and appears to improve performance by reducing rule visits
+
+This paper will describe some of the functions in AIDA, and briefly describe some of the systems developed with the help of AIDA. This should help demonstrate that APL is an excellent language for development of expert systems.},
+  review = 	 {fbie: rejected <2016-01-14 11:46:33>},
 }
 
 @inproceedings{Ureche:2012:SCS:2103746.2103762,
@@ -6850,6 +6994,9 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {DSL, SAC, domain specific languages, optimization,
                   single assignment c, staging},
+  abstract = 	 {Domain-specific languages (DSLs) can bridge the gap between high-level programming and efficient execution. However, implementing compiler tool-chains for performance oriented DSLs requires significant effort. Recent research has produced methodologies and frameworks that promise to reduce this development effort by enabling quick transition from library-only, purely embedded DSLs to optimizing compilation. In this case study we report on our experience implementing a compiler for StagedSAC. StagedSAC is a DSL for arithmetic processing with multidimensional arrays modeled after the stand-alone language SAC (Single Assignment C). The main language feature of both SAC and StagedSAC is a loop construction that enables high-level and concise implementations of array algorithms. At the same time, the functional semantics of the two languages allow for advanced compiler optimizations and parallel code generation. We describe how we were able to quickly evolve from a pure library DSL to a performance-oriented compiler with a good speedup and only minor syntax changes using the technique of Lightweight Modular Staging. We also describe the optimizations we perform to obtain fast code and how we plan to generate parallel code with minimal effort using the Delite framework.},
+  notes = 	 {Last sentence of abstract seems interesting.},
+  review = 	 {fbie: accepted <2016-01-14 11:48:40>},
 }
 
 @inproceedings{Gusev:1994:NDA:190271.190286,
@@ -6872,6 +7019,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {APL*PLUS, C++, compiler, machine code, mathematical
                   modelling, object-oriented programming},
+  abstract = 	 {An abstract is not available.},
+  review = 	 {fbie: rejected <2016-01-14 11:53:59>},
 }
 
 @article{Gusev:1994:NDA:190468.190286,
@@ -6894,6 +7043,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {APL*PLUS, C++, compiler, machine code, mathematical
                   modelling, object-oriented programming},
+  abstract = 	 {An abstract is not available.},
+  review = 	 {fbie: rejected <2016-01-14 11:54:04>},
 }
 
 @article{Bernecky:1991:GR:114055.114059,
@@ -6913,6 +7064,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 114059,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Gerunds, verbal forms that can be used as nouns, are recognized as having utility in the realm of programming languages. We show that gerunds can be viewed as arrays of atomic representations of verbs (functions), in a way which is consistent with the syntax and semantics of APL, and which allows verbs to be first class objects in the language. We define derivations of verbs from gerunds in the J dialect of APL, and show how these derivations provide control structures for sequencing, selection (in the sense of generalized forms of CASE or SWITCH statements and IF/THEN/ELSE), iteration (DO UNTIL), recursion, and parallel computation (MIMD, or Multiple Instruction, Multiple Data). We conclude with alternative representations of verbs which are useful in other contexts.},
+  review = 	 {fbie: rejected <2016-01-14 11:54:43>},
 }
 
 @inproceedings{Bernecky:1991:GR:114054.114059,
@@ -6931,6 +7084,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 114059,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Gerunds, verbal forms that can be used as nouns, are recognized as having utility in the realm of programming languages. We show that gerunds can be viewed as arrays of atomic representations of verbs (functions), in a way which is consistent with the syntax and semantics of APL, and which allows verbs to be first class objects in the language. We define derivations of verbs from gerunds in the J dialect of APL, and show how these derivations provide control structures for sequencing, selection (in the sense of generalized forms of CASE or SWITCH statements and IF/THEN/ELSE), iteration (DO UNTIL), recursion, and parallel computation (MIMD, or Multiple Instruction, Multiple Data). We conclude with alternative representations of verbs which are useful in other contexts.},
+  review = 	 {fbie: rejected <2016-01-14 11:54:48>},
 }
 
 @article{Geyer-Schulz:1990:ANN:97811.97776,
@@ -6952,6 +7107,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 97776,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {APL has a long tradition as a language for the notation of computer architectures that dates back to its use as notation of the IBM 360 system. Its powerful primitives and compactness make it an ideal tool for simulating hardware functions in order to gain insights into the functionality, the performance and the programming issues of an algorithm without the need to undergo the painstaking process of actually building the target machine and implementing the program on it. We have developed an APL2 software simulator for Non-Von Neumann computers. The basic data structure of the system is an array whose elements model a number of RAMs containing control registers, data and program code. The user can “define” his/her machine by specifying the communication network and communication primitives, the instruction set and its semantics, and the complexity measure. We demonstrate the use of the program system for studying various schemes for adaptive load sharing on multicomputers.},
+  review = 	 {fbie: rejected <2016-01-14 11:55:01>},
 }
 
 @inproceedings{Geyer-Schulz:1990:ANN:97808.97776,
@@ -6971,6 +7128,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 97776,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {APL has a long tradition as a language for the notation of computer architectures that dates back to its use as notation of the IBM 360 system. Its powerful primitives and compactness make it an ideal tool for simulating hardware functions in order to gain insights into the functionality, the performance and the programming issues of an algorithm without the need to undergo the painstaking process of actually building the target machine and implementing the program on it. We have developed an APL2 software simulator for Non-Von Neumann computers. The basic data structure of the system is an array whose elements model a number of RAMs containing control registers, data and program code. The user can “define” his/her machine by specifying the communication network and communication primitives, the instruction set and its semantics, and the complexity measure. We demonstrate the use of the program system for studying various schemes for adaptive load sharing on multicomputers.},
+  review = 	 {fbie: rejected <2016-01-14 11:55:10>},
 }
 
 @article{Hsiao:2014:RDE:2666356.2594330,
@@ -6995,6 +7154,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {Android, causality model, concurrency, event-driven,
                   mobile application, race detection, use-free race},
+  abstract = 	 {Mobile systems commonly support an event-based model of concurrent programming. This model, used in popular platforms such as Android, naturally supports mobile devices that have a rich array of sensors and user input modalities. Unfortunately, most existing tools for detecting concurrency errors of parallel programs focus on a thread-based model of concurrency. If one applies such tools directly to an event-based program, they work poorly because they infer false dependencies between unrelated events handled sequentially by the same thread. In this paper we present a race detection tool named CAFA for event-driven mobile systems. CAFA uses the causality model that we have developed for the Android event-driven system. A novel contribution of our model is that it accounts for the causal order due to the event queues, which are not accounted for in past data race detectors. Detecting races based on low-level races between memory accesses leads to a large number of false positives. CAFA overcomes this problem by checking for races between high-level operations. We discuss our experience in using CAFA for finding and understanding a number of known and unknown harmful races in open-source Android applications.},
+  review = 	 {fbie: rejected <2016-01-14 11:55:16>},
 }
 
 @inproceedings{Hsiao:2014:RDE:2594291.2594330,
@@ -7018,6 +7179,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {Android, causality model, concurrency, event-driven,
                   mobile application, race detection, use-free race},
+  abstract = 	 {Mobile systems commonly support an event-based model of concurrent programming. This model, used in popular platforms such as Android, naturally supports mobile devices that have a rich array of sensors and user input modalities. Unfortunately, most existing tools for detecting concurrency errors of parallel programs focus on a thread-based model of concurrency. If one applies such tools directly to an event-based program, they work poorly because they infer false dependencies between unrelated events handled sequentially by the same thread. In this paper we present a race detection tool named CAFA for event-driven mobile systems. CAFA uses the causality model that we have developed for the Android event-driven system. A novel contribution of our model is that it accounts for the causal order due to the event queues, which are not accounted for in past data race detectors. Detecting races based on low-level races between memory accesses leads to a large number of false positives. CAFA overcomes this problem by checking for races between high-level operations. We discuss our experience in using CAFA for finding and understanding a number of known and unknown harmful races in open-source Android applications.},
+  review = 	 {fbie: rejected <2016-01-14 11:55:20>},
 }
 
 @inproceedings{Prantl:2011:PCP:2148600.2148636,
@@ -7041,6 +7204,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {BRAID, C, C++, PGAS, SIDL, babel, chapel, compiler,
                   fortran, java, language interoperability, python},
+  abstract = 	 {Chapel is a high-level parallel programming language that implements a partitioned global address space model (PGAS). Programs written in this programming model have traditionally been self-contained entities written entirely in one language. On our poster, we present BRAID, which enables Chapel programs to call functions and instantiate objects written in C, C++, Fortran 77-2008, Java and Python. Our tool creates language bindings that are binary-compatible with those generated by the Babel language interoperability tool. The scientific community maintains a large amount of code written in traditional languages. With the help of our tool, users will gain access to their existing codebase with minimal effort and through a well-defined interface. The language bindings are designed to provide a good combination of performance and flexibility (including transparent access to distributed arrays). Knowing the demands of the target audience, we support the full Babel array API. A particular contribution is that we expose Chapel's distributed data types through our interface and make them accessible to external functions implemented in traditional serial programming languages. The advantages of our approach are highlighted by benchmarks that compare the performance of pure Chapel programs with that of hybrid versions that call subroutines implemented in Babel-supported languages inside of parallel loops. We also present our vision for interoperability with other PGAS languages such as UPC and X10.},
+  review = 	 {fbie: rejected <2016-01-14 11:55:47>},
 }
 
 @inproceedings{Govindarajan:2013:RDC:2495258.2495935,
@@ -7059,6 +7224,7 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 2495935,
   publisher =	 {IEEE Computer Society},
   address =	 {Washington, DC, USA},
+  review = 	 {fbie: rejected <2016-01-14 11:55:53>},
 }
 
 @inproceedings{Venkat:2014:NEP:2581122.2544141,
@@ -7081,6 +7247,9 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {code generation, inspector/executor, loop
                   coalescing, non-affine, polyhedral model},
+  abstract = 	 {This paper describes a loop transformation framework that extends a polyhedral representation of loop nests to represent and transform computations with non-affine index arrays in loop bounds and subscripts via a new interface between compile-time and run-time abstractions. Polyhedra scanning code generation, which historically applies an affine mapping to the subscript expressions of the statements in a loop nest, is modified to apply non-affine mappings involving index arrays that are represented at compile time by uninterpreted functions; non-affine loop bounds involving index arrays are also represented. When appropriate, an inspector is utilized to capture the non-affine subscript mappings, and a generalized loop coalescing transformation is introduced as a non-affine transformation to support non-affine loop bounds. With this support, complex sequences of new and existing transformations can then be composed. We demonstrate the effectiveness of this framework by optimizing sparse matrix vector multiplication operations targeting GPUs for different matrix structures and parallelization strategies. This approach achieves performance that is comparable to or greater than the hand-tuned CUSP library; for two of the implementations it achieves an average 1.14× improvement over CUSP across a collection of sparse matrices, while the third performs on average within 8% of CUSP.},
+  notes = 	 {Targets GPUs but seems a general technique.},
+  review = 	 {fbie: accepted <2016-01-14 11:59:00>},
 }
 
 @article{Bittlestone:1985:XES:255315.255364,
@@ -7100,6 +7269,104 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 255364,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {It is hardly possible to pick up a computer journal today without seeing references to the Alvey project in the UK, the Esprit project run by the EEC, the Japanese “Fifth generation” initiative, the proliferation of knowledge-based computer companies around Stanford in California and MIT in Massachusetts, and the large amounts of money that are being poured into the development of expert systems. The references abound: as I write this article the September 1984 issue of “International Management” (1) arrives on my desk with a cover depicting a digitized human brain image on a computer screen and a caption saying “Artificial intelligence: the race to make it work for managers”. I like the use of the word “race” here; it seems to imply that this is our last chance now that the prospect of human intelligence in managers has declined asymptotically to zero.
+Among the savants cited in the international Management article is Sir Clive Sinclair, no less, who has become notorious with the British Computer Society's Expert Systems Specialist Group: notorious for arriving unexpectedly at meetings and giving the rest of the audience something to think about. Sir Clive apparently said in the interview: “Once 'machines of silicon' surpass us, they will be capable of their own design. In a real sense, they will be reproductive, and silicon will have ended carbon's long monopoly. And ours too, I suppose, for we will no longer be able to deem ourselves the finest intelligence in the known universe.”
+Maybe expert systems will dominate us after all — it's just that there'll be a ten-month delay between quoting your Visa number and becoming an inferior intelligence.
+All this is quite fascinating since the phenomenon is very recent: before 1983 the phrase “expert systems” was largely unheard of and certainly not in itself viewed as the potential salvation of the Western world (there are as yet few hints of Eastern bloc development apart from in Hungary, where the University of Budapest, along with those of Marseilles, Edinburgh and London's Imperial College, claims to have invented PROLOG). However, by now there has been “Horizon” television coverage of the genre and there seems little doubt that expert systems are here to stay. But before I take up the theme of my title, perhaps I might be allowed to state my position on one or two related matters. First of all: “Expert systems are not the same thing as artificial intelligence”
+We can see the beginnings of a bandwagon effect here in which technical namedroppers, bored of stating that “UNIX is the coming thing” or “The future of computing lies in networking” are catching up with this latest trend: “Life is just another form of domain specialism”. Expert systems are in fact a very narrowly defined class of computer program with certain in-built inference-drawing capabilities. Artificial intelligence, on the other hand, is a much wider field involving the generic search for synthetic rational life. Much of the most interesting work in artificial intelligence does not involve digital computers at all but concerns the possibility of producing artificial models of brain process, using special fabrication techniques to emulate neurons, axons and synapses. Which brings me to my second definition: “Artificial intelligence will not be implemented on digital computers”
+It turns out that the use of a digital clocked device, irrespective of speed, imposes a fatal limitation on the sophistication of a genuine search for artificial intelligence, and parallel processing makes no difference. The reason is that in the brain it is the dynamic connections between at least 10 to the power 10 asynchronous independent processing elements that provide the kind of complexity that is required. The processors in the brain are called neurons and the interconnection are called axons, and there is substantial evidence to indicate that to a first approximation, almost any neuron can grow an axon to connect to almost any other neuron.
+Now the number of connections between 'N' elements increases in proportion to the square of 'N'. If you have three neurons you can connect A to B, A to C, B to C, and the same in the other direction, which is valid since it corresponds to a negative signal (inhibition vs. excitation). Consequently we have 6 possibilities for the network topology: i.e. 3x2. For 4 elements we have 12 options: 4x3. If we had a mere 100 neurons the result of 100x99 is still only about 10,000. However, in the brain we are considering about 10,000,000,000 neurons. So the number of possible connections is 100,000,000,000,000,000,000 — a number of literally astronomic proportions. We haven't yet introduced the complexity of neurons which connect to more than one other neuron (the majority do), nor signal processing within the neurons themselves (estimated as a seventh order differential equation), nor chemical effects at the synapses, which are retransmission points along the axons. When you drink too much alcohol, it is primarily the synaptic effects which alter your responses. I am unconvinced that there yet exists an artificially intelligent program capable of intoxication.
+If you now consider the implications of asynchronous (but not parallel) operations taking place between arbitrarily connectable elements on this scale, you begin to see that even a billion 64-bit microprocessors would make no difference at all. The emphasis in the brain is on analogue circuits in which feedback and frequency of signal are the determining factor and where there is no single location at which processing can be said to be taking place; the whole of the brain is in this sense intelligent.
+When I asked the Alvey representative at a recent meeting of the Expert Systems Specialist Group (yes, Sir Clive was there too) why there was so little emphasis on neurophysiology in the Alvey program (I was uncharacteristically diplomatic as in fact there is none at all) his response was that the program concerned the “hard” sciences and engineering: the bridge to biology was too narrow for engineers to cross. I believe he was genuinely rueful. However, if your appetite is in any way whetted for “real” artificial intelligence, you had better go out and buy two rather extraordinary books. One of them is, of course, Hofstadter's “Godel Escher Bach: An Eternal Golden Braid” (2). The other is less well-known: William T. Powers's “Behaviour: The Control of Perception” (3).
+In Hofstadter's book the notion of recursion is explored in many delightful ways. For those who have missed it, here is a sampler. Our heroes, Achilles and the Tortoise, have found a lamp. They rub it and a Genie appears. The Genie will grant three wishes. This prospect is greeted with glee by Achilles, who has read the 'Arabian Night' and knows the form. He makes his first wish: Achilles: “I wish that I had 100 wishes instead of just three.” Genie: “I am sorry, Achilles, but I don't grant meta-wishes.” Achilles: “I wish you'd tell me what a 'meta-wish' is.” Genie: “But that is a meta-meta-wish, Achilles, and I don't grant them either.” But after some pleading, the Genie agrees to try (meta-wishes are his favorite wishes too) and from inside his cloak he produces a lamp. He rubs it and out pops a MetaGenie: Genie: “I wish for permission for temporary suspension of all type-restrictions on wishes, for the duration of one typeless wish.” MetaGenie:“Half a moment please (produces a lamp, rubs it, etc.).” This continues for a short infinite period until we get to the top-level MetaGenie, also known as GOD, who grants permission for the typeless wish: Achilles: “I wish my wish would not be granted!” (There follows a SYSTEM CRASH: or as Hofstadter puts it, “the land of dead hiccoughs and extinguished lightbulbs”). Earlier, when quizzed on what the word GOD means, the Genie explains that it's an acronym — G.O.D. — standing for “GOD OVER DJINN” (Djinn being a generic type of intermediate Eastern Deity). Does this help? Ah yes, because we can expand it: GOD = GOD OVER DJINN = (GOD OVER DJINN) OVER DJINN = ((GOD OVER DJINN) OVER DJINN) OVER DJINN ………… If this is starting to look familiar, it's because it is. A deep knowledge of the relation of a system to its metasystem and of the closely connected notion-of recursion is an essential pre-requisite for serious work in artificial intelligence. In fact I suspect that: “Artificial intelligence = recursion + superficial incompetence” What about the other book I referred to: “Behaviour: The Control of Perception” (or as they write it in the USA, “Behavior: The Control of Prception”)? In my estimation this book ranks with Norbert Wiener's “Cybernetics” (4) and Stafford Beer's “Brain of the Firm” (5): together they form the twentieth century triumvirate in this field. Powers starts off with some deceptively simple experiments and ends up with a necessary but not sufficient model of human intelligence based on first principles and an appeal to reason. The argument is convincing and is closer than any other I have read to the true core of artificial intelligence. Significantly, I don't recall in the book a single serious mention of digital computer programming.
+Powers explains that the basic circuit elements in organic brains are not digital at all. They are analogue, but they use frequency not voltage as the yardstick. If 10 neural impulses per second flow in an axon, that may cause (at the lowest level) a certain amount of contraction to be applied to a single muscle fiber. 20 impulses per second might double the contraction force. However, the key point is the perception of all this. Feedback from local sensors is compared against a reference level for the desired state, and the output signal is adjusted accordingly. This compensates for unexpected resistance to the muscle's work — and if you think about it, you've never lifted a weight by applying linear pressure in your life. Literally millions of low-level frequency sensitive feedback circuits create what Powers calls Level 1 — the interface to the outside world at the sensory/motor level.
+Then we start to encounter hierarchy. Where do the reference levels for the desired states come from? Well, these are the outputs from Level 2, but this time they correspond to a higher-level notion: like that of vertical vs. horizontal movement. By positing a hierarchy of feedback circuits whose outputs become the reference levels (i.e.. control signals) for lower level circuits, Powers will lead you to agree that when you are walking at 2 miles per hour, there is an identifiable, traceable neural frequency in your brain which doubles in frequency when you walk at 4 mph. And if you find that hard to swallow, by the time you reach higher levels of hierarchy we are talking about frequencies which correspond to degrees of emotion. Of hate. Of love. To sleep, perchance to dream… “Do Androids Dream of Electric Sheep?” (6).
+I suspect I have strayed somewhat from the title of this article. But I do think it's important to set the context. If you want some fun with computers, start playing with expert systems. If you want to learn something useful about artificial intelligence, start reading some books. The two are not the same and I personally doubt that insights from one much help in the assimilation of the other.
+Perhaps we should focus on the main theme. This gives me a small problem since the arbitrary reader of this article exists in four configurations: you know about APL (or you don't) and you know about expert systems (or you don't). Here I am going to pitch the discussion slightly in favor of someone who knows a bit about APL but nothing about expert systems, although I hope there will be some comfort for the others here and there.
+Let's recap on APL's strengths in this area. We have a language which supports recursion with no limits apart from workspace size. Local variables and arguments to recursive functions are properly masked and pushed to a stack on each recursive invocation. Logical operations in APL are generally implemented at data word bit level and are very comprehensive and very fast. Arrays of arbitrary dimension are supported and most primitive operations apply element-wise without looping. APL is a threaded interpretive language in which individual building blocks are defined and can be invoked in a free-standing manner (like LISP). If LISP suffers from parentheses, APL suffers from silly specialist symbols, but fortunately this last aspect is starting to disappear in the more enlightened implementations. APL is very good indeed at numeric computation of high complexity in both the scientific and the commercial domains, and in addition it is fast and elegant at string handling.
+Standard APL disallows non-orthogonal arrays and those of mixed character and numeric type. This is undoubtedly a disadvantage for expert systems work but is overcome in APL2. However, I haven't used APL2 seriously yet, like most other APLers I suspect, and shall confine my remarks to traditional (or as my American friends would put it, “vanilla”) APL. So the question becomes: “What has PROLOG got that APL hasn't?”
+The answer, surprisingly to APL aficionados, is: quite a lot. However, perhaps surprisingly to PROLOG programmers, it turns out that one can code all the standard PROLOG backtracking and similar logic capability into APL user-defined functions (i.e.. into a subroutine library). You then end up with an APL workspace oriented towards the development of expert systems, but with the great advantage of carrying with it all the “hooks” and existing facilities which have been developed in APL over the last 20 years.
+Evidently PROLOG users don't mind that they have no proper filing, no error control, no serious peripheral control, no multi-process synchronization, no inter-user communication, no user or file security, no computational intrinsics beyond add, subtract, divide and multiply, no interpreter available on IBM mainframes, no links to COBOL and other languages, no screen control, no graphics capability, no links to devices like “mice” … It makes it fun to develop expert systems in PROLOG, but awfully hard to sell them. So far I keep seeing demonstrations of PROLOG expert systems telling me how to water my houseplants, but the florist down the road isn't selling the package yet.
+Let's look at the framework of an expert system in APL terms. This path has been trodden before (7) but I'd like to look at the problem in a slightly different way. To make it more practical, let me tell you about an expert system I have been writing and playing with. It's called GENESIS 4. This sounds like a reasonable name for a package: GENESIS Release 4.0; but actually this is to do with the Bible (8). Not that I am particularly religious by nature; it's just that the Bible predates “Behaviour: The Control of Perception” as a functional specification of humanity by about 5000 years, so it's of interest to all artificial intelligence buffs.
+All expert systems have three chunks.
+The SITUATION MODEL is a whole load of information about (in this case) Adam's descendants, their marriages, their progeny and the main events in their lives.
+The KNOWLEDGE BASE is a set of rules which indicate the laws of genealogy. For example, “A is offspring of B if B begat A” and so on.
+The SYSTEM MANAGER is a set of programs that allows you to explore the situation model, ask it questions, and ask it to draw conclusions: for example, “Is Z descended from A?”. Clever system managers sometimes try to propose rules by looking for patterns in large amounts of data in a situation model.
+That's all.
+What I will do now is re-write parts of Genesis Chapter 4 as if I were entering lines into an APL-based expert system, trying to keep it as much like PROLOG as possible. The numbers in the margins are the verses.
+1. “And Adam knew Eve his wife; and she conceived, and bare Cain, and said 'I have gotten a man from the Lord'.”
+ADAM IS-MARRIED-TO EVE
+CAIN IS-OFFSPRING-OF ADAM
+CAIN IS-OFFSPRING-OF EVE
+CAIN IS-SEX MALE
+2. “And she again bare his brother Abel.”
+ABEL IS-OFFSPRING-OF EVE
+ABEL IS-SEX MALE
+8. “Cain rose up against Abel his brother, and slew him.”
+CAIN KILLS ABEL
+16. “Cain went out from the presence of the Lord, and dwelt in the land of Nod, on the east of Eden.”
+CAIN INHABITS NOD
+NOD IS-EAST-OF EDEN
+17. “And Cain knew his wife, and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch. And unto Enoch was born Irad: and Irad begat Mehujael: and Mehujael began Methusael: and Methusael begat Lamech.” CAIN IS-MARRIED-TO MRS.X ENOCH IS-OFFSPRING-OF CAIN ENOCH IS-OFFSPRING-OF MRS.X CAIN BUILDS-CITY-CALLED ENOCH IRAD IS-OFFSPRING-OF ENOCH MEHUJAEL IS-OFFSPRING-OF IRAD METHUSAEL IS-OFFSPRING-OF MEHUJAEL LAMECH IS-OFFSPRING-OF METHUSAEL
+There's a lot more of this sort of thing. I know that the Bible is now available in compressed text form on floppy discs as “THE WORD Processor” (9) but I'll wager that the logical inferences remain unencoded.
+What can we do with APL so far? Well, we need to encode this information into APL data structures. There are many ways of doing this, of course. An obvious approach is to write a little parser which takes statements like LAMECH IS-OFFSPRING-OF METHUSAEL and divide them into their different text strings (3 in this case). We start building a text matrix with a unique instance of each name. When a statement comes in, we look up the row number of each string or we add the new string to the end of the matrix. So the sequence:
+MEHUJAEL IS-OFFSPRING-OF IRAD
+METHUSAEL IS-OFFSPRING-OF MEHUJAEL
+LAMECH IS-OFFSPRING-OF METHUSAEL
+would be represented by these two matrices:
+MEHUJAEL 1 2 3
+IS-OFFSPRING-OF 4 2 1
+IRAD 5 2 4
+METHUSAEL
+LAMECH
+Actually it's slightly trickier than this as we shall need a flag bit to indicate which entry is a relationship and which is a noun, and they aren't always binary relationships, and the arguments aren't always on each side. But the basic idea's the same. A simple parsing function in APL is about 5 lines of code, and if we call it ADD it really does look like PROLOG.: ADD 'LAMECH IS-OFFSPRING-OF METHUSAEL'
+So far, so trivial, but we've done something epoch-making: we've defined our first function in XPL, which is the name I have chosen for this set of functions, written in APL but using ASCII character set throughout. Now we want to interrogate the database:
+“Is Lamech the offspring of Methusael?” DOES 'LAMECH IS-OFFSPRING-OF METHUSAEL' TRUE
+“Is Irad the offspring of Mehujael?” DOES 'IRAD IS-OFFSPRING-OF MEHUJAEL' FALSE
+Funny syntax, isn't it? I'm trying to stick to PROLOG though, and this is it. Now is it mindbogglingly hard to code this in XPL? Not really: function DOES looks to be at least one line long: it has to find a particular row of integers in the matrix. Of course things get tougher in PROLOG quite quickly:
+“Who is the offspring of Methusael?” WHICH 'X:X IS-OFFSPRING-OF METHUSAEL' LAMECH
+“Who is the offspring of Lamech?” WHICH 'X:X IS-OFFSPRING-OF LAMECH' NO MATCH
+This time not only do we have to find a particular row of integers in the numeric matrix, we also have to work out who X refers to and find him in the list of names. Fiendish stuff. Still, I think we can just about cope. Let's move onto the knowledge base. Here's some useful jargon. You and I are “knowledge engineers” in the context of our translation of the Bible into XPL format. Priests are “domain specialists”: Heaven and Hell is their domain. To this I would add that people who create expert systems languages, as we are doing at this moment, are presumably “metadomain specialists” (I believe this is an original coinage).
+It gets boring telling XPL everything twice. For example:
+ADD 'LAMECH IS-OFFSPRING-OF METHUSAEL' ADD 'METHUSAEL IS-PARENT-OF LAMECH'
+How about defining a rule instead?
+ADD 'X IS-PARENT OF Y IF Y IS-OFFSPRING-OF X'
+and while we're about it:
+ADD 'X IS-OFFSPRING-OF Y IF Y IS-PARENT-OF X'
+Not too hard to handle either is:
+ADD 'X IS-HUSBAND OF Y IF X IS-MARRIED-TO Y AND X IS-SEX MALE'
+Now try:
+ADD 'X IS-GRANDCHILD-OF Y IF X IS-OFFSPRING-OF Z AND Z IS-OFFSPRING-OF Y
+We've introduced the concept of “place markers”, which are analogous to the local names of the arguments of functions, except that the functions are relations (data) rather than programs. There are many ways to incorporate these into XPL and your own ideas will undoubtedly be better then mine: I use negative numbers in the integer matrix to denote place markers:
+MEHUJAEL 1 2 3
+IS-OFFSPRING-OF 4 2 1
+IRAD 5 2 4
+METHUSAEL -1 6 -2
+LAMECH -1 2 -3
+IS-GRANDCHILD-OF -3 2 -2
+The functions DOES and WHICH now become rather more interesting. Suppose we ask the question:
+DOES 'ENOCH IS-GRANDCHILD-OF ADAM'
+DOES now has to go scouting around to see if this is a bit of known data. If not, it goes to see if it has a rule-based definition for the grandchild relation. If it does, it has to find the first match for Enoch based on the offspring relation, and then pause while it tests whether this match in turn relates to Enoch. If not, it can resume looking for further matches for Enoch. It goes without saying that an XPL function employing recursion is the elegant (possibly the only) way to implement this process. It isn't very difficult to do.
+Here's a more interesting rule:
+ADD 'X IS-DESCENDANT-OF Y IF X IS-CHILD-OF Y' ADD 'X IS-DESCENDANT-OF Y IF X IS-CHILD-OF Z AND Z IS-DESCENDANT-OF Y'
+Recursion groupies will see the classic syntax: the first line denotes the limiting condition, the second line forms the recursive relation. The extensive use of recursive tests based on goal-seeking requests from the user is termed “backtracking” for obvious reasons. The standard mechanism of the state indicator in APL handles such requests beautifully.
+I hope that those with some APL experience can see that it is not inordinately tricky to implement these aspects of PROLOG in user-defined APL functions. After a while the imagination starts running riot:
+ADD 'X PROBABLY IS-CHILD-OF Y IF X IS-CHILD-OF Z AND Y IS-MARRIED-TO Z'
+I suppose there's always the milkman. Adverbs like DEFINITELY, PROBABLY, POSSIBLY, CONCEIVABLY (oops) and INCONCEIVABLY can conveniently carry probability values like 1.0, 0.75, 0.5, 0.25 and 0; if you want to change the climate of expert opinion you can tinker with the values. And don't forget NOT:
+ADD 'X IS-SEX FEMALE IF X NOT IS-SEX MALE'
+Well, we don't all live in San Francisco.
+What about expert systems themselves? If you recall the three elements:
+
+situation model
+knowledge base
+system manager
+
+then it turns out in languages like PROLOG that the preceding constructs are used on an intermixed basis to represent data in the situation model and rules in the knowledge base. In XPL one feels it may be cleaner to keep them separate, but that's a matter for personal taste.
+More importantly, most PROLOG users don't seem to have caught on to the fact that much of the data in the situation model may well be a transform of, for example, data about patients in a medical file whose records have been painstakingly composed over many years. File access to other systems is imperative; most of the facts are already there.
+Furthermore, although PROLOG is good at relations, it's very bad at numerical tests. An expert system for shop floor control needs to cope with quantified tests based on quasi-real-time input from process sensors: for example:
+ADD 'TURBINE SWITCH-SETTING OFF IF RPM ABOVE 5000' is as far as I know impossible to handle in PROLOG if RPM is intended to be directly linked to the real world, whereas in APL one simply makes RPM a variable shared with an auxiliary processor which handles direct data capture. For non-APLers this means: variable RPM in the APL workspace is dynamically coupled via programmer-specifiable update protocol with an arbitrary machine code segment, which is itself either handling process input/output or is talking to some other process that is. The point is that a robust and very well established framework for this kind of dynamic linking already exists in APL.
+I hope I have managed to whet two kinds of appetite. If you know APL already, you may be starting to think about building your own XPL functions (mine are for private consumption and you've had numerous hints already) and writing your own expert system. If you know about expert systems and are toiling with inadequate tools, you might just think about looking at APL instead. An unlikely marriage? I don't think so. No more than Cain's, anyway; the identity of Mrs X is the theological riddle of the millenium. Good luck with such experiments: may thy domain specialties be brought forth and multiply upon the interface of the digital computer.},
+  review = 	 {fbie: rejected <2016-01-14 11:59:11>},
 }
 
 @inproceedings{Bittlestone:1985:XES:17701.255364,
@@ -7118,6 +7385,104 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 255364,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {It is hardly possible to pick up a computer journal today without seeing references to the Alvey project in the UK, the Esprit project run by the EEC, the Japanese “Fifth generation” initiative, the proliferation of knowledge-based computer companies around Stanford in California and MIT in Massachusetts, and the large amounts of money that are being poured into the development of expert systems. The references abound: as I write this article the September 1984 issue of “International Management” (1) arrives on my desk with a cover depicting a digitized human brain image on a computer screen and a caption saying “Artificial intelligence: the race to make it work for managers”. I like the use of the word “race” here; it seems to imply that this is our last chance now that the prospect of human intelligence in managers has declined asymptotically to zero.
+Among the savants cited in the international Management article is Sir Clive Sinclair, no less, who has become notorious with the British Computer Society's Expert Systems Specialist Group: notorious for arriving unexpectedly at meetings and giving the rest of the audience something to think about. Sir Clive apparently said in the interview: “Once 'machines of silicon' surpass us, they will be capable of their own design. In a real sense, they will be reproductive, and silicon will have ended carbon's long monopoly. And ours too, I suppose, for we will no longer be able to deem ourselves the finest intelligence in the known universe.”
+Maybe expert systems will dominate us after all — it's just that there'll be a ten-month delay between quoting your Visa number and becoming an inferior intelligence.
+All this is quite fascinating since the phenomenon is very recent: before 1983 the phrase “expert systems” was largely unheard of and certainly not in itself viewed as the potential salvation of the Western world (there are as yet few hints of Eastern bloc development apart from in Hungary, where the University of Budapest, along with those of Marseilles, Edinburgh and London's Imperial College, claims to have invented PROLOG). However, by now there has been “Horizon” television coverage of the genre and there seems little doubt that expert systems are here to stay. But before I take up the theme of my title, perhaps I might be allowed to state my position on one or two related matters. First of all: “Expert systems are not the same thing as artificial intelligence”
+We can see the beginnings of a bandwagon effect here in which technical namedroppers, bored of stating that “UNIX is the coming thing” or “The future of computing lies in networking” are catching up with this latest trend: “Life is just another form of domain specialism”. Expert systems are in fact a very narrowly defined class of computer program with certain in-built inference-drawing capabilities. Artificial intelligence, on the other hand, is a much wider field involving the generic search for synthetic rational life. Much of the most interesting work in artificial intelligence does not involve digital computers at all but concerns the possibility of producing artificial models of brain process, using special fabrication techniques to emulate neurons, axons and synapses. Which brings me to my second definition: “Artificial intelligence will not be implemented on digital computers”
+It turns out that the use of a digital clocked device, irrespective of speed, imposes a fatal limitation on the sophistication of a genuine search for artificial intelligence, and parallel processing makes no difference. The reason is that in the brain it is the dynamic connections between at least 10 to the power 10 asynchronous independent processing elements that provide the kind of complexity that is required. The processors in the brain are called neurons and the interconnection are called axons, and there is substantial evidence to indicate that to a first approximation, almost any neuron can grow an axon to connect to almost any other neuron.
+Now the number of connections between 'N' elements increases in proportion to the square of 'N'. If you have three neurons you can connect A to B, A to C, B to C, and the same in the other direction, which is valid since it corresponds to a negative signal (inhibition vs. excitation). Consequently we have 6 possibilities for the network topology: i.e. 3x2. For 4 elements we have 12 options: 4x3. If we had a mere 100 neurons the result of 100x99 is still only about 10,000. However, in the brain we are considering about 10,000,000,000 neurons. So the number of possible connections is 100,000,000,000,000,000,000 — a number of literally astronomic proportions. We haven't yet introduced the complexity of neurons which connect to more than one other neuron (the majority do), nor signal processing within the neurons themselves (estimated as a seventh order differential equation), nor chemical effects at the synapses, which are retransmission points along the axons. When you drink too much alcohol, it is primarily the synaptic effects which alter your responses. I am unconvinced that there yet exists an artificially intelligent program capable of intoxication.
+If you now consider the implications of asynchronous (but not parallel) operations taking place between arbitrarily connectable elements on this scale, you begin to see that even a billion 64-bit microprocessors would make no difference at all. The emphasis in the brain is on analogue circuits in which feedback and frequency of signal are the determining factor and where there is no single location at which processing can be said to be taking place; the whole of the brain is in this sense intelligent.
+When I asked the Alvey representative at a recent meeting of the Expert Systems Specialist Group (yes, Sir Clive was there too) why there was so little emphasis on neurophysiology in the Alvey program (I was uncharacteristically diplomatic as in fact there is none at all) his response was that the program concerned the “hard” sciences and engineering: the bridge to biology was too narrow for engineers to cross. I believe he was genuinely rueful. However, if your appetite is in any way whetted for “real” artificial intelligence, you had better go out and buy two rather extraordinary books. One of them is, of course, Hofstadter's “Godel Escher Bach: An Eternal Golden Braid” (2). The other is less well-known: William T. Powers's “Behaviour: The Control of Perception” (3).
+In Hofstadter's book the notion of recursion is explored in many delightful ways. For those who have missed it, here is a sampler. Our heroes, Achilles and the Tortoise, have found a lamp. They rub it and a Genie appears. The Genie will grant three wishes. This prospect is greeted with glee by Achilles, who has read the 'Arabian Night' and knows the form. He makes his first wish: Achilles: “I wish that I had 100 wishes instead of just three.” Genie: “I am sorry, Achilles, but I don't grant meta-wishes.” Achilles: “I wish you'd tell me what a 'meta-wish' is.” Genie: “But that is a meta-meta-wish, Achilles, and I don't grant them either.” But after some pleading, the Genie agrees to try (meta-wishes are his favorite wishes too) and from inside his cloak he produces a lamp. He rubs it and out pops a MetaGenie: Genie: “I wish for permission for temporary suspension of all type-restrictions on wishes, for the duration of one typeless wish.” MetaGenie:“Half a moment please (produces a lamp, rubs it, etc.).” This continues for a short infinite period until we get to the top-level MetaGenie, also known as GOD, who grants permission for the typeless wish: Achilles: “I wish my wish would not be granted!” (There follows a SYSTEM CRASH: or as Hofstadter puts it, “the land of dead hiccoughs and extinguished lightbulbs”). Earlier, when quizzed on what the word GOD means, the Genie explains that it's an acronym — G.O.D. — standing for “GOD OVER DJINN” (Djinn being a generic type of intermediate Eastern Deity). Does this help? Ah yes, because we can expand it: GOD = GOD OVER DJINN = (GOD OVER DJINN) OVER DJINN = ((GOD OVER DJINN) OVER DJINN) OVER DJINN ………… If this is starting to look familiar, it's because it is. A deep knowledge of the relation of a system to its metasystem and of the closely connected notion-of recursion is an essential pre-requisite for serious work in artificial intelligence. In fact I suspect that: “Artificial intelligence = recursion + superficial incompetence” What about the other book I referred to: “Behaviour: The Control of Perception” (or as they write it in the USA, “Behavior: The Control of Prception”)? In my estimation this book ranks with Norbert Wiener's “Cybernetics” (4) and Stafford Beer's “Brain of the Firm” (5): together they form the twentieth century triumvirate in this field. Powers starts off with some deceptively simple experiments and ends up with a necessary but not sufficient model of human intelligence based on first principles and an appeal to reason. The argument is convincing and is closer than any other I have read to the true core of artificial intelligence. Significantly, I don't recall in the book a single serious mention of digital computer programming.
+Powers explains that the basic circuit elements in organic brains are not digital at all. They are analogue, but they use frequency not voltage as the yardstick. If 10 neural impulses per second flow in an axon, that may cause (at the lowest level) a certain amount of contraction to be applied to a single muscle fiber. 20 impulses per second might double the contraction force. However, the key point is the perception of all this. Feedback from local sensors is compared against a reference level for the desired state, and the output signal is adjusted accordingly. This compensates for unexpected resistance to the muscle's work — and if you think about it, you've never lifted a weight by applying linear pressure in your life. Literally millions of low-level frequency sensitive feedback circuits create what Powers calls Level 1 — the interface to the outside world at the sensory/motor level.
+Then we start to encounter hierarchy. Where do the reference levels for the desired states come from? Well, these are the outputs from Level 2, but this time they correspond to a higher-level notion: like that of vertical vs. horizontal movement. By positing a hierarchy of feedback circuits whose outputs become the reference levels (i.e.. control signals) for lower level circuits, Powers will lead you to agree that when you are walking at 2 miles per hour, there is an identifiable, traceable neural frequency in your brain which doubles in frequency when you walk at 4 mph. And if you find that hard to swallow, by the time you reach higher levels of hierarchy we are talking about frequencies which correspond to degrees of emotion. Of hate. Of love. To sleep, perchance to dream… “Do Androids Dream of Electric Sheep?” (6).
+I suspect I have strayed somewhat from the title of this article. But I do think it's important to set the context. If you want some fun with computers, start playing with expert systems. If you want to learn something useful about artificial intelligence, start reading some books. The two are not the same and I personally doubt that insights from one much help in the assimilation of the other.
+Perhaps we should focus on the main theme. This gives me a small problem since the arbitrary reader of this article exists in four configurations: you know about APL (or you don't) and you know about expert systems (or you don't). Here I am going to pitch the discussion slightly in favor of someone who knows a bit about APL but nothing about expert systems, although I hope there will be some comfort for the others here and there.
+Let's recap on APL's strengths in this area. We have a language which supports recursion with no limits apart from workspace size. Local variables and arguments to recursive functions are properly masked and pushed to a stack on each recursive invocation. Logical operations in APL are generally implemented at data word bit level and are very comprehensive and very fast. Arrays of arbitrary dimension are supported and most primitive operations apply element-wise without looping. APL is a threaded interpretive language in which individual building blocks are defined and can be invoked in a free-standing manner (like LISP). If LISP suffers from parentheses, APL suffers from silly specialist symbols, but fortunately this last aspect is starting to disappear in the more enlightened implementations. APL is very good indeed at numeric computation of high complexity in both the scientific and the commercial domains, and in addition it is fast and elegant at string handling.
+Standard APL disallows non-orthogonal arrays and those of mixed character and numeric type. This is undoubtedly a disadvantage for expert systems work but is overcome in APL2. However, I haven't used APL2 seriously yet, like most other APLers I suspect, and shall confine my remarks to traditional (or as my American friends would put it, “vanilla”) APL. So the question becomes: “What has PROLOG got that APL hasn't?”
+The answer, surprisingly to APL aficionados, is: quite a lot. However, perhaps surprisingly to PROLOG programmers, it turns out that one can code all the standard PROLOG backtracking and similar logic capability into APL user-defined functions (i.e.. into a subroutine library). You then end up with an APL workspace oriented towards the development of expert systems, but with the great advantage of carrying with it all the “hooks” and existing facilities which have been developed in APL over the last 20 years.
+Evidently PROLOG users don't mind that they have no proper filing, no error control, no serious peripheral control, no multi-process synchronization, no inter-user communication, no user or file security, no computational intrinsics beyond add, subtract, divide and multiply, no interpreter available on IBM mainframes, no links to COBOL and other languages, no screen control, no graphics capability, no links to devices like “mice” … It makes it fun to develop expert systems in PROLOG, but awfully hard to sell them. So far I keep seeing demonstrations of PROLOG expert systems telling me how to water my houseplants, but the florist down the road isn't selling the package yet.
+Let's look at the framework of an expert system in APL terms. This path has been trodden before (7) but I'd like to look at the problem in a slightly different way. To make it more practical, let me tell you about an expert system I have been writing and playing with. It's called GENESIS 4. This sounds like a reasonable name for a package: GENESIS Release 4.0; but actually this is to do with the Bible (8). Not that I am particularly religious by nature; it's just that the Bible predates “Behaviour: The Control of Perception” as a functional specification of humanity by about 5000 years, so it's of interest to all artificial intelligence buffs.
+All expert systems have three chunks.
+The SITUATION MODEL is a whole load of information about (in this case) Adam's descendants, their marriages, their progeny and the main events in their lives.
+The KNOWLEDGE BASE is a set of rules which indicate the laws of genealogy. For example, “A is offspring of B if B begat A” and so on.
+The SYSTEM MANAGER is a set of programs that allows you to explore the situation model, ask it questions, and ask it to draw conclusions: for example, “Is Z descended from A?”. Clever system managers sometimes try to propose rules by looking for patterns in large amounts of data in a situation model.
+That's all.
+What I will do now is re-write parts of Genesis Chapter 4 as if I were entering lines into an APL-based expert system, trying to keep it as much like PROLOG as possible. The numbers in the margins are the verses.
+1. “And Adam knew Eve his wife; and she conceived, and bare Cain, and said 'I have gotten a man from the Lord'.”
+ADAM IS-MARRIED-TO EVE
+CAIN IS-OFFSPRING-OF ADAM
+CAIN IS-OFFSPRING-OF EVE
+CAIN IS-SEX MALE
+2. “And she again bare his brother Abel.”
+ABEL IS-OFFSPRING-OF EVE
+ABEL IS-SEX MALE
+8. “Cain rose up against Abel his brother, and slew him.”
+CAIN KILLS ABEL
+16. “Cain went out from the presence of the Lord, and dwelt in the land of Nod, on the east of Eden.”
+CAIN INHABITS NOD
+NOD IS-EAST-OF EDEN
+17. “And Cain knew his wife, and she conceived, and bare Enoch: and he builded a city, and called the name of the city, after the name of his son, Enoch. And unto Enoch was born Irad: and Irad begat Mehujael: and Mehujael began Methusael: and Methusael begat Lamech.” CAIN IS-MARRIED-TO MRS.X ENOCH IS-OFFSPRING-OF CAIN ENOCH IS-OFFSPRING-OF MRS.X CAIN BUILDS-CITY-CALLED ENOCH IRAD IS-OFFSPRING-OF ENOCH MEHUJAEL IS-OFFSPRING-OF IRAD METHUSAEL IS-OFFSPRING-OF MEHUJAEL LAMECH IS-OFFSPRING-OF METHUSAEL
+There's a lot more of this sort of thing. I know that the Bible is now available in compressed text form on floppy discs as “THE WORD Processor” (9) but I'll wager that the logical inferences remain unencoded.
+What can we do with APL so far? Well, we need to encode this information into APL data structures. There are many ways of doing this, of course. An obvious approach is to write a little parser which takes statements like LAMECH IS-OFFSPRING-OF METHUSAEL and divide them into their different text strings (3 in this case). We start building a text matrix with a unique instance of each name. When a statement comes in, we look up the row number of each string or we add the new string to the end of the matrix. So the sequence:
+MEHUJAEL IS-OFFSPRING-OF IRAD
+METHUSAEL IS-OFFSPRING-OF MEHUJAEL
+LAMECH IS-OFFSPRING-OF METHUSAEL
+would be represented by these two matrices:
+MEHUJAEL 1 2 3
+IS-OFFSPRING-OF 4 2 1
+IRAD 5 2 4
+METHUSAEL
+LAMECH
+Actually it's slightly trickier than this as we shall need a flag bit to indicate which entry is a relationship and which is a noun, and they aren't always binary relationships, and the arguments aren't always on each side. But the basic idea's the same. A simple parsing function in APL is about 5 lines of code, and if we call it ADD it really does look like PROLOG.: ADD 'LAMECH IS-OFFSPRING-OF METHUSAEL'
+So far, so trivial, but we've done something epoch-making: we've defined our first function in XPL, which is the name I have chosen for this set of functions, written in APL but using ASCII character set throughout. Now we want to interrogate the database:
+“Is Lamech the offspring of Methusael?” DOES 'LAMECH IS-OFFSPRING-OF METHUSAEL' TRUE
+“Is Irad the offspring of Mehujael?” DOES 'IRAD IS-OFFSPRING-OF MEHUJAEL' FALSE
+Funny syntax, isn't it? I'm trying to stick to PROLOG though, and this is it. Now is it mindbogglingly hard to code this in XPL? Not really: function DOES looks to be at least one line long: it has to find a particular row of integers in the matrix. Of course things get tougher in PROLOG quite quickly:
+“Who is the offspring of Methusael?” WHICH 'X:X IS-OFFSPRING-OF METHUSAEL' LAMECH
+“Who is the offspring of Lamech?” WHICH 'X:X IS-OFFSPRING-OF LAMECH' NO MATCH
+This time not only do we have to find a particular row of integers in the numeric matrix, we also have to work out who X refers to and find him in the list of names. Fiendish stuff. Still, I think we can just about cope. Let's move onto the knowledge base. Here's some useful jargon. You and I are “knowledge engineers” in the context of our translation of the Bible into XPL format. Priests are “domain specialists”: Heaven and Hell is their domain. To this I would add that people who create expert systems languages, as we are doing at this moment, are presumably “metadomain specialists” (I believe this is an original coinage).
+It gets boring telling XPL everything twice. For example:
+ADD 'LAMECH IS-OFFSPRING-OF METHUSAEL' ADD 'METHUSAEL IS-PARENT-OF LAMECH'
+How about defining a rule instead?
+ADD 'X IS-PARENT OF Y IF Y IS-OFFSPRING-OF X'
+and while we're about it:
+ADD 'X IS-OFFSPRING-OF Y IF Y IS-PARENT-OF X'
+Not too hard to handle either is:
+ADD 'X IS-HUSBAND OF Y IF X IS-MARRIED-TO Y AND X IS-SEX MALE'
+Now try:
+ADD 'X IS-GRANDCHILD-OF Y IF X IS-OFFSPRING-OF Z AND Z IS-OFFSPRING-OF Y
+We've introduced the concept of “place markers”, which are analogous to the local names of the arguments of functions, except that the functions are relations (data) rather than programs. There are many ways to incorporate these into XPL and your own ideas will undoubtedly be better then mine: I use negative numbers in the integer matrix to denote place markers:
+MEHUJAEL 1 2 3
+IS-OFFSPRING-OF 4 2 1
+IRAD 5 2 4
+METHUSAEL -1 6 -2
+LAMECH -1 2 -3
+IS-GRANDCHILD-OF -3 2 -2
+The functions DOES and WHICH now become rather more interesting. Suppose we ask the question:
+DOES 'ENOCH IS-GRANDCHILD-OF ADAM'
+DOES now has to go scouting around to see if this is a bit of known data. If not, it goes to see if it has a rule-based definition for the grandchild relation. If it does, it has to find the first match for Enoch based on the offspring relation, and then pause while it tests whether this match in turn relates to Enoch. If not, it can resume looking for further matches for Enoch. It goes without saying that an XPL function employing recursion is the elegant (possibly the only) way to implement this process. It isn't very difficult to do.
+Here's a more interesting rule:
+ADD 'X IS-DESCENDANT-OF Y IF X IS-CHILD-OF Y' ADD 'X IS-DESCENDANT-OF Y IF X IS-CHILD-OF Z AND Z IS-DESCENDANT-OF Y'
+Recursion groupies will see the classic syntax: the first line denotes the limiting condition, the second line forms the recursive relation. The extensive use of recursive tests based on goal-seeking requests from the user is termed “backtracking” for obvious reasons. The standard mechanism of the state indicator in APL handles such requests beautifully.
+I hope that those with some APL experience can see that it is not inordinately tricky to implement these aspects of PROLOG in user-defined APL functions. After a while the imagination starts running riot:
+ADD 'X PROBABLY IS-CHILD-OF Y IF X IS-CHILD-OF Z AND Y IS-MARRIED-TO Z'
+I suppose there's always the milkman. Adverbs like DEFINITELY, PROBABLY, POSSIBLY, CONCEIVABLY (oops) and INCONCEIVABLY can conveniently carry probability values like 1.0, 0.75, 0.5, 0.25 and 0; if you want to change the climate of expert opinion you can tinker with the values. And don't forget NOT:
+ADD 'X IS-SEX FEMALE IF X NOT IS-SEX MALE'
+Well, we don't all live in San Francisco.
+What about expert systems themselves? If you recall the three elements:
+
+situation model
+knowledge base
+system manager
+
+then it turns out in languages like PROLOG that the preceding constructs are used on an intermixed basis to represent data in the situation model and rules in the knowledge base. In XPL one feels it may be cleaner to keep them separate, but that's a matter for personal taste.
+More importantly, most PROLOG users don't seem to have caught on to the fact that much of the data in the situation model may well be a transform of, for example, data about patients in a medical file whose records have been painstakingly composed over many years. File access to other systems is imperative; most of the facts are already there.
+Furthermore, although PROLOG is good at relations, it's very bad at numerical tests. An expert system for shop floor control needs to cope with quantified tests based on quasi-real-time input from process sensors: for example:
+ADD 'TURBINE SWITCH-SETTING OFF IF RPM ABOVE 5000' is as far as I know impossible to handle in PROLOG if RPM is intended to be directly linked to the real world, whereas in APL one simply makes RPM a variable shared with an auxiliary processor which handles direct data capture. For non-APLers this means: variable RPM in the APL workspace is dynamically coupled via programmer-specifiable update protocol with an arbitrary machine code segment, which is itself either handling process input/output or is talking to some other process that is. The point is that a robust and very well established framework for this kind of dynamic linking already exists in APL.
+I hope I have managed to whet two kinds of appetite. If you know APL already, you may be starting to think about building your own XPL functions (mine are for private consumption and you've had numerous hints already) and writing your own expert system. If you know about expert systems and are toiling with inadequate tools, you might just think about looking at APL instead. An unlikely marriage? I don't think so. No more than Cain's, anyway; the identity of Mrs X is the theological riddle of the millenium. Good luck with such experiments: may thy domain specialties be brought forth and multiply upon the interface of the digital computer.},
+  review = 	 {fbie: rejected <2016-01-14 11:59:15>},
 }
 
 @inproceedings{Ciricescu:2003:RSV:956417.956540,
@@ -7136,6 +7501,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 956540,
   publisher =	 {IEEE Computer Society},
   address =	 {Washington, DC, USA},
+  abstract = 	 {The need to process multimedia data places largecomputational demands on portable/embedded devices.These multimedia functions share commoncharacteristics: they are computationally intensive anddata-streaming, performing the same operation(s) onmany data elements.The Reconfigurable StreamingVector Processor (RSVPTM) is a vector coprocessorarchitecture that accelerates streaming data operations.Programming the RSVP architecture involves describingthe shape and location of vector streams in memory anddescribing computations as data-flow graphs.Thesedescriptions are intuitive and independent of each other,making the RSVP architecture easy to program.They arealso machine independent, allowing binary-compatibleimplementations with varying cost-performance tradeoffs.This paper presents the RSVP architecture andprogramming model, a programming case study, and ourfirst implementation.Our results show significantspeedups on streaming data functions.Speedups forkernels and applications range from 2 to over 20 timesthat of an ARM9 host processor alone.},
+  review = 	 {fbie: rejected <2016-01-14 11:59:24>},
 }
 
 @article{Younge:2015:SHP:2817817.2731194,
@@ -7161,6 +7528,8 @@ Coding is done by first computing customized weight vectors for each input patte
   keywords =	 {cloud computing, gpudirect, iaas, iommu, kvm,
                   molecular dynamics, openstack, sr-iov,
                   virtualization},
+  abstract = 	 {Cloud Infrastructure-as-a-Service paradigms have recently shown their utility for a vast array of computational problems, ranging from advanced web service architectures to high throughput computing. However, many scientific computing applications have been slow to adapt to virtualized cloud frameworks. This is due to performance impacts of virtualization technologies, coupled with the lack of advanced hardware support necessary for running many high performance scientific applications at scale. By using KVM virtual machines that leverage both Nvidia GPUs and InfiniBand, we show that molecular dynamics simulations with LAMMPS and HOOMD run at near-native speeds. This experiment also illustrates how virtualized environments can support the latest parallel computing paradigms, including both MPI+CUDA and new GPUDirect RDMA functionality. Specific findings show initial promise in scaling of such applications to larger production deployments targeting large scale computational workloads.},
+  review = 	 {fbie: rejected <2016-01-14 11:59:38>},
 }
 
 @inproceedings{Younge:2015:SHP:2731186.2731194,
@@ -7186,6 +7555,8 @@ Coding is done by first computing customized weight vectors for each input patte
   keywords =	 {cloud computing, gpudirect, iaas, iommu, kvm,
                   molecular dynamics, openstack, sr-iov,
                   virtualization},
+  abstract = 	 {Cloud Infrastructure-as-a-Service paradigms have recently shown their utility for a vast array of computational problems, ranging from advanced web service architectures to high throughput computing. However, many scientific computing applications have been slow to adapt to virtualized cloud frameworks. This is due to performance impacts of virtualization technologies, coupled with the lack of advanced hardware support necessary for running many high performance scientific applications at scale. By using KVM virtual machines that leverage both Nvidia GPUs and InfiniBand, we show that molecular dynamics simulations with LAMMPS and HOOMD run at near-native speeds. This experiment also illustrates how virtualized environments can support the latest parallel computing paradigms, including both MPI+CUDA and new GPUDirect RDMA functionality. Specific findings show initial promise in scaling of such applications to larger production deployments targeting large scale computational workloads.},
+  review = 	 {fbie: rejected <2016-01-14 11:59:42>},
 }
 
 @article{Kumar:2005:DSA:1071690.1064221,
@@ -7209,6 +7580,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {EM algorithm, data streaming, flow statistics,
                   statistical inference, traffic analysis},
+  abstract = 	 {Statistical information about the flow sizes in the traffic passing through a network link helps a network operator to characterize network resource usage, infer traffic demands, detect traffic anomalies, and improve network performance through traffic engineering. Previous work on estimating the flow size distribution for the complete population of flows has produced techniques that either make inferences from sampled network traffic, or use data streaming approaches. In this work, we identify and solve a more challenging problem of estimating the size distribution and other statistical information about arbitrary subpopulations of flows. Inferring subpopulation flow statistics is more challenging than the complete population counterpart, since subpopulations of interest are often specified a posteriori (i.e., after the data collection is done), making it impossible for the data collection module to "plan in advance".Our solution consists of a novel mechanism that combines data streaming with traditional packet sampling to provide highly accurate estimates of subpopulation flow statistics. The algorithm employs two data collection modules operating in parallel --- a NetFlow-like packet sampler and a streaming data structure made up of an array of counters. Combining the data collected by these two modules, our estimation algorithm uses a statistical estimation procedure that correlates and decodes the outputs (observations) from both data collection modules to obtain flow statistics for any arbitrary subpopulation. Evaluations of this algorithm on real-world Internet traffic traces demonstrate its high measurement accuracy.},
+  review = 	 {fbie: rejected <2016-01-14 12:00:00>},
 }
 
 @inproceedings{Kumar:2005:DSA:1064212.1064221,
@@ -7232,6 +7605,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {EM algorithm, data streaming, flow statistics,
                   statistical inference, traffic analysis},
+  abstract = 	 {Statistical information about the flow sizes in the traffic passing through a network link helps a network operator to characterize network resource usage, infer traffic demands, detect traffic anomalies, and improve network performance through traffic engineering. Previous work on estimating the flow size distribution for the complete population of flows has produced techniques that either make inferences from sampled network traffic, or use data streaming approaches. In this work, we identify and solve a more challenging problem of estimating the size distribution and other statistical information about arbitrary subpopulations of flows. Inferring subpopulation flow statistics is more challenging than the complete population counterpart, since subpopulations of interest are often specified a posteriori (i.e., after the data collection is done), making it impossible for the data collection module to "plan in advance".Our solution consists of a novel mechanism that combines data streaming with traditional packet sampling to provide highly accurate estimates of subpopulation flow statistics. The algorithm employs two data collection modules operating in parallel --- a NetFlow-like packet sampler and a streaming data structure made up of an array of counters. Combining the data collected by these two modules, our estimation algorithm uses a statistical estimation procedure that correlates and decodes the outputs (observations) from both data collection modules to obtain flow statistics for any arbitrary subpopulation. Evaluations of this algorithm on real-world Internet traffic traces demonstrate its high measurement accuracy.},
+  review = 	 {fbie: rejected <2016-01-14 12:00:05>},
 }
 
 @article{Schnase:1993:SDM:151480.151521,
@@ -7252,6 +7627,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 151521,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Many important issues in the design and implementation of hypermedia system functionality focus on the way interobject connections are represented, manipulated, and stored. A prototypic system called HB1 is being designed to meet the storage needs of next-generation hypermedia system architectures. HB1 is referred to as a hyperbase management system (HBMS) because it supports, not only the storage and manipulation of information, but the storage and manipulation of the connectivity data that link information together to form hypermedia. Among HB1's distinctions is its use of a semantic network database system to manage physical storage. Here, basic semantic modeling concepts as they apply to hypermedia systems are reviewed, and experiences using a semantic database system in HB1 are discussed.
+Semantic data models attempt to provide more powerful mechanisms for structuring objects than are provided by traditional approaches. In HB1, it was necessary to abstract interobject connectivity, behaviors, and information for hypermedia. Building on top of a semantic database system facilitated such a separation and made the structural aspects of hypermedia conveniently accessible to manipulation. This becomes particularly important in the implementation of structure-related operations such as structural queries. Our experience suggests that an integrated semantic object-oriented database paradigm appears to be superior to purely relational, semantic, or object-oriented methodologies for representing the structurally complex interrelationships that arise in hypermedia.},
+  review = 	 {fbie: rejected <2016-01-14 12:00:39>},
 }
 
 @article{Gerlek:1995:BIV:200994.201003,
@@ -7277,6 +7655,9 @@ Coding is done by first computing customized weight vectors for each input patte
   keywords =	 {constant propagation, def-use chain, demand-driven,
                   induction variable, static single assignment,
                   strength reduction, wraparound variable},
+  abstract = 	 {Linear induction variable detection is usually associated with the strength reduction optimization. For restructuring compilers, effective data dependence analysis requires that the compiler detect and accurately describe linear and nonlinear induction variables as well as more general sequences. In this article we present a practical technique for detecting a broader class of linear induction variables than is usually recognized, as well as several other sequence forms, including periodic, polynomial, geometric, monotonic, and wrap-around variables. Our method is based on Factored Use-Def (FUD) chains, a demand-driven representation of the popular Static Single Assignment (SSA) form. In this form, strongly connected components of the associated SSA graph correspond to sequences in the source program: we describe a simple yet efficient algorithm for detecting and classifying these sequences. We have implemented this algorithm in Nascent, our restructuring Fortran 90+ compiler, and we present some results showing the effectiveness of our approach.},
+  notes = 	 {Not focusing on any declarative aspects. Such specialized loop optimizations are not relevant.},
+  review = 	 {fbie: rejected <2016-01-14 12:04:34>},
 }
 
 @article{Zhang:2013:FAF:2457443.2457445,
@@ -7302,6 +7683,8 @@ Coding is done by first computing customized weight vectors for each input patte
   keywords =	 {Eclat, Frequent itemset mining, co-processor, data
                   intensive, data mining, high performance computing,
                   reconfigurable, reconfigurable applications},
+  abstract = 	 {In this article we describe a Field Programmable Gate Array (FPGA)-based coprocessor architecture for Frequent Itemset Mining (FIM). FIM is a common data mining task used to find frequently occurring subsets amongst a database of sets. FIM is a nonnumerical, data intensive computation and is used in machine learning and computational biology. FIM is particularly expensive---in terms of execution time and memory---when performed on large and/or sparse databases or when applied using a low appearance frequency threshold. Because of this, the development of increasingly efficient FIM algorithms and their mapping to parallel architectures is an active field. Previous attempts to accelerate FIM using FPGAs have relied on performance-limiting strategies such as iterative database loading and runtime logic unit reconfiguration. In this article, we present a novel architecture to implement Eclat, a well-known FIM algorithm. Unlike previous efforts, our technique does not impose limits on the maximum set size as a function of available FPGA logic resources and our design scales well to multiple FPGAs. In addition to a novel hardware design, we also present a corresponding compression scheme for intermediate results that are stored in on-chip memory. On a four-FPGA board, experimental results show up to 68X speedup compared to a highly optimized software implementation.},
+  review = 	 {fbie: rejected <2016-01-14 12:04:45>},
 }
 
 @article{Hu:2000:HHP:347837.347872,
@@ -7325,6 +7708,8 @@ Coding is done by first computing customized weight vectors for each input patte
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
   keywords =	 {benchmarks, compilers, high performance Fortran},
+  abstract = 	 {The high performance Fortran (HPF) benchmark suite HPFBench is designed for evaluating the HPF language and compilers on scalable architectures. The functionality of the benchmarks covers scientific software library functions and application kernels that reflect the computational structure and communication patterns in fluid dynamic simulations, fundamental physics, and molecular studies in chemistry and biology. The benchmarks are characterized in terms of FLOP count, memory usage, communication pattern, local memory accesses, array allocation mechanism, as well as operation and communication counts per iteration. The benchmarks output performance evaluation metrics in the form of elapsed times, FLOP rates, and communication time breakdowns. We also provide a benchmark guide to aid  the choice of subsets of the benchmarks for evaluating particular aspects of an HPF compiler. Furthermore, we report an evaluation of an industry-leading HPF compiler from the Portland Group Inc. using the HPFBench benchmarks on the distributed-memory IBM SP2},
+  review = 	 {fbie: rejected <2016-01-14 12:04:51>},
 }
 
 @article{Swanson:2007:WA:1233307.1233308,
@@ -7348,6 +7733,8 @@ Coding is done by first computing customized weight vectors for each input patte
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
   keywords =	 {WaveScalar, dataflow computing, multithreading},
+  abstract = 	 {Silicon technology will continue to provide an exponential increase in the availability of raw transistors. Effectively translating this resource into application performance, however, is an open challenge that conventional superscalar designs will not be able to meet. We present WaveScalar as a scalable alternative to conventional designs. WaveScalar is a dataflow instruction set and execution model designed for scalable, low-complexity/high-performance processors. Unlike previous dataflow machines, WaveScalar can efficiently provide the sequential memory semantics that imperative languages require. To allow programmers to easily express parallelism, WaveScalar supports pthread-style, coarse-grain multithreading and dataflow-style, fine-grain threading. In addition, it permits blending the two styles within an application, or even a single function. To execute WaveScalar programs, we have designed a scalable, tile-based processor architecture called the WaveCache. As a program executes, the WaveCache maps the program's instructions onto its array of processing elements (PEs). The instructions remain at their processing elements for many invocations, and as the working set of instructions changes, the WaveCache removes unused instructions and maps new ones in their place. The instructions communicate directly with one another over a scalable, hierarchical on-chip interconnect, obviating the need for long wires and broadcast communication. This article presents the WaveScalar instruction set and evaluates a simulated implementation based on current technology. For single-threaded applications, the WaveCache achieves performance on par with conventional processors, but in less area. For coarse-grain threaded applications the WaveCache achieves nearly linear speedup with up to 64 threads and can sustain 7--14 multiply-accumulates per cycle on fine-grain threaded versions of well-known kernels. Finally, we apply both styles of threading to equake from Spec2000 and speed it up by 9x compared to the serial version.},
+  review = 	 {fbie: rejected <2016-01-14 12:05:15>},
 }
 
 @article{Abbott:1990:RSF:78949.78951,
@@ -7368,6 +7755,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 78951,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Above all, it is vital to recognize that completely guaranteed behavior is impossible and that there are inherent risks in relying on computer systems in critical environments. The unforeseen consequences are often the most disastrous [Neumann 1986].
+Section 1 of this survey reviews the current state of the art of system reliability, safety, and fault tolerance. The emphasis is on the contribution of software to these areas. Section 2 reviews current approaches to software fault tolerance. It discusses why some of the assumptions underlying hardware fault tolerance do not hold for software. It argues that the current software fault tolerance techniques are more accurately thought of as delayed debugging than as fault tolerance. It goes on to show that in providing both backtracking and executable specifications, logic programming offers most of the tools currently used in software fault tolerance. Section 3 presents a generalization of the recovery block approach to software fault tolerance, called resourceful systems. Systems are resourceful if they are able to determine whether they have achieved their goals or, if not, to develop and carry out alternate plans. Section 3 develops an approach to designing resourceful systems based upon a functionally rich architecture and an explicit goal orientation.},
+  review = 	 {fbie: rejected <2016-01-14 12:05:27>},
 }
 
 @inproceedings{Murray-Lasso:1968:OCA:800167.805398,
@@ -7386,6 +7776,8 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 805398,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {A circuit analysis-design-optimization system, DCANAL, has been designed specifically for on-line interactive computer aided circuit design on the General Electric Desk Side Computer System. The system is useful for obtaining all the circuit responses of linear and nonlinear circuits. Transistor and diode operating points, effects of circuit element variations, and the design or optimization of element values for desired circuit responses may be quickly and easily determined. The features of the program system are 1. Availability. All circuit designers at any Bell Telephone Laboratories location may access the program. Only a teletypewriter terminal is needed. 2. Large Circuits. Fifty branch, 30 node circuits with 20 transistors and 20 diodes may be analyzed. 3 Fast Response. Most analyses are performed within 30 seconds. 4. Modeling Flexibility. Circuits may be modeled with resistors, controlled current sources, independent voltage and current sources, and “black boxes” represented as admittance matrices. Transistors and diodes may be modeled with the conventional Ebers-Moll equations or by data tables from measured terminal characteristics. The data tables, or the Ebers-Moll coefficients, may be stored in device files for easy recall. 5. Design Optimization. Selected resistors may be designated as variable, and their values automatically designed to meet specified circuit responses. Circuits may also be automatically optimized by designing resistance values to constrain branch currents and voltages to lie between specified minimum and maximum values. 6. Circuit Description Storage. Circuit descriptions may be saved and stored on files. Several versions of a circuit or several different circuits may be recalled for comparison or additional work. The same circuit file may be used for analysis, design, and optimization. Repeating the lengthy and error prone input is avoided. 7. English Commands. All input commands consist of two English words directly associated with the function to be performed. 8. Selective Output. Particular entries or entire arrays of node voltage, branch current, branch power, transistor and diode voltage and current, and circuit description may be selected as output. 9. Element Modification. Any or all of the circuit elements may be temporarily or permanently modified. 10. Parameter Variation and Sensitivity. Any specified circuit element may be varied over a prescribed range with any circuit response and its sensitivity selected as output. 11. On-Line Distributions. All the up-to-date information on the capabilities, new factors, and modifications to the system are available in an auxiliary instruction program. This provides the user with the latest information when he needs it and where he needs it.},
+  review = 	 {fbie: rejected <2016-01-14 12:06:35>},
 }
 
 @article{Miller:1990:SSM:84537.84556,
@@ -7405,6 +7797,15 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 84556,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {Product turnaround time (TAT) is defined as the clock or elapsed time from wafer release to completed wafer fabrication. It is also known as cycle time, mean elapsed time, or manufacturing lead time. Turnaround time is arguably more important in semiconductor fabrication than in any other industry because it has a major impact on contamination levels, process control capabilities, yield-learning rates and product costs.
+Semiconductor manufacturers must strictly control particulate contamination to achieve high device yields. Longer turnaround times increase the opportunity for the particles to migrate to wafer surfaces, even in strict clean-room environments [11]. The negative relationship between time and product yields is shown in Figure 1.
+Submicron device fabrication also demands stringent process control capability. Variation in time between steps is a major contributor to process variability, directly affecting process yields. Sequential processes performed minutes apart may produce significantly different results than the identical processes performed hours apart because the properties of materials change over time.
+The slope of the yield learning curve is also a function of turnaround time. Slow feedback because of high turnaround times delays problem recognition and verification of solutions. Semiconductor fabrication is especially sensitive to turnaround time because definitive functional results are not available until circuits are completely fabricated on the wafe—typically hundreds of process steps after the raw silicon wafers are released into the manufacturing line. Figure 2 depicts the relationship between turnaround time, shown as a multiple of theoretical or raw process time (RPT), and the yield learning rate.
+The impact of longer turnaround time is not limited to reduced yields. Longer TAT also increases product costs. For example, a line with a 1O-day TAT that starts 1,000 wafers a day will have 10,000 wafers of work-in-process (WIP). A line with the same wafer starts per day (WSD) but an 11-day TAT will have 11,000 wafers in WIP. The longer TAT causes higher carrying costs for partially finished goods, more space for WIP storage, additional resources for product tracking and control, and many other additional expenses.
+Minimizing turnaround time is critically important in the semiconductor industry due to its major contribution to greater product yields and lower costs. However, it is not the only determinant of success in semiconductor manufacturing. State-of-the-art facilities cost hundreds of millions of dollars to build and equip, due to requirements for cleanliness, vibration control, chemical and gas purity and other components that are specified to angstroms and sub-microns. The semiconductor industry's capital-intensive nature demands high throughput rates and maximum utilization of resources to attain a competitive cost per wafer.
+The amount of work-in-process (WIP), also known as line-loading levels, affects both turnaround time and throughput performance. Throughput analysis techniques [4, 6] generate curves demonstrating that infinite levels of work in process maximize throughput (Figure 3) by ensuring that resources never starve for work. Queuing theory analysis [1] produces curves that show minimum line-loading levels produce minimum turnaround times by eliminating time spent queued for busy resources (Figure 4). The inverse shapes of these two performance curves demonstrate the inherent conflict in line-loading decisions when attempting to both maximize throughput and minimize turnaround time.
+Wafer fabrication involves hundreds of individual tools performing multiple processes to produce an array of sophisticated end products. Actual turnaround time and throughput curves for each tool depend on many variables unique to that tool, such as arrival rates, service rates, rework rates, failure rates, and starvation and blockage opportunities. Resolution of the line-loading conflict is especially difficult given the complexity of semiconductor manufacturing, and simulation emerges as perhaps the only currently existing methodology for taking into account the detailed interactions among elements in such a manufacturing environment [3, 14].},
+  review = 	 {fbie: rejected <2016-01-14 12:06:42>},
 }
 
 @article{Cong:2009:FHA:1575774.1575776,
@@ -7428,6 +7829,8 @@ Coding is done by first computing customized weight vectors for each input patte
   address =	 {New York, NY, USA},
   keywords =	 {FPGA, Lithography simulation, coprocessor
                   acceleration},
+  abstract = 	 {Lithography simulation, an essential step in design for manufacturability (DFM), is still far from computationally efficient. Most leading companies use large clusters of server computers to achieve acceptable turn-around time. Thus coprocessor acceleration is very attractive for obtaining increased computational performance with a reduced power consumption. This article describes the implementation of a customized accelerator on FPGA using a polygon-based simulation model. An application-specific memory partitioning scheme is designed to meet the bandwidth requirements for a large number of processing elements. Deep loop pipelining and ping-pong buffer based function block pipelining are also implemented in our design. Initial results show a 15X speedup versus the software implementation running on a microprocessor, and more speedup is expected via further performance tuning. The implementation also leverages state-of-art C-to-RTL synthesis tools. At the same time, we also identify the need for manual architecture-level exploration for parallel implementations. Moreover, we implement the algorithm on NVIDIA GPUs using the CUDA programming environment, and provide some useful comparisons for different kinds of accelerators.},
+  review = 	 {fbie: rejected <2016-01-14 12:06:48>},
 }
 
 @article{Grossman:2005:LET:1053331.1053335,
@@ -7447,6 +7850,9 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 1053335,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {To submit a letter, e-mail us at feedback@acmqueue.comExtensible Programming, Extended Edition  In &#8220;Extensible Programming for the 21st Century&#8221; (December/January   2004-2005), Gregory V. Wilson considers user-extensible syntax and semantics   to be the &#8220;next big thing&#8221; that is missing from existing programming   systems. Done imperfectly, however, unfamiliar extended syntax can interfere   with readability, creating a Tower of Babel that makes adding resources to a   project expensive. I note that Donn Seeley&#8217;s work, &#8220;How Not to Write   Fortran in Any Language&#8221; (December/January 2004-2005), touches on how   familiar structure helps us understand code. Kurt Guntheroth, Seattle, Washington GREG WILSON RESPONDS: I agree. If misused, syntactic extensibility   will make programs harder to read. However, that&#8217;s true of every abstraction   mechanism&#8212;each time we give programmers new ways of doing things, it allows   the good ones to do better, but the bad ones to do worse. I also believe that   new syntactic forms are no more likely to be unreadable than the mess of nested   function calls, conditionals, and so on that they can replace.*I liked Greg Wilson&#8217;s article, since I think it addresses an important   issue for the future (there already is a Java extender!). But I missed seeing   Dylan (object-oriented language originally developed by Apple Computer) mentioned   in the article. Dylan has implemented key components (control constructs such   as for, while, if, etc.) of the language by means of macros without becoming   as bulky as Scheme.  But one thing really worries me about extensibility. In real life, every community   invents its own language with specific terms, semantics, acronyms, etc. In the   end I am afraid that we will get a new portability issue (between communities)   if extension is too easy. Michael Erdmann, Berlin, Germany GREG WILSON RESPONDS: I like Dylan too. I&#8217;ve always   regretted that it didn&#8217;t become more widely known. I decided to use Scheme   as an example in my article because I thought more people would know about it   and because so many ideas about extensibility were first developed in it. Regarding your worries, I hope that active libraries will lead to exactly   the reverse: if everything needed to make XYZ work (the runtime library, its   link/load descriptors, associated metadata of the kind needed for Servlet deployment,   adapters for various tools, etc.) is bundled in a single format, then portability   should be enhanced, not reduced.*First of all, I&#8217;d like to thank you for creating a magazine that does   not make you drowsy. I really enjoy reading it. It is nice to see the ideas   &#8220;in the rough&#8221;&#8212;before they are proven.  I&#8217;m writing to you about Gregory V. Wilson&#8217;s &#8220;Extensible Programming   for the 21st Century.&#8221; The author suggests that the main presentation   of the programming languages will be XML; although this idea is attractive,   I think it should apply only to the documentation, specifically to the presentation,   and not to the programming code itself. The reason is the right level of abstraction:   when the presentation is too elaborate, the real meaning may escape. There is   a good reason for ACM Queue itself being a text-based magazine and not a multimedia   presentation.  The author did not mention any of the pre-XML extensible languages. I find it   fascinating how TCL was started as an extensible language and ended up as yet   another scripting tool. Dmitriy Vasilev, Saratoga, California GREG WILSON RESPONDS: I agree with your view that &#8220;when   the presentation is too elaborate, the real meaning may escape.&#8221; That&#8217;s   precisely why I advocate separation of model and view in source code: to present   more comprehensible views of programs, we need to break the one-to-one binding   between characters in the source file and glyphs on the screen. I mentioned   Scheme, which predates XML by almost 20 years, because I feel it is still the   most extensible &#8220;little language&#8221; ever created. Forth would have   been another interesting choice.  A Lesson in Self-Healing   I enjoyed reading Michael W. Shapiro&#8217;s &#8220;Self-Healing in Modern Operating   Systems&#8221; (December/January 2004-2005), but wondered why he made no mention   of the IBM AIX error logger and system resource controller. The AIX error logger   provides centralized reporting of hardware errors similar to the &#8220;fault   manager&#8221; described by Shapiro, and can be told to perform different actions   for each error. The AIX system resource controller keeps startup information   for system daemons and has an associated API to communicate with them. It is   clearly a forerunner of the &#8220;service manager&#8221; described in the article.   These features in AIX have been present for 10-15 years, and I missed them sorely   when I moved from an AIX shop to a Solaris shop in 1995. Ed Ravin, Bronx, New York  Fortran Lives  The article &#8220;How Not to Write Fortran in Any Language&#8221; was arrogant   and misleading. Donn Seeley writes, &#8220;No one would want to program in Fortran   today, since many better alternatives are available. But you can write a usable   and maintainable program in Fortran in spite of its many hindrances.&#8221;   I doubt that Seeley knows anything about Fortran 90 or 95.  Obviously, some people do want to use Fortran, because leading companies such   as Fujitsu, Hewlett-Packard, IBM, Intel, and Sun Microsystems sell Fortran 95   compilers, as do several independent vendors. If no new code were being written   in Fortran, they would still be selling Fortran 77 compilers.   Fortran 90 fixed most of the defects of Fortran 77, adding free source form,   dynamic memory allocation, user-defined types, procedure interface checking   at compile time via modules, array operations and sections similar to Matlab,   and other features. Fortran 95 added features for parallel programming from   the High Performance Fortran language, such as pure functions and the forall   construct. The recently approved Fortran 2003 standard is a major revision,   adding object-oriented programming, IEEE arithmetic, interoperability with C,   and other features, as described in a recent book by Michael Metcalf, John Reid,   and Malcolm Cohen (Fortran 95/2003 Explained, Oxford University Press, 2004).     Fortran was too slow to incorporate some important language features, but the   decision about whether to use it today should be based on the features of Fortran   95 that are currently available and those of Fortran 2003 that soon will be.   I hope that future issues of ACM Queue will not contain such ill-informed bashing   of unfashionable programming languages. Vivek Rao, Narberth, Pennsylvania We edit letters for content, style, and length.},
+  fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1053335&ftid=300919&dwn=1&CFID=575239404&CFTOKEN=98241671},
+  review = 	 {fbie: rejected <2016-01-14 12:07:03>},
 }
 
 @inproceedings{Micco:1987:UCE:322917.322923,
@@ -7466,4 +7872,34 @@ Coding is done by first computing customized weight vectors for each input patte
   acmid =	 322923,
   publisher =	 {ACM},
   address =	 {New York, NY, USA},
+  abstract = 	 {By way of introduction, Chatham College is a small liberal arts college that has obtained a grant to implement a curriculum in artificial intelligence even with the minimal equipment and resources that we do possess.
+We had been involved with preparing and teaching courses to familiarize undergraduate students with the field of artificial intelligence for several years. Last year we decided to develop a cluster of advanced courses that would turn out 'knowledge engineers'. There is a serious shortage of such skilled people in the Pittsburgh area. We planned for them to go immediately to Industry and begin working on expert systems, with a wide range of applications. These included but were not limited to diagnostic systems, financial modelling applications, and shop floor management. Under the terms of our funding we also encouraged students to become entrepreneurs by first developing and then marketing their own expert systems targeted for specialized markets.
+Students selecting this upper level cluster have already completed our core computer science requirements and have a good math background. One of the key factors in this project has been that we worked closely with the business community seeking their input into the curriculum planning process. They also provided us with the internship opportunities we requested and gave the students exposure to a much wider range of equipment than we could afford to provide in house.
+The program has been designed to run on IBM PC's with 512K. We purchased copies of Golden Common Lisp and Turbo Prolog as well as using an Altos with Xenix and C to get us started. We are currently negotiating for a grant for 2 Hewlett Packard artificial intelligence workstations with four terminals each. These cost about $50,000 each and are far beyond our price range. Two things are encouraging. Prices are falling very rapidly and the other is that NSF and other foundations are beginning to make instrumentation grants available to smaller institutions for the purchase of sophisticated equipment of this type. Our most difficult task has proven to be finding faculty to help teach these courses. We have had to draw on local industry to help with part time instructors
+The whole cluster consists of 6 courses and a 6 credit internship. The first introductory course. Artificial Intelligence, involves an overview of the field. The history of the movement from its roots to its current popular status are explored. We based the course on Patrick Winston's text Artificial Intelligence. Each of the major research areas is explored. The approach taken was one of studying the classic toy problems. This made it possible to show the difficulties that have been encountered at a practical level and then to review progress in the field, while permitting students to gain actual programming experience. For example, in Natural Language we introduce the Eliza program as an early example of an attempt to use the keywords approach. Students are required to produce a modified conversation. We also look at the Turing test. Drawing from Rodger Schank's book The Cognitive Computer we go on to talk about scripts, using the Restaurant Script as an example. Students are asked to put together a travel script in teams of four. This section is wrapped up with a discussion of natural language programs today.
+In the area of vision research, so critical in Robotics, we used the classic toy blocks problem, encouraging the students to key it in and modify it. We found that actually working with the code helped the students to gain a much more vivid appreciation of the difficulties involved. Winston has an excellent presentation on the subject. It was difficult to improve on it.
+Having introduced two specialized problems in the field, we move the students into the challenge of finding a general problem solving technique. At this stage they have no difficulty in accepting the fact that no such algorithm can be developed and that it is rather a matter of determining the rules of thumb or heuristics governing the specific problem domain with a sufficiently large knowledge base to cover all likely contingencies and options.
+To help to clarify this point, we delve into game playing strategies. Students are asked to write a tic tac toe game wherein the computer learns from its own mistakes. The first version they are asked to produce simply stores patterns of play in an array. The program searches for a pattern match. If one is found it will play the next move in the pattern string. If none is found a move is picked at random from those available. As it plays it keeps adding to the number of pattern strings it recognizes. The key element in this program is that the last byte in the pattern string contains a score for that particular pattern. The score for each winning pattern is incremented by one each time it is selected. Losing patterns have one subtracted from their score. Eventually when the score reaches zero that particular pattern will not be played again. The principle involved is that of reward and punishment. The patterns that win are reinforced by means of higher scores, while losing patterns are punished by having points taken away.
+The next refinement students are asked to add in, is an algorithm that will assist the computer to pick a better move not at random but with a set of clearly specified rules. This has proven to be an interesting and challenging exercise for our students. It has provided them with a thorough backdrop for an in-depth discussion of game-playing strategies…brute force versus attempting to minimize the search path.
+To help students to gain a better appreciation of the work being done, we also made use of many examples of industrial applications captured on videotape from the Texas Instruments satellite broadcasts done last year. The lectures by various prominent figures were used to stimulate discussion of the relative benefits of artificial intelligence applications and the new technologies available.
+This leads very naturally to the final topic, the Japanese Challenge and 'our response to it, particularly in the development of new hardware. We look at the progress in VLSI chips and parallel processing that is making possible much larger and more sophisticated applications.
+Obviously it is also important to give the students training in the languages of the field. We have developed a course that concentrates on Lisp and then follow it with a course in Prolog. I would like to have added several other of the artificial intelligence languages including Ops5, and Flavors but decided to wait until we obtained the artificial intelligence workstations in order to keep our software costs down to manageable levels.
+The Lisp course, based on Golden Common Lisp, available for micros with 512k minimum, focuses on the structure of list processing languages in general and the use of primitive functions to build ever more complex functions to perform all sorts of information processing tasks on lists. It took a considerable amount of time to select the version of Lisp that would provide all the functions that we required for the course. While Golden Common Lisp was not as comprehensive as the version of Franz Lisp we had been running on a VAX mainframe, it did have enough features to support a first course.
+During the course students have a number of small assignments and are required to write a variety of functions. Here the emphasis is on the mechanics of list processing languages. We usually finish up with two larger assignments. The first is an inheritance problem where students explore the use of properties and a search problem where they are asked to get the computer to determine the best route from one city to any other when several options are available. A variety of search strategies are proposed and then compared…breadth first, depth first, hill climbing. The text we used for this course was Robert Wilensky's Lispcraft.
+Meanwhile, running concurrently, students have also been taking a course in Learning, Memory and Cognition, where they are studying in some depth human information processing and problem solving behavior. In our case, because we do not have the expertise in the Computer Science Department to handle this course it is being taught by the Psychology Department. The course is important because it provides a strong theoretical base upon which to build. If, in fact, we can develop computers that can think like humans and exercise judgment, then we must have a good working knowledge of how we do in fact perform these tasks ourselves.
+A constant theme running through these courses is the concept that there is no one problem solving technique but rather that in each type of problem specialised knowledge is needed and in addition we need to have rules of thumb or heuristics to guide us when more than one option is available.
+In the Prolog course students begin working with developing several small expert systems. We build a diagnostic system using the bicycle repair one as a model. Students are free to choose their own topic. They have ranged from diagnosing physical symptoms of illness to lawnmover repair. Here they are working with a very limited domain. As part of this course we discuss numerous examples of expert systems currently being used. Another assignment that students find quite challenging is the Monkey and Bananas toy problem, taken from Lee Brownston's book “Programming Expert Systems in Ops5: an introduction to rule based programming”. Here the problem domain is limited to a room with a number of objects in it. The monkey is presented with the problem of reaching the bananas no matter where they may be positioned in the room, even if they appear on the ceiling. Several other objects are in the room, including a ladder, a sofa. Students explore in some detail how to handle all the various sets of rules that are needed depending on the room layout and the actual location of the bananas.
+At the same time students are being given a course in C running in Unix to give them exposure to a portable language that could be called from the Lisp programs and that would help to make their applications run more efficiently. It was clear from the industry experts that we talked to that in many cases the expert systems are rewritten in C after first being developed in either Lisp or Prolog.
+Having built a reasonably firm foundation, the students are then moved into the Expert systems design course where they undertake more ambitious projects of their own under directed supervision. The first time this course was offered we did not yet have any industry contacts and were limited to what was available on campus. We selected as our project the design of an expert system that would provide the students some first hand experience at knowledge representation. They were to develop a system that would substitute for the reference librarian in the library. The great advantage of this project was that the expert whose knowledge base was to be tapped was readily available to the students.
+In the first few weeks of the course the students discussed the selection criteria for good projects. Then the class as a whole interviewed one of our reference librarians, Irma Smith who had agreed to participate as our resident expert. The class explained what they were trying to accomplish and decided with her input to use the case study approach. Each group of students then met with her individually to evaluate how she deals with 3 particular reference requests. They were asked to develop sets of rules for the three case studies assigned to them, and develop a prototype system. This took a couple of weeks. In the meantime they were getting lectures on managing costs and risks in project development.
+The next stage in the process involved meeting as a whole class and combining the best features of each of the different sets of rules. The variety was surprising, and promoted a great deal of heated discussion as the different teams defended their approach to the problem. By the time the students had merged all the rules they had come up with, it was clear that the rules could not simply be added at random. We discussed breaking the process down into clearly defined subsets of rules that would be accessed only when needed for specific applications. Modular design was the best available solution to the problem that presented itself and helped to ensure that the correct sets of rules would be triggered.
+The need for testing was obvious and each team was asked to test the merged system with the specific cases that they had started with. This necessitated tracing through the firing of the rules and tinkering with the firing order. This proved to be much more time consuming than we had anticipated.
+At this point we introduce the problem of integrating their little expert system into the existing environment of the library. Here we used the existing and proposed library automation projects and explored how to integrate our expert system as a front end to direct the patron to the appropriate on line databases. Students quickly realized that there was a great deal more involved than had appeared at first. They explored the interface with the on-line card catalog, discovered that they would also have to connect with the circulation system and the interlibrary loan system.
+The problem of technology transfer was discussed at length...why it occurs, how to recognize problems before they get out of hand, how to ease the introduction of new technology. Several of the library staff felt very threatened by the project and were very critical of the students' efforts.
+Following this step, students were asked to explore cost estimating techniques for sizeable systems. The next step involved a critical analysis of the user interface. The importance of considering the humans who must use the systems and different techniques for building friendlier user interfaces were explored. Particular emphasis was placed on the use of graphics in the front end design. Students were shown a number of interfaces, both good and bad then they were asked to develop a proposal for their own system. We did not require them to develop any code because of the time constraints.
+Although originally we intended to get the students to work on an industrial application in the Expert Systems Design course, the library project proved to be very successful particularly because the problems were reasonably familiar to the students and they have ready access to a real expert who can be interviewed at some length. Another great advantage from our point of view is that the project could be repeated each time the course is offered.
+Because of the need to integrate their systems with databases of various types, we strongly encourage students to also take a course in Data Base Management Systems. We also hope to add in a required course in Graphics or Human Factors in Systems with a strong emphasis on designing better front-ends.
+By the time students have completed this sequence of six courses in a minimum of two semesters, they are ready for an internship in industry helping to develop real, working expert systems. Our limited experience in finding internships suggests that many manufacturers are interested in diagnostic systems of one sort or another, and financial institutions are also beginning to be interested in possible applications to the financial management area. However it is still difficult to find people who are willing to help the students to have a good experience and there are not many good field work supervisors available. The “toy problem” approach to teaching has worked well for us. We start the students out with examples from Ph.D. dissertations then gradually build them up to designing substantial expert systems of their own, thereby providing them with practical experience with many different approaches and techniques.
+In closing I should mention that this 'expert systems design' track as we have chosen to call it is still very new and experimental. We are still learning from our mistakes.},
+  review = 	 {fbie: rejected <2016-01-14 12:07:15>},
 }
