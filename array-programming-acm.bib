@@ -168,6 +168,7 @@
   abstract = 	 {
 
              Massively parallel SIMD machines rely on data parallelism usually achieved by a careful hand coding to support program efficiency. This paper describes parallelization of code generated for SIMD machines by the compiler for the Equational Programming Language, EPL. The language supports architecture-independent scientific programming by recurrent equations. The EPL compiler serves as a programming aid for users of parallel machines by automating data partitioning and computation parallelization based on inherent data dependencies. In support of a Connection Machine architecture, the EPL compiler performs horizontal partitioning of the program, a process that selects a dimension of each data structure to be projected along the processor array. Each processor then holds a single instance of that structure and operations along the projected dimension are done in parallel. The paper describes horizontal partitioning, code generation in MPL and efficiency of programs generated for Maspar SIMD machine. },
+  review = 	 {fbie: rejected <2016-01-14 12:09:51>},
 
 }
 
@@ -4859,6 +4860,7 @@ We present a framework for the automatic determination of array alignments in da
   acmid =	 2342703,
   publisher =	 {Springer-Verlag},
   address =	 {Berlin, Heidelberg},
+  review = 	 {fbie: rejected <2016-01-14 12:16:19>},
 }
 
 @inproceedings{Cao:2010:TCN:1787275.1787277,
@@ -5990,6 +5992,7 @@ Coding is done by first computing customized weight vectors for each input patte
 
             },
   notes = 	 {The paper seems incomplete at a first glance, at least one table is missing. I am undecided.},
+  review = 	 {fbie: rejected <2016-01-14 12:16:29>},
 }
 
 @inproceedings{Moreira:2001:CTA:376656.376831,
@@ -6455,6 +6458,7 @@ More concretely, the compiler V-Pascal has acquired the ability to automatically
   keywords =	 {Locality analysis, Selective Cache, Dual Data Cache},
   abstract = 	 {Most memory references in numerical codes correspond to array references whose indices are affine functions of surrounding loop indices. These array references follow a regular predictable memory pattern that can be analyzed at compile time. This analysis can provide valuable information like the locality exhibited by the program, which can be used to implement a more intelligent caching strategy. In this paper we propose a static locality analysis oriented to the management of data caches. We show that previous proposals on locality analysis are not appropriate when the programs have a high conflict miss ratio. This paper extends those proposals by introducing a compile time interference analysis that significantly improve the performance of them. We first show how this analysis can be used to characterize the dynamic locality properties of numerical codes. This evaluation show for instance that a large percentage of references exhibit only temporal locality and another significant percentage does not exhibit any type of locality. This motivates the use of a dual data cache, which has a module specialized to exploit temporal locality, and a selective cache respectively. Then, the performance provided by these two cache organizations is evaluated. In both organizations, the static locality analysis is responsible for tagging each memory instruction accordingly to the particular type(s) of locality that it exhibits.},
   notes = 	 {The paper seems not to be available from ACM.},
+  review = 	 {fbie: rejected <2016-01-14 12:16:40>},
 }
 
 @inproceedings{Krothapalli:1990:EPT:100348.100461,
