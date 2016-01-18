@@ -1,2 +1,9 @@
 *~
 .slirm_cache
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.rel
+*.synctex.gz
