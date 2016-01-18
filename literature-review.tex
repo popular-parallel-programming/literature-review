@@ -1,0 +1,276 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{todonotes}
+\usepackage{url}
+
+\lstset{
+  breaklines=true,
+  breakatwhitespace=true,
+  basicstyle=\ttfamily,
+}
+
+\title{Systematic Mapping Study of Declarative Parallel Programming
+  and Spreadsheet End-User Development}
+\author{Florian Biermann\\\small{\texttt{fbie@itu.dk}}}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+
+Spreadsheets are widely used in many different disciplines within
+industry and science by domain experts who often are
+non-programmers\todo{cite Sestoft 2014}. Research on spreadsheet
+technology has recently gained increased interest, which is probably
+due to a renewed popularity of functional programming
+principles. Spreadsheets do not possess mutable state, which makes
+reasoning about their correctness rather easy. Moreover, this
+particular trait makes it possible to investigate transparent
+parallelization of spreadsheet calculations.
+
+In this systematic mapping study, we want to map out the publications
+on spreadsheet end-user programming and declarative array programming
+languages to inform further research on parallel programming in
+spreadsheets. Declarative array programming allows a compiler to
+re-write expressions to perform implicit parallelization of
+computations. The user does not need to be aware of the parallelism
+inherent to a problem and as long as they choose to use the highest
+abstraction to model their computation, a sophisticated compiler can
+infer such parallelism automatically.
+
+With this study, we want to find\dots.\todo{Continue.}
+
+\newpage{}
+\part{The Systematic Mapping Study}
+\label{part:syst-mapp-study}
+
+\section{Protocol}
+\label{sec:protocol}
+
+\subsection{Background}
+\label{sec:background}
+
+The goal of this systematic mapping study is to coalesce two
+apparently disjoint research areas, namely declarative parallel array
+programming techniques and end-user development in a spreadsheet model
+of computation.
+
+This study is meant to motivate and inform further research on
+declarative parallel programming in spreadsheets for end-users. We
+want to gain an overview over well known techniques for transforming
+expressions that describe seemingly sequential operations into
+efficient parallel code. Furthermore, we want to gain insight into how
+this can be combined with spreadsheet end-user development techniques
+and if there has been made any effort into this direction
+already. \todo{Should we maybe also include a search on spreadsheets
+  AND parallel? It seems that there are only few publications on ACM
+  and IEEE and then we have at least tried to find a connection.}
+
+We purposely do not focus on data-flow parallelism in
+spreadsheets. This is a separate project orthogonal to declarative
+parallel array programming in spreadsheets.
+
+To gain overlapping literature lists, we run three different search queries:
+
+\begin{description}
+\item[Declarative, parallel array programming languages] What are
+  promising techniques for automatic parallelization of declarative,
+  functional languages?
+\item[Spreadsheet end-user development] Which paradigms have been
+  developed, what do users use spreadsheets for?
+\item[Parallelism in spreadsheets] To what degree have parallel
+  spreadsheet engines been investigated? What are challenges and
+  possibilities? Where does our agenda fit in?
+\end{description}
+
+\subsection{Research Questions}
+\label{sec:research-questions}
+
+Our research questions are listed in the following:
+
+\begin{enumerate}
+\item What is the state of the art in declarative parallel array
+  programming languages?
+\item Has there been research on declarative parallel array
+  programming in a spreadsheet model of computation?
+\item Are there any obvious ways to combine declarative parallel array
+  programming and spreadsheet end-user development?
+\end{enumerate}
+
+\subsection{Study Selection Criteria}
+\label{sec:study-select-crit}
+
+We perform two disjoint literature studies, one for declarative
+parallel array programming languages and one for spreadsheet end-user
+development.
+
+In the following, we give a list of criteria for inclusion or
+exclusion of studies. Naturally, some of the studies can fulfill
+criteria of both lists. We choose therefore to perform a majority vote
+on the number of fulfilled criteria when making a decision of
+inclusion or exclusion.
+
+\subsubsection{Criteria for Declarative Parallel Languages}
+\label{sec:crit-decl-parall}
+
+\paragraph{Inclusion Criteria}
+
+A publication should be included if it:
+
+\begin{itemize}
+\item Mentions implementations of well-known array languages, such as APL or J.
+\item Focuses on automatic parallelization of array expressions.
+\item Mentions caching and false sharing.
+\item Talks about compiler optimizations.
+\item Focuses on implementation of declarative, functional parallel
+  programming techniques.
+\item Mentions homogeneous systems and shared memory.
+\item Mentions loop fusion and nested loops.
+\item Talks generally about program transformation.
+\end{itemize}
+
+\paragraph{Exclusion Criteria}
+
+A study should be excluded if it:
+
+\begin{itemize}
+\item Focuses on the application of parallel programming, e.g.\ within
+  machine learning.
+\item Develops techniques for distributed memory or mentions message
+  passing.
+\item Develops techniques for focuses on formal verification.
+\item Targets GPU, GPGPU, FPGA and hardware accelerated techniques on
+  heterogeneous systems.
+\item Includes I/O.
+\item Works towards automatic parallelization of imperative languages.
+\item Is a review paper without any novel contribution.
+\item Focuses on SIMD and Accelerate. \todo{SIMD seems relevant? How did that get here? Cite Accelerate.}
+\item Mentions storage, disk etc.
+\item Focuses on transactional memory.
+\end{itemize}
+
+\subsubsection{Criteria for Spreadsheet End-User Development}
+\label{sec:crit-spre-end}
+
+\paragraph{Inclusion Criteria}
+
+A study should be included if it:
+
+\begin{itemize}
+\item Mentions functional programming or functional language.
+\item Describes the implementation of a spreadsheet engine.
+\item Focuses on gaining or providing spreadsheet understanding.
+\item Mentions types or type-inference.
+\item Is a survey of ``real-world spreadsheets'' and full spreadsheet corpora.
+\end{itemize}
+
+\paragraph{Exclusion Criteria}
+
+A study should be excluded if it:
+
+\begin{itemize}
+\item Focuses on the application of spreadsheets and specific
+  spreadsheet models, such as simulations or in teaching.
+\item Describes systems inspired by spreadsheets.
+\item Mentions CSCW and knowledge work or performs ethnographic
+  studies.
+\item Focuses on data structures in spreadsheets.
+\item Mentions either mashups, mobile apps or web development.
+\item Focuses on external tools and architectures for spreadsheet
+  users.
+\item Develops techniques for transforming spreadsheets.
+\end{itemize}
+
+\subsection{Quality Assurance}
+\label{sec:quality-assurance}
+
+To verify that the results of our searches are meaningful, we
+
+\section{Process}
+\label{sec:process}
+
+\subsection{Literature Search}
+\label{sec:literature-search}
+
+We have use IEEExplore and ACM Digital Library as sources for our
+literature search. The number of results from these sources varies
+drastically, which is probably due to IEEExplore interpreting search
+queries very strictly. We avoid Google Scholar and CiteSeerX, as these
+meta engines return way over a thousand publications for each query,
+which is infeasible for our scope.
+
+The uniqueness of a publication in the following means that a
+publication is listed only once. Sometimes, publications have multiple
+entries in a digital library, for instance once for the conference and
+once for the conference's proceedings.
+
+\paragraph{Declarative Parallel Array Programming Languages}
+
+To generate a literature list for declarative parallel array
+programming languages, we use the following query:
+
+\begin{lstlisting}
+(functional AND array AND programming AND parallel) AND (data-parallel OR ``data parallel'' OR multi-core OR multicore  OR ``multi core'')
+\end{lstlisting}
+
+This results in 250 publications of which 194 are unique from the ACM
+Digital Library. IEEExplore, however, only returns eight publications,
+all of which are unique. This makes an initial list of 202
+publications.
+
+\paragraph{Spreadsheet End-User Development}
+
+The search query we use for finding publications on spreadsheet
+end-user development is:
+
+\begin{lstlisting}
+spreadsheets AND (end-user-development OR "end user development" OR "end-user development")
+\end{lstlisting}
+
+This results in 435 publications of which 386 are unique from the ACM
+Digital Library and in 104 publications, all of which are unique, from
+IEEExplore. This makes an initial list of 490 publications to
+consider.
+
+\subsection{Literature Selection}
+\label{sec:literature-selection}
+
+Using the criteria defined in Section~\ref{sec:study-select-crit}, we
+include studies based on their titles and their abstracts. If the
+title is not be informative enough, we accept the study and will later
+screen it again based on the abstract.
+
+To perform the selection of literature move conveniently, we have
+developed an Emacs-based tool, called the Systematic Literature Review
+Mode (SLIRM). SLIRM automatically downloads abstracts and full-text
+files on demand for BibTeX-formatted entries that have been exported
+from a digital library, such as the ACM Digital Library. SLIRM is
+open-source and freely available\footnote{Download SLIRM from
+  \url{https://github.com/fbie/slirm}}.
+
+\subsection{Mapping}
+\label{sec:mapping}
+
+\newpage{}
+\part{Results}
+\label{part:results}
+
+\section{Declarative Parallel Programming}
+\label{sec:declarative-parallel-programming}
+
+\section{Spreadsheet End-User Development}
+\label{sec:spreadsheet-end-user-dev}
+
+
+
+\end{document}
