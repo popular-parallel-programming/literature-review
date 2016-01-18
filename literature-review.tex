@@ -219,6 +219,9 @@ publication is listed only once. Sometimes, publications have multiple
 entries in a digital library, for instance once for the conference and
 once for the conference's proceedings.
 
+We have an initial list of 681 publications to consider, which we
+construct as described in the following:
+
 \paragraph{Declarative Parallel Array Programming Languages}
 
 To generate a literature list for declarative parallel array
@@ -230,8 +233,7 @@ programming languages, we use the following query:
 
 This results in 250 publications of which 194 are unique from the ACM
 Digital Library. IEEExplore, however, only returns eight publications,
-all of which are unique. This makes an initial list of 202
-publications.
+all of which are unique. This adds 202 publications to consider.
 
 \paragraph{Spreadsheet End-User Development}
 
@@ -244,8 +246,19 @@ spreadsheets AND (end-user-development OR "end user development" OR "end-user de
 
 This results in 435 publications of which 386 are unique from the ACM
 Digital Library and in 104 publications, all of which are unique, from
-IEEExplore. This makes an initial list of 490 publications to
-consider.
+IEEExplore. This adds 424 publications to consider.
+
+\paragraph{Parallel Spreadsheets}
+
+We use the following query to generate a list of publications focusing
+on anything parallel in spreadsheets:
+
+\begin{lstlisting}
+spreadsheets AND parallel
+\end{lstlisting}
+
+ACM returns 21 publications of which 17 are unique and IEEExplore
+returns 38 publications. This adds 55 publications to consider.
 
 \subsection{Literature Selection}
 \label{sec:literature-selection}
