@@ -56,4 +56,23 @@ intermediate representations. They call this "structure inference".
 Describes how to remove bounds checking predicates from the
 computation at compile time and how to specialize functions based on
 these. The techniques are implemented in Futhark.
+** Grelck & Scholz, 2007: SAC: Off-the-shelf Support for Data-Parallelism on Multicores
+Description of the SAC implementation, its optimizing compiler,
+scheduler and memory management. Work is modeled as micro-threads that
+are small units of work. Micro-threads are managed via work-stealing
+queues. Such a scheduling technique is required to optimize
+performance, as all parallelism stems from array-operations that
+require synchronization when done.
+** Keller et al., 2012: Vectorization Avoidance
+Flattening nested parallelism sometimes introduces arrays for
+intendedly scalar values. These intermediate arrays require extra
+allocation at a high cost. Subsequential fusion seems not able to
+handle this. Therefore, it can pay off to avoid vectorization from the
+beginning, for which this paper describes a promising technique.
+** Bergstrom et al., 2010: Lazy Tree Splitting
+Instead of performing static transformations, nested data-parallelism
+can be achieved via scheduling and work-stealing. Choosing the right
+work-size is problematic. They describe a work-stealing based method
+to dynamically balance load across workers, relying heavily on
+zippers.
 * Spreadsheet End-User Development
