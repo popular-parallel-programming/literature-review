@@ -52,7 +52,7 @@ comparing algorithms written in SAC and C.
 Give inference rules for compiling "routing functions", which change
 the layout of data, such as transposition or indexing to avoid
 intermediate representations. They call this "structure inference".
-** Henriksen & Onacea, 2014: Bounds Checking: An Instance of Hybrid Analysis
+** Henriksen & Oancea, 2014: Bounds Checking: An Instance of Hybrid Analysis
 Describes how to remove bounds checking predicates from the
 computation at compile time and how to specialize functions based on
 these. The techniques are implemented in Futhark.
@@ -75,4 +75,39 @@ can be achieved via scheduling and work-stealing. Choosing the right
 work-size is problematic. They describe a work-stealing based method
 to dynamically balance load across workers, relying heavily on
 zippers.
+** Deitz et al., 2003: The Design and Implementation of a Parallel Array Operator for Arbitrary Data Remapping
+A remap-operator with scatter-gather semantics, implemented in
+ZPL. The operator has strong semantics and can modify data layout
+arbitrarily in arrays, while minimizing communication amongst
+processors. Its expressiveness and its performance nearly equal to
+hand-written Fortran make it very powerful.
+** Maydan et al., 1993: Array Data-Flow Analysis and its Use in Array Privatization
+The paper describes an inter-procedural data-flow analysis to detect
+data-dependences in nested loops in imperative languages. The analysis
+uses a Least-Write-Tree to determine when the last write operation to
+an array subscript occurs and can thereby decide how to efficiently
+share an array amongst processors.
+** Hwang et al., 1995: An Array Operation Synthesis Scheme to Optimize Fortran 90 Programs
+Fusion of array functions, such as transpose or reshape (i.e. remap)
+in Fortran 90. Their technique fuses sequential expressions to avoid
+temporaries and improves the performance for sequential programs. The
+paper includes a very detailed overview of the applied
+transformations.
+** Stucki et al., 2015: RBB Vector: A Practical General Purpose Immutable Sequence
+The authors describe a vector based on Relaxed-Radix-Balanced trees,
+which exhibits effectively constant or amortized constant complexity
+for all operations, e.g. indexing, updates and concatenation. For
+array-operations, the parallel speedup however is sub-linear.
+** Henriksen & Oancea, 2013: A T2 Graph-Reduction Approach to Fusion
+To fuse SOAC's (second-order array combinator) efficiently, the
+$\mathbb{L}_0$ language uses a number of fusion-rules that require a
+control-flow-graph analysis on the input program. Thereby,
+performance-degrading fusions can be avoided, e.g. if they introduce
+duplicate computations. The rules are formulated as a computational
+algebra. Similar in structure and spirit to
+\cite{Chakravarty:2001:FAF:507635.507661}.
+** Chakravarty & Keller, 2001: Functional Array Fusion
+Formulates functional array fusion as array deforestation and gives
+equational rewrite rules for flattening and fusion. Observes, that
+flattening simplifies fusion greatly. Cites many foundational papers.
 * Spreadsheet End-User Development
