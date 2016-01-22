@@ -5,7 +5,7 @@
 #+AUTHOR: Florian Biermann
 #+EMAIL: fbie@itu.dk
 
-#+BIBLIOGRAPHY: array-programming-ieee unsrt
+#+BIBLIOGRAPHY: array-programming-ieee-accepted unsrt
 #+BIBLIOGRAPHY: array-programming-acm-accepted unsrt
 
 * Declarative Parallel Array Programming
