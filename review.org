@@ -116,4 +116,24 @@ argues that, in order to parallelize, compilation is
 necessary. Furthermore, Ching observes that scheduling and
 partitioning of work pose problems and that parallelism in
 array-languages is a matter of the user writing idiomatic code.
+** Knobe & Sarkar, 1998: Array SSA Form and its Use in Parallelization
+To parallelize imperative loops, the authors use a data-flow on the
+static-single-assignment form of arrays. Their technique succeeds in
+parallelizing all loops that are not inherently sequential due to
+data-dependencies. This approach is geared towards iterative, explicit
+loops. (Low relevance for declarative parallel programming.)
+** Sinkarovs & Scholz, 2013: Semantics-Preserving Data Layout Transformations for Improved Vectorization
+Proof and technique to re-arrange the layout of n-dimensional, nested
+arrays for vectorization based on layout types, which can be
+inferred. Promises fully automatic layout changes for improved
+higher-order parallel primitives. Transformations seem to be large for
+small functions already. (Must re-read for details.)
+** Sastry & Clinger, 1994: Parallel Destructive Updating in Strict Functional Languages
+Live-variable analysis can be used to detect cases in a functional
+program, where destructive updates are allowed. An array variable that
+is not live after some program point can be updated destructively. In
+a similar fashion, partitioning and combining arrays can be analyzed
+to optimize the overall program performance (cost of copying vs. cost
+of pointing to old data). This analysis also allows parallel array
+updates.
 * Spreadsheet End-User Development
