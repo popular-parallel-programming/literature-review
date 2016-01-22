@@ -110,4 +110,10 @@ algebra. Similar in structure and spirit to
 Formulates functional array fusion as array deforestation and gives
 equational rewrite rules for flattening and fusion. Observes, that
 flattening simplifies fusion greatly. Cites many foundational papers.
+** Ching, 1990: Automatic Parallelization of APL-style Programs
+Observes that APL can exploit functional and data parallelism, but
+argues that, in order to parallelize, compilation is
+necessary. Furthermore, Ching observes that scheduling and
+partitioning of work pose problems and that parallelism in
+array-languages is a matter of the user writing idiomatic code.
 * Spreadsheet End-User Development
