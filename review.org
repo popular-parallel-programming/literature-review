@@ -34,7 +34,7 @@ of array evaluation \cite{Keller:2010:RSP:1863543.1863582}.
 Flattening nested data parallelism without increasing asymptotic
 complexity. Array representations and invariants for automated
 flattening \cite{Lippmeier:2012:WEH:2364527.2364564}.
-** Lippmeyer et al., 2012: Guiding Parallel Array Fusion
+** Lippmeier et al., 2012: Guiding Parallel Array Fusion
 Exposing array implementation via "type indices" to describe what
 state the array is in (e.g. delayed, manifested) or what its
 performance cost model is. Useful for end-programmers to reason about
