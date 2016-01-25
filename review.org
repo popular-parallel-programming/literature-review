@@ -161,4 +161,16 @@ To make computations on non-rectangular, heterogeneous arrays more
 convenient, this paper introduces carrier-arrays, which can be used to
 model jagged arrays and automatically can decide the rank to which a
 function must be lifted to be applied to all its scalar elements.
+** Hall, 1994: Using Hindley-Milner Type Inference to Optimize List Representation
+A technique to implement some kind of type-inference based dynamic
+dispatch of runtime-specialized functions to choose between optimized
+and unoptimized functions for data structures. The approach seems
+general enough to apply it to automatic parallelization of functional
+programs.
+** Anderson & Hudak, 1990: Compilation of Haskell Array Comprehensions for Scientific Computing
+Describes the compilation of array comprehensions in Haskell, which
+avoids intermediate arrays and solves subscript-dependencies, such
+that the semantics of a sequential array comprehension is
+conserved. The authors make assumptions on how scientific programmers
+use arrays
 * Spreadsheet End-User Development
