@@ -148,4 +148,17 @@ a similar fashion, partitioning and combining arrays can be analyzed
 to optimize the overall program performance (cost of copying vs. cost
 of pointing to old data). This analysis also allows parallel array
 updates \cite{Sastry:1994:PDU:182590.182486}.
+** Perrott, 1979: A Language for Array and Vector Processors
+Describes *Actulus*, a language written on top of Pascal, which has a
+syntax that enables users to describe the parallelism of array
+constructs. Nested arrays are only allowed to have one level of
+parallelism, as, at the time of writing, there is not enough
+experience with automatic flattening of parallel arrays. Actulus has a
+very imperative feel and the author does not mention side-effects or
+destructive updates at all.
+** Lowney, 1981: Carrier Arrays: An Idiom-Preserving Extension to APL
+To make computations on non-rectangular, heterogeneous arrays more
+convenient, this paper introduces carrier-arrays, which can be used to
+model jagged arrays and automatically can decide the rank to which a
+function must be lifted to be applied to all its scalar elements.
 * Spreadsheet End-User Development
