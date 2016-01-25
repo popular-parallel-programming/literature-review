@@ -173,4 +173,13 @@ avoids intermediate arrays and solves subscript-dependencies, such
 that the semantics of a sequential array comprehension is
 conserved. The authors make assumptions on how scientific programmers
 use arrays
+** Arvind et al., 1989: I-Structures: Data Structures for Parallel Computing
+I-Structures are arrays where each index can be written exactly
+once. Reading empty indices blocks the reading thread until another
+thread writes a value there. Initial, empty values can be seen as
+logical "true", assignment is a logical conjunction, e.g. "true AND
+42". Multiple assignments produce "false", e.g. "true AND 42 AND
+23". Blocking and single-assignment make I-Structures non-strict and
+reads and writes can be re-ordered according to re-write rules. These
+traits however sacrifice referential transparency.
 * Spreadsheet End-User Development
