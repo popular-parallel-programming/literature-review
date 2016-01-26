@@ -80,6 +80,7 @@ Instead of performing static transformations, nested data-parallelism
 can be achieved via scheduling and work-stealing. Choosing the right
 work-size is problematic. They describe a work-stealing based method
 to dynamically balance load across workers, relying heavily on zippers
+and implemented in Parallel ML
 \cite{Bergstrom:2010:LTS:1863543.1863558}.
 ** Deitz et al., 2003: The Design and Implementation of a Parallel Array Operator for Arbitrary Data Remapping
 A remap-operator with scatter-gather semantics, implemented in
