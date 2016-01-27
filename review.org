@@ -44,7 +44,7 @@ require more explicit knowledge about array state. Parallelism as part
 of array evaluation \cite{Keller:2010:RSP:1863543.1863582}.
 ** Lippmeier et al., 2012: Work-Efficient Higher Order Vectorization
 - flattening
-- nested data parallelism
+- nested parallelism
 - dph
 - functional
 Flattening nested data parallelism without increasing asymptotic
@@ -101,7 +101,7 @@ require synchronization when done
 \cite{Grelck:2007:SOS:1248648.1248654}.
 ** Keller et al., 2012: Vectorization Avoidance
 - flattening
-- nested data parallelism
+- nested parallelism
 - dph
 - fusion
 Flattening nested parallelism sometimes introduces arrays for
@@ -256,7 +256,7 @@ reads and writes can be re-ordered according to re-write rules. These
 traits however sacrifice referential transparency.
 ** Blelloch & Greiner, 1996: A Provable Time and Space Efficient Implementation of NESL
 - nesl
-- nested data parallelism
+- nested parallelism
 - flattening
 NESL is a language for expressing nested data parallelism and can be
 implemented on a P-CEK intermediate machine with optimal time and
