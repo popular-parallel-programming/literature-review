@@ -18,6 +18,8 @@
   basicstyle=\ttfamily,
 }
 
+\newcommand{\sac}{S\textsc{a}C}
+
 \title{Systematic Mapping Study of Declarative Parallel Programming
   and Spreadsheet End-User Development}
 \author{Florian Biermann\\\small{\texttt{fbie@itu.dk}}}
@@ -64,7 +66,8 @@ With this study, we want to find\dots.\todo{Continue.}
 The goal of this systematic mapping study is to coalesce two
 apparently disjoint research areas, namely declarative parallel array
 programming techniques and end-user development in a spreadsheet model
-of computation.
+of computation. We base our methodology on~\citet{keele2007guidelines}
+and~\citet{petersen2008systematic}.
 
 This study is meant to motivate and inform further research on
 declarative parallel programming in spreadsheets for end-users. We
@@ -325,10 +328,75 @@ programming are:
 \section{Declarative Parallel Programming}
 \label{sec:declarative-parallel-programming}
 
-This section outlines related work on
+We have identified three key topics within parallel array
+programming. While these are clearly interconnected and cannot just be
+seen by themselves, we will use these to structure the review of the
+research body on parallel array programming.
+
+There are a few key-languages that appear in the literature. The two
+oldest are Fortran\todo{Source?}, which is an imperative
+high-performance language, and APL~\cite{Iverson1962Programming},
+which is a high-level declarative and functional
+language. Furthermore, much work has been done on Single-assignment-C
+(\sac)\todo{Source?}, which is a C-like functional language, and Data
+Parallel Haskell (DPH) and REPA\todo{Source?}, which are library and
+compiler extensions for Haskell. Another very important language is
+NESL~\cite{Blelloch1993NESL}, which introduced the idea of statically
+flattening nested arrays.
 
 \subsection{Nested Data Parallelism}
 \label{sec:nest-data-parall}
+
+Nested data parallelism describes the nesting of parallel operations
+over a nested array. A standard example from the literature is matrix
+multiplication~\cite{Keller:2010:RSP:1863543.1863582}. A matrix is
+represented by an array of arrays. Matrix multiplication can then be
+implemented conveniently via higher-order functions, here illustrated
+in F\#:
+
+\begin{lstlisting}[language=ML]
+type Matrix = double [] [];
+(* TODO: Actually write the code. *)
+\end{lstlisting}
+
+Such a declarative implementation of matrix multiplication lends
+itself naturally to an implicitly parallel execution. However, there
+are possibilities for parallelism on different levels in the
+three-dimensional array structure. A naive way of implementing such
+nested parallelism would be to simply start new parallel threads from
+within each parallel thread. There would be quite some overhead to
+this solution. Research on nested data parallelism has focused on
+eliminating this overhead in two different ways.
+
+\paragraph{Flattening}
+
+\citet{Blelloch1993Implementation} introduced the idea of statically
+flattening nested arrays to perform an optimal parallelization of
+operations over arrays. The key to doing so is the right choice of
+array representation. \citet{Blelloch1993Implementation} showed that
+there exists such a representation which enables the compiler to
+flatten arrays in constant time. This flattening has been implemented
+in NESL and \citet{Blelloch:1996:PTS:232627.232650} showed, based on
+NESL's built-in cost semantics, that NESL actually can be implemented
+without overhead.
+
+The idea of flattening nested parallelism has since been taken up
+again by \citet{Lippmeier:2012:WEH:2364527.2364564} and moved to
+Haskell. In contrast to NESL, Haskell is a fully-fledged functional
+programming language with types and higher-order functions that is
+compiled instead of interpreted.
+
+As it turns out, flattening nested data parallelism is much harder to
+achieve in such a higher-order language. The presence of higher-order
+functions makes lifting of functions more
+complicated~\cite{Lippmeier:2012:WEH:2364527.2364564}. Higher-order
+flattening introduces many intermediate arrays that take time and
+space. Therefore, \citet{Keller:2012:VA:2364506.2364512} developed a
+technique to avoid such flattening if no performance increase can be
+expected.
+
+\paragraph{Dynamic Scheduling}
+
 
 \subsection{Data Structures}
 \label{sec:data-structures}
@@ -341,5 +409,7 @@ This section outlines related work on
 \label{sec:spreadsheet-end-user-dev}
 
 
+\bibliographystyle{unsrtnat}
+\bibliography{array-programming-acm-accepted,array-programming-ieee-accepted,fbie}
 
 \end{document}
