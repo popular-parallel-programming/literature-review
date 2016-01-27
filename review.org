@@ -183,4 +183,23 @@ logical "true", assignment is a logical conjunction, e.g. "true AND
 23". Blocking and single-assignment make I-Structures non-strict and
 reads and writes can be re-ordered according to re-write rules. These
 traits however sacrifice referential transparency.
+** Blelloch & Greiner, 1996: A Provable Time and Space Efficient Implementation of NESL
+NESL is a language for expressing nested data parallelism and can be
+implemented on a P-CEK intermediate machine with optimal time and
+space bounds. These bounds are achieved by extending NESL's
+operational semantics with a cost model for both, time and space. This
+means that the high-level nature of NESL does not incur extra runtime
+cost.
+** Tang et al., 1990: Compiler Techniques for Data Synchronization in Nested Parallel Loops
+The paper focuses on parallelizing nested do-loops with non-trivial
+data dependencies in an imperative language. To make the
+parallelization deterministic, a read-write order is enforced, which
+can be computed at compile time. (This seems largely irrelevant for
+functional, declarative parallel programming.)
+** Ureche et al., 2012: StagedSAC: A Case Study in Performance-Oriented DSL Development
+StagedSAC is a compiled Scala DSL that is similar to SAC. The most
+notable contribution is that of static shape-inference based on
+partially known shapes. Unsatisfiable requirements are implemented as
+run-time checks. Specialization of loops for shapes occurs
+just-in-time.
 * Spreadsheet End-User Development
