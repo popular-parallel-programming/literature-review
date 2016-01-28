@@ -328,10 +328,11 @@ programming are:
 \section{Declarative Parallel Programming}
 \label{sec:declarative-parallel-programming}
 
-We have identified three key topics within parallel array
-programming. While these are clearly interconnected and cannot just be
-seen by themselves, we will use these to structure the review of the
-research body on parallel array programming.
+We have identified four key topics within parallel array programming:
+nested data parallelism, array fusion, data structures and loop
+parallelization. While these are clearly interconnected and cannot
+just be seen by themselves, we will use these to structure the review
+of the research body on parallel array programming.
 
 There are a few key-languages that appear in the literature. The two
 oldest are Fortran\todo{Source?}, which is an imperative
@@ -343,6 +344,10 @@ Parallel Haskell (DPH) and REPA\todo{Source?}, which are library and
 compiler extensions for Haskell. Another very important language is
 NESL~\cite{Blelloch1993NESL}, which introduced the idea of statically
 flattening nested arrays.
+
+\cite{Fluet:2008:SFG:1411204.1411239,
+  Bernecky:2015:AEP:2774959.2774962}\todo{Parallelism due to
+  programmer writing idiomatic functional code.}
 
 \subsection{Nested Data Parallelism}
 \label{sec:nest-data-parall}
@@ -362,23 +367,28 @@ type Matrix = double [] [];
 Such a declarative implementation of matrix multiplication lends
 itself naturally to an implicitly parallel execution. However, there
 are possibilities for parallelism on different levels in the
-three-dimensional array structure. A naive way of implementing such
-nested parallelism would be to simply start new parallel threads from
-within each parallel thread. There would be quite some overhead to
-this solution. Research on nested data parallelism has focused on
-eliminating this overhead in two different ways.
+three-dimensional array structure. Early work on the parallel language
+Actulus~\cite{Perrott:1979:LAV:357073.357075} recognizes the
+difficulty of nested data parallelism and as a temporary solution
+restricts the level of parallelism to one dimension which the
+programmer has to choose ahead of time.
+
+A naive way of implementing such nested parallelism would be to simply
+start new parallel threads from within each parallel thread. There
+would be quite some overhead to this solution. Research on nested data
+parallelism has focused on eliminating this overhead in two different
+ways.
 
 \paragraph{Flattening}
 
 \citet{Blelloch1993Implementation} introduced the idea of statically
 flattening nested arrays to perform an optimal parallelization of
 operations over arrays. The key to doing so is the right choice of
-array representation. \citet{Blelloch1993Implementation} showed that
-there exists such a representation which enables the compiler to
-flatten arrays in constant time. This flattening has been implemented
-in NESL and \citet{Blelloch:1996:PTS:232627.232650} showed, based on
-NESL's built-in cost semantics, that NESL actually can be implemented
-without overhead.
+array representation and there exists a representation which enables
+the compiler to flatten arrays in constant time. This flattening has
+been implemented in NESL and \citet{Blelloch:1996:PTS:232627.232650}
+showed, based on NESL's built-in cost semantics, that NESL actually
+can be implemented without overhead.
 
 The idea of flattening nested parallelism has since been taken up
 again by \citet{Lippmeier:2012:WEH:2364527.2364564} and moved to
@@ -395,19 +405,78 @@ space. Therefore, \citet{Keller:2012:VA:2364506.2364512} developed a
 technique to avoid such flattening if no performance increase can be
 expected.
 
+\cite{Collins:2014:NFL:2627373.2627375}\todo{Write briefly about
+  NOVA.}
+
+Flattening nested data parallelism is tightly coupled to array fusion,
+which we will discuss in detail in Section~\ref{sec:fusion}.
+
 \paragraph{Dynamic Scheduling}
 
+Static flattening nested data parallelism with no overhead is targeted
+at homogeneous computations on possibly irregular arrays. Possible
+imbalance of work distribution is mostly a result of irregular nested
+data structures, such as sparse vectors where adjacent zero-valued
+entries are not stored in memory. This demands a strong type system,
+such that all elements of an array are of the same type. Otherwise, a
+two-dimensional array might mostly contain numbers but spuriously also
+other data types or arrays. This means that not the entire parallelism
+is visible to the compiler, so static flattening might not be feasible
+to balance the workload.
 
-\subsection{Data Structures}
-\label{sec:data-structures}
+\cite{Fluet:2008:SFG:1411204.1411239,
+  Bergstrom:2010:LTS:1863543.1863558,
+  Grelck:2007:SOS:1248648.1248654}\todo{Write about these
+  publications.}
 
 \subsection{Fusion}
 \label{sec:fusion}
 
+\cite{Hwang:1995:AOS:209936.209949,
+  Chakravarty:2001:FAF:507635.507661,
+  Henriksen:2013:TGA:2502323.2502328,
+  Chakravarty:2013:DPH:2502323.2508151,
+  Lippmeier:2012:GPA:2364506.2364511}\todo{Write about these
+  publications.}
+
+\subsection{Data Structures}
+\label{sec:data-structures}
+
+\cite{47507, Keller:2010:RSP:1863543.1863582,
+  Stucki:2015:RVP:2784731.2784739, Lowney:1981:CAI:567532.567533,
+  Hall:1994:UHT:182409.156781, Arvind:1989:IDS:69558.69562}\todo{Write about these publications.}
+
+\subsection{Loop Parallelization}
+\label{sec:loop-parallelization}
+
+\cite{Tang:1990:CTD:77726.255155, Maydan:1993:AFA:158511.158515,
+  Knobe:1998:ASF:268946.268956,
+  Henriksen:2014:BCI:2627373.2627388}\todo{Write about these
+  publications.}
+
+\subsection{Other Topics}
+\label{sec:other-topics}
+
+\paragraph{DSLs, coordination and explicit scheduling}
+
+\cite{Fluet:2008:SFG:1411204.1411239, 4228136,
+  Grelck:2007:SOS:1248648.1248654, Ureche:2012:SCS:2103746.2103762}
+
+\paragraph{RETRAN}
+
+\cite{367042}
+
+\paragraph{Remap and data layout}
+
+\cite{Walinsky:1990:FPL:91556.91610, Deitz:2003:DIP:781498.781526,
+  Sinkarovs:2013:SDL:2502323.2502332}.
+
+\paragraph{Destructive array updates}
+
+\cite{Sastry:1994:PDU:182590.182486}
 
 \section{Spreadsheet End-User Development}
 \label{sec:spreadsheet-end-user-dev}
-
 
 \bibliographystyle{unsrtnat}
 \bibliography{array-programming-acm-accepted,array-programming-ieee-accepted,fbie}
