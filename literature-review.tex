@@ -438,10 +438,26 @@ other data types or arrays. This means that not the entire parallelism
 is visible to the compiler, so static flattening might not be feasible
 to balance the workload.
 
-\cite{Fluet:2008:SFG:1411204.1411239,
-  Bergstrom:2010:LTS:1863543.1863558,
-  Grelck:2007:SOS:1248648.1248654}\todo{Write about these
-  publications.}
+Dynamic scheduling leaves the distribution of work to run-time of the
+program. \sac, for instance, uses work-stealing
+queues~\cite{Chase2005Dynamic, Grelck:2007:SOS:1248648.1248654} to
+dynamically schedule work. Such scheduling schemes can produce some
+overhead at run-time that would otherwise be alleviated by
+compile-time transformations. To minimize overhead for different kinds
+of computations, \citet{Fluet:2008:SFG:1411204.1411239} argue for a
+mix of schedulers and to let the run-time chose which scheduler to use
+for distributing work.
+
+A notable scheduling heuristic is lazy tree
+splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}. Work is
+distributed by a master thread that communicates with other threads
+via a work-stealing queue like technique. Arrays are represented via
+binary trees of arrays. For each portion of work that the master
+thread performs, it checks if any of the remaining threads are
+idle. If so, it splits the remaining array in two, dispatches the
+latter half to the idle threads and continues to the next portion of
+work. This heuristic shows low overhead in experimental settings
+\cite{Bergstrom:2010:LTS:1863543.1863558}.
 
 \subsection{Fusion}
 \label{sec:fusion}
