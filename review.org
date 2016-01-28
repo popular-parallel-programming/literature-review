@@ -10,7 +10,7 @@
 
 * Declarative Parallel Array Programming
 ** O'Donnel, 1988: Architectures for declarative programming languages
-- data-structures
+- data structures
 - functional
 Constant-time, functional array implementation. Lookup and update are
 of constant time \cite{47507}.
@@ -113,6 +113,7 @@ beginning, for which this paper describes a promising technique
 ** Bergstrom et al., 2010: Lazy Tree Splitting
 - scheduling
 - functional
+- nested parallelism
 Instead of performing static transformations, nested data-parallelism
 can be achieved via scheduling and work-stealing. Choosing the right
 work-size is problematic. They describe a work-stealing based method
