@@ -345,9 +345,21 @@ compiler extensions for Haskell. Another very important language is
 NESL~\cite{Blelloch1993NESL}, which introduced the idea of statically
 flattening nested arrays.
 
-\cite{Ching:1990:APA:97808.97826,
-  Bernecky:2015:AEP:2774959.2774962}\todo{Parallelism due to
-  programmer writing idiomatic functional code.}
+The opportunity for parallelism in these languages stems from
+bulk-operations over arrays. While imperative languages like Fortran
+use iterative loops, functional languages depend on higher-order
+functions like \texttt{map} or \texttt{fold} to express data-parallel
+computations. \citet{Ching:1990:APA:97808.97826} argued that it is
+easier for programmers to express parallelism in such a declarative
+high-level way than by explicitly scheduling work to different
+processors and implemented this approach in the APL370 compiler. The
+only requirement to make use of such implicitly parallel constructs is
+that the programmer writes idiomatic code which the language runtime
+can parallelize
+efficiently~\cite{Bernecky:2015:AEP:2774959.2774962}. Not only that
+parallelism is much easier to extract, but also sequential programs
+written in such a high-level style will often perform
+faster~\cite{Bernecky:2015:AEP:2774959.2774962}.
 
 \subsection{Nested Data Parallelism}
 \label{sec:nest-data-parall}
@@ -405,8 +417,10 @@ space. Therefore, \citet{Keller:2012:VA:2364506.2364512} developed a
 technique to avoid such flattening if no performance increase can be
 expected.
 
-\cite{Collins:2014:NFL:2627373.2627375}\todo{Write briefly about
-  NOVA.}
+The more recent high-level language NOVA builds on the principles
+developed in NESL and DPH, using many of such state-of-the-art
+techniques and targets both, shared-memory multiprocessors as well as
+general purpose GPUs~\cite{Collins:2014:NFL:2627373.2627375}.
 
 Flattening nested data parallelism is tightly coupled to array fusion,
 which we will discuss in detail in Section~\ref{sec:fusion}.
