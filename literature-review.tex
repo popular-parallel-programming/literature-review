@@ -557,13 +557,44 @@ require fusion.
 \subsection{Loop Parallelization}
 \label{sec:loop-parallelization}
 
-\cite{Tang:1990:CTD:77726.255155, Maydan:1993:AFA:158511.158515,
-  Knobe:1998:ASF:268946.268956,
-  Henriksen:2014:BCI:2627373.2627388}\todo{Write about these
-  publications.}
+Parallelism in imperative languages is expressed via some kind of
+\texttt{do-loop} construct that roughly translates to ``for each
+element of a list or for each integer in some range, perform the given
+body''. The problem with this style of parallelism is that imperative
+languages allow for non-trivial data dependencies and side-effects. As
+a consequence, the analysis that a compiler needs to perform in order
+to safely parallelize a \texttt{do-loop} is much more complicated than
+when using higher-order functions.
+
+One way to safely parallelize imperative loops is to enforce a
+read-write order that can be computed at compile
+time~\cite{Tang:1990:CTD:77726.255155}. When the read-write order of
+elements is known, a reading thread synchronizes with the writing
+thread to avoid lost updates. A similar approach uses a data-flow
+analysis of accesses to array-subscripts on an inter-procedural
+level~\cite{Maydan:1993:AFA:158511.158515}. Instead of enforcing an
+ordering of read and write accesses,
+\citet{Knobe:1998:ASF:268946.268956} simply fall back to
+single-assignment arrays, thereby eliminating a whole class of data
+dependencies in loops. The most dominant technique for data dependency
+analysis is data-flow analysis of loops and array
+indices~\cite{Maydan:1993:AFA:158511.158515,
+  Knobe:1998:ASF:268946.268956}.
+
+In bounded, iterative loops, the bounds must be checked after every
+iteration. To alleviate this costly and repetitive computation,
+\citet{Henriksen:2014:BCI:2627373.2627388} lift the bounds check out
+of the loop at compile time and specialize the body for the bounds of
+the loop.
+
+These techniques for imperative loop-parallelization are relevant for
+the implementation of high-level operations over arrays.
 
 \subsection{Other Topics}
 \label{sec:other-topics}
+
+This section summarizes research that does not fit into the four major
+categories.
 
 \paragraph{DSLs, coordination and explicit scheduling}
 
