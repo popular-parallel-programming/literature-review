@@ -515,9 +515,44 @@ destructive array updates using live-variable data-flow analysis.
 \subsection{Data Structures}
 \label{sec:data-structures}
 
-\cite{47507, Keller:2010:RSP:1863543.1863582,
-  Stucki:2015:RVP:2784731.2784739, Lowney:1981:CAI:567532.567533,
-  Hall:1994:UHT:182409.156781, Arvind:1989:IDS:69558.69562}\todo{Write about these publications.}
+Choosing the right data structure is a key element to high-performance
+array computing. \citet{Lowney:1981:CAI:567532.567533} developed
+carrier arrays as an extension to APL that are able to express
+irregular nested parallelism (opposite to regular nested parallelism,
+where all sub-arrays must be of the same length. Carrier arrays decide
+automatically to which rank a function must be lifted to, to be
+applied to all elements of the array.
+
+Performance of single operations on arrays are also of concern. For
+instance, functional arrays should be able to perform constant-time
+lookup and preferably also constant-time update~\cite{47507}. It is
+well-known that data structures choose a trade-off between the
+asymptotic performance of the different operations, like random
+access, update, appending etc. Nevertheless,
+\citet{Stucki:2015:RVP:2784731.2784739} developed a general-purpose
+array data structure, the relaxed-radix-bound (RRB) array. They proved
+the bounds for all operations and for practical sizes of an RRB array
+to be constant or amortized constant. RRB arrays are of clear value to
+parallel array programming, especially in conjunction with scheduling
+schemes.
+
+It is a challenge to implement such high-performance arrays in a
+purely functional language. \citet{Arvind:1989:IDS:69558.69562}
+developed I-Structures which conceptually are write-once arrays. Each
+subscript can be written exactly once during the entire program. Reads
+and writes to indices can be re-ordered according to re-write rules at
+the cost of sacrificing referential transparency.
+
+Type-based run-time specialization of functions and optimization of
+data structures seems to be a widely applicable technique in
+functional
+programming~\cite{Hall:1994:UHT:182409.156781}. REPA~\cite{Keller:2010:RSP:1863543.1863582}
+uses types in order to represent the (irregular) shapes of arrays and
+to specialize higher-order functions. REPA arrays are unboxed and
+lazy. Forcing a single element of an array forces the evaluation of
+the entire array. Array evaluation can be performed in parallel. Lazy
+arrays can avoid creating intermediate arrays and therefore do not
+require fusion.
 
 \subsection{Loop Parallelization}
 \label{sec:loop-parallelization}
