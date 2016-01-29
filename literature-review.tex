@@ -502,13 +502,13 @@ analysis can detect code structures that inhibit fusion, subsequently
 re-writes the program in such a way that fusion becomes possible and
 avoids duplicate computations
 
-A special variant of fusion is destructive update analysis. Since in
-purely functional programs, data structures are immutable, writing to
-a single index of an array results in a new array in which all
-elements are copied from the original array with exception of the
-index that was updated. If the array that is being updated is not
-referenced again throughout the program, the update can be performed
-in-place, or destructively, without the overhead of copying all
+A special variant of fusion is destructive update analysis. Since data
+structures are immutable in purely functional languages, writing to a
+single index of an array produces in a new array in which all elements
+are copied from the original array with exception of the index that
+was updated. If the array that is being updated is not referenced
+again throughout the program, the update can be performed in-place, or
+destructively, without the overhead of copying all
 data. \citet{Sastry:1994:PDU:182409.182486} developed an analysis for
 destructive array updates using live-variable data-flow analysis.
 
