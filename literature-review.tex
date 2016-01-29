@@ -449,15 +449,16 @@ mix of schedulers and to let the run-time chose which scheduler to use
 for distributing work.
 
 A notable scheduling heuristic is lazy tree
-splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}. Work is
-distributed by a master thread that communicates with other threads
-via a work-stealing queue like technique. Arrays are represented via
-binary trees of arrays. For each portion of work that the master
-thread performs, it checks if any of the remaining threads are
-idle. If so, it splits the remaining array in two, dispatches the
-latter half to the idle threads and continues to the next portion of
-work. This heuristic shows low overhead in experimental settings
-\cite{Bergstrom:2010:LTS:1863543.1863558}.
+splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}. In this scheme,
+every thread gets assigned some part of the workload. Threads
+communicate with other threads via a technique inspired by and as
+efficient as work-stealing queues. Arrays are represented via binary
+trees of arrays. For each portion of work that a thread performs, it
+checks if any of the remaining threads are idle. If so, it splits the
+remaining array in half, dispatches the second part to the idle
+threads and continues to the next portion of work. This heuristic
+shows low overhead in experimental
+settings~\cite{Bergstrom:2010:LTS:1863543.1863558}.
 
 \subsection{Fusion}
 \label{sec:fusion}
