@@ -186,7 +186,7 @@ array-languages is a matter of the user writing idiomatic code
 ** Knobe & Sarkar, 1998: Array SSA Form and its Use in Parallelization
 - loops
 - data-flow
-- datat dependence
+- data dependence
 To parallelize imperative loops, the authors use a data-flow on the
 static-single-assignment form of arrays. Their technique succeeds in
 parallelizing all loops that are not inherently sequential due to
