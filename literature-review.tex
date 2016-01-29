@@ -463,12 +463,54 @@ settings~\cite{Bergstrom:2010:LTS:1863543.1863558}.
 \subsection{Fusion}
 \label{sec:fusion}
 
-\cite{Hwang:1995:AOS:209936.209949,
-  Chakravarty:2001:FAF:507635.507661,
-  Henriksen:2013:TGA:2502323.2502328,
-  Chakravarty:2013:DPH:2502323.2508151,
-  Lippmeier:2012:GPA:2364506.2364511}\todo{Write about these
-  publications.}
+Fusion refers to avoiding intermediate representations of arrays for
+consecutive bulk operations. For instance, two succeeding applications
+of \texttt{map} can be fused as follows:
+
+\begin{center}
+  \begin{tabular}{ccc}
+\begin{lstlisting}[language=ML]
+map g (map f xs)
+\end{lstlisting}
+    & $\Longrightarrow$ &
+\begin{lstlisting}[language=ML]
+map (f >> g) xs
+\end{lstlisting}
+  \end{tabular}
+\end{center}
+
+This optimization is very valuable in all kinds of programs,
+sequential and parallel alike, for example in sequential
+Fortran~90 programs\cite{Hwang:1995:AOS:209936.209949}.
+
+Fusion is a static technique performed during compile time. The fusion
+transformations can be expressed as straight-forward equational
+rewrite rules, as done by
+\citet{Chakravarty:2001:FAF:507635.507661}. They also observe that
+flattening nested arrays makes fusion a much simpler task which
+emphasizes the connection between flattening and fusion. Some
+researchers have been focusing on making such optimizations visible to
+the programmer via
+types~\cite{Lippmeier:2012:GPA:2364506.2364511}. This enables
+programmers to reason about the performance of their declarative code.
+
+More aggressive fusion is possible if the compiler performs a more
+complex analysis. \citet{Henriksen:2013:TGA:2502323.2502328} use a
+data-flow based graph-reduction to analyze functional programs with
+second-order functions on arrays for fusion possibilities. Their
+analysis can detect code structures that inhibit fusion, subsequently
+re-writes the program in such a way that fusion becomes possible and
+avoids duplicate computations
+
+A special variant of fusion is destructive update analysis. Since in
+purely functional programs, data structures are immutable, writing to
+a single index of an array results in a new array in which all
+elements are copied from the original array with exception of the
+index that was updated. If the array that is being updated is not
+referenced again throughout the program, the update can be performed
+in-place, or destructively, without the overhead of copying all
+data. \citet{Sastry:1994:PDU:182409.182486} developed an analysis for
+destructive array updates using live-variable data-flow analysis.
 
 \subsection{Data Structures}
 \label{sec:data-structures}
@@ -500,10 +542,6 @@ settings~\cite{Bergstrom:2010:LTS:1863543.1863558}.
 
 \cite{Walinsky:1990:FPL:91556.91610, Deitz:2003:DIP:781498.781526,
   Sinkarovs:2013:SDL:2502323.2502332}.
-
-\paragraph{Destructive array updates}
-
-\cite{Sastry:1994:PDU:182590.182486}
 
 \section{Spreadsheet End-User Development}
 \label{sec:spreadsheet-end-user-dev}
