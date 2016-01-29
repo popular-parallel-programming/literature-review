@@ -17,6 +17,7 @@
   review = 	 {fbie: accepted <2016-01-15 14:00:27>},
   abstract = 	 {Interpreters replace the edit/compile/run cyle with edit/run. Dynamic computing environments, like spreadsheets, shorten this still more to just edit. So-called "Visiprog" environments, such as Maryland's XED, permit developing normal imperative programs in a dynamic computing environment, XED and similar environments, because they show the results of executing a program after every (reasonable) editing step, raise the issue of efficient incremental execution. Incremental execution optimizations are also applicable to any programming situation, including batch/cards, in which nearly the same program is run many times on nearly the same data. However, the requirement of remembering large amounts of internal state between runs make incremental exectution most natural for interpreted languages. This paper examines some algorithms for incremental execution. Based on the frequency of typical program editing changes, we predict the importance of optimizing certain kinds of incremental execution. We also examine actual speedups obtained in executing programs after subjecting them to these simulated incremental edits under these optimizations. The speedups range from factors of 1.1 to near 10. Finally, we discuss the feasibility of including these optimizations in an actual dynamic computing environment like XED, and in more traditional programming environments.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=29654&ftid=262412&dwn=1&CFID=575549397&CFTOKEN=15758644},
+  notes = 	 {Incremental evaluation. Low priority read},
 }
 @article{Karinthi:1987:IRP:960114.29654,
   author = 	 {Karinthi, R. R. and Weiser, M.},
@@ -35,7 +36,7 @@
   acmid = 	 {29654},
   publisher = 	 {ACM},
   address = 	 {New York, NY, USA},
-  notes = 	 {This might be relevant in terms of recomputation.},
+  notes = 	 {Incremental evaluation. Low priority read.},
   review = 	 {fbie: accepted <2016-01-15 14:00:25>},
   abstract = 	 {Interpreters replace the edit/compile/run cyle with edit/run. Dynamic computing environments, like spreadsheets, shorten this still more to just edit. So-called "Visiprog" environments, such as Maryland's XED, permit developing normal imperative programs in a dynamic computing environment, XED and similar environments, because they show the results of executing a program after every (reasonable) editing step, raise the issue of efficient incremental execution. Incremental execution optimizations are also applicable to any programming situation, including batch/cards, in which nearly the same program is run many times on nearly the same data. However, the requirement of remembering large amounts of internal state between runs make incremental exectution most natural for interpreted languages. This paper examines some algorithms for incremental execution. Based on the frequency of typical program editing changes, we predict the importance of optimizing certain kinds of incremental execution. We also examine actual speedups obtained in executing programs after subjecting them to these simulated incremental edits under these optimizations. The speedups range from factors of 1.1 to near 10. Finally, we discuss the feasibility of including these optimizations in an actual dynamic computing environment like XED, and in more traditional programming environments.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=29654&ftid=262412&dwn=1&CFID=575549397&CFTOKEN=15758644},
@@ -60,6 +61,7 @@
   abstract = 	 {We describe extensions to the Excel spreadsheet that integrate user-defined functions into the spreadsheet grid, rather than treating them as a "bolt-on". Our first objective was to bring the benefits of additional programming language features to a system that is often not recognised as a programming language. Second, in a project involving the evolution of a well-established language, compatibility with previous versions is a major issue, and maintaining this compatibility was our second objective. Third and most important, the commercial success of spreadsheets is largely due to the fact that many people find them more usable than programming languages for programming-like tasks. Thus, our third objective (with resulting constraints) was to maintain this usability advantage.Simply making Excel more like a conventional programming language would not meet these objectives and constraints. We have therefore taken an approach to our design work that emphasises the cognitive requirements of the user as a primary design criterion. The analytic approach that we demonstrate in this project is based on recent developments in the study of programming usability, including the Cognitive Dimensions of Notations and the Attention Investment model of abstraction use. We believe that this approach is also applicable to the design and extension of other programming languages and environments.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=944721&ftid=233102&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:36:19>},
+  notes = 	 {Must read.},
 }
 @article{Jones:2003:UAF:944746.944721,
   author = 	 {Jones, Simon Peyton and Blackwell, Alan and Burnett,
@@ -101,6 +103,7 @@
   address = 	 {New York, NY, USA},
   abstract = 	 {Barclays Capital, like many other investment banks, uses Microsoft Excel as a rapid application development environment for pricing models and other tools. While this may sound bizarre, Excel's flexibility and convenience renders it an immensely useful tool for the Front Office, and our Traders are extremely Excel literate. Excel combines two programming models a zeroth order functional language (the spreadsheet) an imperative programming language (Visual Basic for Applications) The functional model allows very rapid development and great transparency, but the limitations of Excel's built-in functions drives developers to use VBA. Soon the spreadsheet dependency graph is lost and the spreadsheet layer is relegated to a GUI on top of tens/hundreds of thousands of lines of VBA. The logic is tightly tied to Excel, and a server-side implementation involves a complete rewrite in another language, which carries both operational risk and developmental cost. FMD ('Functional Model Deployment') prevents these problems by embedding a functional language cleanly into Excel, effectively extending Excel to be a higher order functional environment. Now complex models can be developed without leaving the pure spreadsheet domain: Before 1.Limited built-in functions need to be extended with add-ins or VBA. 2.Boilerplate code needs to be written to import libraries. 3.Systems need to be rewritten to run outside Excel. (typically ported to C++ / C# back end) After 1.Functions can be defined on-the-fly without leaving the pure spreadsheet side. 2.Dynamic and data-driven wrappers make external libraries directly visible. 3.Spreadsheet 'programs' can be exported and run outside of Excel. The business have fully supported this approach, and are enthusiastic about using FMD - as Simon Peyton Jones identified elsewhere, "Excel is the world's most popular functional language". From their point of view, functional programming in Excel is just an extension of what they've been doing for years!},
   review = 	 {fbie: accepted <2016-01-15 13:30:28>},
+  notes = 	 {Seems highly related to Funcalc. Must view.},
 }
 @inproceedings{Lewis:1985:ESI:317456.317466,
   author = 	 {Lewis, Clayton},
@@ -122,6 +125,7 @@
   abstract = 	 {Conventional spreadsheet programs offer a very convenient user interface for many quantitative tasks, but they are restricted to handling precisely-specified quantities and calculations. ASP is a generalized spreadsheet that extends the basic spreadsheet paradigm to encompass quantities which are not known exactly, and functions which are not known well enough to permit calculation. ASP works by propagating assertions about quantities and functions through the network of relationships that the spreadsheet defines.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=317466&ftid=16233&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:29:58>},
+  notes = 	 {Computing with approximate values. Related to interval arithmetics. Low priority read.},
 }
 @article{Lewis:1985:ESI:1165385.317466,
   author = 	 {Lewis, Clayton},
@@ -165,6 +169,7 @@
   abstract = 	 {The ASP package, a spreadsheet implemented in Smalltalk-80, is discussed. A description of the unique data manipulation features of ASP is given. A discussion of how these features arise from the Smalltalk-80 environment is included, with emphasis on features not common to all object oriented languages.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=28737&ftid=32265&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:29:22>},
+  notes = 	 {Embedding spreadsheets in OO and vice versa. Low priority read.},
 }
 @article{Piersol:1986:OSA:960112.28737,
   author = 	 {Piersol, Kurt W.},
@@ -207,6 +212,7 @@
   abstract = 	 {Spreadsheets are heavily used in industry, because they are easily written and adjusted, using an intuitive visual interface. They often start out as simple tools; however, over time spreadsheets can become increasingly complex, up to the point where they become complicated and inflexible. In many ways, spreadsheet are similar to software: both concern the storage and manipulation of data and the presentation of results to the user. Because of this similarity, many methods and techniques from software engineering can be applied to spreadsheets. The role of SEMS, the International Workshop on Software Engineering Methods in Spreadsheets is to explore the possibilities of applying successful methods from software engineering to spreadsheets. Some, like testing and visualization, have been tried before and can be built upon. For methods that have not yet been tried on spreadsheets, SEMS will serve as a platform for early feedback. The SEMS program included an industrial keynote, "spreadsheet stories" (success or failure), short and long research papers, a good mix of industrial and academic researchers, as well as lively discussion and debate.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2819252&ftid=1617135&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:28:48>},
+  notes = 	 {Workshop proceedings intro. Don't read.},
 }
 @inproceedings{Barik:2015:FUR:2820518.2820594,
   author = 	 {Barik, Titus and Lubick, Kevin and Smith, Justin and
@@ -227,6 +233,7 @@
   abstract = 	 {Spreadsheets are perhaps the most ubiquitous form of end-user programming software. This paper describes a corpus, called Fuse, containing 2,127,284 URLs that return spreadsheets (and their HTTP server responses), and 249,376 unique spreadsheets, contained within a public web archive of over 26.83 billion pages. Obtained using nearly 60,000 hours of computation, the resulting corpus exhibits several useful properties over prior spreadsheet corpora, including reproducibility and extendability. Our corpus is unencumbered by any license agreements, available to all, and intended for wide usage by end-user software engineering researchers. In this paper, we detail the data and the spreadsheet extraction process, describe the data schema, and discuss the trade-offs of Fuse with other corpora.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2820594&ftid=1617946&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:26:52>},
+  notes = 	 {Spreadsheet corpus. Low priority read.},
 }
 @inproceedings{Spenke:1989:SIL:67449.67466,
   author = 	 {Spenke, M. and Beilken, C.},
@@ -246,6 +253,7 @@
   abstract = 	 {We present PERPLEX, a programming environment intended for the end-user. In its design, the concepts of logic programming and spreadsheets are combined. Thus, on the one hand, logic programming becomes an interactive, incremental task where the user gets direct visual feedback, on the other hand, functionality and scope of a conventional spreadsheet program are considerably extended. In order to perform calculations and queries, constraints are imposed on the contents of the spreadsheet cells. New predicates can be defined using a programming-by-example technique: Rules are extracted from the user's solutions for example problems. Thus, concrete intermediate results take over the role of abstract logic variables in the programming process. PERPLEX has been successfully implemented on a Symbolics Lisp Machine.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=67466&ftid=5734&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:26:17>},
+  notes = 	 {Spreadsheets and logic programming or constraint programming. Low priority read.},
 }
 @article{Spenke:1989:SIL:67450.67466,
   author = 	 {Spenke, M. and Beilken, C.},
@@ -266,6 +274,7 @@
   abstract = 	 {We present PERPLEX, a programming environment intended for the end-user. In its design, the concepts of logic programming and spreadsheets are combined. Thus, on the one hand, logic programming becomes an interactive, incremental task where the user gets direct visual feedback, on the other hand, functionality and scope of a conventional spreadsheet program are considerably extended. In order to perform calculations and queries, constraints are imposed on the contents of the spreadsheet cells. New predicates can be defined using a programming-by-example technique: Rules are extracted from the user's solutions for example problems. Thus, concrete intermediate results take over the role of abstract logic variables in the programming process. PERPLEX has been successfully implemented on a Symbolics Lisp Machine.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=67466&ftid=5734&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:26:13>},
+  notes = 	 {Spreadsheets and logic programming or constraint programming. Low priority read. },
 }
 @article{Burnett:2002:SMD:586081.586083,
   author = 	 {Burnett, Margaret and Yang, Sherry and Summet, Jay},
@@ -291,6 +300,7 @@
   abstract = 	 {In this paper, we present an efficient method for automatically generalizing programs written in spreadsheet languages. The strategy is to do generalization through incremental analysis of logical relationships among concrete program entities from the perspective of a particular computational goal. The method uses deductive dataflow analysis with algebraic back-substitution rather than inference with heuristics, and there is no need for generalization-related dialog with the user. We present the algorithms and their time complexities and show that, because the algorithms perform their analyses incrementally, on only the on-screen program elements rather than on the entire program, the method is scalable. Performance data is presented to help demonstrate the scalability.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=586083&ftid=86667&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:26:01>},
+  notes = 	 {Spreadsheets and logic programming or constraint programming. Low priority read. },
 }
 @inproceedings{Saint-Paul:2008:DSY:1353343.1353427,
   author = 	 {Saint-Paul, R{\'e}gis and Benatallah, Boualem and
@@ -312,6 +322,7 @@
   address = 	 {New York, NY, USA},
   abstract = 	 {End-user programmers---the 45 million of them, as estimated for 2001 in US alone [7]---routinely use spreadsheet to visualize, manipulate, and analyze data. Thanks to this environment, they can build applications that solve their daily problems. Even building a report can be seen as programming an application that takes corporate data as input and outputs a presentation. To build this application, spreadsheet users have to import data and place them in spreadsheet cells, highlight the important pieces, compute maybe some aggregates, add a chart or two. If well done, this application will be used each time data are updated to effortlessly produce a fresh report.},
   review = 	 {fbie: accepted <2016-01-15 13:25:35>},
+  notes = 	 {Background on spreadsheet end-user development. Low priority read.},
 }
 @inproceedings{Singh:2016:TSD:2837614.2837668,
   author = 	 {Singh, Rishabh and Gulwani, Sumit},
@@ -335,6 +346,7 @@
   abstract = 	 {Cleaning spreadsheet data types is a common problem faced by millions of spreadsheet users. Data types such as date, time, name, and units are ubiquitous in spreadsheets, and cleaning transformations on these data types involve parsing and pretty printing their string representations. This presents many challenges to users because cleaning such data requires some background knowledge about the data itself and moreover this data is typically non-uniform, unstructured, and ambiguous. Spreadsheet systems and Programming Languages provide some UI-based and programmatic solutions for this problem but they are either insufficient for the user&#039;s needs or are beyond their expertise. In this paper, we present a programming by example methodology of cleaning data types that learns the desired transformation from a few input-output examples. We propose a domain specific language with probabilistic semantics that is parameterized with declarative data type definitions. The probabilistic semantics is based on three key aspects: (i) approximate predicate matching, (ii) joint learning of data type interpretation, and (iii) weighted branches. This probabilistic semantics enables the language to handle non-uniform, unstructured, and ambiguous data. We then present a synthesis algorithm that learns the desired program in this language from a set of input-output examples. We have implemented our algorithm as an Excel add-in and present its successful evaluation on 55 benchmark problems obtained from online help forums and Excel product team.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2837668&ftid=1659057&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:24:48>},
+  notes = 	 {Must read -- interesting type approach.},
 }
 @inproceedings{Gulwani:2011:ASP:1926385.1926423,
   author = 	 {Gulwani, Sumit},
@@ -359,6 +371,7 @@
   abstract = 	 {We describe the design of a string programming/expression language that supports restricted forms of regular expressions, conditionals and loops. The language is expressive enough to represent a wide variety of string manipulation tasks that end-users struggle with. We describe an algorithm based on several novel concepts for synthesizing a desired program in this language from input-output examples. The synthesis algorithm is very efficient taking a fraction of a second for various benchmark examples. The synthesis algorithm is interactive and has several desirable features: it can rank multiple solutions and has fast convergence, it can detect noise in the user input, and it supports an active interaction model wherein the user is prompted to provide outputs on inputs that may have multiple computational interpretations. The algorithm has been implemented as an interactive add-in for Microsoft Excel spreadsheet system. The prototype tool has met the golden test - it has synthesized part of itself, and has been used to solve problems beyond author's imagination.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1926423&ftid=907639&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:24:43>},
+  notes = 	 {Programming by example, spreadsheet synthesis. Low priority read but interesting, may be implemented in Funcalc some day.},
 }
 @article{Gulwani:2011:ASP:1925844.1926423,
   author = 	 {Gulwani, Sumit},
@@ -409,6 +422,7 @@
   abstract = 	 {Spreadsheets are widely recognized as popular programming systems with a huge number of spreadsheets being created every day. Also, spreadsheets are often used in the decision processes of profit-oriented companies. While this illustrates their practical importance, studies have shown that up to 90\% of real-world spreadsheets contain errors. In order to improve the productivity of spreadsheet end-users, the software engineering community has proposed to employ model-driven approaches to spreadsheet development. In this paper we describe the evaluation of a bidirectional model-driven spreadsheet environment. In this environment, models and data instances are kept in conformity, even after an update on any of these artifacts. We describe the issues of an empirical study we plan to conduct, based on our previous experience with end-user studies. Our goal is to assess if this model-driven spreadsheet development framework does in fact contribute to improve the productivity of spreadsheet users.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2667096&ftid=1498015&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:24:26>},
+  notes = 	 {Spreadsheet model-driven development. Low priority read.},
 }
 @inproceedings{Mendes:2012:CEM:2337223.2337500,
   author = 	 {Mendes, Jorge},
@@ -428,6 +442,7 @@
   abstract = 	 {Spreadsheets are increasingly used as programming languages, in the construction of large and complex systems. The fact is that spreadsheets, being a highly flexible framework, lack important programming language features such as abstraction or encapsulation. This flexibility, however, comes with a price: spreadsheets are populated with significant amounts of errors. One of the approaches that try to overcome this problem advocates the use of model-driven spreadsheet development: a spreadsheet model is defined, from which a concrete spreadsheet is generated. Although this approach has been proved effective in other contexts, still it needs to accommodate for future evolution of both the model and its instance, so that they remain synchronized at all moments. In this paper, we propose a pair of transformation sets, one working at the model level and the other at the instance level, such that each transformation in one set is related to a transformation in the other set. With our approach, we ensure model/data compliance while allowing for model and data evolution.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2337500&ftid=1265077&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:24:22>},
+  notes = 	 {Spreadsheet model-driven development. Low priority read.},
 }
 @inproceedings{Cunha:2012:BMS:2337223.2337443,
   author = 	 {Cunha, J\'{a}come and Fernandes, Jo\~{a}o Paulo and
@@ -449,6 +464,7 @@
   abstract = 	 {In this extended abstract we present a bidirectional model-driven framework to develop spreadsheets. By being model driven, our approach allows to evolve a spreadsheet model and automatically have the data co-evolved. The bidirectional component achieves precisely the inverse, that is, to evolve the data and automatically obtain a new model to which the data conforms.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2337443&ftid=1265026&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:24:11>},
+  notes = 	 {Spreadsheet model-driven development. Low priority read.},
 }
 @inproceedings{Vemuri:1992:DDD:503720.503808,
   author = 	 {Vemuri, Sarat and Sengupta, Shankar and Davis,
@@ -471,6 +487,7 @@
   abstract = 	 {We conducted experiments to evaluate on-line data dependency diagrams for spreadsheets. Results were consistent those of earlier experiments with written data dependency diagrams. Although users had no trouble browsing the on-line diagrams, the diagrams did not seem to improve the performance of a maintenance task on a small spreadsheet. The diagrams may be helpful for larger spreadsheets.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=503808&ftid=69381&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:23:18>},
+  notes = 	 {Understanding and debugging. Low priority read.},
 }
 @inproceedings{Cox:1994:UVP:192309.192343,
   author = 	 {Cox, Philip T. and Smedley, Trevor J.},
@@ -512,6 +529,7 @@
   abstract = 	 {Spreadsheet languages, which include commercial spreadsheets and various research systems, have had a substantial impact on end-user computing. Research shows, however, that spreadsheets often contain faults. Thus, in previous work, we presented a methodology that assists spreadsheet users in testing their spreadsheet formulas. Our empirical studies have shown that this methodology can help end-users test spreadsheets more adequately and efficiently; however, the process of generating test cases can still represent a significant impediment. To address this problem, we have been investigating how to automate test case generation for spreadsheets in ways that support incremental testing and provide immediate visual feedback. We have utilized two techniques for generating test cases, one involving random selection and one involving a goal-oriented approach. We describe these techniques, and report results of an experiment examining their relative costs and benefits.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=581359&ftid=79344&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:21:51>},
+  notes = 	 {Testing. Low priority read.},
 }
 @article{Reichwein:1999:SSI:331963.331968,
   author = 	 {Reichwein, James and Rothermel, Gregg and Burnett,
@@ -535,6 +553,7 @@
   abstract = 	 {Spreadsheet languages, which include commercial spreadsheets and various research systems, have proven to be flexible tools in many domain specific settings. Research shows, however, that spreadsheets often contain faults. We would like to provide at least some of the benefits of formal testing and debugging methodologies to spreadsheet developers. This paper presents an integrated testing and debugging methodology for spreadsheets. To accommodate the modeless and incremental development, testing and debugging activities that occur during spreadsheet creation, our methodology is tightly integrated into the spreadsheet environment. To accommodate the users of spreadsheet languages, we provide an interface to our methodology that does not require an understanding of testing and debugging theory, and that takes advantage of the immediate visual feedback that is characteristic of the spreadsheet paradigm.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=331968&ftid=1304&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:21:15>},
+  notes = 	 {Understanding, debugging, testing. Low priority read.},
 }
 @inproceedings{Reichwein:1999:SSI:331960.331968,
   author = 	 {Reichwein, James and Rothermel, Gregg and Burnett,
@@ -557,6 +576,7 @@
   abstract = 	 {Spreadsheet languages, which include commercial spreadsheets and various research systems, have proven to be flexible tools in many domain specific settings. Research shows, however, that spreadsheets often contain faults. We would like to provide at least some of the benefits of formal testing and debugging methodologies to spreadsheet developers. This paper presents an integrated testing and debugging methodology for spreadsheets. To accommodate the modeless and incremental development, testing and debugging activities that occur during spreadsheet creation, our methodology is tightly integrated into the spreadsheet environment. To accommodate the users of spreadsheet languages, we provide an interface to our methodology that does not require an understanding of testing and debugging theory, and that takes advantage of the immediate visual feedback that is characteristic of the spreadsheet paradigm.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=331968&ftid=1304&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:21:12>},
+  notes = 	 {Understanding, debugging, testing. Low priority read.},
 }
 @article{Isakowitz:1995:TLT:195705.195708,
   author = 	 {Isakowitz, Tom\'{a}s and Schocken, Shimon and
@@ -581,6 +601,7 @@
   abstract = 	 {In spite of the increasing sophistication and power of commercial spreadsheet packages, we still lack a formal theory or a methodology to support the construction and maintenance of spreadsheet models. Using a dual logical/physical perspective, we identify four principal components that characterize any spread sheet model: schema, data, editorial, and binding. We present a factoring algorithm for identifying and extracting these components from conventional spreadsheets with minimal user intervention, and a synthesis algorithm that assists users in the construction of executable spreadsheets from reusable model components. This approach opens new possibilities for applying object-oriented and model management  techniques to support the construction, sharing, and reuse of spreadsheet models in organizations. Importantly, our approach to model management and the Windows-based prototype that we have developed are designed to coexist with, rather than replace, traditional spreadsheet programs. In other words, the users are not required to learn a new modeling language; instead, their logical models and data sets are extracted from their spreadsheets transparently, as a side-effect of using standard spreadsheet programs.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=195708&ftid=36921&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:21:05>},
+  notes = 	 {Modeling and understanding. Middle priority read, may contain some useful concepts.},
 }
 @inproceedings{Hermans:2013:DCD:2486788.2486827,
   author = 	 {Hermans, Felienne and Sedee, Ben and Pinzger, Martin
@@ -602,6 +623,7 @@
   abstract = 	 {Spreadsheets are widely used in industry: it is estimated that end-user programmers outnumber programmers by a factor 5. However, spreadsheets are error-prone, numerous companies have lost money because of spreadsheet errors. One of the causes for spreadsheet problems is the prevalence of copy-pasting.   In this paper, we study this cloning in spreadsheets. Based on existing text-based clone detection algorithms, we have developed an algorithm to detect data clones in spreadsheets: formulas whose values are copied as plain text in a different location.   To evaluate the usefulness of the proposed approach, we conducted two evaluations. A quantitative evaluation in which we analyzed the EUSES corpus and a qualitative evaluation consisting of two case studies. The results of the evaluation clearly indicate that 1) data clones are common, 2) data clones pose threats to spreadsheet quality and 3) our approach supports users in finding and resolving data clones.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2486827&ftid=1372473&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:20:30>},
+  notes = 	 {Understanding and visualization. Low priority read.},
 }
 @inproceedings{Hermans:2012:DVI:2337223.2337275,
   author = 	 {Hermans, Felienne and Pinzger, Martin and Deursen,
@@ -623,6 +645,7 @@
   abstract = 	 {Spreadsheets are often used in business, for simple tasks, as well as for mission critical tasks such as finance or forecasting. Similar to software, some spreadsheets are of better quality than others, for instance with respect to usability, maintainability or reliability. In contrast with software however, spreadsheets are rarely checked, tested or certified. In this paper, we aim at developing an approach for detecting smells that indicate weak points in a spreadsheet's design. To that end we first study code smells and transform these code smells to their spreadsheet counterparts. We then present an approach to detect the smells, and communicate located smells to spreadsheet users with data flow diagrams. We analyzed occurrences of these smells in the Euses corpus. Furthermore we conducted ten case studies in an industrial setting. The results of the evaluation indicate that smells can indeed reveal weaknesses in a spreadsheet's design, and that data flow diagrams are an appropriate way to show those weaknesses.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2337275&ftid=1264917&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:20:16>},
+  notes = 	 {Understanding and visualization. Low priority read.},
 }
 @inproceedings{Burnett:2003:ESE:776816.776828,
   author = 	 {Burnett, Margaret and Cook, Curtis and Pendse, Omkar
@@ -645,6 +668,7 @@
   abstract = 	 {There has been little research on end-user program development beyond the activity of programming. Devising ways to address additional activities related to end-user program development may be critical, however, because research shows that a large proportion of the programs written by end users contain faults. Toward this end, we have been working on ways to provide formal "software engineering" methodologies to end-user programmers. This paper describes an approach we have developed for supporting assertions in end-user software, focusing on the spreadsheet paradigm. We also report the results of a controlled experiment, with 59 end-user subjects, to investigate the usefulness of this approach. Our results show that the end users were able to use the assertions to reason about their spreadsheets, and that doing so was tied to both greater correctness and greater efficiency.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=776828&ftid=148316&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:20:08>},
+  notes = 	 {Quality assurance, testing, validation, empirical study. Low priority read.},
 }
 @inproceedings{Abraham:2006:TIS:1140335.1140346,
   author = 	 {Abraham, Robin and Erwig, Martin},
@@ -668,6 +692,7 @@
   abstract = 	 {Spreadsheets are the most popular programming systems in use today. Since spreadsheets are visual, first-order functional languages, research into the foundations of spreadsheets is therefore a highly relevant topic for the principles and, in particular, the practice, of declarative programming.Since the error rate in spreadsheets is very high and since those errors have significant impact, methods and tools that can help detect and remove errors from spreadsheets are very much needed. Type systems have traditionally played a strong role in detecting errors in programming languages, and it is therefore reasonable to ask whether type systems could not be helpful in improving the current situation of spreadsheet programming.In this paper we introduce a type system and a type inference algorithm for spreadsheets and demonstrate how this algorithm and the underlying typing concept can identify programming errors in spreadsheets. In addition, we also demonstrate how the type inference algorithm can be employed to infer models, or specifications, for spreadsheets, which can be used to prevent future errors in spreadsheets.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1140346&ftid=362172&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:18:57>},
+  notes = 	 {Types. Must read.},
 }
 @inproceedings{Harris:2011:STT:1993498.1993536,
   author = 	 {Harris, William R. and Gulwani, Sumit},
@@ -691,6 +716,7 @@
   abstract = 	 {Every day, millions of computer end-users need to perform tasks over large, tabular data, yet lack the programming knowledge to do such tasks automatically. In this work, we present an automatic technique that takes from a user an example of how the user needs to transform a table of data, and provides to the user a program that implements the transformation described by the example. In particular, we present a language of programs TableProg that can describe transformations that real users require.We then present an algorithm ProgFromEx that takes an example input and output table, and infers a program in TableProg that implements the transformation described by the example. When the program is applied to the example input, it reproduces the example output. When the program is applied to another, potentially larger, table with a 'similar' layout as the example input table, then the program produces a corresponding table with a layout that is similar to the example output table. A user can apply ProgFromEx interactively, providing multiple small examples to obtain a program that implements the transformation that the user desires. Moreover, ProgFromEx can help identify 'noisy' examples that contain errors. To evaluate the practicality of TableProg and ProgFromEx, we implemented ProgFromEx as a module for the Microsoft Excel spreadsheet program. We applied the module to automatically implement over 50 table transformations specified by endusers through examples on online Excel help forums. In seconds, ProgFromEx found programs that satisfied the examples and could be applied to larger input tables. This experience demonstrates that TableProg and ProgFromEx can significantly automate the tasks over tabular data that users need to perform.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1993536&ftid=981798&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:18:36>},
+  notes = 	 {Programming by example. Low priority read.},
 }
 @article{Harris:2011:STT:1993316.1993536,
   author = 	 {Harris, William R. and Gulwani, Sumit},
@@ -741,6 +767,7 @@
   abstract = 	 {Spreadsheet languages, which include commercial spreadsheets and various research systems, have had a substantial impact on end-user computing. Research shows, however, that spreadsheets often contain faults. Thus, in previous work we presented a methodology that helps spreadsheet users test their spreadsheet formulas. Our empirical studies have shown that end users can use this methodology to test spreadsheets more adequately and efficiently; however, the process of generating test cases can still present a significant impediment. To address this problem, we have been investigating how to incorporate automated test case generation into our testing methodology in ways that support incremental testing and provide immediate visual feedback. We have used two techniques for generating test cases, one involving random selection and one involving a goal-oriented approach. We describe these techniques and their integration into our testing environment, and report results of an experiment examining their effectiveness and efficiency.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1131423&ftid=357704&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:18:26>},
+  notes = 	 {Testing. Low priority read.},
 }
 @inproceedings{Babbitt:1998:ISS:353053.353087,
   author = 	 {Babbitt, Timothy G. and Galletta, Dennis F. and
@@ -761,6 +788,7 @@
   abstract = 	 {An abstract is not available.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=353087&ftid=3821&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:18:07>},
+  notes = 	 {Unclear. Seems low priority.},
 }
 @inproceedings{Jankun-Kelly:2000:SIV:375213.375220,
   author = 	 {Jankun-Kelly, T. J. and Ma, Kwan-Liu},
@@ -783,6 +811,7 @@
   abstract = 	 {An abstract is not available.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=375220&ftid=76352&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:17:48>},
+  notes = 	 {Visualization. Seems low priority.},
 }
 @article{Ronen:1989:SAD:63238.63244,
   author = 	 {Ronen, Boaz and Palley, Michael A and Lucas,Jr.,
@@ -805,6 +834,7 @@
   abstract = 	 {Although spreadsheet programs and microcomputers have revolutionized information processing in organizations, a significant number of serious errors have been reported through the misuse of this technology. This article discusses several different contexts for the development of spreadsheet models and presents structured design techniques for these models.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=63244&ftid=19968&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:17:37>},
+  notes = 	 {Model-driven design. Low priority.},
 }
 @article{Gulwani:2012:SDM:2240236.2240260,
   author = 	 {Gulwani, Sumit and Harris, William R. and Singh,
@@ -827,6 +857,7 @@
   abstract = 	 {Millions of computer end users need to perform tasks over large spreadsheet data, yet lack the programming knowledge to do such tasks automatically. We present a programming by example methodology that allows end users to automate such repetitive tasks. Our methodology involves designing a domain-specific language and developing a synthesis algorithm that can learn programs in that language from user-provided examples. We present instantiations of this methodology for particular domains of tasks: (a) syntactic transformations of strings using restricted forms of regular expressions, conditionals, and loops, (b) semantic transformations of strings involving lookup in relational tables, and (c) layout transformations on spreadsheet tables. We have implemented this technology as an add-in for the Microsoft Excel Spreadsheet system and have evaluated it successfully over several benchmarks picked from various Excel help forums.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2240260&ftid=1265813&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:17:32>},
+  notes = 	 {Programming by examples. Low priority.},
 }
 @inproceedings{Levoy:1994:SI:192161.192190,
   author = 	 {Levoy, Marc},
@@ -848,6 +879,7 @@
   abstract = 	 {We describe a data visualization system based on spreadsheets. Cells in our spreadsheet contain graphical objects such as images, volumes, or movies. Cells may also contain widgets such as buttons, sliders, or curve editors. Objects are displayed in miniature inside each cell. Formulas for cells are written in a general-purpose programming language (Tcl) augmented with operators for array manipulation, image processing, and rendering.Compared to flow chart visualization systems, spreadsheets are more expressive, morescalable, and easier to program. Compared to conventional numerical spreadsheets, spreadsheets for images pose several unique design problems: larger formulas, longer computation times, and more complicated intercelldependencies. In response to these problems, we have extended the spreadsheet paradigm in three ways: formulas can display their results anywhere in the spreadsheet, cells can be selectively disabled, and multiple cells can be edited at once. We discuss these extensions and their implications, and we also point out some unexpected uses for our spreadsheets: as a visual database browser, as a graphical user interface builder, as a smart clipboard for the desktop, and as a presentation tool.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=192190&ftid=609020&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:17:26>},
+  notes = 	 {Spreadsheet as image manipulation workbench. Low priority. Might be interesting later as case study, seeking to replace Tcl with SDFs.},
 }
 @inproceedings{Abraham:2007:GSD:1248820.1248858,
   author = 	 {Abraham, Robin and Erwig, Martin},
@@ -865,6 +897,7 @@
   publisher = 	 {IEEE Computer Society},
   address = 	 {Washington, DC, USA},
   review = 	 {fbie: accepted <2016-01-15 13:17:08>},
+  notes = 	 {Debugging. Low priority.},
 }
 @inproceedings{Ruthruff:2003:ESV:774833.774851,
   author = 	 {Ruthruff, J. and Creswick, E. and Burnett, M. and
@@ -891,6 +924,7 @@
   abstract = 	 {End-user programming has become the most common form of programming today. However, despite this growth, there has been little investigation into bringing the benefits of software visualization to end-user programmers. Evidence from the spreadsheet paradigm, probably the most widely used end-user environment, reveals that end users' programs often contain faults. We would like to integrate software visualization into these end-user environments to help end users deal with the reliability issues in their programs. Towards this end, we have devised several fault localization visualization techniques for spreadsheets. This paper describes these techniques and reports the results of a formative study---using tests created by end users---to investigate how these fault localization techniques compare. Our results reveal some strengths and weaknesses of each technique, and provide insights into the cost-effectiveness of each technique for the interactive world of end-user spreadsheet development.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=774851&ftid=155212&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:16:53>},
+  notes = 	 {Debugging, visualization. Low prority.},
 }
 @inproceedings{Erwig:2005:AGM:1062455.1062494,
   author = 	 {Erwig, Martin and Abraham, Robin and Cooperstein,
@@ -916,6 +950,7 @@
   abstract = 	 {Existing spreadsheet systems allow users to change cells arbitrarily, which is a major source of spreadsheet errors. We propose a system that prevents errors in spreadsheets by restricting spreadsheet updates to only those that are logically and technically correct. The system is based on the concept of templates that describe the principal structure of the initial spreadsheet and all of its future versions. We have developed a program generator that translates a template into an initial spreadsheet together with customized update operations for changing cells and inserting/deleting rows and columns for this particular template.We have designed a type system for templates that ensures the following form of "spreadsheet maintenance safety": Update operations that are generated from a type-correct template are proved to transform the spreadsheet only according to the template and to never produce any omission, reference, or type errors.Finally, we have developed a prototype as an extension to Excel, which has been shown by a preliminary usability study to be well accepted by end users.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1062494&ftid=315686&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:16:18>},
+  notes = 	 {Model-driven development. Low priority.},
 }
 @inproceedings{Rothermel:2000:WTS:337180.337206,
   author = 	 {Rothermel, Karen J. and Cook, Curtis R. and Burnett,
@@ -941,6 +976,7 @@
   abstract = 	 {Is it possible to achieve some of the benefits of formal testing within the informal programming conventions of the spreadsheet paradigm? We have been working on an approach that attempts to do so via the development of a testing methodology for this paradigm. Our “What You See Is What You Test” (WYSIWYT) methodology supplements the convention by which spreadsheets provide automatic immediate visual feedback about values by providing automatic immediate visual feedback about “testedness”. In previous work we described this methodology; in this paper, we present empirical data about the methodology's effectiveness. Our results show that the use of the methodology was associated with significant improvement in testing effectiveness and efficiency even with no training on the theory of testing or test adequacy that the model implements. These results may be due at least in part to the fact that use of the methodology was associated with a significant reduction in overconfidence.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=337206&ftid=7032&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:16:02>},
+  notes = 	 {Testing, empirically evaluated. Low priority.},
 }
 @inproceedings{Miller:2015:SPB:2814189.2814201,
   author = 	 {Miller, Gary},
@@ -965,6 +1001,7 @@
   abstract = 	 {This paper takes a cognition-centric approach for programming languages. It promotes the spreadsheet paradigm, with two concrete goals. First, it calls for the design and implementation of several language features to enhance the expressiveness of spreadsheet programming. Second, it describes a plan for rigorous empirical studies to retain the learnability of spreadsheet programming.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2814201&ftid=1636943&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:15:37>},
+  notes = 	 {Possibly interesting as overall motivation.},
 }
 @inproceedings{Barowy:2015:FER:2737924.2737952,
   author = 	 {Barowy, Daniel W. and Gulwani, Sumit and Hart, Ted
@@ -989,6 +1026,7 @@
   abstract = 	 {With hundreds of millions of users, spreadsheets are one of the most important end-user applications. Spreadsheets are easy to use and allow users great flexibility in storing data. This flexibility comes at a price: users often treat spreadsheets as a poor man&#039;s database, leading to creative solutions for storing high-dimensional data. The trouble arises when users need to answer queries with their data. Data manipulation tools make strong assumptions about data layouts and cannot read these ad-hoc databases. Converting data into the appropriate layout requires programming skills or a major investment in manual reformatting. The effect is that a vast amount of real-world data is "locked-in" to a proliferation of one-off formats. We introduce FlashRelate, a synthesis engine that lets ordinary users extract structured relational data from spreadsheets without programming. Instead, users extract data by supplying examples of output relational tuples. FlashRelate uses these examples to synthesize a program in Flare. Flare is a novel extraction language that extends regular expressions with geometric constructs. An interactive user interface on top of FlashRelate lets end users extract data by point-and-click. We demonstrate that correct Flare programs can be synthesized in seconds from a small set of examples for 43 real-world scenarios. Finally, our case study demonstrates FlashRelate&#039;s usefulness addressing the widespread problem of data trapped in corporate and government formats.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=2737952&ftid=1588447&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:14:57>},
+  notes = 	 {Spreadsheets as database, programming by example. Low priority read.},
 }
 @article{Barowy:2015:FER:2813885.2737952,
   author = 	 {Barowy, Daniel W. and Gulwani, Sumit and Hart, Ted
@@ -1037,6 +1075,7 @@
   abstract = 	 {One of the difficulties in understanding and debugging spreadsheets is due to the invisibility of the data flow structure which is associated with cell formulas. In this paper, we present a spreadsheet visualization approach that is mainly based on the Markov Clustering (MCL) algorithm in an attempt to help spreadsheet users understand and debug their spreadsheets. The MCL algorithm helps in visualizing large graphs by generating clusters of cells. In our visualization approach, we also use compound fisheye views and treemaps to help in the navigation of the generated clusters. Compound fish eye views help to view members of a particular cluster while showing their linkages with other clusters. Treemaps help to visualize the depth we are at while navigating a cluster tree. Our initial experiments show that graph-based spreadsheet visualization using the MCL algorithm generates clusters which match with the corresponding logical areas of a given spreadsheet. Our experiments also show that analysis of the clusters helps us to identify some errors in the spreadsheets.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1370866&ftid=498663&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:14:29>},
+  notes = 	 {Understanding and debugging. Low priority read.},
 }
 @inproceedings{Chi:1997:SAI:263407.263513,
   author = 	 {Chi, Ed Huai-hsin and Konstan, Joseph and Barry,
@@ -1060,6 +1099,7 @@
   abstract = 	 {An abstract is not available.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=263513&ftid=42002&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:14:09>},
+  notes = 	 {Spreadsheets for visualization. Low priority read.},
 }
 @inproceedings{Tyszkiewicz:2010:SRD:1807167.1807191,
   author = 	 {Tyszkiewicz, Jerzy},
@@ -1082,6 +1122,7 @@
   abstract = 	 {Spreadsheets are among the most commonly used applications for data management and analysis. Perhaps they are even among the most widely used computer applications of all kinds. However, the spreadsheet paradigm of computation still lacks sufficient analysis. In this paper we demonstrate that a spreadsheet can play the role of a relational database engine, without any use of macros or built-in programming languages, merely by utilizing spreadsheet formulas. We achieve that by implementing all operators of relational algebra by means of spreadsheet functions. Given a definition of a database in SQL, it is therefore possible to construct a spreadsheet workbook with empty worksheets for data tables and worksheets filled with formulas for queries. From then on, when the user enters, alters or deletes data in the data worksheets, the formulas in query worksheets automatically compute the actual results of the queries. Thus, the spreadsheet serves as data storage and executes SQL queries, and therefore acts as a relational database engine. The paper is based on Microsoft Excel (TM), but our constructions work in other spreadsheet systems, too. We present a number of performance tests conducted in the beta version of Excel 2010. Their conclusion is that the performance is sufficient for a desktop database with a couple thousand rows.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1807191&ftid=803616&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:13:54>},
+  notes = 	 {Spreadsheets as database. Low priority read.},
 }
 @inproceedings{Abraham:2006:ITS:1134285.1134312,
   author = 	 {Abraham, Robin and Erwig, Martin},
@@ -1104,6 +1145,7 @@
   abstract = 	 {We present a study investigating the performance of a system for automatically inferring spreadsheet templates. These templates allow users to safely edit spreadsheets, that is, certain kinds of errors such as range, reference, and type errors can be provably prevented. Since the inference of templates is inherently ambiguous, such a study is required to demonstrate the effectiveness of any such automatic system. The study results show that the system considered performs significantly better than subjects with intermediate to expert level programming expertise. These results are important because the translation of the huge body of existing spreadsheets into a system based on safety-guaranteeing templates cannot be performed without automatic support. We also carried out post-hoc analyses of the video recordings of the subjects' interactions with the spreadsheets and found that although expert-level subjects needed less time and developed more accurate templates than less experienced subjects, they did not inspect fewer cells in the spreadsheet. \%and found that expert-level subjects spend less time and inspect fewer cells in the spreadsheet and develop more accurate templates than subjects with less experience.},
   fullTextUrl =  {http://dl.acm.org/ft_gateway.cfm?id=1134312&ftid=355341&dwn=1&CFID=745299778&CFTOKEN=60877949},
   review = 	 {fbie: accepted <2016-01-15 13:13:30>},
+  notes = 	 {Model-driven development, inferring models. Low priority read.},
 }
 @inproceedings{Hermans:2011:SPS:1985793.1985855,
   author = 	 {Hermans, Felienne and Pinzger, Martin and van
