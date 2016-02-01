@@ -596,18 +596,57 @@ the implementation of high-level operations over arrays.
 This section summarizes research that does not fit into the four major
 categories.
 
-\paragraph{DSLs, coordination and explicit scheduling}
+\paragraph{Domain-specific languages}
 
-\cite{4228136, Ureche:2012:SCS:2103746.2103762}
+Some of the research on array programming focused on domain-specific
+languages (DSLs). \citet{4228136} implemented explicitly coordination
+of parallel computations in \sac{} via an embedded DSL in a
+declarative fashion. This, however, removes some of the declarative
+nature of program code. Another DSL on top of \sac{} is Staged\sac{}
+which adds compile-time shape inference of nested arrays to
+\sac{}~\cite{Ureche:2012:SCS:2103746.2103762}. The compiler adds all
+statically unsatisfiable requirements as run-time checks to the
+program.
 
-\paragraph{RETRAN}
+\paragraph{Retran}
 
-\cite{367042}
+Retran is a declarative, Fortran-like, purely functional
+language~\cite{367042}. Similar to the APL extension by
+\citet{Lowney:1981:CAI:567532.567533}, Retran automatically applies
+lower-rank functions to all elements of a higher-rank
+array. Therefore, there are no higher-order functions in
+Retran. Retran uses anti-currying to lift functions to the required
+rank.
 
 \paragraph{Remap and data layout}
 
-\cite{Walinsky:1990:FPL:91556.91610, Deitz:2003:DIP:781498.781526,
-  Sinkarovs:2013:SDL:2502323.2502332}.
+Declarative functional programming languages tend to free the
+programmer from thinking explicitly about data layout. For performance
+reasons, it can be necessary to expose data layout to the
+programmer. Also, high-level languages often provide functions to
+transpose two-dimensional arrays or to more generally change the
+layout of an array. The most general operator of this kind is
+\texttt{remap}, sometimes also referred to as \texttt{scatter} on the
+assignment's right-hand side and \texttt{gather} on the assignment's
+left-hand side.
+
+\citet{Walinsky:1990:FPL:91556.91610} implemented implicit remapping
+as part of the compilation for functional programming languages. They
+provide inference rules for remapping. By using such a remapping, they
+effectively avoid intermediate representations of arrays. Implicit
+remapping also aids improving vectorization of higher-order functions,
+as shown by \citet{Sinkarovs:2013:SDL:2502323.2502332}.
+
+The ZPL programming language is based around regular-shaped arrays and
+a concept called regions which roughly equal named
+index-sets~\cite{Chamberlain1999Regions}. Furthermore, it makes all
+communication visible to the programmer through syntax and types,
+featuring a ``what you see is what you get'' performance
+model~\cite{Chamberlain1998ZPLs}. Data remapping is a crucial
+operation in ZPL.\@ \citet{Deitz:2003:DIP:781498.781526} show ZPL's
+\texttt{scatter}-\texttt{gather} operator semantics. The operator can
+modify data layout of arbitrarily ranked arrays and exhibits high
+performance.
 
 \section{Spreadsheet End-User Development}
 \label{sec:spreadsheet-end-user-dev}
