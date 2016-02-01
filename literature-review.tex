@@ -314,7 +314,7 @@ programming are:
 \item NESL
 \item Nested Parallelism
 \item Remap
-\item SAC
+\item \sac{}
 \item Scheduling
 \item Shape inference
 \end{itemize}
@@ -339,7 +339,7 @@ oldest are Fortran\todo{Source?}, which is an imperative
 high-performance language, and APL~\cite{Iverson1962Programming},
 which is a high-level declarative and functional
 language. Furthermore, much work has been done on Single-assignment-C
-(\sac)\todo{Source?}, which is a C-like functional language, and Data
+(\sac{})\todo{Source?}, which is a C-like functional language, and Data
 Parallel Haskell (DPH) and REPA\todo{Source?}, which are library and
 compiler extensions for Haskell. Another very important language is
 NESL~\cite{Blelloch1993NESL}, which introduced the idea of statically
@@ -439,7 +439,7 @@ is visible to the compiler, so static flattening might not be feasible
 to balance the workload.
 
 Dynamic scheduling leaves the distribution of work to run-time of the
-program. \sac, for instance, uses work-stealing
+program. \sac{}, for instance, uses work-stealing
 queues~\cite{Chase2005Dynamic, Grelck:2007:SOS:1248648.1248654} to
 dynamically schedule work. Such scheduling schemes can produce some
 overhead at run-time that would otherwise be alleviated by
