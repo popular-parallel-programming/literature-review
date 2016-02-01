@@ -548,9 +548,9 @@ data structures seems to be a widely applicable technique in
 functional
 programming~\cite{Hall:1994:UHT:182409.156781}. REPA~\cite{Keller:2010:RSP:1863543.1863582}
 uses types in order to represent the (irregular) shapes of arrays and
-to specialize higher-order functions. REPA arrays are unboxed and
-lazy. Forcing a single element of an array forces the evaluation of
-the entire array. Array evaluation can be performed in parallel. Lazy
+to specialize higher-order functions. REPA arrays consist of unboxed
+values and are lazy. Forcing a single element of an array forces the
+evaluation of the entire array. Arrays can evaluate in parallel. Lazy
 arrays can avoid creating intermediate arrays and therefore do not
 require fusion.
 
