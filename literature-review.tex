@@ -33,13 +33,19 @@
 
 Spreadsheets are widely used in many different disciplines within
 industry and science by domain experts who often are
-non-programmers\todo{cite Sestoft 2014}. Research on spreadsheet
+non-programmers~\cite{Sestoft2014Spreadsheet}. Research on spreadsheet
 technology has recently gained increased interest, which is probably
 due to a renewed popularity of functional programming
 principles. Spreadsheets do not possess mutable state, which makes
 reasoning about their correctness rather easy. Moreover, this
 particular trait makes it possible to investigate transparent
 parallelization of spreadsheet calculations.
+
+As an example of recent development in parallel spreadsheet
+technology, AMD has implemented OpenCL kernel generation in
+LibreOffice Calc. Their modification generates kernels from operations
+on cell-area, which highly parallel GPGPU hardware then
+executes~\cite{Trudeau2015Collaboration}.
 
 In this systematic mapping study, we want to map out the publications
 on spreadsheet end-user programming and declarative array programming
@@ -49,7 +55,8 @@ re-write expressions to perform implicit parallelization of
 computations. The user does not need to be aware of the parallelism
 inherent to a problem and as long as they choose to use the highest
 abstraction to model their computation, a sophisticated compiler can
-infer such parallelism automatically.
+infer such parallelism automatically. We focus on approaches that do
+not require special hardware, i.e.\ shared-memory multiprocessors.
 
 With this study, we want to find\dots.\todo{Continue.}
 
