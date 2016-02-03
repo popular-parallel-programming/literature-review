@@ -282,3 +282,71 @@ partially known shapes. Unsatisfiable requirements are implemented as
 run-time checks. Specialization of loops for shapes occurs
 just-in-time.
 * Spreadsheet End-User Development
+** Abraham & Erwig, 2006: Type Inference for Spreadsheets
+
+- type inference
+- errors
+
+A type system for spreadsheets that identifies type mismatches between
+formulas. Formulas that expect a different type from a referred
+formula are marked as type mismatched, which also reflects in their
+type. Types are tuples of a data type and a possibly empty set of type
+mismatches. The type rules can compress types of cell areas by
+compressing column and row types and are called template types.
+
+** Miller, 2015: The Spreadsheet Paradigm: A Basis for Powerful and Accessible Programming
+
+- language
+- teaching
+- expressiveness
+
+Argues that spreadsheets are easy to comprehend but limited in their
+power. To change this, Miller proposes a research agenda that focuses
+on enriching a spreadsheet language and to perform user-studied to
+assess the design. He presents a number of features add, for instance
+easier grouping of cells and avoiding repetitive formulas. Boils down
+to that the spreadsheet paradigm should be enhanced to encourage
+"Computational Thinking".
+
+** Sestoft, 2008: Implementing Function Spreadsheets
+
+- language
+- functions
+- abstraction
+
+Describes an early version of Corecalc and its extension Funcalc,
+argues for recursive and higher-order functions and presents run-time
+byte-code generation from sheet-defined functions.
+** Stadelmann, 1993: A Spreadsheet Based on Constraints
+
+- language
+- constraints
+- arrays
+
+This paper presents a constraint-programming approach to
+spreadsheets. Spreadsheets are split up, where the cell grid is used
+to display values while an external textual editor holds a list of
+constraints in the form \texttt{F(ca$_i$) ~ G(ca$_j$)}. Remarkable is
+the approach to handle bulk data, i.e vectors or matrices, and to
+define constraints on them, such that for instance vector addition can
+be expressed as a constraint in a single line. The paper gives various
+examples on constraint programs in spreadsheets
+
+** Peyton Jones et al., 2003: A User-Centered Approach to Functions in Excel
+
+- language
+- functions
+- abstraction
+
+This paper describes basic paradigms for implementing a spreadsheet
+language. The design is guided by "Cognitive Dimensions" that help to
+identify which abstractions medium-level spreadsheet users are used
+to. Functions are here modeled as separate spreadsheets into which
+values get injected when the functions are called. The design forbids
+recursion, as the authors deem this a mental overhead for spreadsheet
+users while also pointing out how using one spreadsheet per call to a
+user-defined function would make the system too complex. (This is in
+stark contrast to Funcalc.) Furthermore, the paper also outlines some
+principles for array programming in spreadsheets, using a notion of
+matrices and vectors. For instance, they propose to be able reference
+matrices in single cells to allow better abstraction.
