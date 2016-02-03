@@ -350,3 +350,37 @@ stark contrast to Funcalc.) Furthermore, the paper also outlines some
 principles for array programming in spreadsheets, using a notion of
 matrices and vectors. For instance, they propose to be able reference
 matrices in single cells to allow better abstraction.
+
+** Singh & Gulwani, 2016: Transforming Spreadsheet Data Types Using Examples
+
+- abstraction
+- language
+
+Spreadsheet users often need to transform data in form of spreadsheets
+from one or more arbitrary formats to another. In typical programming
+languages, there are DSLs embedded to perform string transformations,
+but they can only handle simple cases and are not very
+general. Instead, the authors propose a programming by example
+approach. They extended Excel with a DSL that allows users to provide
+a few transformations, such that the transformation can learn these
+rules and then automatically transform the remaining items. They
+combine a probabilistic approach of parsing with joint learning of
+transformation rules. This highly declarative data transformation
+approach seems very usable and fast.
+** Isakowitz et al., 1995: Towards a Logical/Physical Theory of Spreadsheet Modeling
+
+- abstraction
+
+The paper observes that many errors in spreadsheets are due to wrong
+modeling logic and not only mistyped cell references. They claim that
+this is a manifestation of not separating data and logic, i.e. a
+missing abstraction pattern. Moreover, they want to make spreadsheet
+logic available in an organization via a centralized mechanism, just
+like a package manager. For this, they propose to synthesize logic and
+data from authorized spreadsheets for modular re-use.
+
+Interesting claims are that many spreadsheet errors resemble
+programming errors in languages that lack sufficient abstraction. They
+focus much on model management literature while stressing that users
+should be able to continue using the spreadsheet software that they
+are used to.
