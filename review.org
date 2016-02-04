@@ -317,6 +317,7 @@ to that the spreadsheet paradigm should be enhanced to encourage
 Describes an early version of Corecalc and its extension Funcalc,
 argues for recursive and higher-order functions and presents run-time
 byte-code generation from sheet-defined functions.
+
 ** Stadelmann, 1993: A Spreadsheet Based on Constraints
 
 - language
@@ -384,3 +385,57 @@ programming errors in languages that lack sufficient abstraction. They
 focus much on model management literature while stressing that users
 should be able to continue using the spreadsheet software that they
 are used to.
+
+** Mittermeir & Clemont, 2002: Finding High-Level Structures in Spreadsheet Programs
+
+- abstraction
+- errors
+
+Due to the visual layout, misconceptions of the model in a spreadsheet
+are common. A lack of documentation and much ad-hoc design reinforce
+this. Therefore, the authors developed a tool to visualize logical
+equivalence classes and semantic classes of cells. This helps users to
+separate logic from data in spreadsheets and also visually guides
+spreadsheet understanding. The equivalence and semantic classes seem
+of general interest to spreadsheet programming.
+
+** Mendes, 2011: ClassSheet-Driven Spreadsheet Environments
+
+- abstraction
+
+This paper describes ClassSheet, which basically brings
+object-orientation to spreadsheets. The logic of a spreadsheet is
+defined in a separate model-spreadsheet that contains no data. Regular
+spreadsheets are instances of such model-spreadsheets and contain the
+data. Thereby, the system achieves maintenance of spreadsheet logic
+independently from the actual computations.
+
+** Benfield, 2009 (Talk): FMD: Functional Development in Excel
+
+- language
+- abstraction
+
+FMD a DSL in Excel that exposes objects and library functions to a
+spreadsheet model. FMD generates boiler-plate code to generate
+functions inside Excel, such that logic does not have to be copied. A
+user can write some logic that is parameterized on a variable name
+
+:=variable("name"):
+
+The last cell of the logic is the generated function that can be
+mapped to a cell area via a second-order function
+
+:=map(...):
+
+The cell in the area can be specified to map to a particular
+variable. This basically allows array programming in Excel in a
+(nearly) purely functional manner.
+
+*** Side note
+
+After the talk, Simon Peyton-Jones compares Excel to a super-tanker: a
+big thing that moves slowly (the Excel software) with a tiny crew that
+needs to take care of everything (the development team), with a
+thousand whispers in their ear. He says that because of pressure from
+more visible features by the competition, functional programming in
+Excel is not something that is on their priority list.
