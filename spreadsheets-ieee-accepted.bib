@@ -1,153 +1,87 @@
-@INPROCEEDINGS{1553556,
-  author = 	 {Erwig, M. and Abraham, R. and Cooperstein, I. and
-                  Kollmansberger, S.},
-  booktitle = 	 {Software Engineering, 2005. ICSE
-                  2005. Proceedings. 27th International Conference on},
-  title = 	 {Automatic generation and maintenance of correct
-                  spreadsheets},
-  year = 	 {2005},
-  pages = 	 {136-145},
-  abstract = 	 {Existing spreadsheet systems allow users to change
-                  cells arbitrarily, which is a major source of
-                  spreadsheet errors. We propose a system that
-                  prevents errors in spreadsheets by restricting
-                  spreadsheet updates to only those that are logically
-                  and technically correct. The system is based on the
-                  concept of templates that describe the principal
-                  structure of the initial spreadsheet and all of its
-                  future versions. We have developed a program
-                  generator that translates a template into an initial
-                  spreadsheet together with customized update
-                  operations for changing cells and inserting/deleting
-                  rows and columns for this particular template. We
-                  have designed a type system for templates that
-                  ensures the following form of "spreadsheet
-                  maintenance safety": Update operations that are
-                  generated from a type-correct template are proved to
-                  transform the spreadsheet only according to the
-                  template and to never produce any omission,
-                  reference, or type errors. Finally, we have
-                  developed a prototype as an extension to Excel,
-                  which has been shown by a preliminary usability
-                  study to be well accepted by end users.},
-  keywords = 	 {automatic programming;software
-                  maintenance;spreadsheet programs;Excel;automatic
-                  spreadsheet generation;automatic spreadsheet
-                  maintenance;end-user software engineering;program
-                  generation;spreadsheet maintenance safety;type
-                  system;Automatic programming;Computer errors;Error
-                  correction;Permission;Prototypes;Safety;Software
-                  engineering;Software prototyping;Testing;Usability},
-  doi = 	 {10.1109/ICSE.2005.1553556},
-  month = 	 {May},
-  review = 	 {fbie: accepted <2016-01-15 15:14:57>},
+@INPROCEEDINGS{1173080,
+  author = 	 {Mittermeir, R. and Clermont, M.},
+  booktitle = 	 {Reverse Engineering, 2002. Proceedings. Ninth
+                  Working Conference on},
+  title = 	 {Finding high-level structures in spreadsheet
+                  programs},
+  year = 	 {2002},
+  pages = 	 {221-232},
+  abstract = 	 {Spreadsheets are a common tool in end-user
+                  programming, but even while important decisions are
+                  based on spreadsheet computations, spreadsheets are
+                  poorly documented software and the differences
+                  between simple one-shot computations and large,
+                  long-living sheets are not well understood. Like
+                  other software, production spreadsheets are subject
+                  to repeated maintenance cycles. Consequently, as
+                  with conventional software, short maintenance cycles
+                  and poor documentation tend to decrease their
+                  quality. We introduce an approach to help
+                  maintainers understand the structure of large
+                  spreadsheets as well as to zoom into certain parts
+                  of the spreadsheet. To cope with large sheets, our
+                  approach features two levels of abstraction: logical
+                  areas and semantic classes. These abstractions are
+                  based on different degrees of relatedness of cells
+                  according to the formulas they contain.},
+  keywords = 	 {software maintenance;spreadsheet
+                  programs;abstraction;cell relatedness;end-user
+                  programming;formulas;high-level structure
+                  finding;logical areas;quality;repeated maintenance
+                  cycles;semantic classes;spreadsheet
+                  programs;Application software;Computer
+                  industry;Computer
+                  languages;Documentation;Microcomputers;Production;Prototypes;Software
+                  engineering;Software maintenance;Spreadsheet
+                  programs},
+  doi = 	 {10.1109/WCRE.2002.1173080},
+  ISSN = 	 {1095-1350},
+  review = 	 {fbie: accepted <2016-02-04 10:10:11>},
+  notes = 	 {Abstraction and separation of logic and data, highly relevant.},
 }
-@INPROCEEDINGS{926738,
-  author = 	 {Panko, R.R.},
-  booktitle = 	 {System Sciences, 2000. Proceedings of the 33rd
-                  Annual Hawaii International Conference on},
-  title = 	 {Two corpuses of spreadsheet errors},
-  year = 	 {2000},
-  pages = 	 {8 pp. vol.1-},
-  abstract = 	 {The widespread presence of errors in spreadsheets is
-                  now well-established. Quite a few methodological and
-                  software approaches have been suggested as ways to
-                  reduce spreadsheet errors. However, these approaches
-                  are always tailored to particular types of
-                  errors. Are such errors, in fact, widespread? A tool
-                  that focuses on rare errors is not very
-                  appealing. In other fields of error analysis,
-                  especially linguistics, it has proven useful to
-                  collect corpora (systematic samples) of errors. This
-                  paper presents two corpora of errors seen in
-                  spreadsheet experiments. Hopefully, these corpora
-                  will help us assess the claims of spreadsheet
-                  reduction approaches and should guide theory
-                  creation and testing.},
-  keywords = 	 {coding errors;error analysis;program
-                  diagnostics;spreadsheet programs;error
-                  analysis;spreadsheet error corpora;spreadsheet
-                  reduction;systematic samples;theory creation;theory
-                  testing;Computer errors;Electrical capacitance
-                  tomography;Error
-                  analysis;Ethics;Feedback;Humans;Investments;Tail;Tellurium;Writing},
-  doi = 	 {10.1109/HICSS.2000.926738},
-  month = 	 {Jan},
-  review = 	 {fbie: accepted <2016-01-15 15:14:32>},
-}
-@INPROCEEDINGS{6080821,
-  author = 	 {Correia, J.P. and Ferreira, M.A.},
-  booktitle = 	 {Software Maintenance (ICSM), 2011 27th IEEE
-                  International Conference on},
-  title = 	 {Measuring maintainability of spreadsheets in the
-                  wild},
+@INPROCEEDINGS{6070409,
+  author = 	 {Mendes, J.},
+  booktitle = 	 {Visual Languages and Human-Centric Computing
+                  (VL/HCC), 2011 IEEE Symposium on},
+  title = 	 {ClassSheet-driven spreadsheet environments},
   year = 	 {2011},
-  pages = 	 {516-519},
-  abstract = 	 {Several studies have shown how spreadsheets are
-                  pervasive in many organizations as a form of
-                  end-user programming. Despite their importance and
-                  long lifespan, they are seldom developed with
-                  maintenance concerns in mind, and organizations have
-                  no efficient way of estimating the risk they
-                  present. In this paper we take a first step towards
-                  automated assessment of spreadsheet
-                  maintainability. We use the Goal Question Metric
-                  approach to select metrics relevant for
-                  maintainability and apply the selected metrics to a
-                  spreadsheet corpus in order to study their behavior
-                  "in the wild". We observe that the majority of the
-                  metrics behave in the same way as similar ones for
-                  traditional software systems, which means that
-                  existing methodologies to assess maintainability can
-                  be applied to spreadsheets as well. This opens the
-                  possibility of creating instruments for
-                  organizations that rely on spreadsheets to start
-                  actively managing their maintainability.},
-  keywords = 	 {personal computing;software maintenance;spreadsheet
-                  programs;end-user programming;goal question
-                  metric;organization;spreadsheet corpus;spreadsheet
-                  maintainability;ISO
-                  standards;Measurement;Organizations;Reliability;Software
-                  systems;Spreadsheet programs},
-  doi = 	 {10.1109/ICSM.2011.6080821},
-  ISSN = 	 {1063-6773},
+  pages = 	 {235-236},
+  abstract = 	 {The paper mentions that a spreadsheet business model
+                  is defined from which a customized spreadsheet
+                  application is generated guarantying the consistency
+                  of the spreadsheet with the underlying model. This
+                  approach closes the gap between creating and using a
+                  domain specific language for spreadsheet models and
+                  a totally different framework for actually editing
+                  spreadsheet data. Instead, it unifies these
+                  operations within spreadsheets: in one sheet it
+                  defines the underlying model while another sheet
+                  holds the actual data, such that the model and the
+                  data are kept synchronized. An important feature is
+                  that model evolution is available as a set of
+                  pre-defined operations. Also, any evolution in a
+                  spreadsheet model is automatically propagated to its
+                  spreadsheet instance (that contains the underlying
+                  data). ClassSheets are a high-level, object-oriented
+                  formalism to specify the business logic of
+                  spreadsheets. They allow users to express business
+                  object structures within a spreadsheet using
+                  concepts from the Unified Modeling Language (UML).},
+  keywords = 	 {Unified Modeling Language;business data
+                  processing;object-oriented methods;spreadsheet
+                  programs;ClassSheet-driven spreadsheet
+                  environment;Unified Modeling Language;customized
+                  spreadsheet application;domain specific
+                  language;object-oriented formalism;spreadsheet
+                  business logic;spreadsheet business model;Adaptation
+                  models;Data models;Object oriented
+                  modeling;Synchronization;USA Councils;Unified
+                  modeling language;Visualization},
+  doi = 	 {10.1109/VLHCC.2011.6070409},
+  ISSN = 	 {1943-6092},
   month = 	 {Sept},
-  review = 	 {fbie: accepted <2016-01-15 15:14:03>},
-}
-@INPROCEEDINGS{6226577,
-  author = 	 {Cunha, J. and Fernandes, J.P. and Mendes, J. and
-                  Saraiva, J.},
-  booktitle = 	 {User Evaluation for Software Engineering Researchers
-                  (USER), 2012},
-  title = 	 {Towards an evaluation of bidirectional model-driven
-                  spreadsheets},
-  year = 	 {2012},
-  pages = 	 {25-28},
-  abstract = 	 {Spreadsheets are widely recognized as popular
-                  programming systems with a huge number of
-                  spreadsheets being created every day. Also,
-                  spreadsheets are often used in the decision
-                  processes of profit-oriented companies. While this
-                  illustrates their practical importance, studies have
-                  shown that up to 90% of real-world spreadsheets
-                  contain errors.},
-  keywords = 	 {decision making;personal
-                  computing;profitability;software
-                  engineering;spreadsheet
-                  programs;artifact;bidirectional model driven
-                  spreadsheet;decision process;productivity
-                  improvement;profit oriented company;programming
-                  system;software engineering;spreadsheet
-                  development;spreadsheet end user;Concrete;Data
-                  models;Object oriented
-                  modeling;Productivity;Software
-                  engineering;Tutorials;Visualization;Bidirectional
-                  Transformations;Embedded DSLs;Model
-                  Inference;Model-Driven Engineering;Software
-                  Evolution;Spreadsheets},
-  doi = 	 {10.1109/USER.2012.6226577},
-  month = 	 {June},
-  review = 	 {fbie: accepted <2016-01-15 15:13:59>},
+  review = 	 {fbie: accepted <2016-02-04 10:03:58>},
+  notes = 	 {Abstraction of spreadsheets, sounds like a concept similar to function sheets. Might be relevant.},
 }
 @INBOOK{6940568,
   author = 	 {Sestoft, P.},
@@ -193,311 +127,6 @@
   publisher = 	 {MIT Press},
   isbn = 	 {9780262326537},
   url = 	 {http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6940568},
-  review = 	 {fbie: accepted <2016-01-15 15:13:19>},
-  notes = 	 {This should be replaced with the actual reference to the book.},
-}
-@INPROCEEDINGS{1287261,
-  author = 	 {Clermont, M.},
-  booktitle = 	 {Reverse Engineering, 2003. WCRE
-                  2003. Proceedings. 10th Working Conference on},
-  title = 	 {Analyzing large spreadsheet programs},
-  year = 	 {2003},
-  pages = 	 {306-315},
-  abstract = 	 {Not Available},
-  keywords = 	 {Computational modeling;Computer errors;Computer
-                  languages;Flow graphs;Microcomputers;Organizational
-                  aspects;Programming profession;Software
-                  maintenance;Spreadsheet programs;Visualization},
-  doi = 	 {10.1109/WCRE.2003.1287261},
-  ISSN = 	 {1095-1350},
-  month = 	 {Nov},
-  review = 	 {fbie: accepted <2016-01-15 15:11:58>},
-}
-@INPROCEEDINGS{6070409,
-  author = 	 {Mendes, J.},
-  booktitle = 	 {Visual Languages and Human-Centric Computing
-                  (VL/HCC), 2011 IEEE Symposium on},
-  title = 	 {ClassSheet-driven spreadsheet environments},
-  year = 	 {2011},
-  pages = 	 {235-236},
-  abstract = 	 {The paper mentions that a spreadsheet business model
-                  is defined from which a customized spreadsheet
-                  application is generated guarantying the consistency
-                  of the spreadsheet with the underlying model. This
-                  approach closes the gap between creating and using a
-                  domain specific language for spreadsheet models and
-                  a totally different framework for actually editing
-                  spreadsheet data. Instead, it unifies these
-                  operations within spreadsheets: in one sheet it
-                  defines the underlying model while another sheet
-                  holds the actual data, such that the model and the
-                  data are kept synchronized. An important feature is
-                  that model evolution is available as a set of
-                  pre-defined operations. Also, any evolution in a
-                  spreadsheet model is automatically propagated to its
-                  spreadsheet instance (that contains the underlying
-                  data). ClassSheets are a high-level, object-oriented
-                  formalism to specify the business logic of
-                  spreadsheets. They allow users to express business
-                  object structures within a spreadsheet using
-                  concepts from the Unified Modeling Language (UML).},
-  keywords = 	 {Unified Modeling Language;business data
-                  processing;object-oriented methods;spreadsheet
-                  programs;ClassSheet-driven spreadsheet
-                  environment;Unified Modeling Language;customized
-                  spreadsheet application;domain specific
-                  language;object-oriented formalism;spreadsheet
-                  business logic;spreadsheet business model;Adaptation
-                  models;Data models;Object oriented
-                  modeling;Synchronization;USA Councils;Unified
-                  modeling language;Visualization},
-  doi = 	 {10.1109/VLHCC.2011.6070409},
-  ISSN = 	 {1943-6092},
-  month = 	 {Sept},
-  review = 	 {fbie: accepted <2016-01-15 15:11:56>},
-}
-@INPROCEEDINGS{7180124,
-  author = 	 {Barik, T. and Lubick, K. and Smith, J. and Slankas,
-                  J. and Murphy-Hill, E.},
-  booktitle = 	 {Mining Software Repositories (MSR), 2015 IEEE/ACM
-                  12th Working Conference on},
-  title = 	 {Fuse: A Reproducible, Extendable, Internet-Scale
-                  Corpus of Spreadsheets},
-  year = 	 {2015},
-  pages = 	 {486-489},
-  abstract = 	 {Spreadsheets are perhaps the most ubiquitous form of
-                  end-user programming software. This paper describes
-                  a corpus, called Fuse, containing 2,127,284 URLs
-                  that return spreadsheets (and their HTTP server
-                  responses), and 249,376 unique spreadsheets,
-                  contained within a public web archive of over 26.83
-                  billion pages. Obtained using nearly 60,000 hours of
-                  computation, the resulting corpus exhibits several
-                  useful properties over prior spreadsheet corpora,
-                  including reproducibility and extendability. Our
-                  corpus is unencumbered by any license agreements,
-                  available to all, and intended for wide usage by
-                  end-user software engineering researchers. In this
-                  paper, we detail the data and the spreadsheet
-                  extraction process, describe the data schema, and
-                  discuss the trade-offs of Fuse with other corpora.},
-  keywords = 	 {Internet;software engineering;spreadsheet
-                  programs;Fuse;Internet-scale corpus;data
-                  schema;end-user programming software;end-user
-                  software engineering researchers;extendable-scale
-                  corpus;public Web archive;reproducible-scale
-                  corpus;spreadsheet corpora;spreadsheet extraction
-                  process;Data
-                  mining;Fuses;Metadata;Pipelines;Software;Software
-                  engineering;Uniform resource
-                  locators;MapReduce;corpus;dataset;end-user software
-                  engineering;spreadsheets},
-  doi = 	 {10.1109/MSR.2015.70},
-  month = 	 {May},
-  review = 	 {fbie: accepted <2016-01-15 15:11:03>},
-}
-@INPROCEEDINGS{1372333,
-  author = 	 {Abraham, R.},
-  booktitle = 	 {Visual Languages and Human Centric Computing, 2004
-                  IEEE Symposium on},
-  title = 	 {Identifying Structure in Spreadsheets},
-  year = 	 {2004},
-  pages = 	 {267-268},
-  abstract = 	 {Spreadsheets are among the most commonly used
-                  programming systems in the world. Existing
-                  spreadsheets are rife with errors, some of which
-                  have serious impacts. We are working on algorithms
-                  and strategies that automatically infer the
-                  structure of spreadsheets. This information can be
-                  used to develop systems that enable end users to
-                  develop safer spreadsheets},
-  keywords = 	 {programming;reliability;spreadsheet
-                  programs;programming systems;spreadsheet
-                  development;structure identification;Computer
-                  errors;Computer science education;Costs;Educational
-                  programs;Error analysis;Inspection;Mathematics;Power
-                  system modeling;Programming profession;Vehicles},
-  doi = 	 {10.1109/VLHCC.2004.30},
-  month = 	 {Sept},
-  review = 	 {fbie: accepted <2016-01-15 15:10:44>},
-}
-@INPROCEEDINGS{6344472,
-  author = 	 {Dinmore, M.},
-  booktitle = 	 {Visual Languages and Human-Centric Computing
-                  (VL/HCC), 2012 IEEE Symposium on},
-  title = 	 {Design and evaluation of a literate spreadsheet},
-  year = 	 {2012},
-  pages = 	 {15-18},
-  abstract = 	 {Support for capturing and sharing the
-                  problem-solving knowledge associated with
-                  end-user-developed software is often lacking. The
-                  principles behind literate programming have been
-                  proposed as an approach to addressing this. To study
-                  the potential efficacy of these principles in the
-                  general end-user programming case, they were applied
-                  to spreadsheets, the most common end-user
-                  programming environment, to produce a literate
-                  spreadsheet design. The resulting artifact was then
-                  evaluated through a user study with a focus on the
-                  literate design's effect on user comprehension and
-                  modification performance in each of the data,
-                  formula and dependency layers of the spreadsheet
-                  model. Significant performance improvements were
-                  observed in the formula and dependency layers over
-                  the traditional spreadsheet design, suggesting that
-                  the literate form can help improve end-user
-                  problem-solving knowledge reuse.},
-  keywords = 	 {personal computing;problem solving;programming
-                  environments;software reusability;spreadsheet
-                  programs;end-user problem-solving knowledge
-                  reuse;end-user programming
-                  environment;end-user-developed software;literate
-                  programming;literate spreadsheet design;modification
-                  performance;spreadsheet model;user
-                  comprehension;Documentation;Humans;Information
-                  systems;Problem-solving;Programming
-                  profession;Software;Spreadsheet programs;empirical
-                  studies;end-user programming;literate programming},
-  doi = 	 {10.1109/VLHCC.2012.6344472},
-  ISSN = 	 {1943-6092},
-  month = 	 {Sept},
-  review = 	 {fbie: accepted <2016-01-15 15:08:59>},
-}
-@INPROCEEDINGS{495417,
-  author = 	 {Galletta, D.F. and Hartzel, K.S. and Johnson, S. and
-                  Joseph, J. and Rustagi, S.},
-  booktitle = 	 {System Sciences, 1996., Proceedings of the
-                  Twenty-Ninth Hawaii International Conference on ,},
-  title = 	 {An experimental study of spreadsheet presentation
-                  and error detection},
-  year = 	 {1996},
-  volume = 	 {2},
-  pages = 	 {336-345 vol.2},
-  abstract = 	 {Several well-founded concerns exist about the
-                  integrity and validity of electronic
-                  spreadsheets. One hundred thirteen MBA students
-                  sought eight errors planted in a single-page
-                  spreadsheet to discover if differences in the
-                  presentation format would facilitate error-finding
-                  performance. Five presentation formats were
-                  used. Spreadsheets were presented on the screen,
-                  both with and without formulas. Spreadsheets were
-                  also presented on paper with a list of formulas
-                  attached or without formulas. A new integrated
-                  formula paper treatment was introduced with formulas
-                  presented in each cell directly under each
-                  calculated value. Subjects found, on average, only
-                  about 50% of the errors across all presentation
-                  formats. The on-screen treatments were clearly
-                  inferior to the paper treatments, whether or not
-                  formulas were presented. Practitioners should be
-                  aware of the difficulties in finding even simple
-                  errors, especially on-screen, and should develop
-                  training programs to facilitate spreadsheet
-                  auditors' performance},
-  keywords = 	 {accounts data processing;auditing;data
-                  integrity;errors;financial data
-                  processing;spreadsheet programs;system
-                  monitoring;training;MBA students;calculated
-                  value;electronic spreadsheets;error-finding
-                  performance;formulas;integrated formula paper
-                  treatment;on-screen treatment;paper
-                  treatment;presentation format;single-page
-                  spreadsheet;spreadsheet auditor
-                  performance;spreadsheet error detection;spreadsheet
-                  integrity;spreadsheet presentation;spreadsheet
-                  validity;training programs;Computer errors;Computer
-                  languages;Decision making;Environmental
-                  economics;Face detection;Laboratories},
-  doi = 	 {10.1109/HICSS.1996.495417},
-  month = 	 {Jan},
-  review = 	 {fbie: accepted <2016-01-15 15:08:47>},
-}
-@INPROCEEDINGS{661583,
-  author = 	 {Teo, T.S.H. and Tan, M.},
-  booktitle = 	 {System Sciences, 1997, Proceedings of the Thirtieth
-                  Hawaii International Conference on},
-  title = 	 {Quantitative and qualitative errors in spreadsheet
-                  development},
-  year = 	 {1997},
-  volume = 	 {3},
-  pages = 	 {149-155 vol.3},
-  abstract = 	 {Past research has shown that errors are relatively
-                  common in all types of spreadsheets. As spreadsheets
-                  are used widely by executives in analyzing
-                  financial, budgeting and forecasting problems to
-                  support their decision making, it is very important
-                  that spreadsheets are accurate. Errors undetected in
-                  spreadsheets may have undesirable consequences, as
-                  they may adversely impact the firm's bottom line as
-                  well as the firm's competitiveness. In this paper,
-                  we investigate the types of errors that occur for a
-                  simple domain-free spreadsheet model. We also show
-                  that spreadsheet errors can be difficult to detect
-                  during “what-if” analysis (i.e. when design
-                  parameters are changed) when the spreadsheets are
-                  not properly designed. The results show that most
-                  students do not take due care in designing their
-                  spreadsheets. The study appears to suggest that in
-                  teaching spreadsheets, emphasis must be placed on
-                  creating a comprehensible design that enables easy
-                  detection of errors and easy maintenance},
-  keywords = 	 {computer literacy;error detection;program
-                  debugging;software maintenance;spreadsheet
-                  programs;teaching;accuracy;budgeting
-                  problems;competitiveness;comprehensible
-                  design;decision making;design parameters;domain-free
-                  spreadsheet model;error detection;financial
-                  problems;forecasting problems;qualitative
-                  errors;quantitative errors;spreadsheet
-                  development;spreadsheet
-                  maintenance;students;teaching;what-if
-                  analysis;Analytical models;Application
-                  software;Computer applications;Computer
-                  errors;Debugging;Decision making;Education;Error
-                  analysis;Testing},
-  doi = 	 {10.1109/HICSS.1997.661583},
-  ISSN = 	 {1060-3425},
-  month = 	 {Jan},
-  review = 	 {fbie: accepted <2016-01-15 15:08:20>},
-}
-@INPROCEEDINGS{1173080,
-  author = 	 {Mittermeir, R. and Clermont, M.},
-  booktitle = 	 {Reverse Engineering, 2002. Proceedings. Ninth
-                  Working Conference on},
-  title = 	 {Finding high-level structures in spreadsheet
-                  programs},
-  year = 	 {2002},
-  pages = 	 {221-232},
-  abstract = 	 {Spreadsheets are a common tool in end-user
-                  programming, but even while important decisions are
-                  based on spreadsheet computations, spreadsheets are
-                  poorly documented software and the differences
-                  between simple one-shot computations and large,
-                  long-living sheets are not well understood. Like
-                  other software, production spreadsheets are subject
-                  to repeated maintenance cycles. Consequently, as
-                  with conventional software, short maintenance cycles
-                  and poor documentation tend to decrease their
-                  quality. We introduce an approach to help
-                  maintainers understand the structure of large
-                  spreadsheets as well as to zoom into certain parts
-                  of the spreadsheet. To cope with large sheets, our
-                  approach features two levels of abstraction: logical
-                  areas and semantic classes. These abstractions are
-                  based on different degrees of relatedness of cells
-                  according to the formulas they contain.},
-  keywords = 	 {software maintenance;spreadsheet
-                  programs;abstraction;cell relatedness;end-user
-                  programming;formulas;high-level structure
-                  finding;logical areas;quality;repeated maintenance
-                  cycles;semantic classes;spreadsheet
-                  programs;Application software;Computer
-                  industry;Computer
-                  languages;Documentation;Microcomputers;Production;Prototypes;Software
-                  engineering;Software maintenance;Spreadsheet
-                  programs},
-  doi = 	 {10.1109/WCRE.2002.1173080},
-  ISSN = 	 {1095-1350},
-  review = 	 {fbie: accepted <2016-01-15 15:08:05>},
+  review = 	 {fbie: accepted <2016-02-04 10:01:58>},
+  notes = 	 {Funcalc. This should be replaced with the actual reference to the book.},
 }
