@@ -60,278 +60,6 @@ not require special hardware, i.e.\ shared-memory multiprocessors.
 
 With this study, we want to find\dots.\todo{Continue.}
 
-\newpage{}
-\part{A Systematic Mapping Study}
-\label{part:syst-mapp-study}
-
-\section{Protocol}
-\label{sec:protocol}
-
-\subsection{Background}
-\label{sec:background}
-
-The goal of this systematic mapping study is to coalesce two
-apparently disjoint research areas, namely declarative parallel array
-programming techniques and end-user development in a spreadsheet model
-of computation. We base our methodology on~\citet{keele2007guidelines}
-and~\citet{petersen2008systematic}.
-
-This study is meant to motivate and inform further research on
-declarative parallel programming in spreadsheets for end-users. We
-want to gain an overview over well known techniques for transforming
-expressions that describe seemingly sequential operations into
-efficient parallel code. Furthermore, we want to gain insight into how
-this can be combined with spreadsheet end-user development techniques
-and if there has been made any effort into this direction
-already. \todo{Should we maybe also include a search on spreadsheets
-  AND parallel? It seems that there are only few publications on ACM
-  and IEEE and then we have at least tried to find a connection.}
-
-We purposely do not focus on data-flow parallelism in
-spreadsheets. This is a separate project orthogonal to declarative
-parallel array programming in spreadsheets.
-
-To gain overlapping literature lists, we run three different search queries:
-
-\begin{description}
-\item[Declarative, parallel array programming languages] What are
-  promising techniques for automatic parallelization of declarative,
-  functional languages?
-\item[Spreadsheet end-user development] Which paradigms have been
-  developed, what do users use spreadsheets for?
-\item[Parallelism in spreadsheets] To what degree have parallel
-  spreadsheet engines been investigated? What are challenges and
-  possibilities? Where does our agenda fit in?
-\end{description}
-
-\subsection{Research Questions}
-\label{sec:research-questions}
-
-Our research questions are listed in the following:
-
-\begin{enumerate}
-\item What is the state of the art in declarative parallel array
-  programming languages?
-\item What are the most scrutinized topics in array programming?
-\item Has there been research on declarative parallel array
-  programming in a spreadsheet model of computation?
-\item Are there any obvious ways to combine declarative parallel array
-  programming and spreadsheet end-user development?
-\end{enumerate}
-
-\subsection{Study Selection Criteria}
-\label{sec:study-select-crit}
-
-We perform two disjoint literature studies, one for declarative
-parallel array programming languages and one for spreadsheet end-user
-development.
-
-In the following, we give a list of criteria for inclusion or
-exclusion of studies. Naturally, some of the studies can fulfill
-criteria of both lists. We choose therefore to perform a majority vote
-on the number of fulfilled criteria when making a decision of
-inclusion or exclusion.
-
-\subsubsection{Criteria for Declarative Parallel Languages}
-\label{sec:crit-decl-parall}
-
-\paragraph{Inclusion Criteria}
-
-A publication should be included if it:
-
-\begin{itemize}
-\item Mentions implementations of prominent array languages.
-\item Focuses on automatic parallelization of array expressions.
-\item Mentions caching and false sharing.
-\item Talks about compiler optimizations.
-\item Focuses on implementation of declarative, functional parallel
-  programming techniques.
-\item Mentions homogeneous systems and shared memory.
-\item Mentions loop fusion and nested loops.
-\item Talks generally about program transformation.
-\end{itemize}
-
-\paragraph{Exclusion Criteria}
-
-A publication should be excluded if it:
-
-\begin{itemize}
-\item Focuses on the application of parallel programming, e.g.\ within
-  machine learning.
-\item Develops techniques for distributed memory or mentions message
-  passing.
-\item Develops techniques for focuses on formal verification.
-\item Targets GPU, GPGPU, FPGA and hardware accelerated techniques on
-  heterogeneous systems.
-\item Includes I/O.
-\item Works towards automatic parallelization of imperative languages.
-\item Is a review paper without any novel contribution.
-\item Mentions Accelerate.\todo{Cite Accelerate.}
-\item Mentions storage, disk etc.
-\item Focuses on transactional memory.
-\end{itemize}
-
-\subsubsection{Criteria for Spreadsheet End-User Development and
-  Parallel Spreadsheets}
-\label{sec:crit-spre-end}
-
-\paragraph{Inclusion Criteria}
-
-A publication should be included if it:
-
-\begin{itemize}
-\item Mentions functional programming or functional language.
-\item Describes the implementation of a spreadsheet engine.
-\item Focuses on gaining or providing spreadsheet understanding.
-\item Mentions types or type-inference.
-\end{itemize}
-
-\paragraph{Exclusion Criteria}
-
-A publication should be excluded if it:
-
-\begin{itemize}
-\item Focuses on the application of spreadsheets and specific
-  spreadsheet models, such as simulations or in teaching.
-\item Describes systems inspired by spreadsheets.
-\item Mentions CSCW and knowledge work or performs ethnographic
-  studies.
-\item Focuses on data structures in spreadsheets.
-\item Mentions either mashups, mobile apps or web development.
-\item Focuses on external tools and architectures for spreadsheet
-  users.
-\item Develops techniques for transforming spreadsheets.
-\item Surveys ``real-life'' spreadsheets.
-\end{itemize}
-
-\subsection{Quality Assurance}
-\label{sec:quality-assurance}
-
-To verify that the results of our searches are meaningful, we compile
-a list of relevant and important publications, which must be included
-in the results obtained by our automated search\todo{Include
-  Nlelloch's NESL, Peyton-Jones' User-Focused Approach to Functions
-  and Sestoft's Spreadsheet Implementation Technology.}.
-
-\section{Process}
-\label{sec:process}
-
-\subsection{Literature Search}
-\label{sec:literature-search}
-
-We have use IEEExplore and ACM Digital Library as sources for our
-literature search. The number of results from these sources varies
-drastically, which is probably due to IEEExplore interpreting search
-queries very strictly. We avoid Google Scholar and CiteSeerX, as these
-meta engines return way over a thousand publications for each query,
-which is infeasible for our scope.
-
-The uniqueness of a publication in the following means that a
-publication is listed only once. Sometimes, publications have multiple
-entries in a digital library, for instance one for a conference's
-proceedings and one for SIGPLAN Notes.
-
-We have an initial list of 681 publications to consider, which we
-construct as described in the following:
-
-\paragraph{Declarative Parallel Array Programming Languages}
-
-To generate a literature list for declarative parallel array
-programming languages, we use the following query:
-
-\begin{lstlisting}
-(functional AND array AND programming AND parallel) AND (data-parallel OR ``data parallel'' OR multi-core OR multicore  OR ``multi core'')
-\end{lstlisting}
-
-\noindent This results in 250 publications of which 194 are unique from the ACM
-Digital Library. IEEExplore, however, only returns eight publications,
-all of which are unique. This adds 202 publications to consider.
-
-\paragraph{Spreadsheet End-User Development}
-
-The search query we use for finding publications on spreadsheet
-end-user development is:
-
-\begin{lstlisting}
-spreadsheets AND (end-user-development OR "end user development" OR "end-user development")
-\end{lstlisting}
-
-\noindent This results in 435 publications of which 386 are unique from the ACM
-Digital Library and in 104 publications, all of which are unique, from
-IEEExplore. This adds 424 publications to consider.
-
-\paragraph{Parallel Spreadsheets}
-
-We use the following query to generate a list of publications focusing
-on anything parallel in spreadsheets:
-
-\begin{lstlisting}
-spreadsheets AND parallel
-\end{lstlisting}
-
-\noindent ACM returns 21 publications of which 17 are unique and
-IEEExplore returns 38 publications. This adds 55 publications to
-consider.
-
-\subsection{Literature Selection}
-\label{sec:literature-selection}
-
-Using the criteria defined in Section~\ref{sec:study-select-crit}, we
-include studies based on their titles and their abstracts. If the
-title is not informative enough, we accept the study and will later
-screen it again based on the abstract.
-
-To perform the selection of literature move conveniently, we have
-developed an
-Emacs\footnote{\url{https://www.gnu.org/software/emacs/}}-based tool,
-called the Systematic Literature Review Mode (SLIRM). SLIRM
-automatically downloads abstracts and full-text files on demand for
-BibTeX-formatted entries that have been exported from a digital
-library, such as the ACM Digital Library. SLIRM is open-source and
-freely available\footnote{Download SLIRM from
-  \url{https://github.com/fbie/slirm}}.
-
-\subsection{Mapping}
-\label{sec:mapping}
-
-In order to group publications and to map out the research field, we
-assigned each publication at least one keyword.
-
-\subsubsection{Declarative Parallel Programming}
-
-The keywords for publications on declarative parallel array
-programming are:
-
-\begin{multicols}{2}
-
-\begin{itemize}
-\item APL
-\item DPH
-\item DSL
-\item Data structures
-\item Data-flow
-\item Declarative
-\item Destructive updates
-\item Flattening
-\item Fortran
-\item Functional
-\item Fusion
-\item Inference rules
-\item Loops
-\item NESL
-\item Nested Parallelism
-\item Remap
-\item \sac{}
-\item Scheduling
-\item Shape inference
-\end{itemize}
-
-\end{multicols}
-
-\newpage{}
-\part{Results}
-\label{part:results}
-
 \section{Declarative Parallel Programming}
 \label{sec:declarative-parallel-programming}
 
@@ -472,7 +200,8 @@ settings~\cite{Bergstrom:2010:LTS:1863543.1863558}.
 
 Fusion refers to avoiding intermediate representations of arrays for
 consecutive bulk operations. For instance, two succeeding applications
-of \texttt{map} can be fused as follows:
+of \texttt{map} can be fused as follows, where \texttt{.} is the
+function composition operator:
 
 \begin{center}
   \begin{tabular}{ccc}
@@ -481,7 +210,7 @@ map g (map f xs)
 \end{lstlisting}
     & $\Longrightarrow$ &
 \begin{lstlisting}[language=ML]
-map (f >> g) xs
+map (f . g) xs
 \end{lstlisting}
   \end{tabular}
 \end{center}
@@ -660,5 +389,264 @@ performance.
 
 \bibliographystyle{unsrtnat}
 \bibliography{array-programming-acm-accepted,array-programming-ieee-accepted,fbie}
+
+\appendix
+
+\newpage{}
+
+\section{Protocol}
+\label{sec:protocol}
+
+\subsection{Background}
+\label{sec:background}
+
+The goal of this systematic mapping study is to coalesce two
+apparently disjoint research areas, namely declarative parallel array
+programming techniques and end-user development in a spreadsheet model
+of computation. We base our methodology on~\citet{keele2007guidelines}
+and~\citet{petersen2008systematic}.
+
+This study is meant to motivate and inform further research on
+declarative parallel programming in spreadsheets for end-users. We
+want to gain an overview over well known techniques for transforming
+expressions that describe seemingly sequential operations into
+efficient parallel code. Furthermore, we want to gain insight into how
+this can be combined with spreadsheet end-user development techniques
+and if there has been made any effort into this direction
+already. \todo{Should we maybe also include a search on spreadsheets
+  AND parallel? It seems that there are only few publications on ACM
+  and IEEE and then we have at least tried to find a connection.}
+
+We purposely do not focus on data-flow parallelism in
+spreadsheets. This is a separate project orthogonal to declarative
+parallel array programming in spreadsheets.
+
+To gain overlapping literature lists, we run three different search queries:
+
+\begin{description}
+\item[Declarative, parallel array programming languages] What are
+  promising techniques for automatic parallelization of declarative,
+  functional languages?
+\item[Spreadsheet end-user development] Which paradigms have been
+  developed, what do users use spreadsheets for?
+\item[Parallelism in spreadsheets] To what degree have parallel
+  spreadsheet engines been investigated? What are challenges and
+  possibilities? Where does our agenda fit in?
+\end{description}
+
+\subsection{Research Questions}
+\label{sec:research-questions}
+
+Our research questions are listed in the following:
+
+\begin{enumerate}
+\item What is the state of the art in declarative parallel array
+  programming languages?
+\item What are the most scrutinized topics in array programming?
+\item Has there been research on declarative parallel array
+  programming in a spreadsheet model of computation?
+\item Are there any obvious ways to combine declarative parallel array
+  programming and spreadsheet end-user development?
+\end{enumerate}
+
+\subsection{Study Selection Criteria}
+\label{sec:study-select-crit}
+
+We perform two disjoint literature studies, one for declarative
+parallel array programming languages and one for spreadsheet end-user
+development.
+
+In the following, we give a list of criteria for inclusion or
+exclusion of studies. Naturally, some of the studies can fulfill
+criteria of both lists. We choose therefore to perform a majority vote
+on the number of fulfilled criteria when making a decision of
+inclusion or exclusion.
+
+\paragraph{Declarative Parallel Array Programming}
+~\\
+
+We include a publication if it:
+
+\begin{itemize}
+\item Mentions implementations of prominent array languages.
+\item Focuses on automatic parallelization of array expressions.
+\item Mentions caching and false sharing.
+\item Talks about compiler optimizations.
+\item Focuses on implementation of declarative, functional parallel
+  programming techniques.
+\item Mentions homogeneous systems and shared memory.
+\item Mentions loop fusion and nested loops.
+\item Talks generally about program transformation.
+\end{itemize}
+
+We exclude a publication if it:
+
+\begin{itemize}
+\item Focuses on the application of parallel programming, e.g.\ within
+  machine learning.
+\item Develops techniques for distributed memory or mentions message
+  passing.
+\item Develops techniques for focuses on formal verification.
+\item Targets GPU, GPGPU, FPGA and hardware accelerated techniques on
+  heterogeneous systems.
+\item Includes I/O.
+\item Works towards automatic parallelization of imperative languages.
+\item Is a review paper without any novel contribution.
+\item Mentions Accelerate.\todo{Cite Accelerate.}
+\item Mentions storage, disk etc.
+\item Focuses on transactional memory.
+\end{itemize}
+
+\paragraph{Spreadsheet End-User Development and Parallel Spreadsheets}
+~\\
+
+We include a publication if it:
+
+\begin{itemize}
+\item Mentions functional programming or functional language.
+\item Describes the implementation of a spreadsheet engine.
+\item Focuses on gaining or providing spreadsheet understanding.
+\item Mentions types or type-inference.
+\end{itemize}
+
+We exclude a publication if it:
+
+\begin{itemize}
+\item Focuses on the application of spreadsheets and specific
+  spreadsheet models, such as simulations or in teaching.
+\item Describes systems inspired by spreadsheets.
+\item Mentions CSCW and knowledge work or performs ethnographic
+  studies.
+\item Focuses on data structures in spreadsheets.
+\item Mentions either mashups, mobile apps or web development.
+\item Focuses on external tools and architectures for spreadsheet
+  users.
+\item Develops techniques for transforming spreadsheets.
+\item Surveys ``real-life'' spreadsheets.
+\end{itemize}
+
+\subsection{Quality Assurance}
+\label{sec:quality-assurance}
+
+To verify that the results of our searches are meaningful, we compile
+a list of relevant and important publications, which must be included
+in the results obtained by our automated search\todo{Include
+  Nlelloch's NESL, Peyton-Jones' User-Focused Approach to Functions
+  and Sestoft's Spreadsheet Implementation Technology.}.
+
+\section{Process}
+\label{sec:process}
+
+\subsection{Literature Search}
+\label{sec:literature-search}
+
+We have use IEEExplore and ACM Digital Library as sources for our
+literature search. The number of results from these sources varies
+drastically, which is probably due to IEEExplore interpreting search
+queries very strictly. We avoid Google Scholar and CiteSeerX, as these
+meta engines return way over a thousand publications for each query,
+which is infeasible for our scope.
+
+The uniqueness of a publication in the following means that a
+publication is listed only once. Sometimes, publications have multiple
+entries in a digital library, for instance one for a conference's
+proceedings and one for SIGPLAN Notes.
+
+We have an initial list of 681 publications to consider, which we
+construct as described in the following:
+
+\paragraph{Declarative Parallel Array Programming}
+
+To generate a literature list for declarative parallel array
+programming languages, we use the following query:
+
+\begin{lstlisting}
+(functional AND array AND programming AND parallel) AND (data-parallel OR ``data parallel'' OR multi-core OR multicore  OR ``multi core'')
+\end{lstlisting}
+
+\noindent This results in 250 publications of which 194 are unique from the ACM
+Digital Library. IEEExplore, however, only returns eight publications,
+all of which are unique. This adds 202 publications to consider.
+
+\paragraph{Spreadsheet End-User Development}
+
+The search query we use for finding publications on spreadsheet
+end-user development is:
+
+\begin{lstlisting}
+spreadsheets AND (end-user-development OR "end user development" OR "end-user development")
+\end{lstlisting}
+
+\noindent This results in 435 publications of which 386 are unique from the ACM
+Digital Library and in 104 publications, all of which are unique, from
+IEEExplore. This adds 424 publications to consider.
+
+\paragraph{Parallel Spreadsheets}
+
+We use the following query to generate a list of publications focusing
+on anything parallel in spreadsheets:
+
+\begin{lstlisting}
+spreadsheets AND parallel
+\end{lstlisting}
+
+\noindent ACM returns 21 publications of which 17 are unique and
+IEEExplore returns 38 publications. This adds 55 publications to
+consider.
+
+\subsection{Literature Selection}
+\label{sec:literature-selection}
+
+Using the criteria defined in Section~\ref{sec:study-select-crit}, we
+include studies based on their titles and their abstracts. If the
+title is not informative enough, we accept the study and will later
+screen it again based on the abstract.
+
+To perform the selection of literature move conveniently, we have
+developed an
+Emacs\footnote{\url{https://www.gnu.org/software/emacs/}}-based tool,
+called the Systematic Literature Review Mode (SLIRM). SLIRM
+automatically downloads abstracts and full-text files on demand for
+BibTeX-formatted entries that have been exported from a digital
+library, such as the ACM Digital Library. SLIRM is open-source and
+freely available\footnote{Download SLIRM from
+  \url{https://github.com/fbie/slirm}}.
+
+\subsection{Mapping}
+\label{sec:mapping}
+
+In order to group publications and to map out the research field, we
+assigned each publication at least one keyword.
+
+\paragraph{Declarative Parallel Array Programming}
+
+The keywords for publications on declarative parallel array
+programming are:
+
+\begin{multicols}{2}
+
+\begin{itemize}
+\item APL
+\item DPH
+\item DSL
+\item Data structures
+\item Data-flow
+\item Declarative
+\item Destructive updates
+\item Flattening
+\item Fortran
+\item Functional
+\item Fusion
+\item Inference rules
+\item Loops
+\item NESL
+\item Nested Parallelism
+\item Remap
+\item \sac{}
+\item Scheduling
+\item Shape inference
+\end{itemize}
+
+\end{multicols}
 
 \end{document}
