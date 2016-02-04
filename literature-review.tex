@@ -31,15 +31,18 @@
 \section{Introduction}
 \label{sec:intro}
 
-Spreadsheets are widely used in many different disciplines within
-industry and science by domain experts who often are
-non-programmers~\cite{Sestoft2014Spreadsheet}. Research on spreadsheet
+Domain experts from widely different disciplines within industry and
+science by domain use spreadsheets to model complex computations
+conveniently~\cite{Sestoft2014Spreadsheet}. Research on spreadsheet
 technology has recently gained increased interest, which is probably
 due to a renewed popularity of functional programming
 principles. Spreadsheets do not possess mutable state, which makes
 reasoning about their correctness rather easy. Moreover, this
 particular trait makes it possible to investigate transparent
-parallelization of spreadsheet calculations.
+parallelization of spreadsheet calculations. The widespread use of
+spreadsheets together with the apparent opportunities for spreadsheet
+parallelization provide a synergy for future research on ``popular
+parallel programming''.
 
 As an example of recent development in parallel spreadsheet
 technology, AMD has implemented OpenCL kernel generation in
@@ -47,18 +50,32 @@ LibreOffice Calc. Their modification generates kernels from operations
 on cell-area, which highly parallel GPGPU hardware then
 executes~\cite{Trudeau2015Collaboration}.
 
-In this systematic mapping study, we want to map out the publications
-on spreadsheet end-user programming and declarative array programming
-languages to inform further research on parallel programming in
-spreadsheets. Declarative array programming allows a compiler to
-re-write expressions to perform implicit parallelization of
-computations. The user does not need to be aware of the parallelism
-inherent to a problem and as long as they choose to use the highest
-abstraction to model their computation, a sophisticated compiler can
-infer such parallelism automatically. We focus on approaches that do
-not require special hardware, i.e.\ shared-memory multiprocessors.
+In this literature review, we want to provide the reader with an
+overview of the publications on spreadsheet end-user programming and
+declarative array programming to inform further research on parallel
+programming in spreadsheets with a focus on functional programming and
+higher-order functions.
 
-With this study, we want to find\dots.\todo{Continue.}
+Declarative array programming allows the language run-time to re-write
+expressions to perform implicit parallelization of computations. The
+user does not need to be aware of the parallelism inherent to a
+problem and as long as they choose to use the highest abstraction to
+model their computation, a sophisticated compiler can infer such
+parallelism automatically. We focus on approaches that do not require
+special hardware, i.e.\ shared-memory multiprocessors.
+
+\subsection{Approach}
+\label{sec:approach}
+
+Why and how we use tools from systematic literature reviews,
+citing~\cite{keele2007guidelines, petersen2008systematic}.
+
+\subsection{Threats to Validity}
+\label{sec:threats-validity}
+
+What we did not do methodologically sound and what kinds of blind
+spots there exist (that is, publications that are not listed in this
+review).
 
 \section{Declarative Parallel Programming}
 \label{sec:declarative-parallel-programming}
