@@ -82,18 +82,20 @@ review).
 
 We have identified four key topics within parallel array programming:
 nested data parallelism, array fusion, data structures and loop
-parallelization. While these are clearly interconnected and cannot
-just be seen by themselves, we will use these to structure the review
-of the research body on parallel array programming.
+parallelization. While these clearly are interconnected and we
+therefore cannot just see them all by themselves, we will use them to
+structure the review of the research body on parallel array
+programming.
 
 There are a few key-languages that appear in the literature. The two
 oldest are Fortran\todo{Source?}, which is an imperative
 high-performance language, and APL~\cite{Iverson1962Programming},
 which is a high-level declarative and functional
-language. Furthermore, much work has been done on Single-assignment-C
-(\sac{})\todo{Source?}, which is a C-like functional language, and Data
-Parallel Haskell (DPH) and REPA\todo{Source?}, which are library and
-compiler extensions for Haskell. Another very important language is
+language. Furthermore, much research has focused on
+Single-assignment-C (\sac{})\todo{Source?}, which is a C-like
+functional language, and Data Parallel Haskell (DPH) and
+REPA\todo{Source?}, both of which are library and compiler extensions
+for Haskell. Another important language is
 NESL~\cite{Blelloch1993NESL}, which introduced the idea of statically
 flattening nested arrays.
 
@@ -119,9 +121,9 @@ faster~\cite{Bernecky:2015:AEP:2774959.2774962}.
 Nested data parallelism describes the nesting of parallel operations
 over a nested array. A standard example from the literature is matrix
 multiplication~\cite{Keller:2010:RSP:1863543.1863582}. A matrix is
-represented by an array of arrays. Matrix multiplication can then be
-implemented conveniently via higher-order functions, here illustrated
-in F\#:
+represented by an array of arrays. We can then implement matrix
+multiplication conveniently via higher-order functions, here
+illustrated in F\#:
 
 \begin{lstlisting}[language=ML]
 type Matrix = double [] [];
@@ -149,16 +151,16 @@ ways.
 flattening nested arrays to perform an optimal parallelization of
 operations over arrays. The key to doing so is the right choice of
 array representation and there exists a representation which enables
-the compiler to flatten arrays in constant time. This flattening has
-been implemented in NESL and \citet{Blelloch:1996:PTS:232627.232650}
-showed, based on NESL's built-in cost semantics, that NESL actually
-can be implemented without overhead.
+the compiler to flatten arrays in constant time. NESL implements this
+flattening scheme and \citet{Blelloch:1996:PTS:232627.232650} showed,
+based on NESL's built-in cost semantics, that NESL actually can be
+implemented without any additional overhead due to flattening.
 
-The idea of flattening nested parallelism has since been taken up
-again by \citet{Lippmeier:2012:WEH:2364527.2364564} and moved to
-Haskell. In contrast to NESL, Haskell is a fully-fledged functional
-programming language with types and higher-order functions that is
-compiled instead of interpreted.
+Other researchers have since taken up the idea of flattening nested
+parallelism again by \citet{Lippmeier:2012:WEH:2364527.2364564} and
+implemented it in Haskell. In contrast to NESL, Haskell is a
+fully-fledged functional programming language with types and
+higher-order functions that is compiled instead of interpreted.
 
 As it turns out, flattening nested data parallelism is much harder to
 achieve in such a higher-order language. The presence of higher-order
@@ -166,11 +168,10 @@ functions makes lifting of functions more
 complicated~\cite{Lippmeier:2012:WEH:2364527.2364564}. Higher-order
 flattening introduces many intermediate arrays that take time and
 space. Therefore, \citet{Keller:2012:VA:2364506.2364512} developed a
-technique to avoid such flattening if no performance increase can be
-expected.
+technique to avoid such flattening in such cases.
 
 The more recent high-level language NOVA builds on the principles
-developed in NESL and DPH, using many of such state-of-the-art
+developed in NESL and DPH, using a lot of the state-of-the-art
 techniques and targets both, shared-memory multiprocessors as well as
 general purpose GPUs~\cite{Collins:2014:NFL:2627373.2627375}.
 
@@ -179,22 +180,22 @@ which we will discuss in detail in Section~\ref{sec:fusion}.
 
 \paragraph{Dynamic Scheduling}
 
-Static flattening nested data parallelism with no overhead is targeted
-at homogeneous computations on possibly irregular arrays. Possible
-imbalance of work distribution is mostly a result of irregular nested
-data structures, such as sparse vectors where adjacent zero-valued
-entries are not stored in memory. This demands a strong type system,
-such that all elements of an array are of the same type. Otherwise, a
+Static flattening nested data parallelism without overhead targets
+homogeneous computations on possibly irregular arrays. Possible
+imbalance of work distribution is a result of irregular nested data
+structures, such as sparse vectors, where adjacent zero-valued entries
+are not stored in memory. This demands a strong type system, such that
+all elements of an array are of the same type. Otherwise, a
 two-dimensional array might mostly contain numbers but spuriously also
-other data types or arrays. This means that not the entire parallelism
-is visible to the compiler, so static flattening might not be feasible
-to balance the workload.
+other data types or even reference arrays. This means that not the
+entire parallelism is visible to the compiler, so static flattening
+might not be feasible to balance the workload.
 
 Dynamic scheduling leaves the distribution of work to run-time of the
 program. \sac{}, for instance, uses work-stealing
 queues~\cite{Chase2005Dynamic, Grelck:2007:SOS:1248648.1248654} to
 dynamically schedule work. Such scheduling schemes can produce some
-overhead at run-time that would otherwise be alleviated by
+overhead at run-time that we otherwise could alleviate by using
 compile-time transformations. To minimize overhead for different kinds
 of computations, \citet{Fluet:2008:SFG:1411204.1411239} argue for a
 mix of schedulers and to let the run-time chose which scheduler to use
@@ -204,20 +205,21 @@ A notable scheduling heuristic is lazy tree
 splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}. In this scheme,
 every thread gets assigned some part of the workload. Threads
 communicate with other threads via a technique inspired by and as
-efficient as work-stealing queues. Arrays are represented via binary
-trees of arrays. For each portion of work that a thread performs, it
-checks if any of the remaining threads are idle. If so, it splits the
-remaining array in half, dispatches the second part to the idle
-threads and continues to the next portion of work. This heuristic
-shows low overhead in experimental
+efficient as work-stealing queues. Representing arrays via balanced
+binary trees makes halving arrays a constant time operation. When a
+worker thread iterates over an array, it checks at every n-th
+iteration step whether any of the remaining threads are idle. If so,
+it splits its remaining array in half, dispatches the latter half to
+the idle threads and continues to the next iteration step. This
+heuristic shows low overhead in experimental
 settings~\cite{Bergstrom:2010:LTS:1863543.1863558}.
 
 \subsection{Fusion}
 \label{sec:fusion}
 
 Fusion refers to avoiding intermediate representations of arrays for
-consecutive bulk operations. For instance, two succeeding applications
-of \texttt{map} can be fused as follows, where \texttt{.} is the
+consecutive bulk operations. For instance, we can fuse two succeeding
+applications of \texttt{map} as follows, where \texttt{.} is the
 function composition operator:
 
 \begin{center}
@@ -236,14 +238,13 @@ This optimization is very valuable in all kinds of programs,
 sequential and parallel alike, for example in sequential
 Fortran~90 programs\cite{Hwang:1995:AOS:209936.209949}.
 
-Fusion is a static technique performed during compile time. The fusion
-transformations can be expressed as straight-forward equational
-rewrite rules, as done by
-\citet{Chakravarty:2001:FAF:507635.507661}. They also observe that
-flattening nested arrays makes fusion a much simpler task which
-emphasizes the connection between flattening and fusion. Some
-researchers have been focusing on making such optimizations visible to
-the programmer via
+Fusion is a static technique performed during compile
+time. \citet{Chakravarty:2001:FAF:507635.507661} express the fusion
+transformations as straight-forward equational rewrite rules. They
+also observe that flattening nested arrays makes fusion a much simpler
+task which emphasizes the connection between flattening and
+fusion. Some researchers have been focusing on making such
+optimizations visible to the programmer via
 types~\cite{Lippmeier:2012:GPA:2364506.2364511}. This enables
 programmers to reason about the performance of their declarative code.
 
@@ -257,10 +258,10 @@ avoids duplicate computations
 
 A special variant of fusion is destructive update analysis. Since data
 structures are immutable in purely functional languages, writing to a
-single index of an array produces in a new array in which all elements
-are copied from the original array with exception of the index that
-was updated. If the array that is being updated is not referenced
-again throughout the program, the update can be performed in-place, or
+single index of an array produces in a new array. The update operation
+copies all elements from the original array with exception of the
+index that it updated. If the updated array is not referenced again
+throughout the program, we can perform the update in-place, or
 destructively, without the overhead of copying all
 data. \citet{Sastry:1994:PDU:182409.182486} developed an analysis for
 destructive array updates using live-variable data-flow analysis.
