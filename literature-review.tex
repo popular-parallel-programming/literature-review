@@ -413,18 +413,19 @@ computes a value and possibly referencing other cells.
 One major topic in research on spreadsheet programming is the lack of
 abstraction: spreadsheets bundle data and logic in a single
 representation~\cite{Isakowitz:1995:TLT:195705.195708}. Moreover,
-spreadsheets encourage copying formulas across cells to replicate
+spreadsheets encourage copying of formulas across cells to replicate
 computations~\cite{1173080, Benfield:2009:FFD:1668113.1668121}. This
 lack of abstraction makes spreadsheets less powerful than general
 purpose programming languages~\cite{Miller:2015:SPB:2814189.2814201}.
 
 Another main topic is general programming paradigms in a spreadsheet
-model of computation. \todo{Extend!}
+model of computation. Again, abstraction and programming paradigms cannot simply \todo{Extend!}
 
 There are many more topics in spreadsheet research, i.e.\ testing of
 spreadsheets, visualization or analysis of ``real-life'' spreadsheet
-corpora. Since we focus on research on programming in a spreadsheet
-model of computations, we will not consider these here.
+corpora, to only name a few. We focus however on research on end-user
+programming in a spreadsheet model of computations and will therefore
+not consider these other topics here.
 
 Researchers have proposed a number of different ways to raise the
 abstraction and maintenance level of spreadsheets.
@@ -432,12 +433,81 @@ abstraction and maintenance level of spreadsheets.
 \subsection{Abstraction}
 \label{sec:abstraction}
 
-What kinds of abstractions have been proposed?
+It is convenient to define two groups of spreadsheet abstraction. That
+is (1) manual abstraction, where the user has the means to build their
+own abstractions so to hide implementation details and (2) automatic
+abstraction, where the user constructs spreadsheets in a familiar way
+and the system later analyzes them to infer the logic and to
+(subsequently) separate it from data.
+
+\paragraph{Manual abstraction}
+
+Many researchers observed that spreadsheets lack the most basic
+abstraction of general-purpose programming languages: named
+functions~\cite{Jones:2003:UAF:944705.944721}. Named functions make it
+possible to hide implementation detail that is not important for the
+overall logic of a specific model. Therefore,
+\citet{Jones:2003:UAF:944705.944721} proposed to allow end-users to
+define their own abstractions in terms of spreadsheet
+computations. Each newly introduced function is essentially a
+spreadsheet prototype that has designated input cells and a designated
+output cell. Each time the user calls such a sheet-defined function, a
+new spreadsheet instance of this function is instantiated to perform
+the computation.
+
+\citet{Sestoft:2008:IFS:1370847.1370867} extended upon this idea by
+allowing sheet-defined, recursive and run-time compiled
+functions. This approach is more general and alleviates the need for
+instantiating explicit spreadsheets. This approach is implemented in
+the experimental spreadsheet engine Funcalc, which is described in
+great detail in~\cite{Sestoft2014Spreadsheet}.
+
+\paragraph{Automatic abstraction}
+
+The system analyzes spreadsheets to infer their logic and to
+(subsequently) separate it from data. This allows users to build
+spreadsheets in a familiar manner. \todo{Extend!}
 
 \subsection{Programming Paradigms}
 \label{sec:progr-parad}
 
 What kinds of programming paradigms have been proposed?
+
+\paragraph{Object orientation}
+
+FMD~\cite{Benfield:2009:FFD:1668113.1668121} exposes objects to
+spreadsheet users.
+
+\paragraph{Constraint programming}
+
+Constraint programming seems to severely reduce the amount of code
+required to model complicated
+logic~\cite{Stadelmann:1993:SBC:168642.168664}.
+
+\paragraph{By example}
+
+Programming by example allows users to explain how to transform data
+by performing a few transformations manually, from which the system
+can infer general transformation rules. This is useful for
+bulk-processing similar items. \citet{Singh:2016:TSD:2837614.2837668}
+extended Excel with a DSL that allows users to provide such example
+transformations such that Excel then automatically transforms the
+remaining items. They combine a probabilistic approach of parsing with
+joint learning of transformation rules. They require however that the
+data type that a user wants to transform already exists as a
+predefined model.
+
+\section{Discussion}
+\label{sec:discussion}
+
+Much research on spreadsheet end-user programming focuses on bulk-data
+transformations. Also, researchers aim to avoid repetition in
+spreadsheets to avoid error sources. Semantic spreadsheet analysis
+reveals repetitive patterns of homogeneous computations that remind of
+explicit mappings of functions.
+
+These observations fit nicely to declarative, higher-order array
+programming. \todo{Extend!}
 
 \bibliographystyle{unsrtnat}
 \bibliography{array-programming-acm-accepted,array-programming-ieee-accepted,spreadsheets-accepted-acm,spreadsheets-ieee-accepted,spreadsheets-parallel-accepted,fbie}
@@ -489,7 +559,8 @@ To gain overlapping literature lists, we run three different search queries:
 \subsection{Research Questions}
 \label{sec:research-questions}
 
-Our research questions are listed in the following:
+Our research questions are listed in the following: \todo{Move to
+  introduction.}
 
 \begin{enumerate}
 \item What is the state of the art in declarative parallel array
