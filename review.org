@@ -368,6 +368,7 @@ rules and then automatically transform the remaining items. They
 combine a probabilistic approach of parsing with joint learning of
 transformation rules. This highly declarative data transformation
 approach seems very usable and fast.
+
 ** Isakowitz et al., 1995: Towards a Logical/Physical Theory of Spreadsheet Modeling
 
 - abstraction
