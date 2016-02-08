@@ -502,12 +502,30 @@ because the types are inferred rather than annotated.
 \subsection{Programming Paradigms}
 \label{sec:progr-parad}
 
-What kinds of programming paradigms have been proposed?
+Researchers have also proposed to apply different programming
+paradigms to the spreadsheet domain with a focus on raising the
+abstraction level.
 
 \paragraph{Object orientation}
 
-FMD~\cite{Benfield:2009:FFD:1668113.1668121} exposes objects to
-spreadsheet users.
+FMD~\cite{Benfield:2009:FFD:1668113.1668121} is a domain-specific
+language for Excel and exposes objects to spreadsheet users. Objects
+are an accumulation of data with some functions defined on these
+objects. Users can use a special syntax to declare variables that
+model input parameters for user-defined functions. Functions are
+defined inline (as in on the same spreadsheet) by prototype formulas
+where the cell that would yield the result actually evaluates to the
+new defined function. As spreadsheets encourage copying of formulas
+over the same row or column, FMD introduces a high-level \texttt{map}
+operator that applies the same user-defined function across a column
+or row.
+
+To apply stronger separation of implementation and instantiation,
+\citet{6070409} developed ClassSheet. The logic of a computation is
+defined in a model-spreadsheet, while each common spreadsheet that
+computes the model is an instance of this model-spreadsheet. This
+approach resembles a manual version of the abstraction model by
+\citet{Isakowitz:1995:TLT:195705.195708}.
 
 \paragraph{Constraint programming}
 
