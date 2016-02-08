@@ -469,9 +469,35 @@ great detail in~\cite{Sestoft2014Spreadsheet}.
 
 \paragraph{Automatic abstraction}
 
-The system analyzes spreadsheets to infer their logic and to
-(subsequently) separate it from data. This allows users to build
-spreadsheets in a familiar manner. \todo{Extend!}
+Researchers have developed systems that analyze spreadsheets to infer
+their logic and to (subsequently) separate logic from data. This
+allows users to build spreadsheets in a familiar
+manner. \citet{Isakowitz:1995:TLT:195705.195708} developed a system to
+automatically performs such a separation and manages spreadsheet logic
+for modular re-use. They observe that the majority of spreadsheet
+errors they encounter not are simple off-by-one reference errors and
+typos but severe errors in the model's logic which they relate to
+classic programming errors where the programmer has not chosen a high
+enough level of abstraction.
+
+The visual layout of spreadsheets is often implicit documentation of
+the logic. \citet{1173080} however, observe that this visual layout
+often leads to misconceptions if another user takes over the
+spreadsheet. Therefore, they developed a set of logical and semantic
+equivalence classes for cells. These equivalence classes help
+visualizing repetitions in spreadsheet grids, which are the high-level
+structures a user needs to understand in order to be able to maintain
+the spread sheet.
+
+Types are also useful abstractions over spreadsheets. The literature
+includes different type inference systems that make the user aware of
+formulas where the expected type differs from the actual
+type~\cite{Abraham:2006:TIS:1140335.1140346,
+  Cheng2015Static}. Researchers have proposed different solutions to
+handle types in spreadsheets and a common problem is efficient typing
+of cell areas~\cite{Abraham:2006:TIS:1140335.1140346,
+  Cheng2012Abstract}. Type systems are part of automatic abstraction
+because the types are inferred rather than annotated.
 
 \subsection{Programming Paradigms}
 \label{sec:progr-parad}
