@@ -648,7 +648,8 @@ The goal of this systematic mapping study is to coalesce two
 apparently disjoint research areas, namely declarative parallel array
 programming techniques and end-user development in a spreadsheet model
 of computation. We base our methodology on~\citet{keele2007guidelines}
-and~\citet{petersen2008systematic}.
+and~\citet{petersen2008systematic}, see also
+Section~\ref{sec:approach}.
 
 This study is meant to motivate and inform further research on
 declarative parallel programming in spreadsheets for end-users. We
@@ -659,11 +660,9 @@ this can be combined with spreadsheet end-user development techniques
 and if there has been made any effort into this direction
 already.
 
-
-
 We purposely do not focus on data-flow parallelism in
-spreadsheets. This is a separate project orthogonal to declarative
-parallel array programming in spreadsheets.
+spreadsheets. This is a separate research project orthogonal to
+declarative parallel array programming in spreadsheets.
 
 To answer the research questions raised in
 Section~\ref{sec:research-questions}, we run three different search
@@ -694,7 +693,7 @@ on the number of fulfilled criteria when making a decision of
 inclusion or exclusion. The criteria lists can be seen as disjunctions
 of the single criteria.
 
-\paragraph{Declarative Parallel Array Programming}
+\paragraph{Declarative parallel array programming}
 ~\\
 
 We include a publication if it:
@@ -729,7 +728,7 @@ We exclude a publication if it:
 \item Focuses on transactional memory.
 \end{itemize}
 
-\paragraph{Spreadsheet End-User Development and Parallel Spreadsheets}
+\paragraph{Spreadsheet end-user development and parallel spreadsheets}
 ~\\
 
 We include a publication if it:
@@ -760,11 +759,36 @@ We exclude a publication if it:
 \subsection{Quality Assurance}
 \label{sec:quality-assurance}
 
-To verify that the results of our searches are meaningful, we compile
-a list of relevant and important publications, which must be included
-in the results obtained by our automated search\todo{Include
-  Nlelloch's NESL, Peyton-Jones' User-Focused Approach to Functions
-  and Sestoft's Spreadsheet Implementation Technology.}.
+We use two-fold quality assurance. First, we define a list of authors
+and publication topics that must be part of the literature list
+obtained by our search query. This is a relaxed version of the quality
+assurance suggested by \citet{keele2007guidelines}.
+
+\paragraph{Declarative array programming}
+
+We require the following authors and publications in the literature
+list:
+
+\begin{itemize}
+\item Guy Blelloch on NESL
+\item Simon Peyton-Jones on Data-Parallel Haskell
+\item REPA
+\end{itemize}
+
+\paragraph{Spreadsheet end-user development and parallel spreadsheets}
+
+We require toe following authors and publications in the literature
+list:
+
+\begin{itemize}
+\item Peter Sestoft on Funcalc and user-defined functions
+\item Margaret Burnett and Simon Peyton-Jones on user-defined
+  functions in spreadsheets
+\end{itemize}
+
+Furthermore, Peter Sestoft, an expert on research on spreadsheet
+end-user programming, double-checked the literature list for
+relevance.
 
 \section{Process}
 \label{sec:process}
