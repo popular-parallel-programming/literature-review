@@ -657,13 +657,62 @@ possible.
 \subsection{Representing Arrays}
 \label{sec:representing-arrays}
 
-Array representation in spreadsheets. \todo{Extend!}
+Even though not visible to the spreadsheet user, arrays need to be
+implemented efficiently under the hood to allow for high-performance
+computations. Even though not available currently in spreadsheet
+systems like Excel, index update or arbitrary remap operators are
+widespread in array programming and therefore must also be present in
+a spreadsheet language for array programming.
+
+Our literature study has shown that there has been much research on
+array implementations~\cite{47507, Keller:2010:RSP:1863543.1863582,
+  Stucki:2015:RVP:2784731.2784739} which we can nearly directly apply
+to a spreadsheet environment. Most array designs focus on
+one-dimensional arrays, but in a spreadsheet model, arrays are
+two-dimensional and regular. Generalizing from one dimension to two
+dimensions or more seems not problematic as long as these arrays
+remain regular.
 
 \subsection{Flattening and Scheduling}
 \label{sec:scheduling}
 
-Typedness of spreadsheets, implications for static and dynamic
-scheduling. \todo{Extend!}
+Nested parallelism is a huge topic in array programming and has gained
+a lot of traction~\cite{Blelloch1993Implementation,
+  Lippmeier:2012:WEH:2364527.2364564,
+  Collins:2014:NFL:2627373.2627375} because it allows programmers to
+arbitrarily combine parallel operations without needing to worry about
+whether there is any overhead introduced by the nested parallelism.
+
+Static flattening, as in NESL~\cite{Blelloch1993Implementation} or in
+DPH~\cite{Lippmeier:2012:WEH:2364527.2364564}, applies well to regular
+shaped arrays that have a type which is statically inferable. Cell
+areas on spreadsheets are regular in terms of that they are
+rectangular. In a simple spreadsheet model, the type is less
+important, because there only exist scalar values.
+
+In an experimental platform like Funcalc, a single cell can also
+contain an entire array~\cite{Jones:2003:UAF:944705.944721,
+  Sestoft2014Spreadsheet}. This makes the type of arrays more
+interesting again, because any array might now contain more arrays and
+therefore generalize to irregular three- or even higher dimensional
+arrays. Arrays might even contain a mixture of scalar and array
+values, which would defeat the purpose of static scheduling as work
+now cannot be distributes across threads evenly any more.
+
+There are two techniques that can help here. One is to simply resort
+to a dynamic scheduling approach, like lazy tree
+splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}, instead of trying
+to solve the scheduling problem statically. The low overhead suggests
+that this is a feasible solution.
+
+The second is a hybrid solution of dynamic and static scheduling,
+where the choice of the scheduler is made by static type analysis of
+cells~\cite{Abraham:2006:TIS:1140335.1140346, Cheng2012Abstract,
+  Cheng2015Static}. If an array has a statically determinable type, we
+can safely perform static flattening of the nested parallel
+computation. Otherwise, the system resorts to dynamic scheduling and
+accepts the small overhead. Additionally, the system could warn the
+user about possible performance losses.
 
 \section{Conclusion}
 \label{sec:conclusion}
