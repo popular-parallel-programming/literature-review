@@ -51,7 +51,7 @@ LibreOffice Calc. Their modification generates kernels from operations
 on cell-area, which highly parallel GPGPU hardware then
 executes~\cite{Trudeau2015Collaboration}.
 
-In this literature review, we want to provide the reader with an
+In this literature study, we want to provide the reader with an
 overview of the publications on spreadsheet end-user programming and
 declarative array programming to inform further research on parallel
 programming in spreadsheets with a focus on functional programming and
@@ -68,11 +68,37 @@ special hardware, i.e.\ shared-memory multiprocessors.
 \subsection{Approach}
 \label{sec:approach}
 
-Why and how we use tools from systematic literature reviews,
-citing~\cite{keele2007guidelines,
-  petersen2008systematic}. \todo{Write!}
+Systematic literature reviews have gained a lot of traction in the
+software engineering research community and
+\citet{keele2007guidelines} have developed practical guidelines for
+conducting such reviews. The methodology is strict and provides
+reproducibility.
 
-We present an overview over the methodology in
+However, systematic literature reviews usually focus on generating
+meta-level insight on the cumulative research progress by analyzing
+quantitative or qualitative studies. As already outlined, we instead
+want to map out the research landscape of two disjoint research
+areas. Luckily, there exists a methodology that is based on systematic
+literature reviews which allows for a less strict analysis of
+publications, namely systematic mapping
+studies~\cite{petersen2008systematic}.
+
+Systematic mapping studies can identify areas that lack formal
+research and provide an overview of the current state of the art. The
+trade-off between a systematic literature review and a systematic
+mapping study is that of depth against
+breadth~\cite{keele2007guidelines, petersen2008systematic}. Therefore,
+systematic mapping study is our methodology of choice.
+
+However, for our purpose, even systematic mapping studies are too
+strict, as we do not want to chart out, say, all existing research on
+spreadsheet technology. Instead, we want to identify possibly
+non-obvious synergies between array and spreadsheet
+programming. Therefore, we chose the middle way where we do not
+synthesize insight from the accumulated publications but still focus
+on a somewhat deeper understanding of their contributions
+
+We present a detailed protocol of the study
 Sections~\ref{sec:protocol} and~\ref{sec:process}.
 
 \subsection{Research Questions}
@@ -86,16 +112,32 @@ We formulate our research questions as follows:
 \item What are the most scrutinized topics in array programming?
 \item Has there been research on declarative parallel array
   programming in a spreadsheet model of computation?
-\item Are there any obvious ways to combine declarative parallel array
-  programming and spreadsheet end-user development?
+\item Are there any obvious or non-obvious ways to combine declarative
+  parallel array programming and spreadsheet end-user development?
 \end{enumerate}
 
 \subsection{Threats to Validity}
 \label{sec:threats-validity}
 
-What we did not do methodologically sound and what kinds of blind
-spots there exist (that is, publications that are not listed in this
-review). \todo{Write!}
+Naturally, even with a well defined methodology, the validity of our
+research can be questioned. There are two problems we discuss here
+briefly.
+
+Firstly, systematic mapping studies gain validity by redundancy. A
+group of researchers performs the same classification tasks in order
+to minimize bias~\cite{keele2007guidelines}. Due to restrictions in
+personnel, the amount of redundancy is severely limited in our study.
+
+Secondly, we must acknowledge that this study has blind sports in
+terms of scientific literature but also in terms of patents and
+industry development. We have omitted focusing on patents as the bare
+amount of patent applications on spreadsheets is overwhelming. The
+former however is due to limitations in the search results we have
+obtained and due to possibly too restrictive exclusion of publications
+due to the aforementioned limited redundancy.
+
+\citet{Sestoft2014Spreadsheet} provides a comprehensive list of
+patents on spreadsheet technology.
 
 \section{Declarative Parallel Programming}
 \label{sec:declarative-parallel-programming}
