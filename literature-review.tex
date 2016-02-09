@@ -620,10 +620,55 @@ Much research on spreadsheet end-user programming focuses on bulk-data
 transformations. Also, researchers aim to avoid repetition in
 spreadsheets to avoid error sources. Semantic spreadsheet analysis
 reveals repetitive patterns of homogeneous computations that remind of
-explicit mappings of functions.
+explicit mappings of functions. These observations fit nicely to
+declarative, higher-order array programming and we will discuss them
+in greater detail in the following sections.
 
-These observations fit nicely to declarative, higher-order array
-programming. \todo{Extend!}
+\subsection{High-Level Structures and Functional Programming}
+\label{sec:high-level-struct}
+
+Detecting high-level structures in spreadsheets relates directly to
+identifying repeating formulas, much like stencils. Such repetition
+lowers the level of abstraction and also hides potential for
+parallelism.
+
+A system that detects repeating formulas would also be able to
+parallelize these repetitions, as they essentially are a unwrapped
+bulk-application via a higher-order primitive like \texttt{map}. The
+experimental spreadsheet platform Funcalc already maintains explicit
+knowledge about copied formulas by means of the
+support-graph~\cite{Sestoft2014Spreadsheet}.
+
+It is unclear if an even better understanding of such stencil-like
+structures in spreadsheets leads to possibilities for loop fusion. For
+instance, if all values in column A are first transformed by a
+repeating formula in column B and then subsequently by another column
+C, one could in principle avoid the middle step and fuse the
+computations in columns B and C so that one (implicit) map would
+suffice. However, due to spreadsheet semantics, each cell must
+evaluate to the value its formula computes. This forbids fusion, as
+the intermediate values would vanish and could not be displayed to the
+user. Furthermore, if the formulas in column C references the cells in
+column B more than once each, fusion becomes outright impossible. In
+the former case, the system could suggest the user to manually inline
+the formulas for performance reasons. In the latter case, this is not
+possible.
+
+\subsection{Representing Arrays}
+\label{sec:representing-arrays}
+
+Array representation in spreadsheets. \todo{Extend!}
+
+\subsection{Flattening and Scheduling}
+\label{sec:scheduling}
+
+Typedness of spreadsheets, implications for static and dynamic
+scheduling. \todo{Extend!}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Some concluding remarks. \todo{Summarize!}
 
 \section*{Acknowledgements}
 
