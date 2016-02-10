@@ -32,74 +32,27 @@
 \section{Introduction}
 \label{sec:intro}
 
-Domain experts from widely different disciplines within industry and
-science use spreadsheets to conveniently model complex computations
-~\cite{Sestoft2014Spreadsheet}. Research on spreadsheet technology has
-recently gained increased interest, which is probably due to a renewed
-popularity of functional programming principles. Spreadsheets do not
-possess mutable state, which makes reasoning about their correctness
-rather easy. Moreover, this particular trait makes it possible to
-investigate transparent and implicit parallelization of spreadsheet
-calculations. The widespread use of spreadsheets together with the
-apparent opportunities for spreadsheet parallelization provide synergy
-for future research on ``popular parallel programming''.
+Domain experts from widely different disciplines within industry and science use spreadsheets to conveniently model complex computations~\cite{Sestoft2014Spreadsheet}. Research on spreadsheet technology has recently gained increased interest, which is probably due to a renewed popularity of functional programming principles. Spreadsheets do not possess mutable state, which makes reasoning about their correctness rather easy. Moreover, this particular trait makes it possible to investigate transparent and implicit parallelization of spreadsheet calculations. The widespread use of spreadsheets together with the apparent opportunities for spreadsheet parallelization provide synergy for future research on ``popular parallel programming''.
 
-As an example of recent development in parallel spreadsheet
-technology, AMD has implemented OpenCL kernel generation in
-LibreOffice Calc. Their modification generates kernels from operations
-on cell areas, which highly parallel GPGPU hardware then
-executes~\cite{Trudeau2015Collaboration}.
+As an example of recent development in parallel spreadsheet technology, AMD has implemented OpenCL kernel generation in LibreOffice Calc. Their modification generates kernels from operations on cell areas, which highly parallel GPGPU hardware then executes~\cite{Trudeau2015Collaboration}.
 
-In this literature study, we want to provide the reader with an
-overview of the publications on spreadsheet end-user programming and
-declarative array programming to inform further research on parallel
-programming in spreadsheets with a focus on functional programming and
-higher-order functions.
+In this literature study, we want to provide the reader with an overview of the publications on spreadsheet end-user programming and declarative array programming to inform further research on parallel programming in spreadsheets with a focus on functional programming and higher-order functions.
 
-Declarative array programming allows the language run-time to re-write
-expressions to perform implicit parallelization of computations. The
-user does not need to be aware of the parallelism inherent to a
-problem and as long as they choose to use the highest abstraction to
-model their computation~\cite{Bernecky:2015:AEP:2774959.2774962}, a
-sophisticated compiler can infer such parallelism automatically. We
-focus on approaches that do not require special hardware, i.e.\
-shared-memory multiprocessors.
+Declarative array programming allows the language run-time to re-write expressions to perform implicit parallelization of computations. The user does not need to be aware of the parallelism inherent to a problem and as long as they choose to use the highest abstraction to model their computation~\cite{Bernecky:2015:AEP:2774959.2774962}, a sophisticated compiler can infer such parallelism automatically. We focus on approaches that do not require special hardware, i.e.\ shared-memory multiprocessors.
 
 \subsection{Approach}
 \label{sec:approach}
 
-Systematic literature reviews have gained a lot of traction in the
-software engineering research community and
-\citet{keele2007guidelines} have developed practical guidelines for
-conducting such reviews. The methodology is strict and makes studies
-reproducible.
+Systematic literature reviews have gained a lot of traction in the software engineering research community and \citet{keele2007guidelines} have developed practical guidelines for conducting such reviews. The methodology is strict and makes studies reproducible.
 
-However, systematic literature reviews usually focus on generating
-meta-level insight on the cumulative research progress by analyzing
-quantitative or qualitative studies. As already outlined, we instead
-want to map out the research landscape of two disjoint research
-areas. Luckily, there exists a methodology that is based on systematic
-literature reviews which allows for a less strict analysis of
-publications, namely systematic mapping
-studies~\cite{petersen2008systematic}.
+However, systematic literature reviews usually focus on generating meta-level insight on the cumulative research progress by analyzing quantitative or qualitative studies. As already outlined, we instead want to map out the research landscape of two disjoint research areas. Luckily, there exists a methodology that is based on systematic literature reviews which allows for a less strict analysis of publications, namely systematic mapping studies~\cite{petersen2008systematic}.
 
-Systematic mapping studies can identify areas that lack formal
-research and provide an overview of the current state of the art. The
-trade-off between a systematic literature review and a systematic
-mapping study is that of depth against
-breadth~\cite{keele2007guidelines, petersen2008systematic}. Therefore,
+Systematic mapping studies can identify areas that lack formal research and provide an overview of the current state of the art. The trade-off between a systematic literature review and a systematic mapping study is that of depth against breadth~\cite{keele2007guidelines, petersen2008systematic}. Therefore,
 systematic mapping study is our methodology of choice.
 
-However, for our purpose, even systematic mapping studies are too
-strict, as we do not want to chart out, say, all existing research on
-spreadsheet technology. Instead, we want to identify possibly
-non-obvious synergies between array and spreadsheet
-programming. Therefore, we chose the middle way where we do not
-synthesize insight from the accumulated publications but still focus
-on a somewhat deeper understanding of their contributions
+However, for our purpose, even systematic mapping studies are too strict, as we do not want to chart out, say, all existing research on spreadsheet technology. Instead, we want to identify possibly non-obvious synergies between array and spreadsheet programming. Therefore, we chose the middle way where we do not synthesize insight from the accumulated publications but still focus on a somewhat deeper understanding of their contributions
 
-We present a detailed protocol of the study in
-Sections~\ref{sec:protocol} and~\ref{sec:process}.
+We present a detailed protocol of the study in Sections~\ref{sec:protocol} and~\ref{sec:process}.
 
 \subsection{Research Questions}
 \label{sec:research-questions}
@@ -107,181 +60,71 @@ Sections~\ref{sec:protocol} and~\ref{sec:process}.
 We formulate our research questions as follows:
 
 \begin{enumerate}
-\item What is the state of the art in declarative parallel array
-  programming languages?
+\item What is the state of the art in declarative parallel array programming languages?
 \item What are the most scrutinized topics in array programming?
-\item Has there been research on declarative parallel array
-  programming in a spreadsheet model of computation?
-\item Are there any obvious or non-obvious ways to combine declarative
-  parallel array and spreadsheet end-user programming?
+\item Has there been research on declarative parallel array programming in a spreadsheet model of computation?
+\item Are there any obvious or non-obvious ways to combine declarative parallel array and spreadsheet end-user programming?
 \end{enumerate}
 
 \subsection{Threats to Validity}
 \label{sec:threats-validity}
 
-Naturally, even with a well defined methodology, the validity of our
-research can be questioned. There are two problems we discuss here
-briefly.
+Naturally, even with a well defined methodology, the validity of our research can be questioned. There are two problems we discuss here briefly.
 
-Firstly, systematic mapping studies gain validity by redundancy: a
-group of researchers performs the same classification tasks in order
-to minimize bias~\cite{keele2007guidelines}. Due to restrictions in
-personnel, the amount of redundancy is severely limited in our study.
+Firstly, systematic mapping studies gain validity by redundancy: a group of researchers performs the same classification tasks in order to minimize bias~\cite{keele2007guidelines}. Due to restrictions in personnel, the amount of redundancy is severely limited in our study.
 
-Secondly, we must acknowledge that this study has blind sports in
-terms of scientific literature but also in terms of patents and
-industry development. We have omitted focusing on patents as the bare
-amount of patent applications on spreadsheets is overwhelming. The
-former however is due to limitations in the search results we have
-obtained and due to possibly too restrictive exclusion of publications
-due to the aforementioned limited redundancy.
+Secondly, we must acknowledge that this study has blind sports in terms of scientific literature but also in terms of patents and industry development. We have omitted focusing on patents as the bare amount of patent applications on spreadsheets is overwhelming. The former however is due to limitations in the search results we have obtained and due to possibly too restrictive exclusion of publications due to the aforementioned limited redundancy.
 
-\citet{Sestoft2014Spreadsheet} provides a comprehensive list of
-patents on spreadsheet technology.
+\citet{Sestoft2014Spreadsheet} provides a comprehensive list of patents on spreadsheet technology.
 
 \section{Declarative Parallel Programming}
 \label{sec:declarative-parallel-programming}
 
-We have identified four key topics within parallel array programming:
-nested data parallelism, array fusion, data structures and loop
-parallelization. While these clearly are interconnected and we
-therefore cannot just see them all by themselves, we will use them to
-structure the review of the research body on parallel array
-programming.
+We have identified four key topics within parallel array programming: nested data parallelism, array fusion, data structures and loop parallelization. While these clearly are interconnected and we therefore cannot just see them all by themselves, we will use them to structure the review of the research body on parallel array programming.
 
-There are a few key-languages that appear in the literature. The two
-oldest are Fortran, which is an imperative high-performance language,
-and APL~\cite{Iverson1962Programming}, which is a high-level
-declarative and functional language. Furthermore, much research has
-focused on Single-assignment-C (\sac{}), which is a C-like functional
-language, and Data Parallel Haskell (DPH) and REPA both of which are
-library and compiler extensions for Haskell. Another important
-language is NESL~\cite{Blelloch1993NESL}, which introduced the idea of
-statically flattening nested arrays.
+There are a few key-languages that appear in the literature. The two oldest are Fortran, which is an imperative high-performance language, and APL~\cite{Iverson1962Programming}, which is a high-level declarative and functional language. Furthermore, much research has focused on Single-assignment-C (\sac{}), which is a C-like functional language, and Data Parallel Haskell (DPH) and REPA both of which are library and compiler extensions for Haskell. Another important language is NESL~\cite{Blelloch1993NESL}, which introduced the idea of statically flattening nested arrays.
 
-The opportunity for parallelism in these languages stems from
-bulk-operations over arrays. Where imperative languages like Fortran
-use iterative loops, functional languages depend on higher-order
-functions like \texttt{map} or \texttt{fold} to express data-parallel
-computations. \citet{Ching:1990:APA:97808.97826} argued that it is
-easier for programmers to express parallelism in such a declarative
-high-level way than by explicitly scheduling work to different
-processors and implemented such an approach in the APL370
-compiler. The only requirement to make use of such implicitly parallel
-constructs is that the programmer writes idiomatic code which the
-language runtime can parallelize
-efficiently~\cite{Bernecky:2015:AEP:2774959.2774962}. Not only that
-parallelism is much easier to extract, but also sequential programs
-written in such a high-level style will often perform
-faster~\cite{Bernecky:2015:AEP:2774959.2774962}.
+The opportunity for parallelism in these languages stems from bulk-operations over arrays. Where imperative languages like Fortran use iterative loops, functional languages depend on higher-order functions like \texttt{map} or \texttt{fold} to express data-parallel computations. \citet{Ching:1990:APA:97808.97826} argued that it is easier for programmers to express parallelism in such a declarative high-level way than by explicitly scheduling work to different processors and implemented such an approach in the APL370 compiler. The only requirement to make use of such implicitly parallel constructs is that the programmer writes idiomatic code which the language runtime can parallelize efficiently~\cite{Bernecky:2015:AEP:2774959.2774962}. Not only that parallelism is much easier to extract, but also sequential programs written in such a high-level style will often perform faster~\cite{Bernecky:2015:AEP:2774959.2774962}.
 
 \subsection{Nested Data Parallelism}
 \label{sec:nest-data-parall}
 
-Nested data parallelism describes the nesting of parallel operations
-over a nested array. A standard example from the literature is matrix
-multiplication~\cite{Keller:2010:RSP:1863543.1863582}. A matrix is
-represented by an array of arrays. We can then implement matrix
-multiplication conveniently via higher-order functions, here
-illustrated in F\#:
+Nested data parallelism describes the nesting of parallel operations over a nested array. A standard example from the literature is matrix multiplication~\cite{Keller:2010:RSP:1863543.1863582}. A matrix is represented by an array of arrays. We can then implement matrix multiplication conveniently via higher-order functions, here illustrated in F\#:
 
 \begin{lstlisting}[language=ML]
 type Matrix = double [] [];
 \end{lstlisting}
 \todo{Actually write the code.}
 
-Such a declarative implementation of matrix multiplication lends
-itself naturally to an implicitly parallel execution. However, there
-are possibilities for parallelism on different levels in the
-three-dimensional array structure. Early work on the parallel language
-Actulus~\cite{Perrott:1979:LAV:357073.357075} recognizes the
-difficulty of nested data parallelism and as a temporary solution
-restricts the level of parallelism to one dimension which the
-programmer has to choose ahead of time.
+Such a declarative implementation of matrix multiplication lends itself naturally to an implicitly parallel execution. However, there are possibilities for parallelism on different levels in the three-dimensional array structure. Early work on the parallel language Actulus~\cite{Perrott:1979:LAV:357073.357075} recognizes the difficulty of nested data parallelism and as a temporary solution restricts the level of parallelism to one dimension which the programmer has to choose ahead of time.
 
-A naive way of implementing such nested parallelism would be to simply
-start new parallel threads from within each parallel thread. There
-would be quite some overhead to this solution. Research on nested data
-parallelism has focused on eliminating this overhead in two different
-ways.
+A naive way of implementing such nested parallelism would be to simply start new parallel threads from within each parallel thread. There would be quite some overhead to this solution. Research on nested data parallelism has focused on eliminating this overhead in two different ways.
 
 \paragraph{Flattening}
 
-\citet{Blelloch1993Implementation} introduced the idea of statically
-flattening nested arrays to perform an optimal parallelization of
-operations over arrays. The key to doing so is the right choice of
-array representation and there exists a representation which enables
-the compiler to flatten arrays in constant time. NESL implements this
-flattening scheme and \citet{Blelloch:1996:PTS:232627.232650} showed,
-based on NESL's built-in cost semantics, that NESL actually can be
-implemented without any additional overhead due to flattening.
+\citet{Blelloch1993Implementation} introduced the idea of statically flattening nested arrays to perform an optimal parallelization of operations over arrays. The key to doing so is the right choice of array representation and there exists a representation which enables the compiler to flatten arrays in constant time. NESL implements this flattening scheme and \citet{Blelloch:1996:PTS:232627.232650} showed, based on NESL's built-in cost semantics, that NESL actually can be implemented without any additional overhead due to flattening.
 
-Other researchers have since taken up the idea of flattening nested
-parallelism again~\cite{Lippmeier:2012:WEH:2364527.2364564} and
-implemented it in Haskell. In contrast to NESL, Haskell is a
-fully-fledged functional programming language with types and
-higher-order functions that is compiled instead of interpreted.
+Other researchers have since taken up the idea of flattening nested parallelism again~\cite{Lippmeier:2012:WEH:2364527.2364564} and implemented it in Haskell. In contrast to NESL, Haskell is a fully-fledged functional programming language with types and higher-order functions that is compiled instead of interpreted.
 
-As it turns out, flattening nested data parallelism is much harder to
-achieve in such a higher-order language. The presence of higher-order
-functions makes lifting of functions more
-complicated~\cite{Lippmeier:2012:WEH:2364527.2364564}. Higher-order
-flattening introduces many intermediate arrays that take time and
-space. Therefore, \citet{Keller:2012:VA:2364506.2364512} developed a
-technique to avoid flattening in such cases.
+As it turns out, flattening nested data parallelism is much harder to achieve in such a higher-order language. The presence of higher-order functions makes lifting of functions more complicated~\cite{Lippmeier:2012:WEH:2364527.2364564}. Higher-order flattening introduces many intermediate arrays that take time and space. Therefore, \citet{Keller:2012:VA:2364506.2364512} developed a technique to avoid flattening in such cases.
 
-The more recently developed high-level language NOVA builds on the
-principles developed in NESL and DPH, using a lot of the
-state-of-the-art techniques and targets both, shared-memory
-multiprocessors as well as general purpose
-GPUs~\cite{Collins:2014:NFL:2627373.2627375}.
+The more recently developed high-level language NOVA builds on the principles developed in NESL and DPH, using a lot of the state-of-the-art techniques and targets both, shared-memory multiprocessors as well as general purpose GPUs~\cite{Collins:2014:NFL:2627373.2627375}.
 
 Flattening nested data parallelism is tightly coupled to array fusion,
 which we will discuss in detail in Section~\ref{sec:fusion}.
 
 \paragraph{Dynamic scheduling}
 
-Static flattening nested data parallelism without overhead targets
-homogeneous computations on possibly irregular arrays. Possible
-imbalance of work distribution is a result of irregular nested data
-structures, such as sparse vectors, where adjacent zero-valued entries
-are not stored in memory. This demands a strong type system, such that
-all elements of an array are of the same type. Otherwise, a
-two-dimensional array might mostly contain numbers but spuriously also
-other data types or even reference arrays. This means that not the
-entire parallelism is visible to the compiler, so static flattening
-might not be feasible to balance the workload.
+Static flattening nested data parallelism without overhead targets homogeneous computations on possibly irregular arrays. Possible imbalance of work distribution is a result of irregular nested data structures, such as sparse vectors, where adjacent zero-valued entries are not stored in memory. This demands a strong type system, such that all elements of an array are of the same type. Otherwise, a two-dimensional array might mostly contain numbers but spuriously also other data types or even reference arrays. This means that not the entire parallelism is visible to the compiler, so static flattening might not be feasible to balance the workload.
 
-Dynamic scheduling leaves the distribution of work to run-time of the
-program. \sac{}, for instance, uses work-stealing
-queues~\cite{Chase2005Dynamic, Grelck:2007:SOS:1248648.1248654} to
-dynamically schedule work. Such scheduling schemes can produce some
-overhead at run-time that we otherwise could alleviate by using
-compile-time transformations. To minimize overhead for different kinds
-of computations, \citet{Fluet:2008:SFG:1411204.1411239} argue for a
-mix of schedulers and to let the run-time chose which scheduler to use
-for distributing work.
+Dynamic scheduling leaves the distribution of work to run-time of the program. \sac{}, for instance, uses work-stealing queues~\cite{Chase2005Dynamic, Grelck:2007:SOS:1248648.1248654} to dynamically schedule work. Such scheduling schemes can produce some overhead at run-time that we otherwise could alleviate by using compile-time transformations. To minimize overhead for different kinds of computations, \citet{Fluet:2008:SFG:1411204.1411239} argue for a mix of schedulers and to let the run-time chose which scheduler to use for distributing work.
 
-A notable scheduling heuristic is lazy tree
-splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}. In this scheme,
-every thread gets assigned some part of the workload. Threads
-communicate with other threads via a technique inspired by and as
-efficient as work-stealing queues. Representing arrays via balanced
-binary trees makes halving arrays a constant time operation. When a
-worker thread iterates over an array, it checks at every n-th
-iteration step whether any of the remaining threads are idle. If so,
-it splits its remaining array in half, dispatches the latter half to
-the idle threads and continues to the next iteration step. This
-heuristic shows low overhead in experimental
-settings~\cite{Bergstrom:2010:LTS:1863543.1863558}.
+A notable scheduling heuristic is lazy tree splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}. In this scheme, every thread gets assigned some part of the workload. Threads communicate with other threads via a technique inspired by and as efficient as work-stealing queues. Representing arrays via balanced binary trees makes halving arrays a constant time operation. When a worker thread iterates over an array, it checks at every n-th iteration step whether any of the remaining threads are idle. If so, it splits its remaining array in half, dispatches the latter half to the idle threads and continues to the next iteration step. This heuristic shows low overhead in experimental settings~\cite{Bergstrom:2010:LTS:1863543.1863558}.
 
 \subsection{Fusion}
 \label{sec:fusion}
 
-Fusion refers to avoiding intermediate representations of arrays for
-consecutive bulk operations. For instance, we can fuse two succeeding
-applications of \texttt{map} as follows, where \texttt{.} is the
-function composition operator:
+Fusion refers to avoiding intermediate representations of arrays for consecutive bulk operations. For instance, we can fuse two succeeding applications of \texttt{map} as follows, where \texttt{.} is the function composition operator:
 
 \begin{center}
   \begin{tabular}{ccc}
@@ -295,425 +138,145 @@ map (f . g) xs
   \end{tabular}
 \end{center}
 
-This optimization is very valuable in all kinds of programs,
-sequential and parallel alike, for example in sequential Fortran~90
-programs~\cite{Hwang:1995:AOS:209936.209949}.
+This optimization is very valuable in all kinds of programs, sequential and parallel alike, for example in sequential Fortran~90 programs~\cite{Hwang:1995:AOS:209936.209949}.
 
-Fusion is a static technique performed at compile
-time. \citet{Chakravarty:2001:FAF:507635.507661} express the fusion
-transformations as straight-forward equational rewrite rules. They
-also observe that flattening nested arrays makes fusion a much simpler
-task which emphasizes the connection between flattening and
-fusion. Some researchers have been focusing on making such
-optimizations visible to the programmer via
-types~\cite{Lippmeier:2012:GPA:2364506.2364511}. This enables
-programmers to reason about the performance of their declarative code.
+Fusion is a static technique performed at compile time. \citet{Chakravarty:2001:FAF:507635.507661} express the fusion transformations as straight-forward equational rewrite rules. They also observe that flattening nested arrays makes fusion a much simpler task which emphasizes the connection between flattening and fusion. Some researchers have been focusing on making such optimizations visible to the programmer via types~\cite{Lippmeier:2012:GPA:2364506.2364511}. This enables programmers to reason about the performance of their declarative code.
 
-More aggressive fusion is possible if the compiler performs a more
-complex analysis. \citet{Henriksen:2013:TGA:2502323.2502328} use a
-data-flow based graph-reduction to analyze functional programs with
-second-order functions on arrays for fusion possibilities. Their
-analysis can detect code structures that inhibit fusion, subsequently
-re-writes the program in such a way that fusion becomes possible and
-avoids duplicate computations
+More aggressive fusion is possible if the compiler performs a more complex analysis. \citet{Henriksen:2013:TGA:2502323.2502328} use a data-flow based graph-reduction to analyze functional programs with second-order functions on arrays for fusion possibilities. Their analysis can detect code structures that inhibit fusion, subsequently re-writes the program in such a way that fusion becomes possible and avoids duplicate computations
 
-A special variant of fusion is destructive update analysis. Since data
-structures are immutable in purely functional languages, writing to a
-single index of an array produces in a new array. The update operation
-copies all elements from the original array with exception of the
-index that it updated. If the updated array is not referenced again
-throughout the program, we can perform the update in-place, or
-destructively, without the overhead of copying all
-data. \citet{Sastry:1994:PDU:182409.182486} developed an analysis for
-destructive array updates using live-variable data-flow analysis.
+A special variant of fusion is destructive update analysis. Since data structures are immutable in purely functional languages, writing to a single index of an array produces in a new array. The update operation copies all elements from the original array with exception of the index that it updated. If the updated array is not referenced again throughout the program, we can perform the update in-place, or destructively, without the overhead of copying all data. \citet{Sastry:1994:PDU:182409.182486} developed an analysis for destructive array updates using live-variable data-flow analysis.
 
 \subsection{Data Structures}
 \label{sec:data-structures}
 
-Choosing the right data structure is a key element to high-performance
-array programming. \citet{Lowney:1981:CAI:567532.567533} developed
-carrier arrays as an extension to APL that are able to express
-irregular nested parallelism, opposite to regular nested parallelism
-where all sub-arrays must be of the same length. Carrier arrays decide
-automatically to which rank a function must be lifted to, to be
-applied to all elements of the array.
+Choosing the right data structure is a key element to high-performance array programming. \citet{Lowney:1981:CAI:567532.567533} developed carrier arrays as an extension to APL that are able to express irregular nested parallelism, opposite to regular nested parallelism where all sub-arrays must be of the same length. Carrier arrays decide automatically to which rank a function must be lifted to, to be applied to all elements of the array.
 
-Performance of single operations on arrays are also of concern. For
-instance, functional arrays should be able to perform constant-time
-lookup and preferably also constant-time update~\cite{47507}. It is
-well-known that data structures choose a trade-off between the
-asymptotic complexity of the different operations, like random access,
-update, appending etc. Nevertheless,
-\citet{Stucki:2015:RVP:2784731.2784739} developed a general-purpose
-array data structure, the relaxed-radix-bound (RRB) array. They proved
-the bounds for all operations and for practical sizes of an RRB array
-to be constant or amortized constant. RRB arrays are of clear value to
-parallel array programming, especially in conjunction with dynamic
-scheduling schemes.
+Performance of single operations on arrays are also of concern. For instance, functional arrays should be able to perform constant-time lookup and preferably also constant-time update~\cite{47507}. It is well-known that data structures choose a trade-off between the asymptotic complexity of the different operations, like random access, update, appending etc. Nevertheless, \citet{Stucki:2015:RVP:2784731.2784739} developed a general-purpose array data structure, the relaxed-radix-bound (RRB) array. They proved the bounds for all operations and for practical sizes of an RRB array to be constant or amortized constant. RRB arrays are of clear value to parallel array programming, especially in conjunction with dynamic scheduling schemes.
 
-It is a challenge to implement such high-performance arrays in a
-purely functional language. \citet{Arvind:1989:IDS:69558.69562}
-developed I-Structures which conceptually are write-once arrays. Each
-subscript can be written exactly once during the entire program. Reads
-and writes to indices can be re-ordered according to re-write rules at
-the cost of sacrificing referential transparency.
+It is a challenge to implement such high-performance arrays in a purely functional language. \citet{Arvind:1989:IDS:69558.69562} developed I-Structures which conceptually are write-once arrays. Each subscript can be written exactly once during the entire program. Reads and writes to indices can be re-ordered according to re-write rules at the cost of sacrificing referential transparency.
 
-Type-based run-time specialization of functions and optimization of
-data structures is a widely applicable technique in functional
-programming~\cite{Hall:1994:UHT:182409.156781}. REPA~\cite{Keller:2010:RSP:1863543.1863582}
-uses types in order to represent the (irregular) shapes of arrays and
-to specialize higher-order functions. REPA arrays consist of unboxed
-values and are lazy. Forcing a single element of an array forces the
-evaluation of the entire array. Arrays can evaluate in parallel. Lazy
-arrays can avoid creating intermediate arrays and therefore do not
-require fusion~\cite{Keller:2010:RSP:1863543.1863582}.
+Type-based run-time specialization of functions and optimization of data structures is a widely applicable technique in functional programming~\cite{Hall:1994:UHT:182409.156781}. REPA~\cite{Keller:2010:RSP:1863543.1863582} uses types in order to represent the (irregular) shapes of arrays and to specialize higher-order functions. REPA arrays consist of unboxed values and are lazy. Forcing a single element of an array forces the evaluation of the entire array. Arrays can evaluate in parallel. Lazy arrays can avoid creating intermediate arrays and therefore do not require fusion~\cite{Keller:2010:RSP:1863543.1863582}.
 
 \subsection{Loop Parallelization}
 \label{sec:loop-parallelization}
 
-Parallelism in imperative languages is expressed via some kind of
-\texttt{do-loop} construct that roughly translates to ``for each
-element of a list or for each integer in some range, perform the given
-body''. The problem with this style of parallelism is that imperative
-languages allow for non-trivial data dependencies and side-effects. As
-a consequence, the analysis that a compiler needs to perform in order
-to safely parallelize a \texttt{do-loop} is much more complicated than
-when using higher-order functions.
+Parallelism in imperative languages is expressed via some kind of \texttt{do-loop} construct that roughly translates to ``for each element of a list or for each integer in some range, perform the given body''. The problem with this style of parallelism is that imperative languages allow for non-trivial data dependencies and side-effects. As a consequence, the analysis that a compiler needs to perform in order to safely parallelize a \texttt{do-loop} is much more complicated than when using higher-order functions.
 
-One way to safely parallelize imperative loops is to enforce a
-read-write order that can be computed at compile
-time~\cite{Tang:1990:CTD:77726.255155}. When the read-write order of
-elements is known, a reading thread synchronizes with the writing
-thread to avoid lost updates. A similar approach uses a data-flow
-analysis of accesses to array-subscripts on an inter-procedural
-level~\cite{Maydan:1993:AFA:158511.158515}. Instead of enforcing an
-ordering of read and write accesses,
-\citet{Knobe:1998:ASF:268946.268956} simply fall back to
-single-assignment arrays, thereby eliminating a whole class of data
-dependencies in loops. The most dominant technique for data dependency
-analysis is data-flow analysis of loops and array
-indices~\cite{Maydan:1993:AFA:158511.158515,
-  Knobe:1998:ASF:268946.268956}.
+One way to safely parallelize imperative loops is to enforce a read-write order that can be computed at compile time~\cite{Tang:1990:CTD:77726.255155}. When the read-write order of elements is known, a reading thread synchronizes with the writing thread to avoid lost updates. A similar approach uses a data-flow analysis of accesses to array-subscripts on an inter-procedural level~\cite{Maydan:1993:AFA:158511.158515}. Instead of enforcing an ordering of read and write accesses, \citet{Knobe:1998:ASF:268946.268956} simply fall back to single-assignment arrays, thereby eliminating a whole class of data dependencies in loops. The most dominant technique for data dependency analysis is data-flow analysis of loops and array indices~\cite{Maydan:1993:AFA:158511.158515, Knobe:1998:ASF:268946.268956}.
 
-In bounded, iterative loops, the bounds must be checked after every
-iteration. To alleviate this costly and repetitive computation,
-\citet{Henriksen:2014:BCI:2627373.2627388} lift the bounds check out
-of the loop at compile time and specialize the body for the bounds of
-the loop.
+In bounded, iterative loops, the bounds must be checked after every iteration. To alleviate this costly and repetitive computation, \citet{Henriksen:2014:BCI:2627373.2627388} lift the bounds check out of the loop at compile time and specialize the body for the bounds of the loop.
 
-These techniques for imperative loop-parallelization are relevant for
-the implementation of high-level operations over arrays.
+These techniques for imperative loop-parallelization are relevant for the implementation of high-level operations over arrays.
 
 \subsection{Other Topics}
 \label{sec:other-topics}
 
-This section summarizes research that does not fit into the four major
-categories.
+This section summarizes research that does not fit into the four major categories.
 
 \paragraph{Domain-specific languages}
 
-Some of the research on array programming focused on domain-specific
-languages (DSLs). \citet{4228136} implemented explicitly coordination
-of parallel computations in \sac{} via an embedded DSL in a
-declarative fashion. This, however, removes some of the declarative
-nature of program code. Another DSL on top of \sac{} is Staged\sac{}
-which adds compile-time shape inference of nested arrays to
-\sac{}~\cite{Ureche:2012:SCS:2103746.2103762}. The compiler adds all
-statically unsatisfiable requirements as run-time checks to the
-program.
+Some of the research on array programming focused on domain-specific languages (DSLs). \citet{4228136} implemented explicitly coordination of parallel computations in \sac{} via an embedded DSL in a declarative fashion. This, however, removes some of the declarative nature of program code. Another DSL on top of \sac{} is Staged\sac{} which adds compile-time shape inference of nested arrays to \sac{}~\cite{Ureche:2012:SCS:2103746.2103762}. The compiler adds all statically unsatisfiable requirements as run-time checks to the program.
 
 \paragraph{Retran}
 
-Retran is a declarative, Fortran-like, purely functional
-language~\cite{367042}. Similar to the APL extension by
-\citet{Lowney:1981:CAI:567532.567533}, Retran automatically applies
-lower-rank functions to all elements of a higher-rank
-array. Therefore, there are no higher-order functions in
-Retran. Retran uses anti-currying to lift functions to the required
-rank~\cite{367042}.
+Retran is a declarative, Fortran-like, purely functional language~\cite{367042}. Similar to the APL extension by \citet{Lowney:1981:CAI:567532.567533}, Retran automatically applies lower-rank functions to all elements of a higher-rank array. Therefore, there are no higher-order functions in Retran. Retran uses anti-currying to lift functions to the required rank~\cite{367042}.
 
 \paragraph{Remap and data layout}
 
-Declarative functional programming languages tend to free the
-programmer from thinking explicitly about data layout. For performance
-reasons, it can be necessary to expose data layout to the
-programmer. Also, high-level languages often provide functions to
-transpose two-dimensional arrays or to more generally change the
-layout of an array. The most general operator of this kind is
-\texttt{remap}, sometimes also referred to as \texttt{scatter} on the
-assignment's right-hand side and \texttt{gather} on the assignment's
-left-hand side.
+Declarative functional programming languages tend to free the programmer from thinking explicitly about data layout. For performance reasons, it can be necessary to expose data layout to the programmer. Also, high-level languages often provide functions to transpose two-dimensional arrays or to more generally change the layout of an array. The most general operator of this kind is \texttt{remap}, sometimes also referred to as \texttt{scatter} on the assignment's right-hand side and \texttt{gather} on the assignment's left-hand side.
 
-\citet{Walinsky:1990:FPL:91556.91610} implemented implicit remapping
-at compile time for functional programming languages. They provide
-inference rules for remapping. By using such a remapping, they
-effectively avoid intermediate representations of arrays. Implicit
-remapping also aids improving vectorization of higher-order functions,
-as shown by \citet{Sinkarovs:2013:SDL:2502323.2502332}.
+\citet{Walinsky:1990:FPL:91556.91610} implemented implicit remapping at compile time for functional programming languages. They provide inference rules for remapping. By using such a remapping, they effectively avoid intermediate representations of arrays. Implicit remapping also aids improving vectorization of higher-order functions, as shown by \citet{Sinkarovs:2013:SDL:2502323.2502332}.
 
-The ZPL programming language is based around regular-shaped arrays and
-a concept called regions which roughly equal named
-index-sets~\cite{Chamberlain1999Regions}. Furthermore, it makes all
-communication visible to the programmer through syntax and types,
-featuring a ``what you see is what you get'' performance
-model~\cite{Chamberlain1998ZPLs}. Data remapping is a crucial
-operation in ZPL.\@ \citet{Deitz:2003:DIP:781498.781526} show ZPL's
-\texttt{scatter}-\texttt{gather} operator semantics. The operator can
-modify data layout of arbitrarily ranked arrays and exhibits high
-performance.
+The ZPL programming language is based around regular-shaped arrays and a concept called regions which roughly equal named index-sets~\cite{Chamberlain1999Regions}. Furthermore, it makes all communication visible to the programmer through syntax and types, featuring a ``what you see is what you get'' performance model~\cite{Chamberlain1998ZPLs}. Data remapping is a crucial operation in ZPL.\@ \citet{Deitz:2003:DIP:781498.781526} show ZPL's \texttt{scatter}-\texttt{gather} operator semantics. The operator can modify data layout of arbitrarily ranked arrays and exhibits high performance.
 
 \section{Spreadsheet Technology}
 \label{sec:spreadsheet-end-user-dev}
 
-Spreadsheets are visual programming environments. A collection of
-spreadsheets is a workbook. A spreadsheet contains a rectangular grid
-of cells. Each cell contains either a constant or a formula that
-computes a value and possibly references other cells.
+Spreadsheets are visual programming environments. A collection of spreadsheets is a workbook. A spreadsheet contains a rectangular grid of cells. Each cell contains either a constant or a formula that computes a value and possibly references other cells.
 
-One major topic in research on spreadsheet programming is the lack of
-abstraction: spreadsheets bundle data and logic in a single
-representation~\cite{Isakowitz:1995:TLT:195705.195708}. Moreover,
-spreadsheets encourage copying of formulas across cells to replicate
-computations~\cite{1173080, Benfield:2009:FFD:1668113.1668121}. This
-lack of abstraction makes spreadsheets less powerful than general
-purpose programming languages~\cite{Miller:2015:SPB:2814189.2814201}.
+One major topic in research on spreadsheet programming is the lack of abstraction: spreadsheets bundle data and logic in a single representation~\cite{Isakowitz:1995:TLT:195705.195708}. Moreover, spreadsheets encourage copying of formulas across cells to replicate computations~\cite{1173080, Benfield:2009:FFD:1668113.1668121}. This lack of abstraction makes spreadsheets less powerful than general purpose programming languages~\cite{Miller:2015:SPB:2814189.2814201}.
 
-Another main topic is general programming paradigms in a spreadsheet
-model of computation. Researchers have augmented spreadsheets with
-object orientation~\cite{Benfield:2009:FFD:1668113.1668121} and more
-declarative programming
-approaches~\cite{Stadelmann:1993:SBC:168642.168664,
-  Singh:2016:TSD:2837614.2837668} which we will look at in greater
-detail in Section~\ref{sec:progr-parad}. Again, even though we cannot
-strictly separate abstraction and programming paradigms, this
-categorization is convenient for the discussion of how researchers
-propose to handle the complexity of spreadsheet models.
+Another main topic is general programming paradigms in a spreadsheet model of computation. Researchers have augmented spreadsheets with object orientation~\cite{Benfield:2009:FFD:1668113.1668121} and more declarative programming approaches~\cite{Stadelmann:1993:SBC:168642.168664, Singh:2016:TSD:2837614.2837668} which we will look at in greater detail in Section~\ref{sec:progr-parad}. Again, even though we cannot strictly separate abstraction and programming paradigms, this categorization is convenient for the discussion of how researchers propose to handle the complexity of spreadsheet models.
 
-There are many more topics in spreadsheet research, i.e.\ testing of
-spreadsheets, visualization or analysis of ``real-life'' spreadsheet
-corpora, to only name a few. We focus however on research on end-user
-programming in a spreadsheet model of computations and will therefore
-not consider these other topics here.
+There are many more topics in spreadsheet research, i.e.\ testing of spreadsheets, visualization or analysis of ``real-life'' spreadsheet corpora, to only name a few. We focus however on research on end-user programming in a spreadsheet model of computations and will therefore not consider these other topics here.
 
 \subsection{Abstraction}
 \label{sec:abstraction}
 
-It is convenient to define two groups of spreadsheet abstraction. That
-is (1) manual abstraction, where the user has the means to build their
-own abstractions so to hide implementation details and (2) automatic
-abstraction, where the user constructs spreadsheets in a familiar way
-and the system later analyzes them to infer the logic and to
-(subsequently) separate it from data.
+It is convenient to define two groups of spreadsheet abstraction. That is (1) manual abstraction, where the user has the means to build their own abstractions so to hide implementation details and (2) automatic abstraction, where the user constructs spreadsheets in a familiar way and the system later analyzes them to infer the logic and to (subsequently) separate it from data.
 
 \paragraph{Manual abstraction}
 
-Many researchers observed that spreadsheets lack the most basic
-abstraction of general-purpose programming languages: named
-functions~\cite{Jones:2003:UAF:944705.944721}. Named functions make it
-possible to hide implementation detail that is not important for the
-overall logic of a specific model. Therefore,
-\citet{Jones:2003:UAF:944705.944721} proposed to allow end-users to
-define their own abstractions in terms of spreadsheet
-computations. Each newly introduced function is essentially a
-spreadsheet prototype that has designated input cells and a designated
-output cell. Each time the user calls such a sheet-defined function, a
-new spreadsheet instance of this function is instantiated to perform
-the computation.
+Many researchers observed that spreadsheets lack the most basic abstraction of general-purpose programming languages: named functions~\cite{Jones:2003:UAF:944705.944721}. Named functions make it possible to hide implementation detail that is not important for the overall logic of a specific model. Therefore,
+\citet{Jones:2003:UAF:944705.944721} proposed to allow end-users to define their own abstractions in terms of spreadsheet computations. Each newly introduced function is essentially a spreadsheet prototype that has designated input cells and a designated output cell. Each time the user calls such a sheet-defined function, a new spreadsheet instance of this function is instantiated to perform the computation.
 
-\citet{Sestoft:2008:IFS:1370847.1370867} extended upon this idea by
-allowing sheet-defined, recursive and run-time compiled
-functions. This approach is more general and alleviates the need for
-instantiating explicit spreadsheets. This approach is implemented in
-the experimental spreadsheet engine Funcalc which is described in
-great detail in~\cite{Sestoft2014Spreadsheet}.
+\citet{Sestoft:2008:IFS:1370847.1370867} extended upon this idea by allowing sheet-defined, recursive and run-time compiled functions. This approach is more general and alleviates the need for instantiating explicit spreadsheets. This approach is implemented in the experimental spreadsheet engine Funcalc which is described in great detail in~\cite{Sestoft2014Spreadsheet}.
 
 \paragraph{Automatic abstraction}
 
-Researchers have developed systems that analyze spreadsheets to infer
-their logic and to (subsequently) separate logic from data. This
-allows users to build spreadsheets in a familiar
-manner. \citet{Isakowitz:1995:TLT:195705.195708} developed a system
-that automatically performs such a separation and manages spreadsheet
-logic for modular re-use. They observe that the majority of
-spreadsheet errors they encounter are not simple off-by-one reference
-errors and typos but severe errors in the model's logic. They relate
-them to classic programming errors where the programmer has not chosen
-an adequate level of abstraction.
+Researchers have developed systems that analyze spreadsheets to infer their logic and to (subsequently) separate logic from data. This allows users to build spreadsheets in a familiar manner. \citet{Isakowitz:1995:TLT:195705.195708} developed a system that automatically performs such a separation and manages spreadsheet logic for modular re-use. They observe that the majority of spreadsheet errors they encounter are not simple off-by-one reference errors and typos but severe errors in the model's logic. They relate them to classic programming errors where the programmer has not chosen an adequate level of abstraction.
 
-The visual layout of spreadsheets is often implicit documentation of
-the logic. \citet{1173080} however, observe that this visual layout
-often leads to misconceptions if another user takes over the
-spreadsheet. Therefore, they developed a set of logical and semantic
-equivalence classes for cells. These equivalence classes help
-visualizing repetitions in spreadsheet grids, which are the high-level
-structures a user needs to understand in order to be able to maintain
-the spreadsheet.
+The visual layout of spreadsheets is often implicit documentation of the logic. \citet{1173080} however, observe that this visual layout often leads to misconceptions if another user takes over the spreadsheet. Therefore, they developed a set of logical and semantic equivalence classes for cells. These equivalence classes help visualizing repetitions in spreadsheet grids, which are the high-level structures a user needs to understand in order to be able to maintain the spreadsheet.
 
-Types are also useful abstractions over spreadsheets. The literature
-includes different type inference systems that make the user aware of
-formulas where the expected type differs from the actual
-type~\cite{Abraham:2006:TIS:1140335.1140346,
-  Cheng2015Static}. Researchers have proposed different solutions to
-handle types in spreadsheets and a common problem is efficient typing
-of cell areas~\cite{Abraham:2006:TIS:1140335.1140346,
-  Cheng2012Abstract}. Type systems are part of automatic abstraction
-because the types are inferred rather than annotated.
+Types are also useful abstractions over spreadsheets. The literature includes different type inference systems that make the user aware of formulas where the expected type differs from the actual type~\cite{Abraham:2006:TIS:1140335.1140346, Cheng2015Static}. Researchers have proposed different solutions to handle types in spreadsheets and a common problem is efficient typing of cell areas~\cite{Abraham:2006:TIS:1140335.1140346, Cheng2012Abstract}. Type systems are part of automatic abstraction because the types are inferred rather than annotated.
 
 \subsection{Programming Paradigms}
 \label{sec:progr-parad}
 
-Researchers have also proposed to apply different programming
-paradigms to the spreadsheet domain with a focus on raising the
-abstraction level.
+Researchers have also proposed to apply different programming paradigms to the spreadsheet domain with a focus on raising the abstraction level.
 
 \paragraph{Object orientation}
 
-Functional Model Development
-(FMD)~\cite{Benfield:2009:FFD:1668113.1668121} is a domain-specific
-language for Excel and exposes objects to spreadsheet users. Objects
-are an accumulation of data with some functions defined on these
-objects. Users can use a special syntax to declare variables that
-model input parameters for user-defined functions. Functions are
-defined inline (as in on the same spreadsheet) by prototype formulas
-where the cell that would yield the result actually evaluates to the
-new defined function. As spreadsheets encourage copying of formulas
-over the same row or column, FMD introduces a high-level \texttt{map}
-operator that applies the same user-defined function across a column
-or row.
+Functional Model Development (FMD)~\cite{Benfield:2009:FFD:1668113.1668121} is a domain-specific language for Excel and exposes objects to spreadsheet users. Objects are an accumulation of data with some functions defined on these objects. Users can use a special syntax to declare variables that model input parameters for user-defined functions. Functions are defined inline (as in on the same spreadsheet) by prototype formulas where the cell that would yield the result actually evaluates to the new defined function. As spreadsheets encourage copying of formulas over the same row or column, FMD introduces a high-level \texttt{map} operator that applies the same user-defined function across a column or row.
 
-To apply stronger separation of implementation and instantiation,
-\citet{6070409} developed ClassSheet. The logic of a computation is
-defined in a model-spreadsheet, while each common spreadsheet that
-performs the computations is an instance of this model. This approach
-resembles a manual version of the abstraction model by
-\citet{Isakowitz:1995:TLT:195705.195708}.
+To apply stronger separation of implementation and instantiation, \citet{6070409} developed ClassSheet. The logic of a computation is defined in a model-spreadsheet, while each common spreadsheet that performs the computations is an instance of this model. This approach resembles a manual version of the abstraction model by \citet{Isakowitz:1995:TLT:195705.195708}.
 
 \paragraph{Constraint programming}
 
-\citet{Stadelmann:1993:SBC:168642.168664} proposed to let spreadsheet
-users express their models by providing the system with constraints to
-solve. This approach severely reduces the amount of code required to
-model complicated
-logic~\cite{Stadelmann:1993:SBC:168642.168664}. However, due to the
-requirement of being able to name a cell multiple times in a
-constraint, it is infeasible to let constraints directly replace cell
-formulas. Instead, the system provides a second window that contains
-constraints. This side-steps the spreadsheet model slightly.
+\citet{Stadelmann:1993:SBC:168642.168664} proposed to let spreadsheet users express their models by providing the system with constraints to solve. This approach severely reduces the amount of code required to model complicated logic~\cite{Stadelmann:1993:SBC:168642.168664}. However, due to the requirement of being able to name a cell multiple times in a constraint, it is infeasible to let constraints directly replace cell formulas. Instead, the system provides a second window that contains constraints. This side-steps the spreadsheet model slightly.
 
 \paragraph{By example}
 
-Programming by example allows users to explain how to transform data
-by performing a few transformations manually, from which the system
-can infer general transformation rules. This is useful for
-bulk-processing similar items. \citet{Singh:2016:TSD:2837614.2837668}
-extended Excel with a DSL that allows users to provide such example
-transformations such that Excel then automatically transforms the
-remaining items. They combine a probabilistic approach of parsing with
-joint learning of transformation rules. They require however that the
-data type that a user wants to transform already exists as a
-predefined model.
+Programming by example allows users to explain how to transform data by performing a few transformations manually, from which the system can infer general transformation rules. This is useful for bulk-processing similar items. \citet{Singh:2016:TSD:2837614.2837668} extended Excel with a DSL that allows users to provide such example transformations such that Excel then automatically transforms the remaining items. They combine a probabilistic approach of parsing with joint learning of transformation rules. They require however that the data type that a user wants to transform already exists as a predefined model.
 
 \section{Discussion}
 \label{sec:discussion}
 
-Much research on spreadsheet end-user programming focuses on bulk-data
-transformations. Also, researchers aim to avoid repetition in
-spreadsheets to avoid error sources. Semantic spreadsheet analysis
-reveals repetitive patterns of homogeneous computations that remind of
-explicit mappings of functions. These observations fit nicely to
-declarative, higher-order array programming and we will discuss them
-in greater detail in the following sections.
+Much research on spreadsheet end-user programming focuses on bulk-data transformations. Also, researchers aim to avoid repetition in spreadsheets to avoid error sources. Semantic spreadsheet analysis reveals repetitive patterns of homogeneous computations that remind of explicit mappings of functions. These observations fit nicely to declarative, higher-order array programming and we will discuss them in greater detail in the following sections.
 
 \subsection{High-Level Structures and Functional Programming}
 \label{sec:high-level-struct}
 
-Detecting high-level structures in spreadsheets relates directly to
-identifying repeating formulas~\cite{1173080}, much like
-stencils. Such repetition lowers the level of abstraction and also
-hides potential for parallelism.
+Detecting high-level structures in spreadsheets relates directly to identifying repeating formulas~\cite{1173080}, much like stencils. Such repetition lowers the level of abstraction and also hides potential for parallelism.
 
-A system that detects repeating formulas would also be able to
-parallelize these repetitions, as they essentially are a unwrapped
-bulk-application via a higher-order primitive like \texttt{map}. The
-experimental spreadsheet platform Funcalc already maintains explicit
-knowledge about copied formulas by means of the
-support-graph~\cite{Sestoft2014Spreadsheet}.
+A system that detects repeating formulas would also be able to parallelize these repetitions, as they essentially are a unwrapped bulk-application via a higher-order primitive like \texttt{map}. The experimental spreadsheet platform Funcalc already maintains explicit knowledge about copied formulas by means of the support-graph~\cite{Sestoft2014Spreadsheet}.
 
-It is unclear if an even better understanding of such stencil-like
-structures in spreadsheets leads to possibilities for loop fusion. For
-instance, if all values in column A are first transformed by a
-repeating formula in column B and then subsequently by another column
-C, one could in principle avoid the middle step and fuse the
-computations in columns B and C so that one (implicit) \texttt{map}
-would suffice. However, due to spreadsheet semantics, each cell must
-evaluate to the value its formula
-computes~\cite{Sestoft2014Spreadsheet}. This forbids fusion, as the
-intermediate values would vanish and could not be displayed to the
-user. Furthermore, if the formulas in column C references the cells in
-column B more than once each, fusion becomes outright impossible. In
-the former case, the system could suggest the user to manually inline
-the formulas for performance reasons. In the latter case, this is not
-possible.
+It is unclear if an even better understanding of such stencil-like structures in spreadsheets leads to possibilities for loop fusion. For instance, if all values in column A are first transformed by a repeating formula in column B and then subsequently by another column C, one could in principle avoid the middle step and fuse the computations in columns B and C so that one (implicit) \texttt{map} would suffice. However, due to spreadsheet semantics, each cell must evaluate to the value its formula computes~\cite{Sestoft2014Spreadsheet}. This forbids fusion, as the intermediate values would vanish and could not be displayed to the user. Furthermore, if the formulas in column C references the cells in column B more than once each, fusion becomes outright impossible. In the former case, the system could suggest the user to manually inline the formulas for performance reasons. In the latter case, this is not possible.
 
 \subsection{Representing Arrays}
 \label{sec:representing-arrays}
 
-Even though not visible to the spreadsheet user, arrays need to be
-implemented efficiently under the hood to allow for high-performance
-computations. Even though not available currently in spreadsheet
-systems like Excel, index update or arbitrary remap operators are
-widespread in array programming and therefore must also be present in
-a spreadsheet language for array programming.
+Even though not visible to the spreadsheet user, arrays need to be implemented efficiently under the hood to allow for high-performance computations. Even though not available currently in spreadsheet systems like Excel, index update or arbitrary remap operators are widespread in array programming and therefore must also be present in a spreadsheet language for array programming.
 
-Our literature study has shown that there has been much research on
-array implementations~\cite{47507, Keller:2010:RSP:1863543.1863582,
-  Stucki:2015:RVP:2784731.2784739} that we can nearly directly apply
-to a spreadsheet environment. Most array designs focus on
-one-dimensional arrays, but in a spreadsheet model, arrays are
-two-dimensional and regular. Generalizing from one dimension to two
-dimensions or more seems not problematic as long as these arrays
-remain regular.
+Our literature study has shown that there has been much research on array implementations~\cite{47507, Keller:2010:RSP:1863543.1863582,
+  Stucki:2015:RVP:2784731.2784739} that we can nearly directly apply to a spreadsheet environment. Most array designs focus on one-dimensional arrays, but in a spreadsheet model, arrays are two-dimensional and regular. Generalizing from one dimension to two dimensions or more seems not problematic as long as these arrays remain regular.
 
 \subsection{Flattening and Scheduling}
 \label{sec:scheduling}
 
-Nested parallelism is a huge topic in array programming and has gained
-a lot of traction~\cite{Blelloch1993Implementation,
+Nested parallelism is a huge topic in array programming and has gained a lot of traction~\cite{Blelloch1993Implementation,
   Lippmeier:2012:WEH:2364527.2364564,
-  Collins:2014:NFL:2627373.2627375} because it allows programmers to
-arbitrarily combine parallel operations without needing to worry about
-whether there is any overhead introduced by the nested parallelism.
+  Collins:2014:NFL:2627373.2627375} because it allows programmers to arbitrarily combine parallel operations without needing to worry about whether there is any overhead introduced by the nested parallelism.
 
-Static flattening, as in NESL~\cite{Blelloch1993Implementation} or in
-DPH~\cite{Lippmeier:2012:WEH:2364527.2364564}, applies well to regular
-shaped arrays that have a type which is statically inferable. Cell
-areas on spreadsheets are regular in terms of that they are
-rectangular. In a simple spreadsheet model, the type is less
-important, because there only exist scalar values.
+Static flattening, as in NESL~\cite{Blelloch1993Implementation} or in DPH~\cite{Lippmeier:2012:WEH:2364527.2364564}, applies well to regular shaped arrays that have a type which is statically inferable. Cell areas on spreadsheets are regular in terms of that they are rectangular. In a simple spreadsheet model, the type is less important, because there only exist scalar values.
 
-In an experimental platform like Funcalc, a single cell can also
-contain an entire array~\cite{Jones:2003:UAF:944705.944721,
-  Sestoft2014Spreadsheet}. This makes the type of arrays more
-interesting again, because any array might now contain more arrays and
-therefore generalize to irregular three- or even higher dimensional
-arrays. Arrays might even contain a mixture of scalar and array
-values. These cases defeat the purpose of static scheduling as work
-now cannot be distributes across threads evenly any more.
+In an experimental platform like Funcalc, a single cell can also contain an entire array~\cite{Jones:2003:UAF:944705.944721, Sestoft2014Spreadsheet}. This makes the type of arrays more interesting again, because any array might now contain more arrays and therefore generalize to irregular three- or even higher dimensional arrays. Arrays might even contain a mixture of scalar and array values. These cases defeat the purpose of static scheduling as work now cannot be distributes across threads evenly any more.
 
-There are two techniques that can help here. One is to simply resort
-to a dynamic scheduling approach, like lazy tree
-splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}, instead of trying
-to solve the scheduling problem statically. The low overhead suggests
-that this is a feasible solution.
+There are two techniques that can help here. One is to simply resort to a dynamic scheduling approach, like lazy tree splitting~\cite{Bergstrom:2010:LTS:1863543.1863558}, instead of trying to solve the scheduling problem statically. The low overhead suggests that this is a feasible solution.
 
 The second is a hybrid solution of dynamic and static scheduling,
-where the choice of the scheduler is made by static type analysis of
-cells~\cite{Abraham:2006:TIS:1140335.1140346, Cheng2012Abstract,
-  Cheng2015Static}. If an array has a statically determinable type, we
-can safely perform static flattening of the nested parallel
-computation. Otherwise, the system resorts to dynamic scheduling and
-accepts the small overhead. Additionally, the system could warn the
-user about possible performance losses.
+where the choice of the scheduler is made by static type analysis of cells~\cite{Abraham:2006:TIS:1140335.1140346, Cheng2012Abstract,
+  Cheng2015Static}. If an array has a statically determinable type, we can safely perform static flattening of the nested parallel computation. Otherwise, the system resorts to dynamic scheduling and accepts the small overhead. Additionally, the system could warn the user about possible performance losses.
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -737,29 +300,14 @@ Some concluding remarks. \todo{Summarize!}
 \subsection{Background}
 \label{sec:background}
 
-The goal of this systematic mapping study is to coalesce two
-apparently disjoint research areas, namely declarative parallel array
-programming techniques and end-user development in a spreadsheet model
-of computation. We base our methodology on~\citet{keele2007guidelines}
-and~\citet{petersen2008systematic}, see also
-Section~\ref{sec:approach}.
+The goal of this systematic mapping study is to coalesce two apparently disjoint research areas, namely declarative parallel array programming techniques and end-user development in a spreadsheet model of computation. We base our methodology on~\citet{keele2007guidelines}
+and~\citet{petersen2008systematic}, see also Section~\ref{sec:approach}.
 
-This study is meant to motivate and inform further research on
-declarative parallel programming in spreadsheets for end-users. We
-want to gain an overview over well known techniques for transforming
-expressions that describe seemingly sequential operations into
-efficient parallel code. Furthermore, we want to gain insight into how
-this can be combined with spreadsheet end-user development techniques
-and whether there has been made any scientific effort into this
-direction already.
+This study is meant to motivate and inform further research on declarative parallel programming in spreadsheets for end-users. We want to gain an overview over well known techniques for transforming expressions that describe seemingly sequential operations into efficient parallel code. Furthermore, we want to gain insight into how this can be combined with spreadsheet end-user development techniques and whether there has been made any scientific effort into this direction already.
 
-We purposely do not focus on data-flow parallelism in
-spreadsheets. This is a separate research project orthogonal to
-declarative parallel array programming in spreadsheets.
+We purposely do not focus on data-flow parallelism in spreadsheets. This is a separate research project orthogonal to declarative parallel array programming in spreadsheets.
 
-To answer the research questions raised in
-Section~\ref{sec:research-questions}, we run three different search
-queries:
+To answer the research questions raised in Section~\ref{sec:research-questions}, we run three different search queries:
 
 \begin{description}
 \item[Declarative, parallel array programming languages] What are
@@ -775,16 +323,9 @@ queries:
 \subsection{Study Selection Criteria}
 \label{sec:study-select-crit}
 
-We perform two disjoint literature studies, one for declarative
-parallel array programming languages and one for spreadsheet end-user
-development.
+We perform two disjoint literature studies, one for declarative parallel array programming languages and one for spreadsheet end-user development.
 
-In the following, we give a list of criteria for inclusion or
-exclusion of studies. Naturally, some of the studies can fulfill
-criteria of both lists. We choose therefore to perform a majority vote
-on the number of fulfilled criteria when making a decision of
-inclusion or exclusion. The criteria lists can be seen as disjunctions
-of the single criteria.
+In the following, we give a list of criteria for inclusion or exclusion of studies. Naturally, some of the studies can fulfill criteria of both lists. We choose therefore to perform a majority vote on the number of fulfilled criteria when making a decision of inclusion or exclusion. The criteria lists can be seen as disjunctions of the single criteria.
 
 \paragraph{Declarative parallel array programming}
 ~\\
@@ -852,15 +393,11 @@ We exclude a publication if it:
 \subsection{Quality Assurance}
 \label{sec:quality-assurance}
 
-We use two-fold quality assurance. First, we define a list of authors
-and publication topics that must be part of the literature list
-obtained by our search query. This is a relaxed version of the quality
-assurance suggested by \citet{keele2007guidelines}.
+We use two-fold quality assurance. First, we define a list of authors and publication topics that must be part of the literature list obtained by our search query. This is a relaxed version of the quality assurance suggested by \citet{keele2007guidelines}.
 
 \paragraph{Declarative array programming}
 
-We require the following authors and publications in the literature
-list:
+We require the following authors and publications in the literature list:
 
 \begin{itemize}
 \item Guy Blelloch on NESL
@@ -870,8 +407,7 @@ list:
 
 \paragraph{Spreadsheet end-user development and parallel spreadsheets}
 
-We require the following authors and publications in the literature
-list:
+We require the following authors and publications in the literature list:
 
 \begin{itemize}
 \item Peter Sestoft on Funcalc and user-defined functions
@@ -879,9 +415,7 @@ list:
   functions in spreadsheets
 \end{itemize}
 
-Furthermore, Peter Sestoft, an expert on research on spreadsheet
-end-user programming, double-checked the literature list for
-relevance.
+Furthermore, Peter Sestoft, an expert on research on spreadsheet end-user programming, double-checked the literature list for relevance.
 
 \section{Process}
 \label{sec:process}
@@ -889,76 +423,50 @@ relevance.
 \subsection{Literature Search}
 \label{sec:literature-search}
 
-We have use IEEExplore and ACM Digital Library as sources for our
-literature search. The number of results from these sources varies
-drastically, which is probably due to IEEExplore interpreting search
-queries very strictly. We avoid Google Scholar and CiteSeerX, as these
-meta engines return way over a thousand publications for each query,
+We have use IEEExplore and ACM Digital Library as sources for our literature search. The number of results from these sources varies drastically, which is probably due to IEEExplore interpreting search queries very strictly. We avoid Google Scholar and CiteSeerX, as these meta engines return way over a thousand publications for each query,
 which is infeasible for our scope.
 
-The uniqueness of a publication in the following means that a
-publication is listed only once. Sometimes, publications have multiple
-entries in a digital library, for instance one for a conference's
-proceedings and one for SIGPLAN Notes.
+The uniqueness of a publication in the following means that a publication is listed only once. Sometimes, publications have multiple entries in a digital library, for instance one for a conference's proceedings and one for SIGPLAN Notes.
 
-We have an initial list of 681 publications to consider, which we
-construct as described in the following:
+We have an initial list of 681 publications to consider, which we construct as described in the following:
 
 \paragraph{Declarative Parallel Array Programming}
 
-To generate a literature list for declarative parallel array
-programming languages, we use the following query:
+To generate a literature list for declarative parallel array programming languages, we use the following query:
 
 \begin{lstlisting}
 (functional AND array AND programming AND parallel) AND (data-parallel OR ``data parallel'' OR multi-core OR multicore  OR ``multi core'')
 \end{lstlisting}
 
-\noindent This results in 250 publications of which 194 are unique from the ACM
-Digital Library. IEEExplore, however, only returns eight publications,
+\noindent This results in 250 publications of which 194 are unique from the ACM Digital Library. IEEExplore, however, only returns eight publications,
 all of which are unique. This adds 202 publications to consider.
 
 \paragraph{Spreadsheet End-User Development}
 
-The search query we use for finding publications on spreadsheet
-end-user development is:
+The search query we use for finding publications on spreadsheet end-user development is:
 
 \begin{lstlisting}
 spreadsheets AND (end-user-development OR "end user development" OR "end-user development")
 \end{lstlisting}
 
-\noindent This results in 435 publications of which 386 are unique from the ACM
-Digital Library and in 104 publications, all of which are unique, from
-IEEExplore. This adds 424 publications to consider.
+\noindent This results in 435 publications of which 386 are unique from the ACM Digital Library and in 104 publications, all of which are unique, from IEEExplore. This adds 424 publications to consider.
 
 \paragraph{Parallel Spreadsheets}
 
-We use the following query to generate a list of publications focusing
-on anything parallel in spreadsheets:
+We use the following query to generate a list of publications focusing on anything parallel in spreadsheets:
 
 \begin{lstlisting}
 spreadsheets AND parallel
 \end{lstlisting}
 
-\noindent ACM returns 21 publications of which 17 are unique and
-IEEExplore returns 38 publications. This adds 55 publications to
-consider.
+\noindent ACM returns 21 publications of which 17 are unique and IEEExplore returns 38 publications. This adds 55 publications to consider.
 
 \subsection{Literature Selection}
 \label{sec:literature-selection}
 
-Using the criteria defined in Section~\ref{sec:study-select-crit}, we
-include studies based on their titles and their abstracts. If the
-title is not informative enough, we accept the study and will later
-screen it again based on the abstract.
+Using the criteria defined in Section~\ref{sec:study-select-crit}, we include studies based on their titles and their abstracts. If the title is not informative enough, we accept the study and will later screen it again based on the abstract.
 
-To perform the selection of literature move conveniently, we have
-developed an
-Emacs\footnote{\url{https://www.gnu.org/software/emacs/}}-based tool,
-called the Systematic Literature Review Mode (SLIRM). SLIRM
-automatically downloads abstracts and full-text files on demand for
-BibTeX-formatted entries that have been exported from a digital
-library, such as the ACM Digital Library. SLIRM is open-source and
-freely available\footnote{Download SLIRM from
+To perform the selection of literature move conveniently, we have developed an Emacs\footnote{\url{https://www.gnu.org/software/emacs/}}-based tool, called the Systematic Literature Review Mode (SLIRM). SLIRM automatically downloads abstracts and full-text files on demand for BibTeX-formatted entries that have been exported from a digital library, such as the ACM Digital Library. SLIRM is open-source and freely available\footnote{Download SLIRM from
   \url{https://github.com/fbie/slirm}}.
 
 \end{document}
