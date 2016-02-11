@@ -89,10 +89,10 @@ The opportunity for parallelism in these languages stems from bulk-operations ov
 \subsection{Nested Data Parallelism}
 \label{sec:nest-data-parall}
 
-Nested data parallelism describes the nesting of parallel operations over a nested array. A standard example from the literature is matrix multiplication~\cite{Keller:2010:RSP:1863543.1863582}. A matrix is represented by an array of arrays. We can then implement matrix multiplication conveniently via higher-order functions, here illustrated in F\#:
+Nested data parallelism describes the nesting of parallel operations over a nested array. A standard example from the literature is matrix multiplication~\cite{Keller:2010:RSP:1863543.1863582}. A matrix is represented by a two-dimensional array. We can then implement matrix multiplication conveniently via higher-order functions, here illustrated in F\#:
 
 \begin{lstlisting}[language=ML]
-type Matrix = double [] [];
+type Matrix = double [,];
 \end{lstlisting}
 \todo{Actually write the code.}
 
