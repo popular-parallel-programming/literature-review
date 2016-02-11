@@ -10,289 +10,252 @@
 
 * Declarative Parallel Array Programming
 ** O'Donnel, 1988: Architectures for declarative programming languages
+
 - data structures
 - functional
-Constant-time, functional array implementation. Lookup and update are
-of constant time \cite{47507}.
+
+Constant-time, functional array implementation. Lookup and update are of constant time \cite{47507}.
+
 ** Grelck, 2007: Coordinating Data-Parallel SAC
+
 - dsl
 - sac
-Declarative streams in SAC. Explicit coordination of parallel
-processing in a DSL inside SAC \cite{4228136}.
+
+Declarative streams in SAC. Explicit coordination of parallel processing in a DSL inside SAC \cite{4228136}.
+
 ** Shafarenko, 1994: RETRAN
+
 - declarative
 - fortran
-Gets rid of higher-order functions (skeletons) and automatically
-applies functions to all elements of arrays if required by the type of
-the function. Uses "anti-currying" of operands to achieve this, dual
-of lifting \cite{367042}.
+
+Gets rid of higher-order functions (skeletons) and automatically applies functions to all elements of arrays if required by the type of the function. Uses "anti-currying" of operands to achieve this, dual of lifting \cite{367042}.
+
 ** Collins et al., 2014: NOVA
+
 - declarative
 - functional
 - nesl
-Functional declarative parallel language for homogeneous computing
-backends. Inspired by NESL and DPH, uses vectorization. Shared-memory
-multi-core backend displays linear speedup
-\cite{Collins:2014:NFL:2627373.2627375}.
+
+Functional declarative parallel language for homogeneous computing backends. Inspired by NESL and DPH, uses vectorization. Shared-memory multi-core backend displays linear speedup \cite{Collins:2014:NFL:2627373.2627375}.
+
 ** Keller at el., 2010: Regular, Shape-Polymorphic Arrays
+
 - data structures
 - dph
 - functional
-Avoids intermediate arrays in high-level declarative
-programming. Introduces delayed arrays, which hinder sharing and
-require more explicit knowledge about array state. Parallelism as part
-of array evaluation \cite{Keller:2010:RSP:1863543.1863582}.
+
+Avoids intermediate arrays in high-level declarative programming. Introduces delayed arrays, which hinder sharing and require more explicit knowledge about array state. Parallelism as part of array evaluation \cite{Keller:2010:RSP:1863543.1863582}.
+
 ** Lippmeier et al., 2012: Work-Efficient Higher Order Vectorization
+
 - flattening
 - nested parallelism
 - dph
 - functional
-Flattening nested data parallelism without increasing asymptotic
-complexity. Array representations and invariants for automated
-flattening \cite{Lippmeier:2012:WEH:2364527.2364564}.
+
+Flattening nested data parallelism without increasing asymptotic complexity. Array representations and invariants for automated flattening \cite{Lippmeier:2012:WEH:2364527.2364564}.
+
 ** Lippmeier et al., 2012: Guiding Parallel Array Fusion
+
 - dph
 - fusion
 - functional
-Exposing array implementation via "type indices" to describe what
-state the array is in (e.g. delayed, manifested) or what its
-performance cost model is. Useful for end-programmers to reason about
-their array states \cite{Lippmeier:2012:GPA:2364506.2364511}.
+
+Exposing array implementation via "type indices" to describe what state the array is in (e.g. delayed, manifested) or what its performance cost model is. Useful for end-programmers to reason about their array states \cite{Lippmeier:2012:GPA:2364506.2364511}.
+
 ** Fluet et al., 2008: A Scheduling Framework for General-Purpose Languages
+
 - scheduling
 - functional
 - nested parallelism
-Implementation of a scheduling framework for a strict functional
-language. Uses work-stealing to unwrap nested parallelism and shows
-good performance. Argues for a mix of scheduling policies and
-techniques to adapt to different problems
-\cite{Fluet:2008:SFG:1411204.1411239}.
+
+Implementation of a scheduling framework for a strict functional language. Uses work-stealing to unwrap nested parallelism and shows good performance. Argues for a mix of scheduling policies and techniques to adapt to different problems \cite{Fluet:2008:SFG:1411204.1411239}.
+
 ** Bernecky & Scholz, 2015: Abstract Expressionism for Parallel Performance
+
 - functional
 - sac
-Claim that terse, functional programs result in better performance
-than hand-written, imperative code. They give experimental evidence by
-comparing algorithms written in SAC and C
-\cite{Bernecky:2015:AEP:2774959.2774962}.
+
+Claim that terse, functional programs result in better performance than hand-written, imperative code. They give experimental evidence by comparing algorithms written in SAC and C \cite{Bernecky:2015:AEP:2774959.2774962}.
+
 ** Walinsky and Banerjee, 1990: A Functional Programming Language for Massively Parallel Computers
+
 - remap
 - functional
 - inference rules
-Give inference rules for compiling "routing functions", which change
-the layout of data, such as transposition or indexing to avoid
-intermediate representations. They call this "structure inference"
-\cite{Walinsky:1990:FPL:91556.91610}.
+
+Give inference rules for compiling "routing functions", which change the layout of data, such as transposition or indexing to avoid intermediate representations. They call this "structure inference" \cite{Walinsky:1990:FPL:91556.91610}.
+
 ** Henriksen & Oancea, 2014: Bounds Checking: An Instance of Hybrid Analysis
+
 - loops
-Describes how to remove bounds checking predicates from the
-computation at compile time and how to specialize functions based on
-these. The techniques are implemented in Futhark
-\cite{Henriksen:2014:BCI:2627373.2627388}.
+
+Describes how to remove bounds checking predicates from the computation at compile time and how to specialize functions based on these. The techniques are implemented in Futhark \cite{Henriksen:2014:BCI:2627373.2627388}.
+
 ** Grelck & Scholz, 2007: SAC: Off-the-shelf Support for Data-Parallelism on Multicores
+
 - sac
-- functional
+- functional8
 - scheduling
-Description of the SAC implementation, its optimizing compiler,
-scheduler and memory management. Work is modeled as micro-threads that
-are small units of work. Micro-threads are managed via work-stealing
-queues. Such a scheduling technique is required to optimize
-performance, as all parallelism stems from array-operations that
-require synchronization when done
-\cite{Grelck:2007:SOS:1248648.1248654}.
+
+Description of the SAC implementation, its optimizing compiler, scheduler and memory management. Work is modeled as micro-threads that are small units of work. Micro-threads are managed via work-stealing queues. Such a scheduling technique is required to optimize performance, as all parallelism stems from array-operations that require synchronization when done \cite{Grelck:2007:SOS:1248648.1248654}.
+
 ** Keller et al., 2012: Vectorization Avoidance
+
 - flattening
 - nested parallelism
 - dph
 - fusion
-Flattening nested parallelism sometimes introduces arrays for
-intendedly scalar values. These intermediate arrays require extra
-allocation at a high cost. Subsequential fusion seems not able to
-handle this. Therefore, it can pay off to avoid vectorization from the
-beginning, for which this paper describes a promising technique
-\cite{Keller:2012:VA:2364506.2364512}.
+
+Flattening nested parallelism sometimes introduces arrays for intendedly scalar values. These intermediate arrays require extra allocation at a high cost. Subsequential fusion seems not able to handle this. Therefore, it can pay off to avoid vectorization from the beginning, for which this paper describes a promising technique \cite{Keller:2012:VA:2364506.2364512}.
+
 ** Bergstrom et al., 2010: Lazy Tree Splitting
+
 - scheduling
 - functional
 - nested parallelism
-Instead of performing static transformations, nested data-parallelism
-can be achieved via scheduling and work-stealing. Choosing the right
-work-size is problematic. They describe a work-stealing based method
-to dynamically balance load across workers, relying heavily on zippers
-and implemented in Parallel ML
-\cite{Bergstrom:2010:LTS:1863543.1863558}.
+
+Instead of performing static transformations, nested data-parallelism can be achieved via scheduling and work-stealing. Choosing the right work-size is problematic. They describe a work-stealing based method to dynamically balance load across workers, relying heavily on zippers and implemented in Parallel ML \cite{Bergstrom:2010:LTS:1863543.1863558}.
+
 ** Deitz et al., 2003: The Design and Implementation of a Parallel Array Operator for Arbitrary Data Remapping
+
 - remap
 - functional
 - zpl
-A remap-operator with scatter-gather semantics, implemented in
-ZPL. The operator has strong semantics and can modify data layout
-arbitrarily in arrays, while minimizing communication amongst
-processors. Its expressiveness and its performance nearly equal to
-hand-written Fortran make it very powerful
-\cite{Deitz:2003:DIP:781498.781526}.
+
+A remap-operator with scatter-gather semantics, implemented in ZPL. The operator has strong semantics and can modify data layout arbitrarily in arrays, while minimizing communication amongst processors. Its expressiveness and its performance nearly equal to hand-written Fortran make it very powerful \cite{Deitz:2003:DIP:781498.781526}.
+
 ** Maydan et al., 1993: Array Data-Flow Analysis and its Use in Array Privatization
+
 - data-flow
 - loops
 - data dependence
-The paper describes an inter-procedural data-flow analysis to detect
-data-dependences in nested loops in imperative languages. The analysis
-uses a Least-Write-Tree to determine when the last write operation to
-an array subscript occurs and can thereby decide how to efficiently
-share an array amongst processors \cite{Maydan:1993:AFA:158511.158515}.
+
+The paper describes an inter-procedural data-flow analysis to detect data-dependences in nested loops in imperative languages. The analysis uses a Least-Write-Tree to determine when the last write operation to an array subscript occurs and can thereby decide how to efficiently share an array amongst processors \cite{Maydan:1993:AFA:158511.158515}.
+
 ** Hwang et al., 1995: An Array Operation Synthesis Scheme to Optimize Fortran 90 Programs
+
 - fusion
 - remap
 - fortran
-Fusion of array functions, such as transpose or reshape (i.e. remap)
-in Fortran 90. Their technique fuses sequential expressions to avoid
-temporaries and improves the performance for sequential programs. The
-paper includes a very detailed overview of the applied transformations
-\cite{Hwang:1995:AOS:209936.209949}.
+
+Fusion of array functions, such as transpose or reshape (i.e. remap) in Fortran 90. Their technique fuses sequential expressions to avoid temporaries and improves the performance for sequential programs. The paper includes a very detailed overview of the applied transformations \cite{Hwang:1995:AOS:209936.209949}.
+
 ** Stucki et al., 2015: RRB Vector: A Practical General Purpose Immutable Sequence
+
 - data structure
-The authors describe a vector based on Relaxed-Radix-Balanced trees,
-which exhibits effectively constant or amortized constant complexity
-for all operations, e.g. indexing, updates and concatenation. For
-array-operations, the parallel speedup however is sub-linear
-\cite{Stucki:2015:RVP:2784731.2784739}.
+
+The authors describe a vector based on Relaxed-Radix-Balanced trees, which exhibits effectively constant or amortized constant complexity for all operations, e.g. indexing, updates and concatenation. For array-operations, the parallel speedup however is sub-linear \cite{Stucki:2015:RVP:2784731.2784739}.
+
 ** Henriksen & Oancea, 2013: A T2 Graph-Reduction Approach to Fusion
+
 - fusion
 - $\mathbb{L}_0$
 - inference rules
-To fuse SOAC's (second-order array combinator) efficiently, the
-$\mathbb{L}_0$ language uses a number of fusion-rules that require a
-control-flow-graph analysis on the input program. Thereby,
-performance-degrading fusions can be avoided, e.g. if they introduce
-duplicate computations. The rules are formulated as a computational
-algebra. Similar in structure and spirit to
-\cite{Chakravarty:2001:FAF:507635.507661}.
+
+To fuse SOAC's (second-order array combinator) efficiently, the $\mathbb{L}_0$ language uses a number of fusion-rules that require a control-flow-graph analysis on the input program. Thereby,
+performance-degrading fusions can be avoided, e.g. if they introduce duplicate computations. The rules are formulated as a computational algebra. Similar in structure and spirit to \cite{Chakravarty:2001:FAF:507635.507661}.
+
 ** Chakravarty & Keller, 2001: Functional Array Fusion
+
 - fusion
 - flattening
-Formulates functional array fusion as array deforestation and gives
-equational rewrite rules for flattening and fusion. Observes, that
-flattening simplifies fusion greatly. Cites many foundational papers
-\cite{Chakravarty:2001:FAF:507635.507661}.
+
+Formulates functional array fusion as array deforestation and gives equational rewrite rules for flattening and fusion. Observes, that flattening simplifies fusion greatly. Cites many foundational papers \cite{Chakravarty:2001:FAF:507635.507661}.
+
 ** Ching, 1990: Automatic Parallelization of APL-style Programs
+
 - apl
 - functional
 - scheduling
-Observes that APL can exploit functional and data parallelism, but
-argues that, in order to parallelize, compilation is
-necessary. Furthermore, Ching observes that scheduling and
-partitioning of work pose problems and that parallelism in
-array-languages is a matter of the user writing idiomatic code
-\cite{Ching:1990:APA:97808.97826}.
+
+Observes that APL can exploit functional and data parallelism, but argues that, in order to parallelize, compilation is necessary. Furthermore, Ching observes that scheduling and partitioning of work pose problems and that parallelism in array-languages is a matter of the user writing idiomatic code \cite{Ching:1990:APA:97808.97826}.
+
 ** Knobe & Sarkar, 1998: Array SSA Form and its Use in Parallelization
+
 - loops
 - data-flow
 - data dependence
-To parallelize imperative loops, the authors use a data-flow on the
-static-single-assignment form of arrays. Their technique succeeds in
-parallelizing all loops that are not inherently sequential due to
-data-dependencies. This approach is geared towards iterative, explicit
-loops \cite{Knobe:1998:ASF:268946.268956}. (Low relevance for
-declarative parallel programming.)
+
+To parallelize imperative loops, the authors use a data-flow on the static-single-assignment form of arrays. Their technique succeeds in parallelizing all loops that are not inherently sequential due to data-dependencies. This approach is geared towards iterative, explicit loops \cite{Knobe:1998:ASF:268946.268956}. (Low relevance for declarative parallel programming.)
+
 ** Sinkarovs & Scholz, 2013: Semantics-Preserving Data Layout Transformations for Improved Vectorization
+
 - remap
 - declarative
-Proof and technique to re-arrange the layout of n-dimensional, nested
-arrays for vectorization based on layout types, which can be
-inferred. Promises fully automatic layout changes for improved
-higher-order parallel primitives. Transformations seem to be large for
-small functions already
-\cite{Sinkarovs:2013:SDL:2502323.2502332}. (Must re-read for details.)
+
+Proof and technique to re-arrange the layout of n-dimensional, nested arrays for vectorization based on layout types, which can be inferred. Promises fully automatic layout changes for improved higher-order parallel primitives. Transformations seem to be large for small functions already \cite{Sinkarovs:2013:SDL:2502323.2502332}. (Must re-read for details.)
+
 ** Sastry & Clinger, 1994: Parallel Destructive Updating in Strict Functional Languages
+
 - destructive updates
 - data-flow
 - functional
-Live-variable analysis can be used to detect cases in a functional
-program, where destructive updates are allowed. An array variable that
-is not live after some program point can be updated destructively. In
-a similar fashion, partitioning and combining arrays can be analyzed
-to optimize the overall program performance (cost of copying vs. cost
-of pointing to old data). This analysis also allows parallel array
-updates \cite{Sastry:1994:PDU:182590.182486}.
+
+Live-variable analysis can be used to detect cases in a functional program, where destructive updates are allowed. An array variable that is not live after some program point can be updated destructively. In a similar fashion, partitioning and combining arrays can be analyzed to optimize the overall program performance (cost of copying vs. cost of pointing to old data). This analysis also allows parallel array updates \cite{Sastry:1994:PDU:182590.182486}.
+
 ** Perrott, 1979: A Language for Array and Vector Processors
+
 - pascal
 - explicit
-Describes *Actulus*, a language written on top of Pascal, which has a
-syntax that enables users to describe the parallelism of array
-constructs. Nested arrays are only allowed to have one level of
-parallelism, as, at the time of writing, there is not enough
-experience with automatic flattening of parallel arrays. Actulus has a
-very imperative feel and the author does not mention side-effects or
-destructive updates at all.
+
+Describes *Actulus*, a language written on top of Pascal, which has a syntax that enables users to describe the parallelism of array constructs. Nested arrays are only allowed to have one level of parallelism, as, at the time of writing, there is not enough experience with automatic flattening of parallel arrays. Actulus has a very imperative feel and the author does not mention side-effects or destructive updates at all.
+
 ** Lowney, 1981: Carrier Arrays: An Idiom-Preserving Extension to APL
+
 - apl
 - data structures
-To make computations on non-rectangular, heterogeneous arrays more
-convenient, this paper introduces carrier-arrays, which can be used to
-model jagged arrays and automatically can decide the rank to which a
-function must be lifted to be applied to all its scalar elements.
+
+To make computations on non-rectangular, heterogeneous arrays more convenient, this paper introduces carrier-arrays, which can be used to model jagged arrays and automatically can decide the rank to which a function must be lifted to be applied to all its scalar elements.
+
 ** Hall, 1994: Using Hindley-Milner Type Inference to Optimize List Representation
+
 - data structures
 - functional
-A technique to implement some kind of type-inference based dynamic
-dispatch of runtime-specialized functions to choose between optimized
-and unoptimized functions for data structures. The approach seems
-general enough to apply it to automatic parallelization of functional
-programs.
+
+A technique to implement some kind of type-inference based dynamic dispatch of runtime-specialized functions to choose between optimized and unoptimized functions for data structures. The approach seems general enough to apply it to automatic parallelization of functional programs.
+
 ** Anderson & Hudak, 1990: Compilation of Haskell Array Comprehensions for Scientific Computing
+
 - fusion
-Describes the compilation of array comprehensions in Haskell, which
-avoids intermediate arrays and solves subscript-dependencies, such
-that the semantics of a sequential array comprehension is
-conserved. The authors make assumptions on how scientific programmers
-use arrays.
+
+Describes the compilation of array comprehensions in Haskell, which avoids intermediate arrays and solves subscript-dependencies, such that the semantics of a sequential array comprehension is conserved. The authors make assumptions on how scientific programmers use arrays.
+
 ** Arvind et al., 1989: I-Structures: Data Structures for Parallel Computing
+
 - data structures
-I-Structures are arrays where each index can be written exactly
-once. Reading empty indices blocks the reading thread until another
-thread writes a value there. Initial, empty values can be seen as
-logical "true", assignment is a logical conjunction, e.g. "true AND
-42". Multiple assignments produce "false", e.g. "true AND 42 AND
-23". Blocking and single-assignment make I-Structures non-strict and
-reads and writes can be re-ordered according to re-write rules. These
-traits however sacrifice referential transparency.
+
+I-Structures are arrays where each index can be written exactly once. Reading empty indices blocks the reading thread until another thread writes a value there. Initial, empty values can be seen as logical "true", assignment is a logical conjunction, e.g. "true AND 42". Multiple assignments produce "false", e.g. "true AND 42 AND 23". Blocking and single-assignment make I-Structures non-strict and reads and writes can be re-ordered according to re-write rules. These traits however sacrifice referential transparency.
+
 ** Blelloch & Greiner, 1996: A Provable Time and Space Efficient Implementation of NESL
+
 - nesl
 - nested parallelism
 - flattening
-NESL is a language for expressing nested data parallelism and can be
-implemented on a P-CEK intermediate machine with optimal time and
-space bounds. These bounds are achieved by extending NESL's
-operational semantics with a cost model for both, time and space. This
-means that the high-level nature of NESL does not incur extra runtime
-cost.
+
+NESL is a language for expressing nested data parallelism and can be implemented on a P-CEK intermediate machine with optimal time and space bounds. These bounds are achieved by extending NESL's operational semantics with a cost model for both, time and space. This means that the high-level nature of NESL does not incur extra runtime cost.
+
 ** Tang et al., 1990: Compiler Techniques for Data Synchronization in Nested Parallel Loops
+
 - loop
 - data dependence
-The paper focuses on parallelizing nested do-loops with non-trivial
-data dependencies in an imperative language. To make the
-parallelization deterministic, a read-write order is enforced, which
-can be computed at compile time. (This seems largely irrelevant for
-functional, declarative parallel programming.)
+
+The paper focuses on parallelizing nested do-loops with non-trivial data dependencies in an imperative language. To make the parallelization deterministic, a read-write order is enforced, which can be computed at compile time. (This seems largely irrelevant for functional, declarative parallel programming.)
+
 ** Ureche et al., 2012: StagedSAC: A Case Study in Performance-Oriented DSL Development
+
 - sac
 - shape-inference
-StagedSAC is a compiled Scala DSL that is similar to SAC. The most
-notable contribution is that of static shape-inference based on
-partially known shapes. Unsatisfiable requirements are implemented as
-run-time checks. Specialization of loops for shapes occurs
-just-in-time.
+
+StagedSAC is a compiled Scala DSL that is similar to SAC. The most notable contribution is that of static shape-inference based on partially known shapes. Unsatisfiable requirements are implemented as run-time checks. Specialization of loops for shapes occurs just-in-time.
+
 * Spreadsheet End-User Development
 ** Abraham & Erwig, 2006: Type Inference for Spreadsheets
 
 - type inference
 - errors
 
-A type system for spreadsheets that identifies type mismatches between
-formulas. Formulas that expect a different type from a referred
-formula are marked as type mismatched, which also reflects in their
-type. Types are tuples of a data type and a possibly empty set of type
-mismatches. The type rules can compress types of cell areas by
-compressing column and row types and are called template types.
+A type system for spreadsheets that identifies type mismatches between formulas. Formulas that expect a different type from a referred formula are marked as type mismatched, which also reflects in their type. Types are tuples of a data type and a possibly empty set of type mismatches. The type rules can compress types of cell areas by compressing column and row types and are called template types.
 
 ** Miller, 2015: The Spreadsheet Paradigm: A Basis for Powerful and Accessible Programming
 
@@ -300,13 +263,7 @@ compressing column and row types and are called template types.
 - teaching
 - expressiveness
 
-Argues that spreadsheets are easy to comprehend but limited in their
-power. To change this, Miller proposes a research agenda that focuses
-on enriching a spreadsheet language and to perform user-studied to
-assess the design. He presents a number of features add, for instance
-easier grouping of cells and avoiding repetitive formulas. Boils down
-to that the spreadsheet paradigm should be enhanced to encourage
-"Computational Thinking".
+Argues that spreadsheets are easy to comprehend but limited in their power. To change this, Miller proposes a research agenda that focuses on enriching a spreadsheet language and to perform user-studied to assess the design. He presents a number of features add, for instance easier grouping of cells and avoiding repetitive formulas. Boils down to that the spreadsheet paradigm should be enhanced to encourage "Computational Thinking".
 
 ** Sestoft, 2008: Implementing Function Spreadsheets
 
@@ -315,8 +272,7 @@ to that the spreadsheet paradigm should be enhanced to encourage
 - abstraction
 
 Describes an early version of Corecalc and its extension Funcalc,
-argues for recursive and higher-order functions and presents run-time
-byte-code generation from sheet-defined functions.
+argues for recursive and higher-order functions and presents run-time byte-code generation from sheet-defined functions.
 
 ** Stadelmann, 1993: A Spreadsheet Based on Constraints
 
@@ -324,14 +280,7 @@ byte-code generation from sheet-defined functions.
 - constraints
 - arrays
 
-This paper presents a constraint-programming approach to
-spreadsheets. Spreadsheets are split up, where the cell grid is used
-to display values while an external textual editor holds a list of
-constraints in the form \texttt{F(ca$_i$) ~ G(ca$_j$)}. Remarkable is
-the approach to handle bulk data, i.e vectors or matrices, and to
-define constraints on them, such that for instance vector addition can
-be expressed as a constraint in a single line. The paper gives various
-examples on constraint programs in spreadsheets
+This paper presents a constraint-programming approach to spreadsheets. Spreadsheets are split up, where the cell grid is used to display values while an external textual editor holds a list of constraints in the form \texttt{F(ca$_i$) ~ G(ca$_j$)}. Remarkable is the approach to handle bulk data, i.e vectors or matrices, and to define constraints on them, such that for instance vector addition can be expressed as a constraint in a single line. The paper gives various examples on constraint programs in spreadsheets
 
 ** Peyton Jones et al., 2003: A User-Centered Approach to Functions in Excel
 
@@ -339,104 +288,51 @@ examples on constraint programs in spreadsheets
 - functions
 - abstraction
 
-This paper describes basic paradigms for implementing a spreadsheet
-language. The design is guided by "Cognitive Dimensions" that help to
-identify which abstractions medium-level spreadsheet users are used
-to. Functions are here modeled as separate spreadsheets into which
-values get injected when the functions are called. The design forbids
-recursion, as the authors deem this a mental overhead for spreadsheet
-users while also pointing out how using one spreadsheet per call to a
-user-defined function would make the system too complex. (This is in
-stark contrast to Funcalc.) Furthermore, the paper also outlines some
-principles for array programming in spreadsheets, using a notion of
-matrices and vectors. For instance, they propose to be able reference
-matrices in single cells to allow better abstraction.
+This paper describes basic paradigms for implementing a spreadsheet language. The design is guided by "Cognitive Dimensions" that help to identify which abstractions medium-level spreadsheet users are used to. Functions are here modeled as separate spreadsheets into which values get injected when the functions are called. The design forbids recursion, as the authors deem this a mental overhead for spreadsheet users while also pointing out how using one spreadsheet per call to a user-defined function would make the system too complex. (This is in stark contrast to Funcalc.) Furthermore, the paper also outlines some principles for array programming in spreadsheets, using a notion of matrices and vectors. For instance, they propose to be able reference matrices in single cells to allow better abstraction.
 
 ** Singh & Gulwani, 2016: Transforming Spreadsheet Data Types Using Examples
 
 - abstraction
 - language
 
-Spreadsheet users often need to transform data in form of spreadsheets
-from one or more arbitrary formats to another. In typical programming
-languages, there are DSLs embedded to perform string transformations,
-but they can only handle simple cases and are not very
-general. Instead, the authors propose a programming by example
-approach. They extended Excel with a DSL that allows users to provide
-a few transformations, such that the transformation can learn these
-rules and then automatically transform the remaining items. They
-combine a probabilistic approach of parsing with joint learning of
-transformation rules. This highly declarative data transformation
-approach seems very usable and fast.
+Spreadsheet users often need to transform data in form of spreadsheets from one or more arbitrary formats to another. In typical programming languages, there are DSLs embedded to perform string transformations, but they can only handle simple cases and are not very general. Instead, the authors propose a programming by example approach. They extended Excel with a DSL that allows users to provide a few transformations, such that the transformation can learn these rules and then automatically transform the remaining items. They combine a probabilistic approach of parsing with joint learning of transformation rules. This highly declarative data transformation approach seems very usable and fast.
 
 ** Isakowitz et al., 1995: Towards a Logical/Physical Theory of Spreadsheet Modeling
 
 - abstraction
 
-The paper observes that many errors in spreadsheets are due to wrong
-modeling logic and not only mistyped cell references. They claim that
-this is a manifestation of not separating data and logic, i.e. a
-missing abstraction pattern. Moreover, they want to make spreadsheet
-logic available in an organization via a centralized mechanism, just
-like a package manager. For this, they propose to synthesize logic and
-data from authorized spreadsheets for modular re-use.
+The paper observes that many errors in spreadsheets are due to wrong modeling logic and not only mistyped cell references. They claim that this is a manifestation of not separating data and logic, i.e. a missing abstraction pattern. Moreover, they want to make spreadsheet logic available in an organization via a centralized mechanism, just like a package manager. For this, they propose to synthesize logic and data from authorized spreadsheets for modular re-use.
 
-Interesting claims are that many spreadsheet errors resemble
-programming errors in languages that lack sufficient abstraction. They
-focus much on model management literature while stressing that users
-should be able to continue using the spreadsheet software that they
-are used to.
+Interesting claims are that many spreadsheet errors resemble programming errors in languages that lack sufficient abstraction. They focus much on model management literature while stressing that users should be able to continue using the spreadsheet software that they are used to.
 
 ** Mittermeir & Clemont, 2002: Finding High-Level Structures in Spreadsheet Programs
 
 - abstraction
 - errors
 
-Due to the visual layout, misconceptions of the model in a spreadsheet
-are common. A lack of documentation and much ad-hoc design reinforce
-this. Therefore, the authors developed a tool to visualize logical
-equivalence classes and semantic classes of cells. This helps users to
-separate logic from data in spreadsheets and also visually guides
-spreadsheet understanding. The equivalence and semantic classes seem
-of general interest to spreadsheet programming.
+Due to the visual layout, misconceptions of the model in a spreadsheet are common. A lack of documentation and much ad-hoc design reinforce this. Therefore, the authors developed a tool to visualize logical equivalence classes and semantic classes of cells. This helps users to separate logic from data in spreadsheets and also visually guides spreadsheet understanding. The equivalence and semantic classes seem of general interest to spreadsheet programming.
 
 ** Mendes, 2011: ClassSheet-Driven Spreadsheet Environments
 
 - abstraction
 
-This paper describes ClassSheet, which basically brings
-object-orientation to spreadsheets. The logic of a spreadsheet is
-defined in a separate model-spreadsheet that contains no data. Regular
-spreadsheets are instances of such model-spreadsheets and contain the
-data. Thereby, the system achieves maintenance of spreadsheet logic
-independently from the actual computations.
+This paper describes ClassSheet, which basically brings object-orientation to spreadsheets. The logic of a spreadsheet is defined in a separate model-spreadsheet that contains no data. Regular spreadsheets are instances of such model-spreadsheets and contain the data. Thereby, the system achieves maintenance of spreadsheet logic independently from the actual computations.
 
 ** Benfield, 2009 (Talk): FMD: Functional Development in Excel
 
 - language
 - abstraction
 
-FMD a DSL in Excel that exposes objects and library functions to a
-spreadsheet model. FMD generates boiler-plate code to generate
-functions inside Excel, such that logic does not have to be copied. A
-user can write some logic that is parameterized on a variable name
+FMD a DSL in Excel that exposes objects and library functions to a spreadsheet model. FMD generates boiler-plate code to generate functions inside Excel, such that logic does not have to be copied. A user can write some logic that is parameterized on a variable name
 
 :=variable("name"):
 
-The last cell of the logic is the generated function that can be
-mapped to a cell area via a second-order function
+The last cell of the logic is the generated function that can be mapped to a cell area via a second-order function
 
 :=map(...):
 
-The cell in the area can be specified to map to a particular
-variable. This basically allows array programming in Excel in a
-(nearly) purely functional manner.
+The cell in the area can be specified to map to a particular variable. This basically allows array programming in Excel in a (nearly) purely functional manner.
 
 *** Side note
 
-After the talk, Simon Peyton-Jones compares Excel to a super-tanker: a
-big thing that moves slowly (the Excel software) with a tiny crew that
-needs to take care of everything (the development team), with a
-thousand whispers in their ear. He says that because of pressure from
-more visible features by the competition, functional programming in
-Excel is not something that is on their priority list.
+After the talk, Simon Peyton-Jones compares Excel to a super-tanker: a big thing that moves slowly (the Excel software) with a tiny crew that needs to take care of everything (the development team), with a thousand whispers in their ear. He says that because of pressure from more visible features by the competition, functional programming in Excel is not something that is on their priority list.
