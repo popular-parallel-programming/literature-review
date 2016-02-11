@@ -261,6 +261,10 @@ Even though not visible to the spreadsheet user, arrays need to be implemented e
 Our literature study has shown that there has been much research on array implementations~\cite{47507, Keller:2010:RSP:1863543.1863582,
   Stucki:2015:RVP:2784731.2784739} that we can nearly directly apply to a spreadsheet environment. Most array designs focus on one-dimensional arrays, but in a spreadsheet model, arrays are two-dimensional and regular. Generalizing from one dimension to two dimensions or more seems not problematic as long as these arrays remain regular.
 
+Lazy arrays, as implemented in REPA~\cite{Keller:2010:RSP:1863543.1863582}, are interesting for avoiding intermediate structures in single cells. They do not extend beyond that because fusion of intermediate cells is not possible, as discussed in Section~\ref{sec:high-level-struct}.
+
+Destructive array updates~\cite{Sastry:1994:PDU:182409.182486} are also only interesting in the context of single cells. The analysis is much simpler, for the same reason of why fusion across cells is not possible.
+
 \subsection{Flattening and Scheduling}
 \label{sec:scheduling}
 
