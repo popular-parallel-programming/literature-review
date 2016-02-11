@@ -280,7 +280,15 @@ The second is a hybrid solution of dynamic and static scheduling, where the choi
 \section{Conclusion}
 \label{sec:conclusion}
 
-Some concluding remarks. \todo{Summarize!}
+In this study, we have summarized the literature on declarative array programming and end-user spreadsheet programming using systematic literature mapping as a methodology. The reviews show that there is a clear overlap between spreadsheet programming and array programming and many techniques and we can directly apply results from functional array programming to a spreadsheet model of computations.
+
+Current research focuses still on classic high-performance languages like Fortran, but modern languages are now also now vehicles for research on parallel array programming and many have been designed with certain goals in mind, e.g.\ ZPL~\cite{Snyder2007Design}. Moreover, new languages like NOVA~\cite{Collins:2014:NFL:2627373.2627375} emerge to combine the collective research effort. The majority of these modern languages is purely functional, reflecting the idea that the absence of shared mutable state makes programming and reasoning about parallel programs much easier for the end-programmer.
+
+We have discussed and categorized research topics on array programming into three major fields: nested data parallelism, loop fusion and efficient implementation of arrays.
+
+There seem not to exist many publications that report on combining array programming and spreadsheet programming. Notable exemptions are experiments by AMD and LibreOffice~\cite{Trudeau2015Collaboration} as already noted in Section~\ref{sec:intro}, and the domain specific language FMD~\cite{Benfield:2009:FFD:1668113.1668121}. This suggests that there is much room for further research on array programming in a spreadsheet model of computations.
+
+Our analysis shows that there are broad possibilities to combine spreadsheet programming with array programming technology to implement implicit parallelization of operations over explicit and implicit arrays. Spreadsheet computations are of a repetitive nature~\cite{1173080, Benfield:2009:FFD:1668113.1668121} and therefore lend themselves to array programming optimizations.
 
 \section*{Acknowledgements}
 
