@@ -89,14 +89,22 @@ The opportunity for parallelism in these languages stems from bulk-operations ov
 \subsection{Nested Data Parallelism}
 \label{sec:nest-data-parall}
 
-Nested data parallelism describes the nesting of parallel operations over a nested array. A standard example from the literature is matrix multiplication~\cite{Keller:2010:RSP:1863543.1863582}. A matrix is represented by a two-dimensional array. We can then implement matrix multiplication conveniently via higher-order functions, here illustrated in F\#:
+Nested data parallelism describes the nesting of parallel operations over a nested array. A standard example is matrix-vector multiplication. We can represent a matrix as an array of vectors and then implement the operation conveniently via higher-order functions~\cite{Jones2008Harnessing}, here illustrated in F\#:
 
 \begin{lstlisting}[language=ML]
-type Matrix = double [,];
-\end{lstlisting}
-\todo{Actually write the code.}
+type SparseVec = (int * float) []
+type SparseMat = SparseVec []
 
-Such a declarative implementation of matrix multiplication lends itself naturally to an implicitly parallel execution. However, there are possibilities for parallelism on different levels in the three-dimensional array structure. Early work on the parallel language Actulus~\cite{Perrott:1979:LAV:357073.357075} recognizes the difficulty of nested data parallelism and as a temporary solution restricts the level of parallelism to one dimension which the programmer has to choose ahead of time.
+let vecMul (sv : SparseVec) v =
+    sum (map (fun (i, e) -> (get v i) * e) sv)
+
+let matMul (sm : SparseMat) v =
+    sum (map (fun sv -> vecMul sv v) sm)
+\end{lstlisting}
+
+The type \texttt{SparseVec} is a list of index-value pairs, which models all non-zero entries of a vector. We can then represent a sparse matrix as an array of sparse vectors, as in \texttt{SparseMatrix.} To compute the dot product of a sparse and a dense vector, we sum up the point-wise multiplication of the two vectors' scalars, as expressed in the \texttt{vecMul} function. The dot-product of a sparse matrix and a dense vector, \texttt{matMul}, is then the sum of the dot-products of each of the sparse vectors with the dense vector.
+
+Such a declarative implementation of matrix multiplication lends itself naturally to an implicitly parallel execution. In this example, parallelism stems from the point-wise multiplication in \texttt{vecMul} as well as from the \texttt{map} in \texttt{matMul}: the latter is a possibly parallel operation that performs possibly parallel operations. Since the single vector columns of a sparse matrix might vary in length, simply assigning the same amount of sub-vectors to each processor might result in bad work balancing. Early work on the parallel language Actulus~\cite{Perrott:1979:LAV:357073.357075} recognizes the difficulty of nested data parallelism and as a temporary solution restricts the level of parallelism to one dimension which the programmer has to choose ahead of time.
 
 A naive way of implementing such nested parallelism would be to simply start new parallel threads from within each parallel thread. There would be quite some overhead to this solution. Research on nested data parallelism has focused on eliminating this overhead in two different ways.
 
