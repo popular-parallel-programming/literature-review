@@ -4,6 +4,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
 \usepackage{amsmath}
+\usepackage{colortbl}
+\usepackage{color}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -11,6 +13,9 @@
 \usepackage{multicol}
 \usepackage{todonotes}
 \usepackage{url}
+
+\newcolumntype{g}{>{\columncolor{lightgray}}c}
+\newcolumntype{f}{>{\columncolor{pink}}c}
 
 \lstset{
   breaklines=true,
@@ -255,11 +260,35 @@ Much research on spreadsheet end-user programming focuses on bulk-data transform
 \subsection{High-Level Structures and Functional Programming}
 \label{sec:high-level-struct}
 
+\begin{figure}
+  \begin{center}
+    \begin{tabular}{|g|c|c|c|}
+      \hline
+      \rowcolor{lightgray}
+        & A  & B       & C       \\ \hline
+      1 & 23 & = F(A1) & = G(B1) \\ \hline
+      2 & 42 & = F(A2) & = G(B2) \\ \hline
+      3 & 96 & = F(A3) & = G(B3) \\ \hline
+    \end{tabular}
+    ~
+    \begin{tabular}{|g|c|c|c|}
+      \hline
+      \rowcolor{lightgray}
+        & A  & B       & C           \\ \hline
+      1 & 23 & = F(A1) & = J(B1, B2) \\ \hline
+      2 & 42 & = F(A2) & = J(B2, B3) \\ \hline
+      3 & 96 & = F(A3) & = J(B3, B1) \\ \hline
+    \end{tabular}
+  \end{center}
+  \caption{Examples of non-fusable stencil-like structures on interpreted spreadsheets. \textit{Left:} the sheet cannot be fused because every cell needs to evaluate to the result of its formula. \textit{Right:} the sheet cannot be fused because the intermediate values of column \textit{B} are referenced more than once.}
+  \label{fig:spreadsheets-fusion}
+\end{figure}
+
 Detecting high-level structures in spreadsheets relates directly to identifying repeating formulas~\cite{1173080}, much like stencils in scientific computing. Such repetition lowers the level of abstraction and also hides potential for parallelism.
 
 A system that detects repeating formulas would also be able to parallelize these repetitions, as they essentially are an unwrapped bulk-application via a higher-order primitive like \texttt{map}. The experimental spreadsheet platform Funcalc already infers and maintains explicit knowledge about copied formulas by means of the support-graph~\cite{Sestoft2014Spreadsheet}.
 
-It is unclear if an even better understanding of such stencil-like structures in spreadsheets leads to possibilities for loop fusion. For instance, if all values in column A are first transformed by a repeating formula in column B and then subsequently by another column C, one could in principle avoid the middle step and fuse the computations in columns B and C so that one (implicit) \texttt{map} would suffice. However, due to spreadsheet semantics, each cell must evaluate to the value its formula computes~\cite{Sestoft2014Spreadsheet}. This forbids fusion, as the intermediate values would vanish and could not be displayed to the user. It would however be allowed in compiled user-defined functions. Furthermore, if the formulas in column C references the cells in column B more than once each, fusion becomes outright impossible. In the former case, the system could suggest the user to manually inline the formulas for performance reasons. In the latter case, this is not possible.
+It is unclear if an even better understanding of such stencil-like structures in spreadsheets leads to possibilities for loop fusion. For instance, if all values in column A are first transformed by a repeating formula in column B and then subsequently by another column C, one could in principle avoid the middle step and fuse the computations in columns B and C so that one (implicit) \texttt{map} would suffice. However, due to spreadsheet semantics, each cell must evaluate to the value its formula computes~\cite{Sestoft2014Spreadsheet}. This forbids fusion, as the intermediate values would vanish and could not be displayed to the user. Fusion would however be allowed in compiled user-defined functions. Furthermore, if the formulas in column C references the cells in column B more than once each, fusion becomes outright impossible. In the former case, the system could suggest the user to manually inline the formulas for performance reasons. In the latter case, this is not possible. Figure~\ref{fig:spreadsheets-fusion} illustrates the cases where fusion is not possible.
 
 \subsection{Representing Arrays}
 \label{sec:representing-arrays}
