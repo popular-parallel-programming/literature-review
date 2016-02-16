@@ -265,19 +265,19 @@ Much research on spreadsheet end-user programming focuses on bulk-data transform
     \begin{tabular}{|g|c|c|c|}
       \hline
       \rowcolor{lightgray}
-        & A  & B       & C       \\ \hline
-      1 & 23 & = F(A1) & = G(B1) \\ \hline
-      2 & 42 & = F(A2) & = G(B2) \\ \hline
-      3 & 96 & = F(A3) & = G(B3) \\ \hline
+        & A  & B                & C                \\ \hline
+      1 & 23 & \texttt{= F(A1)} & \texttt{= G(B1)} \\ \hline
+      2 & 42 & \texttt{= F(A2)} & \texttt{= G(B2)} \\ \hline
+      3 & 96 & \texttt{= F(A3)} & \texttt{= G(B3)} \\ \hline
     \end{tabular}
     ~
     \begin{tabular}{|g|c|c|c|}
       \hline
       \rowcolor{lightgray}
-        & A  & B       & C           \\ \hline
-      1 & 23 & = F(A1) & = J(B1, B2) \\ \hline
-      2 & 42 & = F(A2) & = J(B2, B3) \\ \hline
-      3 & 96 & = F(A3) & = J(B3, B1) \\ \hline
+        & A  & B                & C                    \\ \hline
+      1 & 23 & \texttt{= F(A1)} & \texttt{= J(B1, B2)} \\ \hline
+      2 & 42 & \texttt{= F(A2)} & \texttt{= J(B2, B3)} \\ \hline
+      3 & 96 & \texttt{= F(A3)} & \texttt{= J(B3, B1)} \\ \hline
     \end{tabular}
   \end{center}
   \caption{Examples of non-fusable stencil-like structures on interpreted spreadsheets. \textit{Left:} the sheet cannot be fused because every cell needs to evaluate to the result of its formula. \textit{Right:} the sheet cannot be fused because the intermediate values of column \textit{B} are referenced more than once.}
