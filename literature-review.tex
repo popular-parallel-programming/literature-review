@@ -126,7 +126,7 @@ Such a declarative implementation of matrix multiplication lends itself naturall
 
 A naive way of implementing such nested parallelism would be to simply start new parallel threads from within each parallel thread. There would be quite some overhead to this solution. Research on nested data parallelism has focused on eliminating this overhead in two different ways.
 
-\paragraph{Flattening}
+\subsubsection{Flattening}
 
 \citet{Blelloch1993Implementation} introduced the idea of statically flattening nested arrays to perform an optimal parallelization of operations over arrays. The key to doing so is the right choice of array representation and there exists a representation which enables the compiler to flatten arrays in constant time. Flattening requires the generation of lifted versions of all functions, called lifting. Lifting the addition operator \texttt{+} of type $int ~ * ~ int \rightarrow int$, for example, returns a new operator \texttt{+}$_L$ of type $[int] ~ * ~ [int] \rightarrow [int]$ that takes arrays of scalars as parameters instead. The function has been ``lifted'' to the next rank. NESL implements this flattening scheme and \citet{Blelloch:1996:PTS:232627.232650} showed, based on NESL's built-in cost semantics, that NESL actually can be implemented without any additional overhead due to flattening.
 
@@ -139,7 +139,7 @@ The more recently developed high-level language NOVA builds on the principles de
 Flattening nested data parallelism is tightly coupled to array fusion,
 which we will discuss in detail in Section~\ref{sec:fusion}.
 
-\paragraph{Dynamic scheduling}
+\subsubsection{Dynamic Scheduling}
 
 Flattening nested data parallelism statically targets homogeneous computations on possibly irregular arrays. Possible imbalance of work distribution is a result of irregular nested data structures, such as sparse vectors, where adjacent zero-valued entries are not stored in memory. This demands a strong type system, such that all elements of an array are of the same type. Otherwise, a two-dimensional array might mostly contain numbers but spuriously also more complex data types such as arrays. This means that not the entire parallelism is visible to the compiler, so static flattening might not be feasible to balance the workload.
 
@@ -199,15 +199,15 @@ These techniques for imperative loop-parallelization are relevant for the implem
 
 This section summarizes research that does not fit into the four major categories.
 
-\paragraph{Domain-specific languages}
+\subsubsection{Domain-Specific Languages}
 
 Some of the research on array programming focused on domain-specific languages (DSLs). \citet{4228136} implemented explicit coordination of parallel computations in \sac{} via an embedded DSL in a declarative fashion. This, however, removes some of the declarative nature of program code. Another DSL on top of \sac{} is Staged\sac{} which adds compile-time shape inference of nested arrays to \sac{}~\cite{Ureche:2012:SCS:2103746.2103762}. The compiler adds all requirements that it could not prove statically to be satisfiable as run-time checks to the program.
 
-\paragraph{Retran}
+\subsubsection{Retran}
 
 Retran is a declarative, Fortran-like, purely functional language~\cite{367042}. Similar to the APL extension by \citet{Lowney:1981:CAI:567532.567533}, Retran automatically applies lower-rank functions to all elements of a higher-rank array. Therefore, there are no higher-order functions in Retran. Retran uses anti-currying to lift functions to the required rank~\cite{367042}.
 
-\paragraph{Remap and data layout}
+\subsubsection{Remap and Data Layout}
 
 Declarative functional programming languages tend to free the programmer from thinking explicitly about data layout. For performance reasons, it can be necessary to expose data layout to the programmer. Also, high-level languages often provide functions to transpose two-dimensional arrays or to more generally change the layout of an array. The most general operator of this kind is \texttt{remap}, sometimes also referred to as \texttt{scatter} on the assignment's right-hand side and \texttt{gather} on the assignment's left-hand side.
 
@@ -231,14 +231,14 @@ There are many more topics in spreadsheet research, i.e.\ testing of spreadsheet
 
 It is convenient to define two groups of spreadsheet abstraction. That is (1) manual abstraction, where the user has the means to build their own abstractions so to hide implementation details and (2) automatic abstraction, where the user constructs spreadsheets in a familiar way and the system later analyzes them to infer the logic and to (subsequently) separate it from data.
 
-\paragraph{Manual abstraction}
+\subsubsection{Manual Abstraction}
 
 Many researchers observed that spreadsheets lack the most basic abstraction of general-purpose programming languages: named functions~\cite{Jones:2003:UAF:944705.944721}. Named functions make it possible to hide implementation detail that is not important for the overall computations of a specific model. Therefore,
 \citet{Jones:2003:UAF:944705.944721} proposed to allow end-users to define their own abstractions in terms of spreadsheet computations. Each newly introduced function is essentially a spreadsheet prototype that has designated input cells and a designated output cell. Each time the user calls such a sheet-defined function, a new spreadsheet instance of this function is instantiated to perform the computation.
 
 \citet{Sestoft:2008:IFS:1370847.1370867} extended upon this idea by allowing sheet-defined, recursive and run-time compiled functions. This approach is more general and alleviates the need for instantiating explicit spreadsheets. This approach is implemented in the experimental spreadsheet engine Funcalc which is described in great detail in~\cite{Sestoft2014Spreadsheet}.
 
-\paragraph{Automatic abstraction}
+\subsubsection{Automatic Abstraction}
 
 Researchers have developed systems that analyze spreadsheets to infer their model and to (subsequently) separate this model from data. This allows users to build spreadsheets in a familiar manner. \citet{Isakowitz:1995:TLT:195705.195708} developed a system that automatically performs such a separation and manages spreadsheet logic for modular re-use. They observe that the majority of spreadsheet errors they encounter are not simple off-by-one reference errors and typos but severe errors in the model's logic. They relate them to classic programming errors where the programmer has not chosen an adequate level of abstraction.
 
@@ -251,17 +251,17 @@ Types are also useful abstractions over spreadsheets. The literature includes di
 
 Researchers have also proposed to apply different programming paradigms to the spreadsheet domain with a focus on raising the abstraction level.
 
-\paragraph{Object orientation}
+\subsubsection{Object Orientation}
 
 Functional Model Development (FMD)~\cite{Benfield:2009:FFD:1668113.1668121} is a domain-specific language for Excel and exposes objects to spreadsheet users. Objects are an accumulation of data with some functions defined on these objects. Users can use a special syntax to declare variables that model input parameters for user-defined functions. Functions are defined inline (as in on the same spreadsheet) by prototype formulas where the cell that would yield the result actually evaluates to the new defined function. As spreadsheets encourage copying of formulas over the same row or column, FMD introduces a high-level \texttt{map} operator that applies the same user-defined function across a column or row.
 
 To apply stronger separation of implementation and instantiation, \citet{6070409} developed ClassSheet. The logic of a computation is defined in a model-spreadsheet, while each common spreadsheet that performs the computations is an instance of this model. This approach resembles a manual version of the abstraction model by \citet{Isakowitz:1995:TLT:195705.195708}.
 
-\paragraph{Constraint programming}
+\subsubsection{Constraint Programming}
 
 \citet{Stadelmann:1993:SBC:168642.168664} proposed to let spreadsheet users express their models by providing the system with constraints to solve. This approach considerably reduces the amount of code required to model complicated logic~\cite{Stadelmann:1993:SBC:168642.168664}. However, due to the requirement of being able to name a cell multiple times in a constraint, it is infeasible to let constraints directly replace cell formulas. Instead, the system provides a second window that contains constraints. This side-steps the spreadsheet model slightly.
 
-\paragraph{By example}
+\subsubsection{By Example}
 
 Programming by example allows users to explain how to transform data by performing a few transformations manually, from which the system can infer general transformation rules. This is useful for bulk-processing similar items. \citet{Singh:2016:TSD:2837614.2837668} extended Excel with a DSL that allows users to provide such example transformations such that Excel then automatically transforms the remaining items. They combine a probabilistic approach of parsing with joint learning of transformation rules. They require however that the data type that a user wants to transform already exists as a predefined model.
 
@@ -386,8 +386,7 @@ We perform two disjoint literature studies, one for declarative parallel array p
 
 In the following, we give a list of criteria for inclusion or exclusion of studies. Naturally, some of the studies can fulfill criteria of both lists. We choose therefore to perform a majority vote on the number of fulfilled criteria when making a decision of inclusion or exclusion. The criteria lists can be seen as disjunctions of the single criteria.
 
-\paragraph{Declarative parallel array programming}
-~\\
+\subsubsection{Declarative Parallel Array Programming}
 
 We include a publication if it:
 
@@ -420,8 +419,7 @@ We exclude a publication if it:
 \item Focuses on transactional memory.
 \end{itemize}
 
-\paragraph{Spreadsheet end-user development and parallel spreadsheets}
-~\\
+\subsubsection{Spreadsheet End-User Development and Parallel Spreadsheets}
 
 We include a publication if it:
 
@@ -453,7 +451,7 @@ We exclude a publication if it:
 
 We use two-fold quality assurance. First, we define a list of authors and publication topics that must be part of the literature list obtained by our search query. This is a relaxed version of the quality assurance suggested by \citet{keele2007guidelines}.
 
-\paragraph{Declarative array programming}
+\subsubsection{Declarative Array Programming}
 
 We require the following authors and publications in the literature list:
 
@@ -463,7 +461,7 @@ We require the following authors and publications in the literature list:
 \item REPA
 \end{itemize}
 
-\paragraph{Spreadsheet end-user development and parallel spreadsheets}
+\subsubsection{Spreadsheet End-User Development and Parallel Spreadsheets}
 
 We require the following authors and publications in the literature list:
 
@@ -488,7 +486,7 @@ The uniqueness of a publication in the following means that a publication is lis
 
 We have an initial list of 681 publications to consider, which we construct as described in the following:
 
-\paragraph{Declarative Parallel Array Programming}
+\subsubsection{Declarative Parallel Array Programming}
 
 To generate a literature list for declarative parallel array programming languages, we use the following query:
 
@@ -499,7 +497,7 @@ To generate a literature list for declarative parallel array programming languag
 \noindent This results in 250 publications of which 194 are unique from the ACM Digital Library. IEEExplore, however, only returns eight publications,
 all of which are unique. This adds 202 publications to consider.
 
-\paragraph{Spreadsheet End-User Development}
+\subsubsection{Spreadsheet End-User Development}
 
 The search query we use for finding publications on spreadsheet end-user development is:
 
@@ -509,7 +507,7 @@ spreadsheets AND (end-user-development OR "end user development" OR "end-user de
 
 \noindent This results in 435 publications of which 386 are unique from the ACM Digital Library and in 104 publications, all of which are unique, from IEEExplore. This adds 424 publications to consider.
 
-\paragraph{Parallel Spreadsheets}
+\subsubsection{Parallel Spreadsheets}
 
 We use the following query to generate a list of publications focusing on anything parallel in spreadsheets:
 
