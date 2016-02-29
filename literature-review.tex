@@ -83,7 +83,7 @@ We formulate our research questions as follows:
 \subsection{Threats to Validity}
 \label{sec:threats-validity}
 
-Naturally, even with a well defined methodology, the validity of our research can be questioned. There are two problems we discuss here briefly.
+Naturally, even with a well defined methodology, the validity of our research can be questioned. There are two problems which we discuss here briefly.
 
 First, systematic mapping studies gain validity by redundancy: a group of researchers performs the same classification tasks in order to minimize bias~\cite{keele2007guidelines}. Due to restrictions in personnel, the amount of redundancy is severely limited in our study.
 
@@ -96,7 +96,7 @@ Secondly, we must acknowledge that this study has blind spots in terms of scient
 
 We have identified four key topics within parallel array programming: nested data parallelism, array fusion, data structures and loop parallelization. While these clearly are interconnected and we therefore cannot just see them all by themselves, we will use them to structure the review of the research body on parallel array programming.
 
-There are a few key languages that appear in the literature. The two oldest are Fortran, which is an imperative high-performance language, and APL~\cite{Iverson1962Programming}, which is a high-level declarative and functional language. Furthermore, much research has focused on Single-assignment-C (\sac{}), which is a C-like functional language, and Data Parallel Haskell (DPH) and REPA both of which are library and compiler extensions for Haskell. Another important language is NESL~\cite{Blelloch1993NESL}, which introduced the idea of statically flattening nested arrays.
+There are a few key languages that appear in the literature. The two oldest are Fortran, which is an imperative high-performance language, and APL~\cite{Iverson1962Programming}, which is a high-level declarative and functional language. Furthermore, much research has focused on Single-assignment-C (\sac{}), which is a C-like functional language, and Data Parallel Haskell (DPH) and REPA, both of which are library and compiler extensions for Haskell. Another important language is NESL~\cite{Blelloch1993NESL}, which introduced the idea of statically flattening nested arrays.
 
 The opportunity for parallelism in these languages stems from bulk-operations over arrays. Where imperative languages like Fortran use iterative loops, functional languages depend on higher-order functions like \texttt{map} or \texttt{fold} to express data-parallel computations. \citet{Ching:1990:APA:97808.97826} argued that it is easier for programmers to express parallelism in such a declarative high-level way than by explicitly scheduling work to different processors and implemented such an approach in the APL370 compiler. The only requirement to make use of such implicitly parallel constructs is that the programmer writes idiomatic code which the language runtime can parallelize efficiently~\cite{Bernecky:2015:AEP:2774959.2774962}. Not only that parallelism is much easier to extract, but also sequential programs written in such a high-level style will often perform faster~\cite{Bernecky:2015:AEP:2774959.2774962}.
 
@@ -124,7 +124,7 @@ A naive way of implementing such nested parallelism would be to simply start new
 
 \subsubsection{Flattening}
 
-\citet{Blelloch1993Implementation} introduced the idea of statically flattening nested arrays to perform an optimal parallelization of operations over arrays. The key to doing so is the right choice of array representation and there exists a representation which enables the compiler to flatten arrays in constant time. Flattening requires the generation of lifted versions of all functions, called lifting. Lifting the addition operator \texttt{+} of type $int ~ * ~ int \rightarrow int$, for example, returns a new operator \texttt{+}$_L$ of type $[int] ~ * ~ [int] \rightarrow [int]$ that takes arrays of scalars as parameters instead. The function has been ``lifted'' to the next rank. NESL implements this flattening scheme and \citet{Blelloch:1996:PTS:232627.232650} showed, based on NESL's built-in cost semantics, that NESL actually can be implemented without any additional overhead due to flattening.
+\citet{Blelloch1993Implementation} introduced the idea of statically flattening nested arrays to perform an optimal parallelization of operations over arrays. The key to doing so is the right choice of array representation and there exists a representation which enables the compiler to flatten nested arrays in constant time. Flattening requires the generation of lifted versions of all functions, called lifting. Lifting the addition operator \texttt{+} of type $int ~ * ~ int \rightarrow int$, for example, returns a new operator \texttt{+}$_L$ of type $[int] ~ * ~ [int] \rightarrow [int]$ that takes arrays of scalars as parameters instead. The function has been ``lifted'' to the next rank. NESL implements this flattening scheme and \citet{Blelloch:1996:PTS:232627.232650} showed, based on NESL's built-in cost semantics, that NESL actually can be implemented without any additional overhead due to flattening.
 
 Other researchers have since taken up the idea of flattening nested parallelism again~\cite{Lippmeier:2012:WEH:2364527.2364564} and implemented it in Haskell. In contrast to NESL, Haskell is a fully-fledged functional programming language with types and higher-order functions that is compiled instead of interpreted.
 
@@ -225,7 +225,7 @@ There are many more topics in spreadsheet research, i.e.\ testing of spreadsheet
 \subsection{Abstraction}
 \label{sec:abstraction}
 
-It is convenient to define two groups of spreadsheet abstraction. That is (1) manual abstraction, where the user has the means to build their own abstractions so to hide implementation details and (2) automatic abstraction, where the user constructs spreadsheets in a familiar way and the system later analyzes them to infer the logic and to (subsequently) separate it from data.
+It is convenient to define two groups of spreadsheet abstraction. That is (1) manual abstraction, where the user has the means to build their own abstractions so to hide implementation details and (2) automatic abstraction, where the user constructs spreadsheets in a familiar way and the system later analyzes them to infer the model and to (subsequently) separate it from data.
 
 \subsubsection{Manual Abstraction}
 
@@ -236,7 +236,7 @@ Many researchers observed that spreadsheets lack the most basic abstraction of g
 
 \subsubsection{Automatic Abstraction}
 
-Researchers have developed systems that analyze spreadsheets to infer their model and to (subsequently) separate this model from data. This allows users to build spreadsheets in a familiar manner. \citet{Isakowitz:1995:TLT:195705.195708} developed a system that automatically performs such a separation and manages spreadsheet logic for modular re-use. They observe that the majority of spreadsheet errors they encounter are not simple off-by-one reference errors and typos but severe errors in the model's logic. They relate them to classic programming errors where the programmer has not chosen an adequate level of abstraction.
+Researchers have developed systems that analyze spreadsheets to infer their model and to (subsequently) separate this model from data. This allows users to build spreadsheets in a familiar manner. \citet{Isakowitz:1995:TLT:195705.195708} developed a system that automatically performs such a separation and manages spreadsheet logic for modular re-use. They observe that the majority of spreadsheet errors they encounter are not simple off-by-one reference errors and typos but severe errors in the model. They relate them to classic programming errors where the programmer has not chosen an adequate level of abstraction.
 
 The visual layout of spreadsheets is often implicit documentation of the logic. \citet{1173080} however, observe that this visual layout often leads to misconceptions if another user takes over the spreadsheet. Therefore, they developed a set of logical and semantic equivalence classes for cells. These equivalence classes help visualizing repetitions in spreadsheet grids, which are the high-level structures a user needs to understand in order to be able to maintain the spreadsheet.
 
@@ -289,7 +289,7 @@ Much research on spreadsheet end-user programming focuses on bulk-data transform
       3 & 96 & \texttt{= F(A3)} & \texttt{= J(B3, B1)} \\ \hline
     \end{tabular}
   \end{center}
-  \caption{Examples of non-fusable stencil-like structures on interpreted spreadsheets. \textit{Left:} the sheet cannot be fused because every cell needs to evaluate to the result of its formula. \textit{Right:} the sheet cannot be fused because the intermediate values of column \textit{B} are referenced more than once.}
+  \caption{Examples of non-fusable stencil-like structures on interpreted spreadsheets. \textit{Left:} columns~\textit{B} and \textit{C} cannot be fused because every cell needs to evaluate to the result of its formula. \textit{Right:} columns~\textit{B} and \textit{C} cannot be fused because the intermediate values of column \textit{B} are referenced more than once in column~\textit{C}.}
   \label{fig:spreadsheets-fusion}
 \end{figure}
 
@@ -297,7 +297,7 @@ Detecting high-level structures in spreadsheets relates directly to identifying 
 
 A system that detects repeating formulas would also be able to parallelize these repetitions, as they essentially are an unwrapped bulk-application via a higher-order primitive like \texttt{map}. The experimental spreadsheet platform Funcalc already infers and maintains explicit knowledge about copied formulas by means of the support-graph~\cite{Sestoft2014Spreadsheet}.
 
-It is unclear if an even better understanding of such stencil-like structures in spreadsheets leads to possibilities for loop fusion. For instance, if all values in column A are first transformed by a repeating formula in column B and then subsequently by another column C, one could in principle avoid the middle step and fuse the computations in columns B and C so that one (implicit) \texttt{map} would suffice. However, due to spreadsheet semantics, each cell must evaluate to the value its formula computes~\cite{Sestoft2014Spreadsheet}. This forbids fusion, as the intermediate values would vanish and could not be displayed to the user. Fusion would however be allowed in compiled user-defined functions. Furthermore, if the formulas in column C references the cells in column B more than once each, fusion becomes outright impossible. In the former case, the system could suggest the user to manually inline the formulas for performance reasons. In the latter case, this is not possible. Figure~\ref{fig:spreadsheets-fusion} illustrates the cases where fusion is not possible.
+It is unclear if an even better understanding of such stencil-like structures in spreadsheets leads to possibilities for loop fusion. For instance, if all values in column A are first transformed by a repeating formula in column B and then subsequently by another column C, one could in principle avoid the middle step and fuse the computations in columns B and C so that one (implicit) \texttt{map} would suffice. However, due to spreadsheet semantics, each cell must evaluate to the value its formula computes~\cite{Sestoft2014Spreadsheet}. This forbids fusion, as the intermediate values would vanish and could not be displayed to the user. Fusion would however be allowed in compiled user-defined functions. Furthermore, if the formulas in column C references the cells in column B more than once each, fusion becomes outright impossible. In the former case, the system could suggest the user to manually inline the formulas for performance reasons. In the latter case, this is not possible. Figure~\ref{fig:spreadsheets-fusion} illustrates cases where fusion is not possible.
 
 \subsection{Representing Arrays}
 \label{sec:representing-arrays}
@@ -308,14 +308,14 @@ Our literature study has shown that there has been much research on array implem
 
 Lazy arrays, as implemented in REPA~\cite{Keller:2010:RSP:1863543.1863582}, are interesting for avoiding intermediate structures in single cells. They do not extend beyond that because fusion of intermediate cells is not possible, as discussed in Section~\ref{sec:high-level-struct}.
 
-Destructive array updates~\cite{Sastry:1994:PDU:182409.182486} are also only interesting in the context of single cells. The analysis is much simpler, for the same reason of why fusion across cells is not possible.
+Destructive array updates~\cite{Sastry:1994:PDU:182409.182486} are also only interesting in the context of single cells. The analysis is much simpler, for the same reason of why fusion across cells is not possible and because there are no let-bindings within the formula of a single cell.
 
 \subsection{Flattening and Scheduling}
 \label{sec:scheduling}
 
 Nested parallelism is a huge topic in array programming and has gained a lot of traction~\cite{Blelloch1993Implementation, Lippmeier:2012:WEH:2364527.2364564, Collins:2014:NFL:2627373.2627375} because it allows programmers to arbitrarily combine parallel operations without needing to worry about whether there is any overhead introduced by the nested parallelism.
 
-Static flattening, as in NESL~\cite{Blelloch1993Implementation} or in DPH~\cite{Lippmeier:2012:WEH:2364527.2364564}, applies well to regular shaped arrays that have a type which is statically inferable. Cell areas on spreadsheets are regular because they are rectangular. In a simple spreadsheet model, the type is less important, because there only exist scalar values.
+Static flattening, as in NESL~\cite{Blelloch1993Implementation} or in DPH~\cite{Lippmeier:2012:WEH:2364527.2364564}, applies well to regular shaped arrays that have a type which is statically inferable. Cell areas on spreadsheets are regular arrays. In a simple spreadsheet model, the type is less important, because there only exist scalar values.
 
 In an experimental platform like Funcalc, a single cell can also contain an entire array~\cite{Jones:2003:UAF:944705.944721, Sestoft2014Spreadsheet}. This makes the type of arrays more interesting again, because any array might now contain more arrays and therefore generalize to irregular three- or even higher dimensional arrays. Arrays might even contain a mixture of scalar and array values. These cases severely complicate static scheduling as work now cannot be distributes across threads evenly any more.
 
@@ -328,7 +328,7 @@ The second is a hybrid solution of dynamic and static scheduling, where the choi
 
 In this study, we have summarized the literature on declarative array programming and end-user spreadsheet programming using systematic literature mapping as a methodology. The reviews show that there is a clear overlap between spreadsheet programming and array programming and many techniques and we can directly apply results from functional array programming to a spreadsheet model of computations.
 
-Current research focuses still on classic high-performance languages like Fortran, but modern languages are now also now vehicles for research on parallel array programming and many have been designed with certain goals in mind, e.g.\ ZPL~\cite{Snyder2007Design}. Moreover, new languages like NOVA~\cite{Collins:2014:NFL:2627373.2627375} emerge to combine the collective research effort. The majority of these modern languages are purely functional, which reflects the idea that the absence of shared mutable state makes programming and reasoning about parallel programs much easier for the end-programmer.
+Current research focuses still on classic high-performance languages like Fortran, but modern languages are now also now vehicles for research on parallel array programming and many have been designed with certain goals in mind, e.g.\ ZPL~\cite{Snyder2007Design}. Moreover, new languages like NOVA~\cite{Collins:2014:NFL:2627373.2627375} emerge to combine the collective research effort. The majority of these modern languages are purely functional, which not reflects the idea that the absence of shared mutable state makes programming and reasoning about parallel programs much easier for the end-programmer, but also allows more compiler optimizations.
 
 We have discussed and categorized research topics on array programming into three major fields: nested data parallelism, loop fusion and efficient implementation of arrays.
 
@@ -338,7 +338,7 @@ Our analysis shows that there are broad possibilities to combine spreadsheet pro
 
 \section*{Acknowledgements}
 
-Peter Sestoft originally suggested systematic literature review as a method and helped reviewing the literature on spreadsheets. He also gave valuable feedback on drafts of this paper. Paolo Tell explained and discussed with us systematic literature review methodologies and related literature. David Christiansen helped with a lot of know-how on Emacs-Lisp during the development of Slirm.
+Peter Sestoft originally suggested systematic literature review as a method and helped reviewing the literature on spreadsheets. He also gave valuable feedback on drafts of this paper. Paolo Tell explained and discussed with us systematic literature review methodologies and related literature. David Christiansen helped with a lot of know-how on Emacs-Lisp during the development of SLIRM (see Section~\ref{sec:literature-selection}).
 
 Thanks!
 
