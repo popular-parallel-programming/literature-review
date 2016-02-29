@@ -152,13 +152,7 @@ Fusion refers to avoiding intermediate representations of arrays for consecutive
 
 \begin{center}
   \begin{tabular}{ccc}
-\begin{lstlisting}[language=ML]
-map g (map f xs)
-\end{lstlisting}
-    & $\Longrightarrow$ &
-\begin{lstlisting}[language=ML]
-map (f . g) xs
-\end{lstlisting}
+    \texttt{map g (map f xs)} & $\Longrightarrow$ & \texttt{map (f . g) xs}
   \end{tabular}
 \end{center}
 
